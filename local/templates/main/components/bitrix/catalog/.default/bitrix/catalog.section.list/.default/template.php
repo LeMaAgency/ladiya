@@ -78,5 +78,4 @@ $arSectionDeleteParams = array("CONFIRM" => GetMessage('CT_BCSL_ELEMENT_DELETE_C
     <? if ($arParams["DISPLAY_BOTTOM_PAGER"]): ?>
         <br/><?= $arResult["NAV_STRING"] ?>
     <? endif; ?>
-    </div>
 </section>
