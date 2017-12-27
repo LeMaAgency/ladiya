@@ -146,14 +146,14 @@ $generalParams = array(
 <section class="content-page">
     <? foreach ($arResult['ITEMS'] as $ikey=>$item): ?>
         <?
-        $this->AddEditAction($arSection['ID'], $arSection['EDIT_LINK'], $strSectionEdit);
-        $this->AddDeleteAction($arSection['ID'], $arSection['DELETE_LINK'], $strSectionDelete, $arSectionDeleteParams);
+        $this->AddEditAction($item['ID'], $item['EDIT_LINK'], $strSectionEdit);
+        $this->AddDeleteAction($item['ID'], $item['DELETE_LINK'], $strSectionDelete, $arSectionDeleteParams);
         ?>
-        <div class="transport-item" id="<? echo $this->GetEditAreaId($arSection['ID']); ?>">
+        <div class="transport-item" id="<? echo $this->GetEditAreaId($item['ID']); ?>">
             <div class="container">
                 <div class="row">
                     <div class="col-md-8 <?if($ikey%2 == 0){?>reverse<?}?>">
-                        <div class="transport-item__img"><img src="<?#=$item['PREVIEW_PICTURE']['SRC'];?>" alt="<?=$item['NAME'];?>"></div>
+                        <div class="transport-item__img"><img src="<?=$item['PREVIEW_PICTURE']['SRC'];?>" alt="<?=$item['NAME'];?>"></div>
                     </div>
                     <div class="col-md-4">
                         <div class="transport-item__description">
