@@ -16,7 +16,7 @@ $aMenuLinks = Array(
 	),
 	Array(
 		"Экскурсии", 
-		"#", 
+		"/ekskursii/", 
 		Array(), 
 		Array(), 
 		"" 

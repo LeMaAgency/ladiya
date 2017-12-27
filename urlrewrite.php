@@ -19,12 +19,6 @@ $arUrlRewrite = array(
 		"PATH" => "/transport/detail.php",
 	),
 	array(
-		"CONDITION" => "#^/o-kavkaze/([^/]+)/?(?:\\?(.*))?\$#",
-		"RULE" => "CODE=\$1&\$2",
-		"ID" => "",
-		"PATH" => "/o-kavkaze/detail.php",
-	),
-	array(
 		"CONDITION" => "#^/photo/([^/]+)/?(?:\\?(.*))?\$#",
 		"RULE" => "CODE=\$1&\$2",
 		"ID" => "",
@@ -36,11 +30,12 @@ $arUrlRewrite = array(
 		"ID" => "",
 		"PATH" => "/video/detail.php",
 	),
+
 	array(
-		"CONDITION" => "#^/o-kmv/([^/]+)/?(?:\\?(.*))?\$#",
-		"RULE" => "CODE=\$1&\$2",
-		"ID" => "",
-		"PATH" => "/o-kmv/detail.php",
+		"CONDITION" => "#^/o-kavkaze/#",
+		"RULE" => "",
+		"ID" => "bitrix:catalog",
+		"PATH" => "/o-kavkaze/index.php",
 	),
 	array(
 		"CONDITION" => "#^/hotel/#",
@@ -53,6 +48,12 @@ $arUrlRewrite = array(
 		"RULE" => "",
 		"ID" => "bitrix:news",
 		"PATH" => "/tours/index.php",
+	),
+	array(
+		"CONDITION" => "#^/o-kmv/#",
+		"RULE" => "",
+		"ID" => "bitrix:catalog",
+		"PATH" => "/o-kmv/index.php",
 	),
 );
 

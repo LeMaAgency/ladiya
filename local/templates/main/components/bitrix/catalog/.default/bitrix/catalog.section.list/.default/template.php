@@ -52,6 +52,9 @@ $arSectionDeleteParams = array("CONFIRM" => GetMessage('CT_BCSL_ELEMENT_DELETE_C
         $this->AddEditAction($arSection['ID'], $arSection['EDIT_LINK'], $strSectionEdit);
         $this->AddDeleteAction($arSection['ID'], $arSection['DELETE_LINK'], $strSectionDelete, $arSectionDeleteParams);
         ?>
+<!--        <pre>-->
+<!--           --><?// var_dump($arSection)?>
+<!--        </pre>-->
         <div class="transport-item" id="<? echo $this->GetEditAreaId($arSection['ID']); ?>">
             <div class="container">
                 <div class="row">

@@ -39,7 +39,7 @@ $APPLICATION->SetTitle("О Кавказе");
 		"SIDEBAR_SECTION_SHOW" => "Y",
 		"SIDEBAR_DETAIL_SHOW" => "N",
 		"SIDEBAR_PATH" => "",
-		"SEF_MODE" => "N",
+		"SEF_MODE" => "Y",
 		"AJAX_MODE" => "N",
 		"AJAX_OPTION_JUMP" => "N",
 		"AJAX_OPTION_STYLE" => "Y",
@@ -173,10 +173,13 @@ $APPLICATION->SetTitle("О Кавказе");
 		"USE_ELEMENT_COUNTER" => "Y",
 		"DISABLE_INIT_JS_IN_COMPONENT" => "N",
 		"USE_ENHANCED_ECOMMERCE" => "N",
-		"SEF_FOLDER" => "/o-kmv/",
-		"VARIABLE_ALIASES" => array(
-			"ELEMENT_ID" => "ELEMENT_ID",
-			"SECTION_ID" => "SECTION_ID",
+		"SEF_FOLDER" => "/o-kavkaze/",
+		"SEF_URL_TEMPLATES" => array(
+			"sections" => "",
+			"section" => "#SECTION_CODE#/",
+			"element" => "#SECTION_CODE#/#ELEMENT_CODE#/",
+			"compare" => "",
+			"smart_filter" => "",
 		)
 	),
 	false
