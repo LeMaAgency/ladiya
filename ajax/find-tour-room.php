@@ -72,10 +72,8 @@ if(empty($rooms))
     <tr>
         <th scope="col">Дата</th>
         <th scope="col">Гостиница</th>
-        <th scope="col">Номер</th>
         <th scope="col">Тип номера</th>
-        <th scope="col">Стоимость</th>
-        <th scope="col">Доплата за 1-местное размещение</th>
+        <th scope="col">Стоимость тура на одного человека</th>
         <th scope="col"></th>
     </tr>
     </thead>
@@ -84,11 +82,13 @@ if(empty($rooms))
         <tr>
             <td data-label="Дата"><?=Helper::enc($_POST["DATE"]);?></td>
             <td data-label="Гостиница"><?=$room['HOTEL_NAME'];?></td>
-            <td data-label="Номер"><?=$room['NAME'];?></td>
             <td data-label="Тип номера"><?=$room['PROPERTY_ROOM_TYPE_VALUE'];?></td>
-            <td data-label="Стоимость"><?=$room['PROPERTY_PRICE_VALUE'];?></td>
-            <td data-label="Доплата за 1-местное размещение"><?=$room['PROPERTY_PRICE_ADDITIONAL_VALUE'];?></td>
-            <td data-label="Забронировать"><a href="#" class="reservation_btn">Забронировать</a></td>
+            <td data-label="Стоимость тура на одного человека"><?=$room['PROPERTY_PRICE_VALUE'];?></td>
+            <td data-label="Забронировать">
+                <a href="#" class="reservation_btn">
+                    Забронировать
+                </a>
+            </td>
         </tr>
     <? endforeach; ?>
     </tbody>

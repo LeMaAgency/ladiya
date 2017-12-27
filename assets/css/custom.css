@@ -1157,6 +1157,7 @@ font-size: 18px;
 }
 .tour-detail_tabs__wrapper .bg .tab-content.main #price table td .reservation_btn{
     color:red;
+    text-decoration: underline;
 }
 .tour-detail_tabs__wrapper .booking, .tour-detail_tabs__wrapper .full_program {
     padding: 20px 0;
