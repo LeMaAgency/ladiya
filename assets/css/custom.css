@@ -1153,8 +1153,11 @@ font-size: 18px;
     font-size: .85em;
     letter-spacing: .1em;
     text-transform: uppercase;
+    text-align: center;
 }
-
+.tour-detail_tabs__wrapper .bg .tab-content.main #price table td .reservation_btn{
+    color:red;
+}
 .tour-detail_tabs__wrapper .booking, .tour-detail_tabs__wrapper .full_program {
     padding: 20px 0;
     border-radius: 5px;

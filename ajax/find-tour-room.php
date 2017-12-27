@@ -76,6 +76,7 @@ if(empty($rooms))
         <th scope="col">Тип номера</th>
         <th scope="col">Стоимость</th>
         <th scope="col">Доплата за 1-местное размещение</th>
+        <th scope="col"></th>
     </tr>
     </thead>
     <tbody>
@@ -87,6 +88,7 @@ if(empty($rooms))
             <td data-label="Тип номера"><?=$room['PROPERTY_ROOM_TYPE_VALUE'];?></td>
             <td data-label="Стоимость"><?=$room['PROPERTY_PRICE_VALUE'];?></td>
             <td data-label="Доплата за 1-местное размещение"><?=$room['PROPERTY_PRICE_ADDITIONAL_VALUE'];?></td>
+            <td data-label="Забронировать"><a href="#" class="reservation_btn">Забронировать</a></td>
         </tr>
     <? endforeach; ?>
     </tbody>
