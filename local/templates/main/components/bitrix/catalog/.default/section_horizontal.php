@@ -20,8 +20,8 @@ else
 	$basketAction = isset($arParams['SECTION_ADD_TO_BASKET_ACTION']) ? $arParams['SECTION_ADD_TO_BASKET_ACTION'] : '';
 }
 ?>
-	<div class="<?=($isSidebar ? "col-md-9 col-sm-8" : "col-xs-12")?>">
-		<div class="row">
+<!--	<div class="--><?//=($isSidebar ? "col-md-9 col-sm-8" : "col-xs-12")?><!--">-->
+<!--		<div class="row">-->
 			<? if ($isFilter): ?>
 				<div class="col-xs-12<?=(isset($arParams['FILTER_HIDE_ON_MOBILE']) && $arParams['FILTER_HIDE_ON_MOBILE'] === 'Y' ? ' hidden-xs' : '')?>">
 					<?
