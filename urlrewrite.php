@@ -30,7 +30,6 @@ $arUrlRewrite = array(
 		"ID" => "",
 		"PATH" => "/video/detail.php",
 	),
-
 	array(
 		"CONDITION" => "#^/o-kavkaze/#",
 		"RULE" => "",
