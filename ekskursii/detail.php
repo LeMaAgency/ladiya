@@ -50,7 +50,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 		"IBLOCK_ID" => "24",
 		"IBLOCK_TYPE" => "content",
 		"IBLOCK_URL" => "",
-		"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
+		"INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
 		"MESSAGE_404" => "",
 		"META_DESCRIPTION" => "-",
 		"META_KEYWORDS" => "-",
