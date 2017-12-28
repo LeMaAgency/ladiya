@@ -3,22 +3,6 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 $APPLICATION->SetTitle("Аренда автобусов");
 CModule::IncludeModule('iblock');
 
-    $allOptions = array();
-    $places = array();
-    $arFilter = array("IBLOCK_ID"=>"23");
-    $arSelectFields = array("ID","NAME");
-    $places = CIBlockElement::GetList(
-        array(),
-        $arFilter,
-        false,
-        array(),
-        $arSelectFields
-    );
-    while($ob = $places->GetNextElement())
-    {
-        $allOptions[] = $ob->GetFields();
-    }
-
 ?>
 
     <div class="head-img head-img_rent-bus">
@@ -80,21 +64,27 @@ CModule::IncludeModule('iblock');
                                 <div class="form__filter__input__log it-error"></div>
                             </div>
                         </div>
+
                         <div class="form__filter__item">
                             <div class="form__filter__item__name">
-                                <span>Место встречи</span>
+                                <span>Количество мест</span>
                             </div>
                             <div class="form__filter__input  it-block">
-                                <select name="select-from" class="form__filter__select__control cs-select cs-skin-border">
+                                <select name="count-of-seats" class="form__filter__select__control cs-select cs-skin-border">
                                     <option value="" selected="selected"></option>
-                                    <?
-                                        foreach ($allOptions as $option)
-                                        {
-                                            echo "<option value=\"".$option["NAME"]."\">".$option["NAME"]."</option>";
-                                        }
-                                    ?>
-
+                                    <option value="до 14 мест" >до 14 мест</option>
+                                    <option value="15-20 мест" >15-20 мест</option>
+                                    <option value="свыше 40 мес">свыше 40 мес</option>
                                 </select>
+                                <div class="form__filter__input__log it-error"></div>
+                            </div>
+                        </div>
+                        <div class="form__filter__item">
+                            <div class="form__filter__item__name">
+                                <span>Дата поездки</span>
+                            </div>
+                            <div class="form__filter__input  it-block">
+                                <input type="text" class="form__filter__input__control filter__item__date__inp" id="date-arrive" name="date-arrive" placeholder="Выбрать дату">
                                 <div class="form__filter__input__log it-error"></div>
                             </div>
                         </div>
@@ -103,24 +93,7 @@ CModule::IncludeModule('iblock');
                                 <span>Место назначения</span>
                             </div>
                             <div class="form__filter__input  it-block">
-                                <select name="select-to" class="form__filter__select__control cs-select cs-skin-border">
-                                    <option value="" selected="selected"></option>
-                                    <?
-                                    foreach ($allOptions as $option)
-                                    {
-                                        echo "<option value=\"".$option["NAME"]."\">".$option["NAME"]."</option>";
-                                    }
-                                    ?>
-                                </select>
-                                <div class="form__filter__input__log it-error"></div>
-                            </div>
-                        </div>
-                        <div class="form__filter__item">
-                            <div class="form__filter__item__name">
-                                <span>Дата встречи</span>
-                            </div>
-                            <div class="form__filter__input  it-block">
-                                <input type="text" class="form__filter__input__control filter__item__date__inp" id="date-arrive" name="date-arrive" placeholder="Выбрать дату">
+                                <input name="destination" class="form__filter__input__control" type="text">
                                 <div class="form__filter__input__log it-error"></div>
                             </div>
                         </div>

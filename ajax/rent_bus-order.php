@@ -12,11 +12,12 @@ $form = new \WM\Forms\AjaxForm(array(
     array('name', 'regex', array('pattern' => '~^[А-я Ё]+$~iu', 'message' => 'Недопустимые значения')),
     array('phone', 'phone', array('message' => 'Телефон должен быть в формате +7 (999) 666-33-11')),
     array('email', 'email'),
-    array('date-arrive', 'required',array('message' => 'Выберите дату встречи')),
+    array('date-arrive', 'required',array('message' => 'Выберите дату поездки')),
     array('date-arrive', 'regex', array('pattern' => '~^(?:3[01]|[12]\\d|0[1-9])\\.(?:0[1-9]|1[0-2])\\.20(?:1[7-9]|[2-9]\\d)$~', 'message' => 'Неправильный формат даты')),
-    array('select-from','required', array('message' => 'Выберите место встречи')),
-    array('select-to','required', array('message' => 'Выберите место назначения')),
-
+    array('count-of-seats','required', array('message' => 'Выберите количество мест')),
+    array('destination','required', array('message' => 'Выберите место назначения')),
+    array('destination','length', array('min' => 2, 'max' => 50, 'message' => 'Не больше 100 символов')),
+    array('destination', 'regex', array('pattern' => '~^[А-я 0-9 . , Ё]+$~iu', 'message' => 'Недопустимые значения')),
 ),
     $_POST
 );
@@ -34,8 +35,8 @@ if($form->validate())
                 'NAME' => Helper::enc($form->getField('name')),
                 'PHONE' => Helper::enc($form->getField('phone')),
                 'EMAIL' => Helper::enc($form->getField('email')),
-                'FROM' => Helper::enc($form->getField('select-from')),
-                'TO' => Helper::enc($form->getField('select-to')),
+                'COUNT_OF_SEATS' => Helper::enc($form->getField('count-of-seats')),
+                'DESTINATION' => Helper::enc($form->getField('destination')),
                 'DATE' => Helper::enc($form->getField('date-arrive')),
                 'COMMENT' => Helper::enc($form->getField('comment')),
             ),
@@ -48,8 +49,8 @@ if($form->validate())
             'NAME' => Helper::enc($form->getField('name')),
             'PHONE' => Helper::enc($form->getField('phone')),
             'EMAIL' => Helper::enc($form->getField('email')),
-            'FROM' => Helper::enc($form->getField('select-from')),
-            'TO' => Helper::enc($form->getField('select-to')),
+            'COUNT_OF_SEATS' => Helper::enc($form->getField('count-of-seats')),
+            'DESTINATION' => Helper::enc($form->getField('destination')),
             'DATE' => Helper::enc($form->getField('date-arrive')),
             'COMMENT' => Helper::enc($form->getField('comment')),
         )
