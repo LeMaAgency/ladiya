@@ -54,6 +54,12 @@ $arUrlRewrite = array(
 		"ID" => "bitrix:catalog",
 		"PATH" => "/o-kmv/index.php",
 	),
+    array(
+        'CONDITION' => '#^/ekskursii/([^/]+)/?(?:\\?(.*))?$#',
+        'RULE' => 'CODE=$1&$2',
+        'ID' => '',
+        'PATH' => '/ekskursii/detail.php',
+    ),
 );
 
 ?>

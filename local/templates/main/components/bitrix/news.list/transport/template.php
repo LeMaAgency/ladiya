@@ -35,7 +35,13 @@ $this->setFrameMode(true);
                                 <?=$arItem['PREVIEW_TEXT'];?>
                             </p>
                             <a href="<?=$arItem['DETAIL_PAGE_URL'];?>" class="item-card__content__more">
-                                <span><?=$arItem['PROPERTIES']['TEXT_BUTTON']['VALUE'];?></span>
+                                <span>
+                                    <? if (!empty($arItem['PROPERTIES']['TEXT_BUTTON']['VALUE'])):?>
+                                        <?=$arItem['PROPERTIES']['TEXT_BUTTON']['VALUE'];?>
+                                    <?else:?>
+                                        Читать далее
+                                    <?endif;?>
+                                </span>
                             </a>
                         </div>
                     </div>
