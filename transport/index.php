@@ -93,16 +93,44 @@ $APPLICATION->SetTitle("Наш транспорт");
                     </div>
                     <div class="col-md-4">
                         <div class="transport-item__description">
-                            <div class="transport-item__description__head">Трансферы (встреча и проводы)</div>
-                            <div class="transport-item__description__title">здесь ваш текст</div>
-                            <p class="transport-item__description__text">"Lorem ipsum dolor sit amet, consectetur
-                                adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                                enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                                commodo consequat. Duis aute irure dolor in reprehenderit
-                                in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                                cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                            <div class="transport-item__description__head">
+                                <?$APPLICATION->IncludeFile(
+                                    SITE_DIR."include/transport/transfer/title.php",
+                                    Array(),
+                                    Array(
+                                        "MODE"      => "html",
+                                    ));
+                                ?>
+                            </div>
+                            <div class="transport-item__description__title">
+                                <?$APPLICATION->IncludeFile(
+                                    SITE_DIR."include/transport/transfer/small_title.php",
+                                    Array(),
+                                    Array(
+                                        "MODE"      => "html",
+                                    ));
+                                ?>
+                            </div>
+                            <p class="transport-item__description__text">
+                                <?$APPLICATION->IncludeFile(
+                                    SITE_DIR."include/transport/transfer/preview_text.php",
+                                    Array(),
+                                    Array(
+                                        "MODE"      => "html",
+                                    ));
+                                ?>
                             </p>
-                            <a href="<?=SITE_DIR?>transport/transfer" class="item-card__content__more"><span>Выбрать трансфер</span></a>
+                            <a href="<?=SITE_DIR?>transport/transfer" class="item-card__content__more">
+                                <span>
+                                    <?$APPLICATION->IncludeFile(
+                                        SITE_DIR."include/transport/transfer/button_text.php",
+                                        Array(),
+                                        Array(
+                                            "MODE"      => "html",
+                                        ));
+                                    ?>
+                                </span>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -116,25 +144,53 @@ $APPLICATION->SetTitle("Наш транспорт");
                     </div>
                     <div class="col-md-4">
                         <div class="transport-item__description">
-                            <div class="transport-item__description__head">автобусы</div>
-                            <div class="transport-item__description__title">Для организации экскурсий и туров используются
-                                современные автобусы различной вместимости:
+                            <div class="transport-item__description__head">
+                                <?$APPLICATION->IncludeFile(
+                                    SITE_DIR."include/transport/rent-bus/title.php",
+                                    Array(),
+                                    Array(
+                                        "MODE"      => "html",
+                                    ));
+                                ?>
+                            </div>
+                            <div class="transport-item__description__title">
+                                <?$APPLICATION->IncludeFile(
+                                    SITE_DIR."include/transport/rent-bus/small_title.php",
+                                    Array(),
+                                    Array(
+                                        "MODE"      => "html",
+                                    ));
+                                ?>
                             </div>
                             <ul class="transport-item__description__list">
-                                <li class="transport-item__description__list__item">&ndash; свыше 40 мест - Mersedes,
-                                    Neoplan, Setra, Volvo, Higer, Hunday, Kia, Аврора
-                                </li>
-                                <li class="transport-item__description__list__item">&ndash; 15 - 20 мест - Mersedes
-                                    Sprinter, Ford
-                                </li>
-                                <li class="transport-item__description__list__item">&ndash; до 14 мест - Mersedes Vito
-                                </li>
+                                <?$APPLICATION->IncludeFile(
+                                    SITE_DIR."include/transport/rent-bus/bus_types.php",
+                                    Array(),
+                                    Array(
+                                        "MODE"      => "html",
+                                    ));
+                                ?>
                             </ul>
                             <p class="transport-item__description__text">
-                                Все автобусы соответствуют стандартам безопасности и комфорта. Оснащены кондиционерами,
-                                аудио- и видео техникой, микрофонами. Эргономичные, удобные сиденья
+                                <?$APPLICATION->IncludeFile(
+                                    SITE_DIR."include/transport/rent-bus/preview_text.php",
+                                    Array(),
+                                    Array(
+                                        "MODE"      => "html",
+                                    ));
+                                ?>
                             </p>
-                            <a href="<?=SITE_DIR?>transport/rent-bus" class="item-card__content__more"><span>Выбрать автобус</span></a>
+                            <a href="<?=SITE_DIR?>transport/rent-bus" class="item-card__content__more">
+                                <span>
+                                    <?$APPLICATION->IncludeFile(
+                                        SITE_DIR."include/transport/rent-bus/button_text.php",
+                                        Array(),
+                                        Array(
+                                            "MODE"      => "html",
+                                        ));
+                                    ?>
+                                </span>
+                            </a>
                         </div>
                     </div>
                 </div>
