@@ -42,7 +42,7 @@ CModule::IncludeModule('iblock');
                                 <span>Имя</span>
                             </div>
                             <div class="form__filter__input  it-block">
-                                <input name="name" class="form__filter__input__control" type="text">
+                                <input name="name" class="form__filter__input__control js-clearable" type="text">
                                 <div class="form__filter__input__log it-error"></div>
                             </div>
                         </div>
@@ -51,7 +51,7 @@ CModule::IncludeModule('iblock');
                                 <span>Телефон</span>
                             </div>
                             <div class="form__filter__input it-block">
-                                <input name="phone" class="form__filter__input__control" type="text">
+                                <input name="phone" class="form__filter__input__control js-clearable" type="text">
                                 <div class="form__filter__input__log it-error"></div>
                             </div>
                         </div>
@@ -60,7 +60,7 @@ CModule::IncludeModule('iblock');
                                 <span>E-mail</span>
                             </div>
                             <div class="form__filter__input  it-block">
-                                <input name="email" class="form__filter__input__control" type="text">
+                                <input name="email" class="form__filter__input__control js-clearable" type="text">
                                 <div class="form__filter__input__log it-error"></div>
                             </div>
                         </div>
@@ -70,8 +70,8 @@ CModule::IncludeModule('iblock');
                                 <span>Количество мест</span>
                             </div>
                             <div class="form__filter__input  it-block">
-                                <select name="count-of-seats" class="form__filter__select__control cs-select cs-skin-border">
-                                    <option value="" selected="selected"></option>
+                                <select name="count-of-seats" class="form__filter__select__control cs-select cs-skin-border js-clearable">
+                                    <option value="" ></option>
                                     <option value="до 14 мест" >до 14 мест</option>
                                     <option value="15-20 мест" >15-20 мест</option>
                                     <option value="свыше 40 мес">свыше 40 мес</option>
@@ -84,7 +84,8 @@ CModule::IncludeModule('iblock');
                                 <span>Дата поездки</span>
                             </div>
                             <div class="form__filter__input  it-block">
-                                <input type="text" class="form__filter__input__control filter__item__date__inp" id="date-arrive" name="date-arrive" placeholder="Выбрать дату">
+                                <input type="text" class="form__filter__input__control filter__item__date__inp js-clearable" id="date-arrive"
+                                       name="date-arrive" placeholder="Выбрать дату">
                                 <div class="form__filter__input__log it-error"></div>
                             </div>
                         </div>
@@ -93,7 +94,7 @@ CModule::IncludeModule('iblock');
                                 <span>Место назначения</span>
                             </div>
                             <div class="form__filter__input  it-block">
-                                <input name="destination" class="form__filter__input__control" type="text">
+                                <input name="destination" class="form__filter__input__control js-clearable" type="text">
                                 <div class="form__filter__input__log it-error"></div>
                             </div>
                         </div>
@@ -102,7 +103,7 @@ CModule::IncludeModule('iblock');
                                 <span>Комментарий</span>
                             </div>
                             <div class="form__filter__input  it-block">
-                                <textarea name="comment" class="form__filter__text__control"></textarea>
+                                <textarea name="comment" class="form__filter__text__control js-clearable"></textarea>
                             </div>
                         </div>
                         <div class="form__filter__item">

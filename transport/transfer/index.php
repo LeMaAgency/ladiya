@@ -107,7 +107,7 @@ while($ob = $places->GetNextElement())
                                 <span>Имя</span>
                             </div>
                             <div class="form__filter__input  it-block">
-                                <input name="name" class="form__filter__input__control" type="text">
+                                <input name="name" class="form__filter__input__control js-clearable" type="text">
                                 <div class="form__filter__input__log it-error"></div>
                             </div>
                         </div>
@@ -116,7 +116,7 @@ while($ob = $places->GetNextElement())
                                 <span>Телефон</span>
                             </div>
                             <div class="form__filter__input it-block">
-                                <input name="phone" class="form__filter__input__control" type="text">
+                                <input name="phone" class="form__filter__input__control js-clearable" type="text">
                                 <div class="form__filter__input__log it-error"></div>
                             </div>
                         </div>
@@ -125,7 +125,7 @@ while($ob = $places->GetNextElement())
                                 <span>E-mail</span>
                             </div>
                             <div class="form__filter__input  it-block">
-                                <input name="email" class="form__filter__input__control" type="text">
+                                <input name="email" class="form__filter__input__control js-clearable" type="text">
                                 <div class="form__filter__input__log it-error"></div>
                             </div>
                         </div>
@@ -168,7 +168,8 @@ while($ob = $places->GetNextElement())
                                 <span>Дата встречи</span>
                             </div>
                             <div class="form__filter__input  it-block">
-                                <input type="text" class="form__filter__input__control filter__item__date__inp" id="date-arrive" name="date-arrive" placeholder="Выбрать дату">
+                                <input type="text" class="form__filter__input__control filter__item__date__inp js-clearable" id="date-arrive"
+                                       name="date-arrive" placeholder="Выбрать дату">
                                 <div class="form__filter__input__log it-error"></div>
                             </div>
                         </div>
@@ -177,12 +178,12 @@ while($ob = $places->GetNextElement())
                                 <span>Комментарий</span>
                             </div>
                             <div class="form__filter__input  it-block">
-                                <textarea name="comment" class="form__filter__text__control"></textarea>
+                                <textarea name="comment" class="form__filter__text__control js-clearable"></textarea>
                             </div>
                         </div>
                         <div class="form__filter__item">
                             <div class="form__filter__btn">
-                                <input type="submit" class="form__filter__btn__control"></input>
+                                <input type="submit" class="form__filter__btn__control "></input>
                             </div>
                         </div>
                     </form>

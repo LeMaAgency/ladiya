@@ -365,7 +365,7 @@ $(function () {
 
             BX.closeWait(waitElement);
 
-            curForm.find('input:not([type="submit"]):not([type="button"]), .cs-placeholder').css({'border': '1px solid #db5959'});
+            curForm.find('input:not([type="submit"]):not([type="button"]), .cs-placeholder').css({'border': '1px solid green'});
 
             if (ans && ans.errors)
             {
@@ -374,16 +374,15 @@ $(function () {
                 {
                     curForm.find('[name="' + inputName + '"]').first().css({'border' : '1px solid red'})
                         .closest('.it-block').find('.it-error').html(ans.errors[inputName]);
+                    curForm.find('[name="' + inputName + '"]').siblings('.cs-placeholder').css({'border' : '1px solid red'});
                 }
 
             }
             else
             {
-                console.log("работает");
-                //ok
-                // $.fancybox(ans.message)
-                // $.fancybox.close('#order-form');
                 $.fancybox.open('Ваша заявка на аредну автобуса отправлена! <br> В скором времени вам ответят! ');
+                curForm.find('input.js-clearable:not([type="checkbox"]), textarea.js-clearable').val('');
+                curForm.find('.cs-placeholder').text('');
             }
         }, 'json');
         return false;
@@ -407,7 +406,7 @@ $(function () {
 
             BX.closeWait(waitElement);
 
-            curForm.find('input:not([type="submit"]):not([type="button"]), select , .cs-placeholder').css({'border': '1px solid #db5959'});
+            curForm.find('input:not([type="submit"]):not([type="button"]), select , .cs-placeholder').css({'border': '1px solid green'});
 
             if (ans && ans.errors)
             {
@@ -416,14 +415,14 @@ $(function () {
                 {
                     curForm.find('[name="' + inputName + '"]').first().css({'border' : '1px solid red'})
                         .closest('.it-block').find('.it-error').html(ans.errors[inputName]);
+                    curForm.find('[name="' + inputName + '"]').siblings('.cs-placeholder').css({'border' : '1px solid red'});
                 }
             }
             else
             {
-                //ok
-                // $.fancybox(ans.message)
-                // $.fancybox.close('#order-form');
                 $.fancybox.open('Ваша заявка трансфера отправлена! <br> В скором времени Вам ответят');
+                curForm.find('input.js-clearable:not([type="checkbox"]), textarea.js-clearable').val('');
+                curForm.find('.cs-placeholder').text('');
             }
         }, 'json');
         return false;
