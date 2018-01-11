@@ -5,6 +5,7 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 use Bitrix\Main\Page\Asset;
 
 $assets = Asset::getInstance();
+CJSCore::init(array('fx'));
 ?>
 <!DOCTYPE html>
 <html lang="<?=LANGUAGE_ID;?>">
