@@ -38,7 +38,7 @@ $confirmDelete = array('CONFIRM' => \GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')
                                         <?= $arItem['NAME']; ?>
                                     </div>
                                     <span class="catalog__list__item__img__wrap__text">
-                                        <?= $arItem['NAME']; ?>
+                                        <?= $arItem['PREVIEW_TEXT']; ?>
                                     </span>
                                     <div class="catalog__list__item__img__wrap__btn">
                                         <?=Loc::getMessage('PHOTO_MORE_INFO');?>
