@@ -227,26 +227,8 @@ $(document).ready(function () {
     $.datepicker.setDefaults($.datepicker.regional['ru']);
 
     var DP = $('.filter__item__date__inp, input[name*="DATE"]');
-
-    var picterDates = [
-        '01.12.2017',
-        '05.12.2017',
-        '07.12.2017'
-    ];
-
     DP.datepicker({
-        beforeShowDay: function severalDates(date){
-            var r = [false, ""];
-            if (typeof(picterDates) != 'undefined') {
-                var dat = $.datepicker.formatDate("dd.mm.yy", date);
-                for (var i = 0, c = picterDates.length; i < c; i++)
-                    if (dat == picterDates[i]) {
-                        r = [true, "yellow"];
-                        return r;
-                    }
-            }
-            return r;
-        }
+        minDate: new Date()
     });
 
 
