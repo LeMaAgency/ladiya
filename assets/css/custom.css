@@ -2642,7 +2642,6 @@ input.filter__button {padding-bottom: 15px !important;}
     .main-menu .dropdown-menu {
         position: relative;
         border: 0;
-        display: block;
         background: transparent;
         color: #fff;
         box-shadow: none;
@@ -2673,15 +2672,18 @@ input.filter__button {padding-bottom: 15px !important;}
     .nav.navbar-nav {
 
     }
+    .main-menu .nav.navbar-nav li,
     .header-menu .nav.navbar-nav li {
         display: block;
         float: none;
         width: auto;
     }
+    .main-menu .nav.navbar-nav li a,
     .header-menu .nav.navbar-nav li a {
         display: block;
         padding: 20px;
     }
+    .main-menu .nav.navbar-nav .dropdown-menu,
     .header-menu .nav.navbar-nav .dropdown-menu {
         background: #fff;
     }
