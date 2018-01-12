@@ -8,14 +8,15 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
             </div>
         </div>
     </div>
-    <section class="breadcrumbs">
-        <div class="container">
-            <ol class="breadcrumb">
-                <li><a href="/">Главная</a></li>
-                <li class="active">Туры по России</li>
-            </ol>
-        </div>
-    </section>
+<?$APPLICATION->IncludeComponent(
+    "bitrix:breadcrumb",
+    "",
+    Array(
+        "PATH" => "",
+        "SITE_ID" => "s1",
+        "START_FROM" => "0"
+    )
+);?>
     <div class="text__block__wrap">
         <? $APPLICATION->IncludeComponent(
             "bitrix:news.detail",

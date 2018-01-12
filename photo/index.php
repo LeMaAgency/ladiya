@@ -10,18 +10,19 @@ $APPLICATION->SetTitle("Фото");
             </div>
         </div>
     </div>
-    <section class="breadcrumbs">
-        <div class="container">
-            <ol class="breadcrumb">
-                <li><a href="/">Главная</a></li>
-                <li class="active">Туры по России</li>
-            </ol>
-        </div>
-    </section>
+<?$APPLICATION->IncludeComponent(
+    "bitrix:breadcrumb",
+    "",
+    Array(
+        "PATH" => "",
+        "SITE_ID" => "s1",
+        "START_FROM" => "0"
+    )
+);?>
     <div class="text__block__wrap">
         <? $APPLICATION->IncludeComponent("bitrix:news.list", "photo", Array(
             "ACTIVE_DATE_FORMAT" => "d.m.Y",    // Формат показа даты
-            "ADD_SECTIONS_CHAIN" => "N",    // Включать раздел в цепочку навигации
+            "ADD_SECTIONS_CHAIN" => "Y",    // Включать раздел в цепочку навигации
             "AJAX_MODE" => "N",    // Включить режим AJAX
             "AJAX_OPTION_ADDITIONAL" => "",    // Дополнительный идентификатор
             "AJAX_OPTION_HISTORY" => "N",    // Включить эмуляцию навигации браузера
