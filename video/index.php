@@ -6,17 +6,18 @@ $APPLICATION->SetTitle("Видео");
         <div class="text___block__images" style="background-image: url('/assets/img/carousel/5.png')">
             <div class="container">
                 <span class="text___block__images__title"><?= $APPLICATION->ShowTitle(); ?></span>
-                <? $APPLICATION->IncludeComponent(
-                    "bitrix:breadcrumb",
-                    "company",
-                    Array(
-                        "PATH" => "",
-                        "SITE_ID" => "s1",
-                        "START_FROM" => "0"
-                    )
-                ); ?>
+
             </div>
         </div>
+        <? $APPLICATION->IncludeComponent(
+            "bitrix:breadcrumb",
+            "",
+            Array(
+                "PATH" => "",
+                "SITE_ID" => "s1",
+                "START_FROM" => "0"
+            )
+        ); ?>
         <? $APPLICATION->IncludeComponent(
             "bitrix:news.list",
             "photo",
