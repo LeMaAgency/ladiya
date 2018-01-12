@@ -128,7 +128,7 @@
                     <div class="footer-address">
                         <div class="row">
                             <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
-                                <a class="button outline" href="#"><? includeArea('look_in_minimap'); ?></a>
+                                <a class="button outline" href="/kontakty/ ">Как проехать</a>
                             </div>
                             <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7">
                                 <p><? includeArea('address'); ?></p>

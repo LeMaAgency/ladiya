@@ -1479,6 +1479,8 @@ font-size: 18px;
     padding: 0 20px 10px;
     background-color: #F5F5F5;
 }
+
+
 .text__block table {
     width: 100%;
     background-color: #F5F5F5;
@@ -1539,7 +1541,7 @@ font-size: 18px;
         border-bottom: 0;
     }
 }
-
+.core__text table tr,
 .text__block table tr,
 .page__hotel__detail__table table tr {
     border: 1px solid #f15922;
@@ -1547,14 +1549,17 @@ font-size: 18px;
     background-color: white;
 }
 
+.core__text table th,
 .text__block table th,
 .page__hotel__detail__table table th,
+.core__text table td,
 .text__block table td ,
 .page__hotel__detail__table table td {
     padding: 11px 10px;
     color: #4e4b4b;
 }
 
+.core__text table th,
 .text__block table th ,
 .page__hotel__detail__table table th {
     font-size: 14px;
@@ -1572,7 +1577,6 @@ font-size: 18px;
     padding: 0;
     margin: 0}
 
-
 .text__block__wrap {
     background-color: #F5F5F5;
 }
@@ -1583,6 +1587,12 @@ font-size: 18px;
     text-align: justify;
     border: 5px solid #f0f1f3;
     border-width: 0 5px;
+}
+
+.core__text {
+    padding: 20px;
+    background: #fff;
+    text-align: justify;
 }
 
 .text___block__images {

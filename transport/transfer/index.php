@@ -320,147 +320,171 @@ while($ob = $places->GetNextElement())
                 <div class="col-xs-12 col-md-8 col-lg-8 results">
                     <div class="row">
                         <div class="col-sm-12">
+                            <div class="core__text">
+                                <h1>Трансфер</h1>
+                                <p><span style="font-weight: bold;">КАВКАЗСКИЕ МИНЕРАЛЬНЫЕ ВОДЫ<br><span><br>Условия встречи туристов</span> </span></p>
+
+                                <table class="tbc" cellspacing="0" cellpadding="0" border="0">
+                                    <tbody>
+                                    <tr><th>
+                                            <p><span style="font-weight: bold;">Прибытие</span></p>
+                                        </th><th>
+                                            <p><span style="font-weight: bold;">Место встречи</span></p>
+                                        </th><th>
+                                            <p><span style="font-weight: bold;">Табличка</span></p>
+                                        </th></tr>
+                                    <tr>
+                                        <td>
+                                            <p>Аэропорт</p>
+                                        </td>
+                                        <td>
+                                            <p>В зале прилета аэропорта</p>
+                                        </td>
+                                        <td>
+                                            <p>ЛАДЬЯ</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p>Ж/д вокзал</p>
+                                        </td>
+                                        <td>
+                                            <p>Около вагона</p>
+                                        </td>
+                                        <td>
+                                            <p>ЛАДЬЯ</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="3">
+                                            <p><strong>Индивидуальный трансфер</strong></p>
+                                        </td>
+                                    </tr>
+                                    <tr><th>
+                                            <p><span style="font-weight: bold;">Место встречи</span></p>
+                                        </th><th>
+                                            <p><span style="font-weight: bold;">Место назначения</span></p>
+                                        </th><th>
+                                            <p><span style="font-weight: bold;">стоимость за машину</span></p>
+                                        </th></tr>
+                                    <tr>
+                                        <td>
+                                            <p>От аэропорта Мин. Воды</p>
+                                        </td>
+                                        <td>
+                                            <p>Кисловодск</p>
+                                        </td>
+                                        <td>
+                                            <p>1200 руб.</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p>От аэропорта Мин. Воды</p>
+                                        </td>
+                                        <td>
+                                            <p>Пятигорск</p>
+                                        </td>
+                                        <td>
+                                            <p>800 &nbsp;руб.</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p>От аэропорта Мин. Воды</p>
+                                        </td>
+                                        <td>
+                                            <p>Железноводск</p>
+                                        </td>
+                                        <td>
+                                            <p>800 руб.</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p>От аэропорта Мин. Воды</p>
+                                        </td>
+                                        <td>
+                                            <p>Ессентуки</p>
+                                        </td>
+                                        <td>
+                                            <p>950&nbsp;руб.</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p>От ж/д вокзала г. Пятигорск</p>
+                                        </td>
+                                        <td>
+                                            <p>до санатория</p>
+                                        </td>
+                                        <td>
+                                            <p>200&nbsp;руб.</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p>От ж/д вокзала г.Железноводск<br>(станция Бештау)</p>
+                                        </td>
+                                        <td>
+                                            <p>до санатория</p>
+                                        </td>
+                                        <td>
+                                            <p>350 руб.</p>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
                             <div class="head">
-                                <div class="buttons hidden-xs">
-                                    <button class="list">
-                                        <span></span>
-                                        <span></span>
-                                    </button>
-                                    <a href="/hotel?VIEW=1">
-                                        <button class="grid">
-                                            <span></span>
-                                            <span></span>
-                                            <span></span>
-                                            <span></span>
-                                        </button>
-                                    </a>
-                                </div>
+<!--                                <div class="buttons hidden-xs">-->
+<!--                                    <button class="list">-->
+<!--                                        <span></span>-->
+<!--                                        <span></span>-->
+<!--                                    </button>-->
+<!--                                    <a href="/hotel?VIEW=1">-->
+<!--                                        <button class="grid">-->
+<!--                                            <span></span>-->
+<!--                                            <span></span>-->
+<!--                                            <span></span>-->
+<!--                                            <span></span>-->
+<!--                                        </button>-->
+<!--                                    </a>-->
+<!--                                </div>-->
                             </div>
                         </div>
                     </div>
-                    <div class="item-card">
-                        <div class="item-card__img">
-                            <img src="/local/templates/main/images/transfer-item/dolina-rose.png" alt="">
-                            <div class="item-card__img__name">Кисловодск</div>
-                        </div>
-                        <div class="item-card__content">
-                            <div class="item-card__content__info">Условия встречи:
-                                <span></span>
-                            </div>
-                            <div class="item-card__content__info">Табличка:
-                                <span class="item-card__content__info__upp">ЛАДЬЯ</span>
-                            </div>
-                            <div class="item-card__content__info">Место ожидания:
-                                <span>около вагона</span>
-                            </div>
-                            <div class="item-card__content__footer clearfix">
-                                <div class="item-card__content__price">Итоговая стоимость:
-                                    <span class="item-card__content__price__number"><span>1 200</span> руб</span>
-                                </div>
-                                <a href="" class="item-card__content__more"><span>отправить заявку</span></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item-card">
-                        <div class="item-card__img">
-                            <img src="/local/templates/main/images/transfer-item/kislovodsk1.png" alt="">
-                            <div class="item-card__img__name">Кисловодск</div>
-                        </div>
-                        <div class="item-card__content">
-                            <div class="item-card__content__info">Условия встречи:
-                                <span></span>
-                            </div>
-                            <div class="item-card__content__info">Табличка:
-                                <span class="item-card__content__info__upp">ЛАДЬЯ</span>
-                            </div>
-                            <div class="item-card__content__info">Место ожидания:
-                                <span>около вагона</span>
-                            </div>
-                            <div class="item-card__content__footer clearfix">
-                                <div class="item-card__content__price">Итоговая стоимость:
-                                    <span class="item-card__content__price__number"><span>1 200</span> руб</span>
-                                </div>
-                                <a href="" class="item-card__content__more"><span>отправить заявку</span></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item-card">
-                        <div class="item-card__img">
-                            <img src="/local/templates/main/images/transfer-item/kisl-2.png" alt="">
-                            <div class="item-card__img__name">Кисловодск</div>
-                        </div>
-                        <div class="item-card__content">
-                            <div class="item-card__content__info">Условия встречи:
-                                <span></span>
-                            </div>
-                            <div class="item-card__content__info">Табличка:
-                                <span class="item-card__content__info__upp">ЛАДЬЯ</span>
-                            </div>
-                            <div class="item-card__content__info">Место ожидания:
-                                <span>около вагона</span>
-                            </div>
-                            <div class="item-card__content__footer clearfix">
-                                <div class="item-card__content__price">Итоговая стоимость:
-                                    <span class="item-card__content__price__number"><span>1 200</span> руб</span>
-                                </div>
-                                <a href="" class="item-card__content__more"><span>отправить заявку</span></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item-card">
-                        <div class="item-card__img">
-                            <img src="/local/templates/main/images/transfer-item/items06.png" alt="">
-                            <div class="item-card__img__name">Кисловодск</div>
-                        </div>
-                        <div class="item-card__content">
-                            <div class="item-card__content__info">Условия встречи:
-                                <span></span>
-                            </div>
-                            <div class="item-card__content__info">Табличка:
-                                <span class="item-card__content__info__upp">ЛАДЬЯ</span>
-                            </div>
-                            <div class="item-card__content__info">Место ожидания:
-                                <span>около вагона</span>
-                            </div>
-                            <div class="item-card__content__footer clearfix">
-                                <div class="item-card__content__price">Итоговая стоимость:
-                                    <span class="item-card__content__price__number"><span>1 200</span> руб</span>
-                                </div>
-                                <a href="" class="item-card__content__more"><span>отправить заявку</span></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item-card">
-                        <div class="item-card__img">
-                            <img src="/local/templates/main/images/transfer-item/img-1.png" alt="">
-                            <div class="item-card__img__name">Кисловодск</div>
-                        </div>
-                        <div class="item-card__content">
-                            <div class="item-card__content__info">Условия встречи:
-                                <span></span>
-                            </div>
-                            <div class="item-card__content__info">Табличка:
-                                <span class="item-card__content__info__upp">ЛАДЬЯ</span>
-                            </div>
-                            <div class="item-card__content__info">Место ожидания:
-                                <span>около вагона</span>
-                            </div>
-                            <div class="item-card__content__footer clearfix">
-                                <div class="item-card__content__price">Итоговая стоимость:
-                                    <span class="item-card__content__price__number"><span>1 200</span> руб</span>
-                                </div>
-                                <a href="" class="item-card__content__more"><span>отправить заявку</span></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="pagination-base">
-                        <nav aria-label="Page navigation">
-                            <ul class="pagination">
-                                <li class="active"><a href="#">1</a></li>
-                                <li><a href="#">2</a></li>
-                            </ul>
-                        </nav>
-                    </div>
+
+<!--                    <div class="item-card">-->
+<!--                        <div class="item-card__img">-->
+<!--                            <img src="/local/templates/main/images/transfer-item/img-1.png" alt="">-->
+<!--                            <div class="item-card__img__name">Кисловодск</div>-->
+<!--                        </div>-->
+<!--                        <div class="item-card__content">-->
+<!--                            <div class="item-card__content__info">Условия встречи:-->
+<!--                                <span></span>-->
+<!--                            </div>-->
+<!--                            <div class="item-card__content__info">Табличка:-->
+<!--                                <span class="item-card__content__info__upp">ЛАДЬЯ</span>-->
+<!--                            </div>-->
+<!--                            <div class="item-card__content__info">Место ожидания:-->
+<!--                                <span>около вагона</span>-->
+<!--                            </div>-->
+<!--                            <div class="item-card__content__footer clearfix">-->
+<!--                                <div class="item-card__content__price">Итоговая стоимость:-->
+<!--                                    <span class="item-card__content__price__number"><span>1 200</span> руб</span>-->
+<!--                                </div>-->
+<!--                                <a href="" class="item-card__content__more"><span>отправить заявку</span></a>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="pagination-base">-->
+<!--                        <nav aria-label="Page navigation">-->
+<!--                            <ul class="pagination">-->
+<!--                                <li class="active"><a href="#">1</a></li>-->
+<!--                                <li><a href="#">2</a></li>-->
+<!--                            </ul>-->
+<!--                        </nav>-->
+<!--                    </div>-->
                 </div>
             </div>
         </div>
