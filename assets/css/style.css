@@ -901,8 +901,11 @@ a:after {
 }
 
 .nav > li > a {
-    padding: 18px;
+    padding: 20px;
     font-size: 14px;
+}
+.icon-menu .nav > li > a {
+    padding: 18px;
 }
 
 @media (min-width: 768px) {
@@ -937,7 +940,7 @@ a:after {
 
 .main-menu .nav > li > a,
 .main-menu .nav > li > span {
-    padding: 30px 10px;
+    padding: 30px 10px 13px;
     font-size: 15px;
     color: #2A2A2A;
     text-transform: uppercase;

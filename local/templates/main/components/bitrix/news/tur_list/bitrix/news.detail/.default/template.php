@@ -466,7 +466,12 @@ $this->setFrameMode(true);
 
                 <div class="row addtional-buttons">
                     <div class="col-xs-12 col-sm-6">
-                        <a href="#" class="booking"><?= Loc::getMessage('TOUR_ORDER_BTN_TITLE'); ?></a>
+                        <a href="#popup__form" class="booking"><?= Loc::getMessage('TOUR_ORDER_BTN_TITLE'); ?></a>
+                        <div id="popup__form" class="popup">
+                            <div class="popup__form">
+                                <div class=""
+                            </div>
+                        </div>
                     </div>
                     <? if (!empty($arResult['PROPERTIES']['FULL_PROGRAMM']['VALUE_SRC'])): ?>
                         <div class="col-xs-12 col-sm-6">
