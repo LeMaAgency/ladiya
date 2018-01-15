@@ -33,7 +33,11 @@ $this->setFrameMode(true);
 <!--    </div>-->
 <!--</div>-->
 
-
+<? if(!empty($arResult['DISPLAY_PROPERTIES']['ELEM_HEAD_PICTURE'])):?>
+    <? $this->SetViewTarget('detail_head_pic');?>
+        <?=$arResult['DISPLAY_PROPERTIES']['ELEM_HEAD_PICTURE']['FILE_VALUE']['SRC']?>
+    <? $this->EndViewTarget();?>
+<?endif;?>
 <section class="content-page">
     <div class="container">
         <div class="row">

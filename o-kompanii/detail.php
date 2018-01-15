@@ -1,7 +1,7 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 ?>
-    <div class="head-img head-img_transport">
+    <div class="head-img head-img_transport" style="background-image: url('<?$APPLICATION->ShowViewContent('detail_head_pic')?>')">
         <div class="lad-slideshow__block-title">
             <h1 class="lad-slideshow__block-title__h1"><?=$APPLICATION->ShowTitle(false);?></h1>
         </div>
@@ -61,7 +61,9 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 		"PAGER_TITLE" => "Страница",
 		"PROPERTY_CODE" => array(
 			0 => "",
-			1 => "",
+			1 => "ELEM_HEAD_PICTURE",
+			2 => "",
+			3 => "",
 		),
 		"SET_BROWSER_TITLE" => "N",
 		"SET_CANONICAL_URL" => "N",

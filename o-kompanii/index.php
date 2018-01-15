@@ -3,7 +3,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 $APPLICATION->SetTitle("О компании");
 ?>
     <div class="text__block__wrap">
-        <div class="text___block__images" style="background-image: url('/assets/img/carousel/5.png')">
+        <div class="text___block__images" <?$APPLICATION->ShowViewContent('head_pic')?>>
             <div class="container">
                 <span class="text___block__images__title"><?= $APPLICATION->ShowTitle(); ?></span>
             </div>
@@ -67,7 +67,9 @@ $APPLICATION->SetTitle("О компании");
 		"PROPERTY_CODE" => array(
 			0 => "TITLE_PREVIEW_DESCRIPTION",
 			1 => "TEXT_BUTTON",
-			2 => "",
+			2 => "PAGE_HEAD_PICTURE",
+			3 => "ELEM_HEAD_PICTURE",
+			4 => "",
 		),
 		"SET_BROWSER_TITLE" => "N",
 		"SET_LAST_MODIFIED" => "N",
