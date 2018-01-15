@@ -52,9 +52,13 @@ $arSectionDeleteParams = array("CONFIRM" => GetMessage('CT_BCSL_ELEMENT_DELETE_C
         $this->AddEditAction($arSection['ID'], $arSection['EDIT_LINK'], $strSectionEdit);
         $this->AddDeleteAction($arSection['ID'], $arSection['DELETE_LINK'], $strSectionDelete, $arSectionDeleteParams);
         ?>
-<!--        <pre>-->
-<!--           --><?// var_dump($arSection)?>
-<!--        </pre>-->
+        <? if ($arSection['SORT']==1):?>
+            <? $this->SetViewTarget('head_pic');?>
+                <?echo "style=\"background-image:url(".$arSection['PICTURE']['SRC'].")\""?>
+                <?echo "id=\"".$this->GetEditAreaId($arSection['ID'])."\""?>
+            <? $this->EndViewTarget();?>
+        <?endif;?>
+        <? if($arSection['SORT']!=1):?>
         <div class="transport-item" id="<? echo $this->GetEditAreaId($arSection['ID']); ?>">
             <div class="container">
                 <div class="row">
@@ -76,6 +80,7 @@ $arSectionDeleteParams = array("CONFIRM" => GetMessage('CT_BCSL_ELEMENT_DELETE_C
                 </div>
             </div>
         </div>
+        <?endif;?>
 
     <? endforeach; ?>
     <? if ($arParams["DISPLAY_BOTTOM_PAGER"]): ?>

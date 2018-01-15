@@ -122,7 +122,8 @@ $APPLICATION->SetTitle("О Кавказе");
 		"LIST_SLIDER_PROGRESS" => "N",
 		"DETAIL_PROPERTY_CODE" => array(
 			0 => "",
-			1 => "",
+			1 => "ELEM_HEAD_PICTURE",
+			2 => "",
 		),
 		"DETAIL_META_KEYWORDS" => "-",
 		"DETAIL_META_DESCRIPTION" => "-",
@@ -133,6 +134,7 @@ $APPLICATION->SetTitle("О Кавказе");
 		"DETAIL_BACKGROUND_IMAGE" => "-",
 		"SHOW_DEACTIVATED" => "N",
 		"DETAIL_MAIN_BLOCK_PROPERTY_CODE" => array(
+			0 => "ELEM_HEAD_PICTURE",
 		),
 		"DETAIL_USE_VOTE_RATING" => "N",
 		"DETAIL_USE_COMMENTS" => "N",

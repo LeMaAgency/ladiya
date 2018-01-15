@@ -17,8 +17,10 @@ $this->setFrameMode(true);
 
 ?>
 
-
-
+<? $this->SetViewTarget('head_pic');?>
+    <?echo "style=\"background-image:url(".CFile::GetPath($arResult['PROPERTIES']['ELEM_HEAD_PICTURE']['VALUE']).")\""?>
+    <?echo "id=\"".$this->GetEditAreaId($arResult['ID'])."\""?>
+<? $this->EndViewTarget();?>
     <div class="container">
         <div class="text__block">
             <? if ($arParams["DISPLAY_PICTURE"] != "N" && is_array($arResult["DETAIL_PICTURE"])): ?>
