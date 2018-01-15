@@ -142,7 +142,12 @@ $generalParams = array(
 );
 
 ?>
+<? $this->SetViewTarget('head_pic');?>
+    <?echo "style=\"background-image:url(".$arResult['DETAIL_PICTURE']['SRC'].")\""?>
+    <?echo "id=\"".$this->GetEditAreaId($arResult['ID'])."\""?>
+<? $this->EndViewTarget();?>
 
+<? var_dump($arResult['DETAIL_PICTURE']['SRC'])?>
 <section class="content-page">
     <? foreach ($arResult['ITEMS'] as $ikey=>$item): ?>
         <?
