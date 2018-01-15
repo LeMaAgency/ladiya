@@ -27,7 +27,7 @@ $this->setFrameMode(true);
                 <?echo "id=\"".$this->GetEditAreaId($arItem['ID'])."\""?>
             <? $this->EndViewTarget();?>
         <?endif;?>
-        <? if($arItem['PROPERTIES']['PAGE_HEAD_PICTURE']['VALUE']!= 'Да'):?>
+        <? if($arItem['PROPERTIES']['PAGE_HEAD_PICTURE']['VALUE']!= 'true'):?>
             <div class="transport-item" id="<?= $this->GetEditAreaId($arItem['ID']); ?>">
                 <div class="container">
                     <div class="row">
