@@ -182,6 +182,9 @@
                         <a href="#" class="i-facebook"></a>
                         <a href="#" class="i-vkontakte"></a>
                     </div>
+                    <div class="footer-social-lema">
+                        <span>© ООО ТК "Ладья" 2017 <br>Копирование материалов сайта запрещено</span>
+                    </div>
                 </div>
             </div>
         </div>
