@@ -2688,3 +2688,125 @@ input.filter__button {padding-bottom: 15px !important;}
         background: #fff;
     }
 }
+
+.news__list {
+    width: 100%;
+    clear: both;
+    overflow: hidden;
+}
+.news__list__item {
+    width: 50%;
+    float: left;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+.news__list__item__wrap {
+    text-align: left;
+    float: left;
+    width: 100%;
+}
+.news__list__item__wrap__left {
+    float: left;
+    width: 40%;
+}
+.news__list__item__wrap__right {
+    float: left;
+    width: 60%;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.news__list__item__img {}
+.news__list__item__img__control {
+    max-width: 100%;
+}
+.news__list__item__title {
+    padding: 10px 0 7px;
+    display: inline-block;
+    margin-right: 10px;
+}
+.news__list__item__title__control {
+    font-size: 19px;
+    text-transform: uppercase;
+    color: #000;
+    font-weight: bold;
+}
+.news__list__item__date {
+    margin-top: 5px;
+    display: inline-block;
+}
+.news__list__item__date__control {
+    font-size: 12px;
+    color: #9e9e9e;
+}
+.news__list__item__text {
+    overflow: hidden;
+    max-height: 80px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.news__list__item__btn {}
+.news__list__item__btn__control {
+    margin: 0;
+    font-size: 14px;
+    padding: 10px 20px 8px;
+    border: 1px solid transparent;
+}
+.news__list__item__btn__control:hover {
+    text-decoration: none;
+    background: #fff;
+    border: 1px solid #f15922;
+    color: #f15922;
+}
+@media (max-width: 1000px) {
+    .news__list__item {
+        width: 100%;
+    }
+    .news__list__item__wrap__left ,
+    .news__list__item__wrap__right {
+        width: 100%;
+        padding: 0;
+    }
+}
+.news__detail {}
+.news__detail__img {}
+.news__detail__img__control {
+    max-width: 100%;
+}
+.news__detail__title {
+    text-align: center;
+    padding: 10px 0 7px;
+}
+.news__detail__title__control {
+    font-size: 30px;
+    text-transform: uppercase;
+    color: #000;
+    font-weight: bold;
+}
+.news__detail__date {
+    margin-bottom: 5px;
+    text-align: center;
+}
+.news__detail__date__control {
+    font-size: 12px;
+    color: #9e9e9e;
+}
+.news__detail__text {
+    overflow: hidden;
+    max-height: 80px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.news__detail__btn {}
+.news__detail__btn__control {
+    margin: 0;
+    font-size: 14px;
+    padding: 10px 20px 8px;
+    border: 1px solid transparent;
+    margin-bottom: 50px;
+}
+.news__detail__btn__control:hover {
+    text-decoration: none;
+    background: #fff;
+    border: 1px solid #f15922;
+    color: #f15922;
+}
