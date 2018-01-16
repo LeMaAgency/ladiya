@@ -15,5 +15,5 @@ $this->setFrameMode(true);
 
 <? $this->SetViewTarget('head_pic');?>
     <?echo "style=\"background-image:url(".$arResult['PREVIEW_PICTURE']['SRC'].")\""?>
-<!--    --><?//echo "id=\"".$this->GetEditAreaId($arItem['ID'])."\""?>
+    <?//echo "id=\"".$this->GetEditAreaId($arItem['ID'])."\""?>
 <? $this->EndViewTarget();?>
