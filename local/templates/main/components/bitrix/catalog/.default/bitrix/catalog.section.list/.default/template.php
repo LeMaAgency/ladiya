@@ -54,7 +54,7 @@ $arSectionDeleteParams = array("CONFIRM" => GetMessage('CT_BCSL_ELEMENT_DELETE_C
         ?>
         <? if ($arSection['SORT']==1):?>
             <? $this->SetViewTarget('head_pic');?>
-                <?echo "style=\"background-image:url(".$arSection['PICTURE']['SRC'].")\""?>
+                <?echo "style=\"background-image:url(".CFile::GetPath($arSection['DETAIL_PICTURE']).")\""?>
                 <?echo "id=\"".$this->GetEditAreaId($arSection['ID'])."\""?>
             <? $this->EndViewTarget();?>
         <?endif;?>
