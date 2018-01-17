@@ -49,16 +49,16 @@ $arUrlRewrite = array(
 		"PATH" => "/hotel/index.php",
 	),
 	array(
-		"CONDITION" => "#^/tours/#",
-		"RULE" => "",
-		"ID" => "bitrix:news",
-		"PATH" => "/tours/index.php",
-	),
-	array(
 		"CONDITION" => "#^/o-kmv/#",
 		"RULE" => "",
 		"ID" => "bitrix:catalog",
 		"PATH" => "/o-kmv/index.php",
+	),
+	array(
+		"CONDITION" => "#^/tours/#",
+		"RULE" => "",
+		"ID" => "bitrix:news",
+		"PATH" => "/tours/index.php",
 	),
 );
 
