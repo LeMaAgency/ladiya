@@ -2,7 +2,7 @@
 $aMenuLinks = Array(
 	Array(
 		"Online бронирование", 
-		"#", 
+		"/ekskursii/online-bronirovanie/", 
 		Array(), 
 		Array(), 
 		"" 
