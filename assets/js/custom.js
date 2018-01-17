@@ -413,7 +413,7 @@ $(function () {
     })
 });
 /** Автоматическая прокрутка слайдера **/
-/*$(function() {
+$(function() {
     window.sliderIntervalTime = 3000;
     function func() {
         $('a.slider-control.right').click();
@@ -429,4 +429,4 @@ $(function () {
             function () {
                 window.intervalID_TWO = setInterval(func,window.sliderIntervalTime);
             });
-});*/
+});
