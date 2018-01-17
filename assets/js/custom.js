@@ -277,6 +277,8 @@ $(document).ready(function () {
 
     /** Конец скриптов **/
 });
+
+
 var coreJsSwitchElement = {
     init: function () {
         // Переменные
@@ -410,3 +412,21 @@ $(function () {
         return false;
     })
 });
+/** Автоматическая прокрутка слайдера **/
+/*$(function() {
+    window.sliderIntervalTime = 3000;
+    function func() {
+        $('a.slider-control.right').click();
+    }
+    window.intervalID_ONE = setInterval(func,window.sliderIntervalTime);
+
+        $('.slider.carousel-inner').mouseover(
+             function() {
+                 clearInterval(window.intervalID_ONE);
+                 clearInterval(window.intervalID_TWO);
+            }
+        ).mouseout(
+            function () {
+                window.intervalID_TWO = setInterval(func,window.sliderIntervalTime);
+            });
+});*/

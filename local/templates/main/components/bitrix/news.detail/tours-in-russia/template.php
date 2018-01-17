@@ -12,6 +12,13 @@
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 ?>
+
+<? if(!empty($arResult['PROPERTIES']['ELEM_HEAD_PICTURE']['VALUE'])):?>
+    <? $this->SetViewTarget('head_pic');?>
+    <?echo "style=\"background-image:url(".CFile::GetPath($arResult['PROPERTIES']['ELEM_HEAD_PICTURE']['VALUE']).")\""?>
+    <? $this->EndViewTarget();?>
+<?endif;?>
+
 <div class="text__block__wrap">
     <div class="container">
         <div class="text__block">
