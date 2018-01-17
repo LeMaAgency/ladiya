@@ -14,7 +14,7 @@ $this->setFrameMode(true);
 if(empty($arResult['ITEMS']))
     return;
 ?>
-<ul class="slider carousel-inner">
+<ul class="slider carousel-inner" id="reviewsSlider">
     <?
     $count = 0;
     $first = true;
@@ -27,7 +27,10 @@ if(empty($arResult['ITEMS']))
                 <span class="author"><?=$arItem['NAME']?></span>
                 <? if (!empty($arItem['PROPERTIES']['CITY']['VALUE'])) { ?><span class="city"><?=$arItem['PROPERTIES']['CITY']['VALUE']?></span><? } ?>
                 <span class="text"><?=$arItem['PREVIEW_TEXT']?></span>
-                <? if (!empty($arItem['DISPLAY_ACTIVE_FROM'])) { ?><span class="data"><?=$arItem['DISPLAY_ACTIVE_FROM']?></span><? } ?>
+                <span class="data"> 
+                    <? if (!empty($arItem['DISPLAY_ACTIVE_FROM']))?>
+                        <?=$arItem['DISPLAY_ACTIVE_FROM'];?>
+                </span>
             </div>
         </li>
         <? $count++;?>
