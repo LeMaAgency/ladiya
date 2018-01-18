@@ -449,7 +449,7 @@ $(function() {
         BX.showWait(waitElement);
 
         $.ajax({
-            method: curForm.attr('method'),
+            type: curForm.attr('method'),
             url: curForm.attr('action'),
             dataType: 'json',
             data: formData,
