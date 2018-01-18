@@ -45,6 +45,7 @@ if($form->validate())
         'TOUR_ORDER_REQUEST',
         //email send params
         array(
+            'NAME' => Helper::enc($form->getField('name')),
             'PHONE' => $form->getField('phone'),
             'DATE' => $form->getField('date'),
             'HOTEL_NAME' => $form->getField('hotel_name'),
