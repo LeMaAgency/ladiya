@@ -4,7 +4,6 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/bitrix/modules/main/include/prolog_be
 
 use \WM\Common\Helper;
 
-var_dump($_POST);
 //Is POST data sent ?
 empty($_POST) && exit;
 
