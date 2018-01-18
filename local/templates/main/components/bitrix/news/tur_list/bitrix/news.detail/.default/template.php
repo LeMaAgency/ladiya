@@ -756,3 +756,37 @@ $this->setFrameMode(true);
     <? endif; ?>
 
 </div>
+<div id="popup__form" class="popup">
+    <div class="popup__form">
+        <div class="popup__bron">
+            <div class="popup__bron__title">
+                Чтобы забронировать поездку заполните поля ниже
+            </div>
+            <div class="popup__bron__text">
+                Мы с Вами свяжемся в ближайшее время
+            </div>
+            <div class="popup__bron__bottom">
+                <form class="form__go js-tour-request" action="/ajax/tour-order.php" name="form__go" method="post">
+                    <input type="hidden" id="tour_order_id" value="">
+                    <div class="popup__bron__bottom__left">
+                        <div class="core__input">
+                            <input class="core__input__control" placeholder="Введите Ваше имя">
+                            <div class="core__input__log"></div>
+                        </div>
+                        <div class="core__input">
+                            <input class="core__input__control" placeholder="Введите Ваш телефон">
+                            <div class="core__input__log"></div>
+                        </div>
+                        <button type="submit" name="submit">Жду звонка</button>
+                    </div>
+                    <div class="popup__bron__bottom__right">
+                        <p>
+                            <input type="checkbox" name="privacy">
+                            <a href="/privacy.html" target="_blank">Я согласен на обработку персональных данных</a>
+                        </p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
