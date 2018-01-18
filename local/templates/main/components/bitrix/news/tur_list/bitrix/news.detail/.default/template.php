@@ -770,11 +770,11 @@ $this->setFrameMode(true);
                     <input type="hidden" id="tour_order_id" value="">
                     <div class="popup__bron__bottom__left">
                         <div class="core__input">
-                            <input class="core__input__control" placeholder="Введите Ваше имя">
+                            <input name="name" class="core__input__control" placeholder="Введите Ваше имя">
                             <div class="core__input__log"></div>
                         </div>
                         <div class="core__input">
-                            <input class="core__input__control" placeholder="Введите Ваш телефон">
+                            <input name="phone" class="core__input__control" placeholder="Введите Ваш телефон">
                             <div class="core__input__log"></div>
                         </div>
                         <button type="submit" name="submit">Жду звонка</button>
