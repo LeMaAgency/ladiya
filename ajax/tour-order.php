@@ -9,7 +9,7 @@ empty($_POST) && exit;
 
 //set rules & fields for form
 $form = new \WM\Forms\AjaxForm(array(
-        array('name', 'required', array('message' => 'Имя и фамилия обязательны к заполнению')),
+        array('name', 'required', array('message' => 'Имя обязательно к заполнению')),
         array('phone', 'required', array('message' => 'Телефон обязателен к заполнению')),
         array('phone', 'phone', array('message' => 'Телефон должен быть в формате +7 (999) 666-33-11')),
         //array('section', 'required', array('message' => 'Раздел обязателен к заполнению')),
