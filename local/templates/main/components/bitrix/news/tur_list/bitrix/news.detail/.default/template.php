@@ -769,18 +769,18 @@ $this->setFrameMode(true);
                 <form class="form__go js-tour-request" action="/ajax/tour-order.php" method="post">
                     <input type="hidden" id="tour_order_id" value="">
                     <div class="popup__bron__bottom__left">
-                        <div class="core__input">
+                        <div class="core__input js-field-block">
                             <input name="name" class="core__input__control" placeholder="Введите Ваше имя">
                             <div class="core__input__log"></div>
                         </div>
-                        <div class="core__input">
+                        <div class="core__input js-field-block">
                             <input name="phone" class="core__input__control" placeholder="Введите Ваш телефон">
                             <div class="core__input__log"></div>
                         </div>
                         <button type="submit" name="submit">Жду звонка</button>
                     </div>
                     <div class="popup__bron__bottom__right">
-                        <p>
+                        <p class="js-field-block">
                             <input type="checkbox" name="privacy">
                             <a href="/privacy.html" target="_blank">Я согласен на обработку персональных данных</a>
                             <span class="core__input__log"></span>

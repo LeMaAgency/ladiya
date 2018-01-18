@@ -468,7 +468,7 @@ $(function() {
                     for (var inputName in ans.errors) {
                         curForm
                             .find('[name="' + inputName + '"]')
-                            .closest('.core__input')
+                            .closest('.js-field-block')
                             .find('.core__input__log')
                             .html(ans['errors'][inputName]);
                     }
