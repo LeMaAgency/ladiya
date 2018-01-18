@@ -429,4 +429,65 @@ $(function() {
             function () {
                 window.intervalID_TWO = setInterval(func,window.sliderIntervalTime);
             });
+
+    //ajax handler for request form
+    $('form.js-tour-request').on('submit', function (e) {
+
+        e.preventDefault();
+
+        var curForm = $(this),
+            formData = new FormData(curForm.get(0)),
+            waitElement = curForm.find('input[type="submit"], button[type="submit"]').get(0);
+
+        var el = $('tr[data-id="' + $('#tour_order_id').val() + '"]').first();
+
+        formData.append('date', el.find('.js-tour-date').text());
+        formData.append('hotel_name', el.find('.js-tour-hotel').text());
+        formData.append('room_type', el.find('.js-tour-room-type').text());
+        formData.append('cost', el.find('.js-tour-cost').text());
+
+        BX.showWait(waitElement);
+
+        $.ajax({
+            method: curForm.attr('method'),
+            url: curForm.attr('action'),
+            dataType: 'json',
+            data: formData,
+            async: false,
+            cache: false,
+            processData: false,
+            contentType: false,
+            success: function (ans) {
+
+                BX.closeWait(waitElement);
+
+                curForm.find('.core__input__log').empty();
+
+                if (ans && ans['errors']) {
+                    //show errors on inputs
+                    for (var inputName in ans.errors) {
+                        curForm
+                            .find('[name="' + inputName + '"]')
+                            .closest('.core__input')
+                            .find('.core__input__log')
+                            .html(ans['errors'][inputName]);
+                    }
+                    //show message with errors
+                    $.fancybox.open(
+                        '<div style="margin:25px;padding:35px;color:red;">' +
+                        '<b>Пожалуйста, исправьте следующие ошибки:</b><br><br>' +
+                        $.map(ans.errors, function (e) {
+                            return e;
+                        }).join('<br>') +
+                        '</div>'
+                    )
+                }
+                else {
+                    //show success message
+                    $.fancybox.open('<div style="margin:25px;padding:35px;color:green;text-align:center;">Ваша заявка принята</div>');
+                }
+            }
+        });
+        return false;
+    });
 });

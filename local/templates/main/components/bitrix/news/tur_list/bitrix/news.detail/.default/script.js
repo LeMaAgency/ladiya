@@ -12,6 +12,12 @@ $(function() {
             $('.js-ajax-filter-search').html(ans);
 
             BX.closeWait(waitElement);
+
+            $('.reservation_btn').on('click', function(e) {
+                e.preventDefault();
+                $('#tour_order_id').val($(this).closest('tr').data('id'));
+                $.fancybox.open($('#popup__form'));
+            });
         });
     })
 });
