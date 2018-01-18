@@ -21,7 +21,7 @@ $form = new \WM\Forms\AjaxForm(array(
     ),
     $_POST
 );
-
+var_dump($form->validate());
 //check form fields
 if($form->validate())
 {
@@ -33,7 +33,6 @@ if($form->validate())
         //iblock add params
         array(
             'NAME' => Helper::enc($form->getField('name')),
-            'CODE' => \CUtil::translit(Helper::enc($form->getField('company_name')), 'RU'),
             'PROPERTY_VALUES' => array(
                 'PHONE' => $form->getField('phone'),
                 'DATE' => $form->getField('date'),
