@@ -10,13 +10,18 @@ $APPLICATION->SetTitle("Новости");
     //'/assets/js/bootstrap.js',
     '/assets/js/scripts.js',
 ));
-?><div class="text__block__wrap">
-	 <?$APPLICATION->ShowViewContent('head_pic')?>
-</div>
+?>
+    <div class="text__block__wrap">
+        <div class="text___block__images" <?$APPLICATION->ShowViewContent('head_pic')?>>
+            <div class="container">
+                <span class="text___block__images__title">Новости</span>
+            </div>
+        </div>
+    </div>
  <?$APPLICATION->IncludeComponent(
-	"bitrix:photo.detail",
-	"pages_head_picture",
-	Array(
+	"bitrix:photo.detail", 
+	"pages_head_picture", 
+	array(
 		"AJAX_MODE" => "N",
 		"AJAX_OPTION_ADDITIONAL" => "",
 		"AJAX_OPTION_HISTORY" => "N",
@@ -29,16 +34,22 @@ $APPLICATION->SetTitle("Новости");
 		"COMPONENT_TEMPLATE" => "pages_head_picture",
 		"DETAIL_URL" => "",
 		"ELEMENT_CODE" => "",
-		"ELEMENT_ID" => "188",
+		"ELEMENT_ID" => "113",
 		"ELEMENT_SORT_FIELD" => "sort",
 		"ELEMENT_SORT_ORDER" => "asc",
-		"FIELD_CODE" => array(0=>"",1=>"",),
+		"FIELD_CODE" => array(
+			0 => "",
+			1 => "",
+		),
 		"IBLOCK_ID" => "25",
 		"IBLOCK_TYPE" => "content",
 		"MESSAGE_404" => "",
 		"META_DESCRIPTION" => "-",
 		"META_KEYWORDS" => "-",
-		"PROPERTY_CODE" => array(0=>"",1=>"",),
+		"PROPERTY_CODE" => array(
+			0 => "",
+			1 => "",
+		),
 		"SECTION_CODE" => "",
 		"SECTION_ID" => "",
 		"SECTION_URL" => "",
@@ -46,7 +57,8 @@ $APPLICATION->SetTitle("Новости");
 		"SET_STATUS_404" => "N",
 		"SET_TITLE" => "N",
 		"SHOW_404" => "N"
-	)
+	),
+	false
 );?> <?$APPLICATION->IncludeComponent(
 	"bitrix:breadcrumb",
 	".default",
