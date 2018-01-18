@@ -24,7 +24,7 @@ $APPLICATION->SetTitle("Отзывы");
 		"CACHE_TYPE" => "A",
 		"DETAIL_URL" => "",
 		"ELEMENT_CODE" => "",
-		"ELEMENT_ID" => "110",
+		"ELEMENT_ID" => "188",
 		"ELEMENT_SORT_FIELD" => "sort",
 		"ELEMENT_SORT_ORDER" => "asc",
 		"FIELD_CODE" => array(
