@@ -439,7 +439,7 @@ $(function() {
             formData = new FormData(curForm.get(0)),
             waitElement = curForm.find('input[type="submit"], button[type="submit"]').get(0);
 
-        var el = $('tr[data-id="' + $('input[name="tour_order_id"]').val() + '"]').first();
+        var el = $('tr[data-id="' + $('#tour_order_id').val() + '"]').first();
 
         formData.append('date', el.find('.js-tour-date').text());
         formData.append('hotel_name', el.find('.js-tour-hotel').text());
@@ -448,7 +448,7 @@ $(function() {
 
         BX.showWait(waitElement);
 
-        $.post($(this).attr('action'), $(this).serialize(), function (ans) {
+        $.post($(this).attr('action'), formData, function (ans) {
 
             BX.closeWait(waitElement);
 
