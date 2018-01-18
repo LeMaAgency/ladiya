@@ -448,37 +448,46 @@ $(function() {
 
         BX.showWait(waitElement);
 
-        $.post($(this).attr('action'), formData, function (ans) {
+        $.ajax({
+            method: curForm.attr('method'),
+            url: curForm.attr('action'),
+            dataType: 'json',
+            data: formData,
+            async: false,
+            cache: false,
+            processData: false,
+            contentType: false,
+            success: function (ans) {
 
-            BX.closeWait(waitElement);
+                BX.closeWait(waitElement);
 
-            curForm.find('.core__input__log').empty();
+                curForm.find('.core__input__log').empty();
 
-            if (ans && ans['errors']) {
-                //show errors on inputs
-                for (var inputName in ans.errors) {
-                    curForm
-                        .find('[name="' + inputName + '"]')
-                        .closest('.core__input')
-                        .find('.core__input__log')
-                        .html(ans['errors'][inputName]);
+                if (ans && ans['errors']) {
+                    //show errors on inputs
+                    for (var inputName in ans.errors) {
+                        curForm
+                            .find('[name="' + inputName + '"]')
+                            .closest('.core__input')
+                            .find('.core__input__log')
+                            .html(ans['errors'][inputName]);
+                    }
+                    //show message with errors
+                    $.fancybox.open(
+                        '<div style="margin:25px;padding:35px;color:red;">' +
+                        '<b>Пожалуйста, исправьте следующие ошибки:</b><br><br>' +
+                        $.map(ans.errors, function (e) {
+                            return e;
+                        }).join('<br>') +
+                        '</div>'
+                    )
                 }
-                //show message with errors
-                $.fancybox.open(
-                    '<div style="margin:25px;padding:35px;color:red;">' +
-                    '<b>Пожалуйста, исправьте следующие ошибки:</b><br><br>' +
-                    $.map(ans.errors, function (e) {
-                        return e;
-                    }).join('<br>') +
-                    '</div>'
-                )
+                else {
+                    //show success message
+                    $.fancybox.open('<div style="margin:25px;padding:35px;color:green;text-align:center;">Ваша заявка принята</div>');
+                }
             }
-            else {
-                //show success message
-                $.fancybox.open('<div style="margin:25px;padding:35px;color:green;text-align:center;">Ваша заявка принята</div>');
-            }
-
-        }, 'json');
+        });
         return false;
     });
 });
