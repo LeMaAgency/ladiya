@@ -766,7 +766,7 @@ $this->setFrameMode(true);
                 Мы с Вами свяжемся в ближайшее время
             </div>
             <div class="popup__bron__bottom">
-                <form class="form__go js-tour-request" action="/ajax/tour-order.php" name="form__go" method="post">
+                <form class="form__go js-tour-request" action="/ajax/tour-order.php" method="post">
                     <input type="hidden" id="tour_order_id" value="">
                     <div class="popup__bron__bottom__left">
                         <div class="core__input">
