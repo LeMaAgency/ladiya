@@ -783,6 +783,7 @@ $this->setFrameMode(true);
                         <p>
                             <input type="checkbox" name="privacy">
                             <a href="/privacy.html" target="_blank">Я согласен на обработку персональных данных</a>
+                            <span class="core__input__log"></span>
                         </p>
                     </div>
                 </form>
