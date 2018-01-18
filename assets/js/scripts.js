@@ -68,6 +68,10 @@ $(document).ready(function(){
             $('.range .max').text(ui.values[1]);
         }
     });
+
+    $('#bron__btn').click(function () {
+        $('[aria-controls="price"]').trigger('click');
+    });
 });
 
 // MAP

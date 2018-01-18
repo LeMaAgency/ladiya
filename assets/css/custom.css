@@ -2821,3 +2821,68 @@ input.filter__button {padding-bottom: 15px !important;}
     font-size: 30px !important;
     text-align: center;
 }
+
+.popup {display: none}
+
+
+.popup__bron {
+    padding: 10px;
+    text-align: center;
+}
+.popup__bron__title {
+    font-size: 16px;
+    font-weight: bold;
+}
+.popup__bron__text {
+    margin-bottom: 10px;
+}
+.popup__bron__bottom__left input {
+    width: 234px;
+    height: 36px;
+    margin: 15px 8px;
+    padding: 20px;
+    color: #333333;
+    font-size: 13px;
+    font-weight: 400;
+    outline: none;
+}
+
+.popup__bron__bottom button {
+    height: 45px;
+    margin: 15px 8px;
+    padding: 0 20px;
+    background-color: #f15922;
+    border: 1px solid #f15922;
+    font-size: 16px;
+    font-weight: 300;
+    outline: none;
+    color: #fff;
+}
+.popup__bron__bottom button:hover {
+    background-color: transparent;
+    color: #f15922;
+}
+.popup__bron__bottom__right {
+    text-align: left;
+    padding: 0 10px;
+}
+.popup__bron__bottom__right input {
+    margin-right: 5px;
+}
+.popup__bron__bottom__right a {
+    color: #0f0f0f;
+}
+
+.core__input {
+    position: relative;
+    display: inline-block}
+.core__input__log {
+    position: absolute;
+    bottom: 2px;
+    left: 25px;
+    background: #fff;
+    padding: 5px;
+    color: red;
+    font-size: 12px;
+    font-weight: bold;
+}

@@ -85,9 +85,41 @@ if(empty($rooms))
             <td data-label="Тип номера"><?=$room['PROPERTY_ROOM_TYPE_VALUE'];?></td>
             <td data-label="Стоимость тура на одного человека"><?=$room['PROPERTY_PRICE_VALUE'];?></td>
             <td data-label="Забронировать">
-                <a href="#" class="reservation_btn">
+                <a href="#popup__form"  data-fancybox class="reservation_btn">
                     Забронировать
                 </a>
+                <div id="popup__form" class="popup">
+                    <div class="popup__form">
+                        <div class="popup__bron">
+                            <div class="popup__bron__title">
+                                Чтобы забронировать поездку заполните поля ниже
+                            </div>
+                            <div class="popup__bron__text">
+                                Мы с Вами свяжемся в ближайшее время
+                            </div>
+                            <div class="popup__bron__bottom">
+                                <form class="form__go" name="form__go" action="" method="post">
+                                    <div class="popup__bron__bottom__left">
+                                        <div class="core__input">
+                                            <input class="core__input__control" placeholder="Введите Ваше имя">
+                                        </div>
+                                        <div class="core__input">
+                                            <input class="core__input__control" placeholder="Введите Ваш телефон">
+                                            <div class="core__input__log">Ошибка</div>
+                                        </div>
+                                        <button type="submit" name="submit">Жду звонка</button>
+                                    </div>
+                                    <div class="popup__bron__bottom__right">
+                                        <p>
+                                            <input type="checkbox" name="privacy">
+                                            <a href="/privacy.html" target="_blank">Я согласен на обработку персональных данных</a>
+                                        </p>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </td>
         </tr>
     <? endforeach; ?>
