@@ -66,8 +66,8 @@ $APPLICATION->SetTitle("Туристам");
     <div class="text__block__wrap">
     <div class="container">
         <div class="text__block">
-            <p>Текст</p>
-        </div>
+            <p>Текст  Вот тут текст.</p>
+<p>новый абзац всегда начинается вот такого тега и заканчивается тегом </p>        </div>
     </div>
 </div>
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
