@@ -5,7 +5,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/bitrix/modules/main/include/prolog_be
 use \WM\Common\Helper,
     \WM\Seo\GTMFormSubmit;
 
-//Is POST data sent ?
+// Is POST data sent ?
 empty($_POST) && exit;
 
 //set rules & fields for form
