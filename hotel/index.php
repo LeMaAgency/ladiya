@@ -394,4 +394,5 @@ $APPLICATION->SetTitle("Гостиницы");
                 </div>
             </div>
         </div>
-    </section><? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>
+    </section>
+<? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>

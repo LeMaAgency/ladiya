@@ -2886,3 +2886,54 @@ input.filter__button {padding-bottom: 15px !important;}
     font-size: 12px;
     font-weight: bold;
 }
+
+.header-menu .navbar-nav > li {
+    text-align: center;
+
+    display: inline-block;
+}
+.header-menu .navbar-nav > li > .dropdown-menu {
+    position: absolute;
+    margin-top: -5px;
+    padding: 0;
+    text-align: center;
+    float: none;
+    left: auto;
+    right: auto;
+
+    width: 150%;
+    min-width: 100%;
+    margin-left: -25%;
+    border-top: 2px solid #f5643f;
+    background: rgba(255,255,255,0.96);
+}
+.header-menu .navbar-nav > li > .dropdown-menu li {
+    position: relative;
+    width: 100%;
+}
+.header-menu .navbar-nav > li > .dropdown-menu li a {
+    word-wrap: normal!important;
+    word-wrap: break-word!important;
+    white-space: normal;
+}
+
+
+.header-menu .navbar-nav > li > .dropdown-menu:before {
+    content: '';
+    position: absolute;
+    right: 50%;
+    margin-right: -10px;
+    border: 10px solid transparent;
+    border-bottom: 10px solid #f5643f;
+    top: -20px;
+}
+@media (min-width: 760px) {
+    .header-menu .navbar-nav > li:hover > .dropdown-menu {
+        display: block;
+    }
+}
+@media (max-width: 760px) {
+    .header-menu .navbar-nav > li > .dropdown-menu {
+        margin: 0;
+    }
+}
