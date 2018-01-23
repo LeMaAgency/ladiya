@@ -396,7 +396,7 @@ $this->setFrameMode(true);
                         <div role="tabpanel" class="tab-pane" id="jotting">
                             <div class="row">
                                 <div class="col-xs-12">
-                                    <p><?= TxtToHTML($arResult['PROPERTIES']['TOUR_MEMO']['VALUE']['TEXT']); ?></p>
+                                    <p><?= htmlspecialcharsback($arResult['PROPERTIES']['TOUR_MEMO']['VALUE']['TEXT']); ?></p>
                                 </div>
                             </div>
                         </div>
