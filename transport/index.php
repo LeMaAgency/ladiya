@@ -60,6 +60,7 @@ $APPLICATION->SetTitle("Наш транспорт");
         "START_FROM" => "0"
     )
 ); ?>
+
 <?//$APPLICATION->IncludeComponent(
 //	"bitrix:news.list",
 //	"transport",
