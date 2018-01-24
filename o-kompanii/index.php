@@ -2,6 +2,27 @@
 require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 $APPLICATION->SetTitle("О компании");
 ?>
+    <div style="display: none">
+        <? $APPLICATION->IncludeComponent(
+            "bitrix:menu",
+            "top_menu",
+            array(
+                "ALLOW_MULTI_SELECT" => "N",
+                "CHILD_MENU_TYPE" => "",
+                "DELAY" => "N",
+                "MAX_LEVEL" => "1",
+                "MENU_CACHE_GET_VARS" => array(
+                ),
+                "MENU_CACHE_TIME" => "3600",
+                "MENU_CACHE_TYPE" => "A",
+                "MENU_CACHE_USE_GROUPS" => "Y",
+                "ROOT_MENU_TYPE" => "podmenu",
+                "USE_EXT" => "N",
+                "COMPONENT_TEMPLATE" => "N"
+            ),
+            false
+        ); ?>
+    </div>
     <div class="text__block__wrap">
         <div class="text___block__images" <?$APPLICATION->ShowViewContent('head_pic')?>>
             <div class="container">
