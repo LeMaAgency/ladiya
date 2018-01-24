@@ -492,14 +492,8 @@ $(function() {
     });
 
     $('.dropdown').hover(function(){
-        $('.dropdown-toggle', this).trigger('click');
-
-
-
+      // $('.dropdown-toggle', this).trigger('click');
     });
-
-
-
     $('.dropdown').on('click',function(){
         location.href = $(this).children('a').attr('href');
     });

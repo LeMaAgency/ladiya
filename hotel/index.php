@@ -1,9 +1,9 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
-$APPLICATION->SetTitle("Гостиницы");
-?><? $APPLICATION->IncludeComponent(
-	"bitrix:news.list", 
-	"slider-hotels", 
+$APPLICATION->SetTitle("Гостиницы"); ?>
+<? $APPLICATION->IncludeComponent(
+	"bitrix:news.list",
+	"slider-hotels",
 	array(
 		"ACTIVE_DATE_FORMAT" => "d.m.Y",
 		"ADD_SECTIONS_CHAIN" => "N",
@@ -76,8 +76,8 @@ $APPLICATION->SetTitle("Гостиницы");
     )
 ); ?>
 <?$APPLICATION->IncludeComponent(
-	"bitrix:news", 
-	"hotel_list1", 
+	"bitrix:news",
+	"hotel_list1",
 	array(
 		"ADD_ELEMENT_CHAIN" => "N",
 		"ADD_SECTIONS_CHAIN" => "N",
@@ -251,138 +251,32 @@ $APPLICATION->SetTitle("Гостиницы");
                     </form>
                 </div>
                 <div class="col-xs-12 col-md-8 col-lg-8 results">
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <div class="head">
-                                <div class="text">
-                                    <p>
-                                        Найдено: <span class="number-offers">100</span> туров
-                                    </p>
-                                </div>
-                                <div class="buttons hidden-xs">
-                                    <button class="list"></button>
-                                    <a href="/hotel/?VIEW=1">
-                                        <button class="grid"></button>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item-card">
-                        <div class="item-card__img">
-                            <img src="/local/templates/main/images/hotels/hotel-beshtaw.png" alt="">
-                            <div class="item-card__img__name">
-                                гостиница бештау
-                            </div>
-                        </div>
-                        <div class="item-card__content">
-                            <div class="item-card__content__info">
-                                адрес гостиницы: г. Пятигорск, ул. 1-я Бульварная, 17
-                            </div>
-                            <p class="item-card__content__text">
-                                В стоимость тура входит: проживание, питание по программе (для организованных групп), транспортное и экскурсионное
-                                обслуживание, страховка, услуги гидов.
-                            </p>
-                            <div class="clearfix">
-                                <div class="item-card__content__price">
-                                    от 15 400 руб
-                                </div>
-                                <a href="" class="item-card__content__more">подробнее</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item-card">
-                        <div class="item-card__img">
-                            <img src="/local/templates/main/images/hotels/hotel-1.png" alt="">
-                            <div class="item-card__img__name">
-                                гостиница бештау
-                            </div>
-                        </div>
-                        <div class="item-card__content">
-                            <div class="item-card__content__info">
-                                адрес гостиницы: г. Пятигорск, ул. 1-я Бульварная, 17
-                            </div>
-                            <p class="item-card__content__text">
-                                В стоимость тура входит: проживание, питание по программе (для организованных групп), транспортное и экскурсионное
-                                обслуживание, страховка, услуги гидов.
-                            </p>
-                            <div class="clearfix">
-                                <div class="item-card__content__price">
-                                    от 15 400 руб
-                                </div>
-                                <a href="" class="item-card__content__more">подробнее</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item-card">
-                        <div class="item-card__img">
-                            <img src="/local/templates/main/images/hotels/hotel-2.png" alt="">
-                            <div class="item-card__img__name">
-                                гостиница бештау
-                            </div>
-                        </div>
-                        <div class="item-card__content">
-                            <div class="item-card__content__info">
-                                адрес гостиницы: г. Пятигорск, ул. 1-я Бульварная, 17
-                            </div>
-                            <p class="item-card__content__text">
-                                В стоимость тура входит: проживание, питание по программе (для организованных групп), транспортное и экскурсионное
-                                обслуживание, страховка, услуги гидов.
-                            </p>
-                            <div class="clearfix">
-                                <div class="item-card__content__price">
-                                    от 15 400 руб
-                                </div>
-                                <a href="" class="item-card__content__more">подробнее</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item-card">
-                        <div class="item-card__img">
-                            <img src="/local/templates/main/images/hotels/hotel-1.png" alt="">
-                            <div class="item-card__img__name">
-                                гостиница бештау
-                            </div>
-                        </div>
-                        <div class="item-card__content">
-                            <div class="item-card__content__info">
-                                адрес гостиницы: г. Пятигорск, ул. 1-я Бульварная, 17
-                            </div>
-                            <p class="item-card__content__text">
-                                В стоимость тура входит: проживание, питание по программе (для организованных групп), транспортное и экскурсионное
-                                обслуживание, страховка, услуги гидов.
-                            </p>
-                            <div class="clearfix">
-                                <div class="item-card__content__price">
-                                    от 15 400 руб
-                                </div>
-                                <a href="" class="item-card__content__more">подробнее</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item-card">
-                        <div class="item-card__img">
-                            <img src="/local/templates/main/images/hotels/hotel-2.png" alt="">
-                            <div class="item-card__img__name">
-                                гостиница бештау
-                            </div>
-                        </div>
-                        <div class="item-card__content">
-                            <div class="item-card__content__info">
-                                адрес гостиницы: г. Пятигорск, ул. 1-я Бульварная, 17
-                            </div>
-                            <p class="item-card__content__text">
-                                В стоимость тура входит: проживание, питание по программе (для организованных групп), транспортное и экскурсионное
-                                обслуживание, страховка, услуги гидов.
-                            </p>
-                            <div class="clearfix">
-                                <div class="item-card__content__price">
-                                    от 15 400 руб
-                                </div>
-                                <a href="" class="item-card__content__more">подробнее</a>
-                            </div>
-                        </div>
-                    </div>
+                     <div class="hotel__list">
+                         <div class="hotel__list__item">
+                             <div class="hotel__list__item__wrap">
+                                 <div class="hotel__list__item__img">
+                                     <div class="hotel__list__item__img__control" style="background-image: url();"></div>
+                                 </div>
+                                 <div class="hotel__list__item__body">
+                                     <div class="hotel__list__item__name">
+                                         <span class="hotel__list__item__name__control">Отель ночной Квартал</span>
+                                     </div>
+                                     <div class="hotel__list__item__map">
+                                         <span class="hotel__list__item__map__control">Пятигорск</span>
+                                     </div>
+                                     <div class="hotel__list__item__icon">
+                                         <div class="hotel__list__item__icon__item hotel__list__item__icon__item_1"></div>
+                                         <div class="hotel__list__item__icon__item hotel__list__item__icon__item_2"></div>
+                                         <div class="hotel__list__item__icon__item hotel__list__item__icon__item_3"></div>
+                                         <div class="hotel__list__item__icon__item hotel__list__item__icon__item_4"></div>
+                                     </div>
+                                     <div class="hotel__list__item__inf">
+                                         <span class="hotel__list__item__inf__control">Доступно 5 видов номеров</span>
+                                     </div>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
                     <div class="pagination-base">
                         <nav aria-label="Page navigation">
                             <ul class="pagination">
