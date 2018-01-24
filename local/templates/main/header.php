@@ -82,23 +82,24 @@ CJSCore::init(array('fx'));
                     </div>
                     <div class="header-menu collapse navbar-collapse">
                         <?$APPLICATION->IncludeComponent(
-                            "bitrix:menu",
-                            "top_menu",
-                            array(
-                                "ALLOW_MULTI_SELECT" => "N",
-                                "CHILD_MENU_TYPE" => "left",
-                                "DELAY" => "N",
-                                "MAX_LEVEL" => "1",
-                                "MENU_CACHE_GET_VARS" => array(),
-                                "MENU_CACHE_TIME" => "3600",
-                                "MENU_CACHE_TYPE" => "A",
-                                "MENU_CACHE_USE_GROUPS" => "Y",
-                                "ROOT_MENU_TYPE" => "top",
-                                "USE_EXT" => "N",
-                                "COMPONENT_TEMPLATE" => "top_menu"
-                            ),
-                            false
-                        );?>
+	"bitrix:menu", 
+	"top_multilevel", 
+	array(
+		"ALLOW_MULTI_SELECT" => "N",
+		"CHILD_MENU_TYPE" => "left",
+		"DELAY" => "N",
+		"MAX_LEVEL" => "1",
+		"MENU_CACHE_GET_VARS" => array(
+		),
+		"MENU_CACHE_TIME" => "3600",
+		"MENU_CACHE_TYPE" => "A",
+		"MENU_CACHE_USE_GROUPS" => "Y",
+		"ROOT_MENU_TYPE" => "top",
+		"USE_EXT" => "N",
+		"COMPONENT_TEMPLATE" => "top_multilevel"
+	),
+	false
+);?>
                         <div class="search__header">
                             <div class="search-button" >
                                 <span class="icon-point i-search" data-js-core-switch-element="search__header"></span>
