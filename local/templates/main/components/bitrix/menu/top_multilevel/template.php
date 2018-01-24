@@ -1,6 +1,7 @@
 <?if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();?>
 
 <?if (!empty($arResult)):?>
+<!--    --><?// echo "<pre style=\"text-align:left\">";var_dump($arResult);echo "</pre>"?>
     <ul class="nav navbar-nav">
     <?
     $previousLevel = 0;

@@ -2,49 +2,49 @@
 $aMenuLinks = Array(
 	Array(
 		"О компании",
-		"o-kompanii",
+		"/o-kompanii/",
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
 		"О Кавказе",
-		"o-kavkaze",
+		"/o-kavkaze/",
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
 		"О КМВ",
-		"o-kmv",
+		"/o-kmv/",
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
 		"Партнерам",
-		"partneram",
+		"/partneram/",
 		Array(), 
 		Array(), 
 		"" 
 	),
     Array(
         "Туристам",
-        "turistam",
+        "/turistam/",
         Array(),
         Array(),
         ""
     ),
     Array(
         "Отзывы",
-        "otzyvy",
+        "/otzyvy/",
         Array(),
         Array(),
         ""
     ),
     Array(
         "Контакты",
-        "kontakty",
+        "/kontakty/",
         Array(),
         Array(),
         ""
