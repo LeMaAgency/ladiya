@@ -52,5 +52,4 @@ foreach($arResult as $arItem):?>
     <?endif?>
 
     </ul>
-    <div class="menu-clear-left"></div>
 <?endif?>
