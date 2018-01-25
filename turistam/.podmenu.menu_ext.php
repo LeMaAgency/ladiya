@@ -6,7 +6,7 @@ global $APPLICATION;
     if(CModule::IncludeModule("iblock"))
         {
 
-$IBLOCK_ID = 13;
+$IBLOCK_ID = 28;
 
 $arOrder = Array();
 $arSelect = Array("ID", "NAME", "IBLOCK_ID", "DETAIL_PAGE_URL","PROPERTY_ADD_IN_SUBMENU_VALUE");
