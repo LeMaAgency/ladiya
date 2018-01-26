@@ -144,24 +144,24 @@ CJSCore::init(array('fx'));
                     </div>
                     <div class="main-menu collapse navbar-collapse">
                         <? $APPLICATION->IncludeComponent(
-                            "bitrix:menu", 
-                            "logo_other_menu", 
-                            array(
-                                "ALLOW_MULTI_SELECT" => "N",
-                                "CHILD_MENU_TYPE" => "other",
-                                "DELAY" => "N",
-                                "MAX_LEVEL" => "2",
-                                "MENU_CACHE_GET_VARS" => array(
-                                ),
-                                "MENU_CACHE_TIME" => "3600",
-                                "MENU_CACHE_TYPE" => "A",
-                                "MENU_CACHE_USE_GROUPS" => "N",
-                                "ROOT_MENU_TYPE" => "other",
-                                "USE_EXT" => "Y",
-                                "COMPONENT_TEMPLATE" => "logo_other_menu"
-                            ),
-                            false
-                        ); ?>
+	"bitrix:menu", 
+	"logo_other_menu", 
+	array(
+		"ALLOW_MULTI_SELECT" => "N",
+		"CHILD_MENU_TYPE" => "other",
+		"DELAY" => "N",
+		"MAX_LEVEL" => "2",
+		"MENU_CACHE_GET_VARS" => array(
+		),
+		"MENU_CACHE_TIME" => "3600",
+		"MENU_CACHE_TYPE" => "A",
+		"MENU_CACHE_USE_GROUPS" => "N",
+		"ROOT_MENU_TYPE" => "more",
+		"USE_EXT" => "Y",
+		"COMPONENT_TEMPLATE" => "logo_other_menu"
+	),
+	false
+); ?>
                         <? $APPLICATION->IncludeComponent(
                             "bitrix:menu", 
                             "logo_menu", 
