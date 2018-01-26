@@ -2088,3 +2088,15 @@ PAGE TRANSFER
         top: auto;
     }
 }
+/* For "partneram" page*/
+.partneram a {
+    color:  blue;
+    text-decoration: underline;
+}
+.partneram a:hover{
+    color: orangered;
+}
+.partneram ol li{
+    list-style-type: decimal;
+    display: list-item;
+}

@@ -55,7 +55,11 @@ $APPLICATION->SetTitle("Партнерам");
 );?>
 <div class="text__block__wrap">
 	<div class="container">
-		<div class="text__block">
+		<div class="text__block partneram">
+    <? \WM\Components\IncludeArea::inc('', array('PATH' => SITE_DIR . 'include/partneram/title.php')); ?>
+    <? \WM\Components\IncludeArea::inc('', array('PATH' => SITE_DIR . 'include/partneram/text.php')); ?>
+    <? \WM\Components\IncludeArea::inc('', array('PATH' => SITE_DIR . 'include/partneram/title-2.php')); ?>
+    <? \WM\Components\IncludeArea::inc('', array('PATH' => SITE_DIR . 'include/partneram/links.php')); ?>
 		</div>
 	</div>
 </div><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
