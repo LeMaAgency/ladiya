@@ -15,22 +15,5 @@
             <? endif ?>
 
         <? endforeach ?>
-        <li class="dropdown">
-            <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Еще</a>
-            <ul class="dropdown-menu">
-                <? foreach($arResult as $arItem):?>
-                    <?if($arItem["FROM_IBLOCK"]=="Y"):?>
-                        <li><a href="<?=$arItem["LINK"]?>"><?=$arItem["NAME"]?></a></li>
-                    <?endif?>
-                <?endforeach;?>
-                <? $APPLICATION->IncludeFile(
-                    SITE_DIR."include/logo_menu/logo_menu-more.php",
-                    array(),
-                    array(
-                            "NAME"=>"пункт меню \"Еще\" "
-                    )
-                ); ?>
-            </ul>
-        </li>
     </ul>
 <? endif ?>
