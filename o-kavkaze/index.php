@@ -3,9 +3,14 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 $APPLICATION->SetPageProperty("tags", "Кавказ Истриякавказа достопримечательностикавказа культуракавказа народыкавказа легендыкавказа");
 $APPLICATION->SetPageProperty("description", "Все о Кавказе");
 $APPLICATION->SetTitle("О Кавказе");
-?><div class="text__block__wrap">
-	 <?$APPLICATION->ShowViewContent('head_pic')?>
-</div>
+?>
+    <div class="text__block__wrap">
+        <div class="text___block__images" <?$APPLICATION->ShowViewContent('head_pic')?>>
+            <div class="container">
+                <span class="text___block__images__title"><?= $APPLICATION->ShowTitle(); ?></span>
+            </div>
+        </div>
+    </div>
  <?$APPLICATION->IncludeComponent(
 	"bitrix:breadcrumb",
 	"",
