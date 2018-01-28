@@ -25,6 +25,12 @@ $arUrlRewrite = array(
 		"PATH" => "/ekskursii/detail.php",
 	),
 	array(
+		"CONDITION" => "#^/turistam/([^/]+)/?(?:\\?(.*))?\$#",
+		"RULE" => "CODE=\$1&\$2",
+		"ID" => "",
+		"PATH" => "/turistam/detail.php",
+	),
+	array(
 		"CONDITION" => "#^/photo/([^/]+)/?(?:\\?(.*))?\$#",
 		"RULE" => "CODE=\$1&\$2",
 		"ID" => "",
@@ -65,12 +71,6 @@ $arUrlRewrite = array(
 		"RULE" => "",
 		"ID" => "bitrix:news",
 		"PATH" => "/news/index.php",
-	),
-		array(
-		"CONDITION" => "#^/turistam/([^/]+)/?(?:\\?(.*))?\$#",
-		"RULE" => "CODE=\$1&\$2",
-		"ID" => "",
-		"PATH" => "/turistam/detail.php",
 	),
 );
 
