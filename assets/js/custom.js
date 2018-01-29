@@ -245,7 +245,7 @@ $(document).ready(function () {
                     var start = range.start.split('.'),
                         end = range.end.split('.');
                         
-                    if (date >= new Date(start[2], start[1] - 1, start[0]) && date <= new Date(end[2], end[1] - 1, end[0])) {
+                    if (date >= new Date(start[2], start[1] - 1, start[0]) && date <= new Date(start[2], start[1] - 1, start[0])) {
                         found = true;
                         return false; // Exit each
                     }
