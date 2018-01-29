@@ -230,7 +230,7 @@ $(document).ready(function () {
     DP.each(function(i, el) {
         el = $(el);
         var params = {
-            dateFormat: 'dd.mm.YYYY',
+            dateFormat: 'dd.mm.yy',
         };
         if(el.data('min'))
             params['minDate'] = el.data('min');
