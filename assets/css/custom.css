@@ -2905,11 +2905,11 @@ input.filter__button {padding-bottom: 15px !important;}
     left: auto;
     right: auto;
 
-    width: 150%;
+    width: 200%;
     min-width: 100%;
-    margin-left: -25%;
+    margin-left: -55%;
     border-top: 2px solid #f5643f;
-    background: rgba(255,255,255,0.96);
+    background: rgba(255,255,255,0.85);
 }
 .header-menu .navbar-nav > li > .dropdown-menu li {
     position: relative;
