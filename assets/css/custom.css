@@ -2587,6 +2587,10 @@ input.filter__button {padding-bottom: 15px !important;}
     }
 }
 
+.search {
+    max-height: none;
+}
+
 
 
 /* adapriv */
