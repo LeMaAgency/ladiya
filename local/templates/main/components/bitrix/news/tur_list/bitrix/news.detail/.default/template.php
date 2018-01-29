@@ -255,10 +255,13 @@ $this->setFrameMode(true);
                                         <div class="col-xs-12 col-sm-4">
                                             <div class="input">
                                                 <label for="room_type">Дата</label><br>
-                                                <input class="input" name="DATE" placeholder="Дата начала тура"/>
+                                                <input
+                                                      <?if(!empty($arResult['MIN_DATE'])){?>data-min-date="<?=$arResult['MIN_DATE'];?>"<?}?>
+                                                      <?if(!empty($arResult['MAX_DATE'])){?>data-max-date="<?=$arResult['MAX_DATE'];?>"<?}?>
+                                                      <?if(!empty($arResult['DATES'])){?>data-dates='<?=$arResult['DATES'];?>'<?}?>
+                                                      class="input" name="DATE" placeholder="Дата начала тура"/>
                                             </div>
                                         </div>
-
                                         <div class="col-xs-12 col-sm-4">
                                             <div class="input">
                                                 <? if (!empty($arResult['HOTELS'])): ?>
@@ -359,7 +362,7 @@ $this->setFrameMode(true);
                                                 <?= Loc::getMessage('TOUR_IN_PRICE_CONTAINS_TITLE'); ?>
                                             </span>
                                                 <span class="core__switch__btn__hidden active core__switch__btn__hidden_price_1">
-                                                <?= $arResult['PROPERTIES']['IN_PRICE_CONTAINS']['VALUE']['TEXT']; ?>
+                                                <?= htmlspecialcharsback($arResult['PROPERTIES']['IN_PRICE_CONTAINS']['VALUE']['TEXT']); ?>
                                             </span>
                                             </p>
                                         <? endif; ?>
@@ -370,7 +373,7 @@ $this->setFrameMode(true);
                                                 <?= Loc::getMessage('TOUR_ALSO_PAYS_TITLE'); ?>
                                             </span>
                                                 <span class="core__switch__btn__hidden active core__switch__btn__hidden_price_2">
-                                            <?= $arResult['PROPERTIES']['ALSO_PAYS']['VALUE']['TEXT']; ?>
+                                            <?= htmlspecialcharsback($arResult['PROPERTIES']['ALSO_PAYS']['VALUE']['TEXT']); ?>
                                         </span>
                                             </p>
                                         <? endif; ?>
@@ -381,7 +384,7 @@ $this->setFrameMode(true);
                                                 <?= Loc::getMessage('TOUR_ADDITIONAL_INFO_TITLE'); ?>
                                             </span>
                                                 <span class="core__switch__btn__hidden active core__switch__btn__hidden_price_3">
-                                            <?= $arResult['PROPERTIES']['ADDITIONAL_INFO']['VALUE']['TEXT']; ?>
+                                            <?= htmlspecialcharsback($arResult['PROPERTIES']['ADDITIONAL_INFO']['VALUE']['TEXT']); ?>
                                         </span>
                                             </p>
                                         <? endif; ?>

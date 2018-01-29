@@ -227,9 +227,37 @@ $(document).ready(function () {
     $.datepicker.setDefaults($.datepicker.regional['ru']);
 
     var DP = $('.filter__item__date__inp, input[name*="DATE"]');
-    DP.datepicker({
-        minDate: new Date()
-    });
+    DP.each(function(i, el) {
+        el = $(el);
+        var params = {
+            dateFormat: 'dd.mm.YYYY',
+        };
+        if(el.data('min'))
+            params['minDate'] = el.data('min');
+        if(el.data('max'))
+            params['maxDate'] = el.data('max');
+        if(el.data('dates'))
+        {
+            var ranges = el.data('dates');
+            params['beforeShowDay'] = function(date) {
+                 var found = false;
+                $.each(ranges, function (i, range) {
+                    var start = range.start.split('.'),
+                        end = range.end.split('.');
+                        
+                    if (date >= new Date(start[2], start[1] - 1, start[0]) && date <= new Date(end[2], end[1] - 1, end[0])) {
+                        found = true;
+                        return false; // Exit each
+                    }
+                })
+                return [found, ''];
+            }
+        }
+        el.datepicker(params);
+    })
+    //DP.datepicker({
+    //    minDate: new Date()
+    //});
 
 
     $('form.js-add-review').on('submit', function (e) {

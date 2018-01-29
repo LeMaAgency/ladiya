@@ -104,3 +104,31 @@ if (!empty($arResult['PROPERTIES']['ROOMS']['VALUE'])) {
 $arResult['SHOW_PRICE_TAB'] = in_array('b91548713cbe4fa84982a865986f14bc', $arResult['PROPERTIES']['VIEW']['VALUE_XML_ID']);
 $arResult['SHOW_GROUP_TAB'] = in_array('e87bc94a378315b528f42eacd270304a', $arResult['PROPERTIES']['VIEW']['VALUE_XML_ID']);
 $arResult['TABS_FIVE_ITEMS'] = !($arResult['SHOW_PRICE_TAB'] && $arResult['SHOW_GROUP_TAB']);
+
+if(!empty($arResult['PROPERTIES']['DATE']['VALUE']) && !empty($arResult['PROPERTIES']['DAYS_COUNT']['VALUE']))
+{
+    $modify = '+' . ($arResult['PROPERTIES']['DAYS_COUNT']['VALUE'] - 1) . ' day';
+    $obj = $dates = array();
+    foreach($arResult['PROPERTIES']['DATE']['VALUE'] as $date)
+    {
+        if(!($tmp = DateTime::createFromFormat('d.m.Y', $date)))
+            continue;
+        $tmp = $tmp->modify($modify)->format('d.m.Y');
+        $dates[] = $date;
+        $dates[] = $tmp;
+        $obj[] = array('start' => $date, 'end' => $tmp);
+    }
+    if(!empty($dates))
+    {
+        $dates = array_unique($dates);
+        usort($dates, function($x, $y) {
+            $date1 = strtotime($x);
+            $date2 = strtotime($y);
+        
+            return $date1 < $date2 ? -1: 1;
+        });
+        $arResult['MIN_DATE'] = current($dates);
+        $arResult['MAX_DATE'] = end($dates);
+        $arResult['DATES'] = json_encode($obj);
+    }
+}
