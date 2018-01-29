@@ -63,7 +63,7 @@ $this->setFrameMode(true);
     </section>
     <section class="container page__program__detail__download">
         <div class="row">
-            <a href="https://projects.invisionapp.com/boards/7U3BW22PGXFVD#/5593610" target="_blank" title="Скачать программу тура"
+            <a href="<?=$arResult['PROPERTIES']['FULL_PROGRAMM']['VALUE_SRC']?>" target="_blank" title="Скачать программу тура"
                class="page__program__detail__download__btn"><?= Loc::getMessage('TOUR_DOWNLOAD_PDF'); ?></a>
         </div>
     </section>
