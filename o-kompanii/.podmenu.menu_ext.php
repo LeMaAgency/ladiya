@@ -26,8 +26,11 @@ $res = CIBlockElement::GetList($arOrder, $arFilter, false, false ,$arSelect);
     
     }        
     
-        }    
+        }
 
- $aMenuLinks = array_merge($aMenuLinksExt, $aMenuLinks);
+if(!empty($aMenuLinksExt))
+{
+    $aMenuLinks = array_merge($aMenuLinksExt, $aMenuLinks);
+}
 
 ?>
