@@ -2879,9 +2879,11 @@ input.filter__button {padding-bottom: 15px !important;}
 
 .core__input {
     position: relative;
-    display: inline-block}
+    display: inline-block;
+    vertical-align: top;
+}
 .core__input__log {
-    position: absolute;
+    /*position: absolute;*/
     bottom: 2px;
     left: 25px;
     background: #fff;
