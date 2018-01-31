@@ -197,143 +197,139 @@ CModule::IncludeModule('iblock');
 <!--                    <div class="button-invert-wrap"><a href="#" class="button-invert"><span>показать все маршруты</span></a></div>-->
                 </div>
                 <div class="col-xs-12 col-md-8 col-lg-8 results">
-                    <div class="row">
-                        <div class="col-sm-12">
+                    <div class="col-sm-12">
+                        <div class="core__text">
+                            <h1>Аренда автобусов</h1>
+                            <p><span style="font-weight: bold;">КАВКАЗСКИЕ МИНЕРАЛЬНЫЕ ВОДЫ<br><span><br>Условия встречи туристов</span> </span></p>
+
+                            <table class="tbc" cellspacing="0" cellpadding="0" border="0">
+                                <tbody>
+                                <tr><th>
+                                        <p><span style="font-weight: bold;">Прибытие</span></p>
+                                    </th><th>
+                                        <p><span style="font-weight: bold;">Место встречи</span></p>
+                                    </th><th>
+                                        <p><span style="font-weight: bold;">Табличка</span></p>
+                                    </th></tr>
+                                <tr>
+                                    <td>
+                                        <p>Аэропорт</p>
+                                    </td>
+                                    <td>
+                                        <p>В зале прилета аэропорта</p>
+                                    </td>
+                                    <td>
+                                        <p>ЛАДЬЯ</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p>Ж/д вокзал</p>
+                                    </td>
+                                    <td>
+                                        <p>Около вагона</p>
+                                    </td>
+                                    <td>
+                                        <p>ЛАДЬЯ</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3">
+                                        <p><strong>Индивидуальный трансфер</strong></p>
+                                    </td>
+                                </tr>
+                                <tr><th>
+                                        <p><span style="font-weight: bold;">Место встречи</span></p>
+                                    </th><th>
+                                        <p><span style="font-weight: bold;">Место назначения</span></p>
+                                    </th><th>
+                                        <p><span style="font-weight: bold;">стоимость за машину</span></p>
+                                    </th></tr>
+                                <tr>
+                                    <td>
+                                        <p>От аэропорта Мин. Воды</p>
+                                    </td>
+                                    <td>
+                                        <p>Кисловодск</p>
+                                    </td>
+                                    <td>
+                                        <p>1200 руб.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p>От аэропорта Мин. Воды</p>
+                                    </td>
+                                    <td>
+                                        <p>Пятигорск</p>
+                                    </td>
+                                    <td>
+                                        <p>800 &nbsp;руб.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p>От аэропорта Мин. Воды</p>
+                                    </td>
+                                    <td>
+                                        <p>Железноводск</p>
+                                    </td>
+                                    <td>
+                                        <p>800 руб.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p>От аэропорта Мин. Воды</p>
+                                    </td>
+                                    <td>
+                                        <p>Ессентуки</p>
+                                    </td>
+                                    <td>
+                                        <p>950&nbsp;руб.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p>От ж/д вокзала г. Пятигорск</p>
+                                    </td>
+                                    <td>
+                                        <p>до санатория</p>
+                                    </td>
+                                    <td>
+                                        <p>200&nbsp;руб.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p>От ж/д вокзала г.Железноводск<br>(станция Бештау)</p>
+                                    </td>
+                                    <td>
+                                        <p>до санатория</p>
+                                    </td>
+                                    <td>
+                                        <p>350 руб.</p>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
                             <div class="head">
-                                <div class="buttons hidden-xs">
-                                    <button class="list">
-                                        <span></span>
-                                        <span></span>
-                                    </button>
-                                    <a href="/hotel?VIEW=1">
-                                        <button class="grid">
-                                            <span></span>
-                                            <span></span>
-                                            <span></span>
-                                            <span></span>
-                                        </button>
-                                    </a>
-                                </div>
+                                <!--                                <div class="buttons hidden-xs">-->
+                                <!--                                    <button class="list">-->
+                                <!--                                        <span></span>-->
+                                <!--                                        <span></span>-->
+                                <!--                                    </button>-->
+                                <!--                                    <a href="/hotel?VIEW=1">-->
+                                <!--                                        <button class="grid">-->
+                                <!--                                            <span></span>-->
+                                <!--                                            <span></span>-->
+                                <!--                                            <span></span>-->
+                                <!--                                            <span></span>-->
+                                <!--                                        </button>-->
+                                <!--                                    </a>-->
+                                <!--                                </div>-->
                             </div>
                         </div>
-                    </div>
-                    <div class="item-card">
-                        <div class="item-card__img">
-                            <img src="/local/templates/main/images/bus-item/bus-1.png" alt="">
-                        </div>
-                        <div class="item-card__content">
-                            <div class="item-card__content__info">Mersedes (15-18 мест)
-                                <span></span>
-                            </div>
-                            <div class="item-card__content__info_light">Маршрут поездки:
-                                <span> Медовые водопады + г. Кольцо</span>
-                            </div>
-                            <div class="item-card__content__info_light">Время поездки:
-                                <span> 3 часа</span>
-                            </div>
-                            <div class="item-card__content__footer clearfix">
-                                <div class="item-card__content__price">Стоимость поездки:
-                                    <span class="item-card__content__price__number"><span>7 500</span> руб</span>
-                                </div>
-                                <a href="" class="item-card__content__more"><span>отправить заявку</span></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item-card">
-                        <div class="item-card__img">
-                            <img src="/local/templates/main/images/bus-item/bus-2.png" alt="">
-                        </div>
-                        <div class="item-card__content">
-                            <div class="item-card__content__info">Mersedes (15-18 мест)
-                                <span></span>
-                            </div>
-                            <div class="item-card__content__info_light">Маршрут поездки:
-                                <span> Медовые водопады + г. Кольцо</span>
-                            </div>
-                            <div class="item-card__content__info_light">Время поездки:
-                                <span> 3 часа</span>
-                            </div>
-                            <div class="item-card__content__footer clearfix">
-                                <div class="item-card__content__price">Стоимость поездки:
-                                    <span class="item-card__content__price__number"><span>8 300</span> руб</span>
-                                </div>
-                                <a href="" class="item-card__content__more"><span>отправить заявку</span></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item-card">
-                        <div class="item-card__img">
-                            <img src="/local/templates/main/images/bus-item/bus-1.png" alt="">
-                        </div>
-                        <div class="item-card__content">
-                            <div class="item-card__content__info">Mersedes (15-18 мест)
-                                <span></span>
-                            </div>
-                            <div class="item-card__content__info_light">Маршрут поездки:
-                                <span> Медовые водопады + г. Кольцо</span>
-                            </div>
-                            <div class="item-card__content__info_light">Время поездки:
-                                <span> 3 часа</span>
-                            </div>
-                            <div class="item-card__content__footer clearfix">
-                                <div class="item-card__content__price">Стоимость поездки:
-                                    <span class="item-card__content__price__number"><span>7 500</span> руб</span>
-                                </div>
-                                <a href="" class="item-card__content__more"><span>отправить заявку</span></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item-card">
-                        <div class="item-card__img">
-                            <img src="/local/templates/main/images/bus-item/bus-2.png" alt="">
-                        </div>
-                        <div class="item-card__content">
-                            <div class="item-card__content__info">Mersedes (15-18 мест)
-                                <span></span>
-                            </div>
-                            <div class="item-card__content__info_light">Маршрут поездки:
-                                <span> Медовые водопады + г. Кольцо</span>
-                            </div>
-                            <div class="item-card__content__info_light">Время поездки:
-                                <span> 3 часа</span>
-                            </div>
-                            <div class="item-card__content__footer clearfix">
-                                <div class="item-card__content__price">Стоимость поездки:
-                                    <span class="item-card__content__price__number"><span>8 300</span> руб</span>
-                                </div>
-                                <a href="" class="item-card__content__more"><span>отправить заявку</span></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item-card">
-                        <div class="item-card__img">
-                            <img src="/local/templates/main/images/bus-item/bus-1.png" alt="">
-                        </div>
-                        <div class="item-card__content">
-                            <div class="item-card__content__info">Mersedes (15-18 мест)
-                                <span></span>
-                            </div>
-                            <div class="item-card__content__info_light">Маршрут поездки:
-                                <span> Медовые водопады + г. Кольцо</span>
-                            </div>
-                            <div class="item-card__content__info_light">Время поездки:
-                                <span> 3 часа</span>
-                            </div>
-                            <div class="item-card__content__footer clearfix">
-                                <div class="item-card__content__price">Стоимость поездки:
-                                    <span class="item-card__content__price__number"><span>7 500</span> руб</span>
-                                </div>
-                                <a href="" class="item-card__content__more"><span>отправить заявку</span></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="pagination-base">
-                        <nav aria-label="Page navigation">
-                            <ul class="pagination">
-                                <li class="active"><a href="#">1</a></li>
-                                <li><a href="#">2</a></li>
-                            </ul>
-                        </nav>
                     </div>
                 </div>
             </div>
