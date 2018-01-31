@@ -519,10 +519,10 @@ $(function() {
         return false;
     });
 
-    $('.dropdown').hover(function(){
+    $('.header-menu .dropdown').hover(function(){
       // $('.dropdown-toggle', this).trigger('click');
     });
-    $('.dropdown').on('click',function(){
+    $('.header-menu .dropdown').on('click',function(){
         location.href = $(this).children('a').attr('href');
     });
 });
