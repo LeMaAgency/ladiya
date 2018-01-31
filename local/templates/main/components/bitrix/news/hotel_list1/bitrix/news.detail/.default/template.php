@@ -93,3 +93,25 @@ $this->setFrameMode(true);
 	}
 	?>
 </div>
+<!--	начало Google карта с меткой-->
+	<div id="map" style="height:400px;width: 100%;"></div>
+    <script>
+      function initMap() {
+		var myLatlng = new google.maps.LatLng(<?=$arResult["PROPERTIES"]["GOOGLE_MAP"]["VALUE"]?>);
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 15,
+          center: myLatlng
+        });
+        var marker = new google.maps.Marker({
+          position: myLatlng,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=<?=$arResult["PROPERTIES"]["GOOGLE_MAP"]["USER_TYPE_SETTINGS"]["API_KEY"]?>&callback=initMap">
+    </script>
+<!--	конец Google карта с меткой-->
+
+
+

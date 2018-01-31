@@ -151,7 +151,7 @@ $this->setFrameMode(true);
                                         <h5><b><?= Loc::getMessage('TOUR_ROUTE_TITLE'); ?>: <?= Helper::escPropValue('ROUTE', $arResult); ?></b></h5>
                                     <? endif; ?>
 
-                                    <div id="map"></div>
+                                    <iframe src="<?=$arResult["PROPERTIES"]["GOOGLE_ROUT_LINK"]["VALUE"]?>" width="640" height="480"></iframe>
 
                                 </div>
                             </div>
