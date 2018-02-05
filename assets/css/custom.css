@@ -1541,8 +1541,8 @@ font-size: 18px;
         border-bottom: 0;
     }
 }
-.core__text table tr,
-.text__block table tr,
+.core__text table td,
+.text__block table td,
 .page__hotel__detail__table table tr {
     border: 1px solid #f15922;
     padding: .35em;

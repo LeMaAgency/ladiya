@@ -324,7 +324,7 @@ while($ob = $places->GetNextElement())
                                 <h1>Трансфер</h1>
                                 <p><span style="font-weight: bold;">КАВКАЗСКИЕ МИНЕРАЛЬНЫЕ ВОДЫ<br><span><br>Условия встречи туристов</span> </span></p>
 
-                                <table class="tbc" cellspacing="0" cellpadding="0" border="0">
+                                <table class="tbc" cellspacing="0" cellpadding="0" border="0" style="width: 100%">
                                     <tbody>
                                     <tr><th>
                                             <p><span style="font-weight: bold;">Прибытие</span></p>
@@ -355,11 +355,12 @@ while($ob = $places->GetNextElement())
                                             <p>ЛАДЬЯ</p>
                                         </td>
                                     </tr>
-                                    <tr>
-                                        <td colspan="3">
-                                            <p><strong>Индивидуальный трансфер</strong></p>
-                                        </td>
-                                    </tr>
+                                    </tbody>
+                                </table>
+                                <p><b><br>Индивидуальный трансфер</b> </span></p>
+
+                                <table style="width: 100%">
+                                    <tbody>
                                     <tr><th>
                                             <p><span style="font-weight: bold;">Место встречи</span></p>
                                         </th><th>
