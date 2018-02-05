@@ -471,13 +471,9 @@ $this->setFrameMode(true);
                     <div class="col-xs-12 col-sm-6">
                         <a href="#price" id="bron__btn" class="booking"><?= Loc::getMessage('TOUR_ORDER_BTN_TITLE'); ?></a>
                     </div>
-                    <? if (!empty($arResult['PROPERTIES']['FULL_PROGRAMM']['VALUE_SRC'])): ?>
-                        <div class="col-xs-12 col-sm-6">
-                            <a href="<?= $arResult['PROPERTIES']['FULL_PROGRAMM']['VALUE_SRC']; ?>" class="full_program">
-                                <?= Loc::getMessage('TOUR_SHOW_FULL_PROGRAMM_TITLE'); ?>
-                            </a>
-                        </div>
-                    <? endif; ?>
+                    <div class="col-xs-12 col-sm-6">
+                        <a href="#popup__form__agenci" data-fancybox class="full_program">Бронирование для агентств</a>
+                    </div>
                 </div>
 
             </div>
@@ -780,6 +776,81 @@ $this->setFrameMode(true);
                             <input name="phone" class="core__input__control" placeholder="Введите Ваш телефон">
                             <div class="core__input__log"></div>
                         </div>
+                        <button type="submit" name="submit">Жду звонка</button>
+                    </div>
+                    <div class="popup__bron__bottom__right">
+                        <p class="js-field-block">
+                            <input type="checkbox" name="privacy">
+                            <a href="/privacy.html" target="_blank">Я согласен на обработку персональных данных</a>
+                            <span class="core__input__log"></span>
+                        </p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="popup__form__agenci" class="popup">
+    <div class="popup__form">
+        <div class="popup__bron">
+            <div class="popup__bron__title">
+                Чтобы забронировать поездку заполните поля ниже
+            </div>
+            <div class="popup__bron__text">
+                Мы с Вами свяжемся в ближайшее время
+            </div>
+            <div class="popup__bron__bottom">
+                <form class="form__go js-tour-request" action="/ajax/tour-order.php" method="post">
+                    <input type="hidden" id="tour_order_id" value="">
+                    <div class="popup__bron__bottom__left">
+                        <div class="core__input js-field-block">
+                            <input name="name" class="core__input__control" placeholder="название агентства">
+                            <div class="core__input__log"></div>
+                        </div>
+                        <div class="core__input js-field-block">
+                            <input name="city" class="core__input__control" placeholder="город">
+                            <div class="core__input__log"></div>
+                        </div>
+                        <div class="core__input js-field-block">
+                            <input name="name" class="core__input__control" placeholder="ФИО менеджера">
+                            <div class="core__input__log"></div>
+                        </div><br>
+                        <div class="core__input js-field-block">
+                            <input name="phone" class="core__input__control" placeholder="Телефон">
+                            <div class="core__input__log"></div>
+                        </div>
+                        <div class="core__input js-field-block">
+                            <input name="email" class="core__input__control" placeholder="Введите Email">
+                            <div class="core__input__log"></div>
+                        </div><br>
+
+<!--                        Название тура (подгружается автоматом в зависимости от того тора, на котором бронируем)-->
+<!--                        дата начала тура (календарик)-->
+<!--                        Кол-во туристов (взр./дет) - текстовое поле-->
+<!--                        Категория гостиницы (подгружать заведенные к этому туру, выбрать можно только одну)-->
+<!--                        Доп. услуги/пожелания  текстовое поле-->
+
+                        <div class="core__input js-field-block">
+                            <input name="phone" class="core__input__control" placeholder="Название тура">
+                            <div class="core__input__log"></div>
+                        </div>
+                        <div class="core__input js-field-block">
+                            <input id="date-arrive" name="date" class="core__input__control js-clearable hasDatepicker" placeholder="Дата начала тура">
+                            <div class="core__input__log"></div>
+                        </div>
+                        <div class="core__input js-field-block">
+                            <input name="phone" class="core__input__control" placeholder="Кол-во туристов">
+                            <div class="core__input__log"></div>
+                        </div><br>
+                        <div class="core__input js-field-block">
+                            <input name="phone" class="core__input__control" placeholder="Категория гостиницы">
+                            <div class="core__input__log"></div>
+                        </div>
+                        <div class="core__input js-field-block">
+                            <input name="phone" class="core__input__control" placeholder="Доп. услуги/пожелания">
+                            <div class="core__input__log"></div>
+                        </div>
+
                         <button type="submit" name="submit">Жду звонка</button>
                     </div>
                     <div class="popup__bron__bottom__right">

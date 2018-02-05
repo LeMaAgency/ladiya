@@ -2877,6 +2877,14 @@ input.filter__button {padding-bottom: 15px !important;}
     color: #0f0f0f;
 }
 
+.popup__bron .core__input {}
+.popup__bron .core__input__log {
+    position: relative;
+    top: -15px;
+    bottom: 0;
+    left: 0;
+}
+
 .core__input {
     position: relative;
     display: inline-block;
