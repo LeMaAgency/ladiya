@@ -2100,3 +2100,9 @@ PAGE TRANSFER
     list-style-type: decimal;
     display: list-item;
 }
+
+
+/*for page 'search'*/
+.search-page a{
+    color: #337ab7;
+}
