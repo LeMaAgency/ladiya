@@ -156,7 +156,6 @@ $this->setFrameMode(true);
                                 </div>
                             </div>
                         </div>
-
                         <div role="tabpanel" class="tab-pane" id="program">
                             <div class="row">
                                 <div class="col-xs-12">
@@ -165,6 +164,7 @@ $this->setFrameMode(true);
                                         $first = true;
                                         ?>
                                         <!-- TAB BUTTONS -->
+                                        <? /*
                                         <ul class="tablist inner" role="tablist">
                                             <? foreach ($arResult['PROGRAMMS'] as $id => $programm): ?>
                                                 <?
@@ -178,8 +178,11 @@ $this->setFrameMode(true);
                                                     <a href="#p<?= $id; ?>" aria-controls="p<?= $id; ?>" role="tab"
                                                        data-toggle="tab"><?= $programm['NAME']; ?></a>
                                                 </li>
+
                                             <? endforeach; ?>
                                         </ul>
+
+                                        */ ?>
 
                                         <?
                                         $first = true;
@@ -236,6 +239,7 @@ $this->setFrameMode(true);
                                                         </div>
                                                     </div>
                                                 </div>
+                                                <? break; ?>
                                             <? endforeach; ?>
                                         </div>
 
