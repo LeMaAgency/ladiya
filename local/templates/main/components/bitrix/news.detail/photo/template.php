@@ -18,6 +18,11 @@ Loc::loadMessages(__FILE__);
 <div class="container">
     <div class="text__block">
         <div class="catalog__list catalog__list_3">
+            <? if(!empty($arResult['PROPERTIES']['ELEM_HEAD_PICTURE']['VALUE'])):?>
+                <? $this->SetViewTarget('detail_head_pic');?>
+                    <?=CFile::GetPath($arResult['PROPERTIES']['ELEM_HEAD_PICTURE']['VALUE']);?>
+                <? $this->EndViewTarget();?>
+            <?endif;?>
             <? foreach ($arResult['PROPERTIES']['MORE_PHOTO']['VALUE'] as $key=>$arImg):
                 $descriptionCode = $key;
                 $arImg = \CFile::GetPath($arImg); ?>

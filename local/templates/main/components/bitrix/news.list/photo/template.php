@@ -26,28 +26,40 @@ $confirmDelete = array('CONFIRM' => \GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')
                 $this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], $strEditLink);
                 $this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], $strDeleteLink, $confirmDelete);
                 ?>
-                <a href="<?=$arItem['DETAIL_PAGE_URL'];?>" title="<?=$arItem['NAME'];?>" class="catalog__list__item">
-                    <div class="catalog__list__item__img" style="background-image: url('<?= $arItem['PREVIEW_PICTURE']['SRC']; ?>');">
-                        <div class="catalog__list__item__img__title">
-                            <?= $arItem['NAME']; ?>
-                        </div>
-                        <div class="catalog__list__item__img__wrap">
-                            <div class="catalog__list__item__img__wrap__table">
-                                <div class="catalog__list__item__img__wrap__table__cell">
-                                    <div class="catalog__list__item__img__wrap__title">
-                                        <?= $arItem['NAME']; ?>
-                                    </div>
-                                    <span class="catalog__list__item__img__wrap__text">
-                                        <?= $arItem['PREVIEW_TEXT']; ?>
-                                    </span>
-                                    <div class="catalog__list__item__img__wrap__btn">
-                                        <?=Loc::getMessage('PHOTO_MORE_INFO');?>
+                
+                <? if($arItem['PROPERTIES']['PAGE_HEAD_PICTURE']['VALUE'] == 'true'):?>
+                    <? $this->SetViewTarget('head_pic');?>
+                        <?
+                         $bgImage = CFile::GetPath($arItem['PROPERTIES']['ELEM_HEAD_PICTURE']['VALUE']);
+                        echo "style=\"background-image:url(".$bgImage.")\""?>
+                        <?echo "id=\"".$this->GetEditAreaId($arItem['ID'])."\""?>
+                    <? $this->EndViewTarget();?>
+                <?endif;?>
+                
+                <? if($arItem['PROPERTIES']['PAGE_HEAD_PICTURE']['VALUE']!= 'true'):?>
+                    <a href="<?=$arItem['DETAIL_PAGE_URL'];?>" title="<?=$arItem['NAME'];?>" class="catalog__list__item">
+                        <div class="catalog__list__item__img" style="background-image: url('<?= $arItem['PREVIEW_PICTURE']['SRC']; ?>');">
+                            <div class="catalog__list__item__img__title">
+                                <?= $arItem['NAME']; ?>
+                            </div>
+                            <div class="catalog__list__item__img__wrap">
+                                <div class="catalog__list__item__img__wrap__table">
+                                    <div class="catalog__list__item__img__wrap__table__cell">
+                                        <div class="catalog__list__item__img__wrap__title">
+                                            <?= $arItem['NAME']; ?>
+                                        </div>
+                                        <span class="catalog__list__item__img__wrap__text">
+                                            <?= $arItem['PREVIEW_TEXT']; ?>
+                                        </span>
+                                        <div class="catalog__list__item__img__wrap__btn">
+                                            <?=Loc::getMessage('PHOTO_MORE_INFO');?>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </a>
+                    </a>
+                <?endif;?>
             <? endforeach; ?>
         </div>
     </div>

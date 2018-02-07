@@ -4,7 +4,7 @@ $APPLICATION->SetTitle("Фото");
 ?>
 
     <div class="text__block__wrap">
-        <div class="text___block__images" style="background-image: url('/assets/img/carousel/5.png')">
+        <div class="text___block__images" <?$APPLICATION->ShowViewContent('head_pic')?>>
             <div class="container">
                 <span class="text___block__images__title"><?= $APPLICATION->ShowTitle(); ?></span>
             </div>
