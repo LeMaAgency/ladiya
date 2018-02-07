@@ -190,57 +190,53 @@ $this->setFrameMode(true);
 
                                         <!-- TAB CONTENT -->
                                         <div class="tab-content inner">
-                                            <? foreach ($arResult['PROGRAMMS'] as $id => $programm): ?>
-                                                <?
-                                                if ($first) {
-                                                    $first = false;
-                                                    $class = ' active';
-                                                } else
-                                                    $class = '';
-                                                ?>
-                                                <div role="tabpanel" class="tab-pane<?= $class ?>" id="p<?= $id; ?>">
-                                                    <div class="img" style="background-image: url(<?= $programm['PICTURE_SRC']; ?>);"></div>
-                                                    <div class="text page__program__detail__list__item">
-                                                        <div class="page__program__detail__list__item__title"><?= $programm['NAME']; ?></div>
-                                                        <div class="page__program__detail__list__item__text">
-                                                            <?= $programm['PREVIEW_TEXT']; ?>
-
-                                                            <? $arSpoilerText = $arResult['SPOILER_TEXT'][$id];
-                                                            if ($arSpoilerText): ?>
-                                                                <? $iCount = count($arSpoilerText['ADDITIONAL_TITLE']);
-                                                                for ($i = 0; $i <= $iCount; $i++):?>
-                                                                    <? if (
-                                                                        !empty($arSpoilerText['ADDITIONAL_TITLE'][$i]) &&
-                                                                        !empty($arSpoilerText['ADDITIONAL_TEXT'][$i])
-                                                                    ): ?>
-                                                                        <? if ($arSpoilerText['TEXT_BEFORE'][$i]): ?>
-                                                                            <p>
-                                                                                <?= $arSpoilerText['TEXT_BEFORE'][$i]; ?>
+                                                <div role="tabpanel" class="tab-pane active" >
+                                                   
+                                                    <? foreach ($arResult['PROGRAMMS'] as $id => $programm): ?>
+                                                    <??>
+                                                        <div class="text page__program__detail__list__item">
+                                                            <div class="page__program__detail__list__item__title"><?= $programm['NAME']; ?></div>
+                                                            <div class="page__program__detail__list__item__text">
+                                                                <?= $programm['PREVIEW_TEXT']; ?>
+    
+                                                                <? $arSpoilerText = $arResult['SPOILER_TEXT'][$id];
+                                                                if ($arSpoilerText): ?>
+                                                                    <? $iCount = count($arSpoilerText['ADDITIONAL_TITLE']);
+                                                                    for ($i = 0; $i <= $iCount; $i++):?>
+                                                                        <? if (
+                                                                            !empty($arSpoilerText['ADDITIONAL_TITLE'][$i]) &&
+                                                                            !empty($arSpoilerText['ADDITIONAL_TEXT'][$i])
+                                                                        ): ?>
+                                                                            <? if ($arSpoilerText['TEXT_BEFORE'][$i]): ?>
+                                                                                <p>
+                                                                                    <?= $arSpoilerText['TEXT_BEFORE'][$i]; ?>
+                                                                                </p>
+                                                                            <? endif; ?>
+                                                                            <p class="core__switch__btn">
+                                                                                <span class="core__switch__btn__text"
+                                                                                      data-js-core-switch-element="core__switch__btn__hidden_<?= $i ?>_1">
+                                                                                      <?= $arSpoilerText['ADDITIONAL_TITLE'][$i]; ?>
+                                                                                </span>
+                                                                                <span class="core__switch__btn__hidden core__switch__btn__hidden_<?= $i ?>_1">
+                                                                                <?= $arSpoilerText['ADDITIONAL_TEXT'][$i]; ?>
+                                                                            </span>
                                                                             </p>
                                                                         <? endif; ?>
-                                                                        <p class="core__switch__btn">
-                                                                            <span class="core__switch__btn__text"
-                                                                                  data-js-core-switch-element="core__switch__btn__hidden_<?= $i ?>_1">
-                                                                                  <?= $arSpoilerText['ADDITIONAL_TITLE'][$i]; ?>
-                                                                            </span>
-                                                                            <span class="core__switch__btn__hidden core__switch__btn__hidden_<?= $i ?>_1">
-                                                                            <?= $arSpoilerText['ADDITIONAL_TEXT'][$i]; ?>
-                                                                        </span>
-                                                                        </p>
-                                                                    <? endif; ?>
-                                                                    <? if ($arSpoilerText['TEXT_AFTER'][$i]): ?>
-                                                                        <p>
-                                                                            <?= $arSpoilerText['TEXT_AFTER'][$i]; ?>
-                                                                        </p>
-                                                                    <? endif; ?>
-                                                                <? endfor; ?>
-                                                            <? endif; ?>
-
+                                                                        <? if ($arSpoilerText['TEXT_AFTER'][$i]): ?>
+                                                                            <p>
+                                                                                <?= $arSpoilerText['TEXT_AFTER'][$i]; ?>
+                                                                            </p>
+                                                                        <? endif; ?>
+                                                                    <? endfor; ?>
+                                                                <? endif; ?>
+    
+                                                            </div>
                                                         </div>
-                                                    </div>
+                                                        
+                                                        <? endforeach;?>
                                                 </div>
-                                                <? break; ?>
-                                            <? endforeach; ?>
+                                                
+                                            
                                         </div>
 
                                     <? endif; ?>
