@@ -204,8 +204,7 @@ $this->setFrameMode(true);
                                                                     <? $iCount = count($arSpoilerText['ADDITIONAL_TITLE']);
                                                                     for ($i = 0; $i <= $iCount; $i++):?>
                                                                         <? if (
-                                                                            !empty($arSpoilerText['ADDITIONAL_TITLE'][$i]) &&
-                                                                            !empty($arSpoilerText['ADDITIONAL_TEXT'][$i])
+                                                                            !empty($arSpoilerText['ADDITIONAL_TITLE'][$i])
                                                                         ): ?>
                                                                             <? if ($arSpoilerText['TEXT_BEFORE'][$i]): ?>
                                                                                 <p>
@@ -213,13 +212,21 @@ $this->setFrameMode(true);
                                                                                 </p>
                                                                             <? endif; ?>
                                                                             <p class="core__switch__btn">
-                                                                                <span class="core__switch__btn__text"
+                                                                                <?if (!empty($arSpoilerText['ADDITIONAL_TEXT'][$i])):?>
+                                                                                    <span class="core__switch__btn__text"
+                                                                                <?else:?>
+                                                                                    <span class="core__switch__btn__text-noarrow"
+                                                                                <?endif;?>
                                                                                       data-js-core-switch-element="core__switch__btn__hidden_<?= $spoiler_number ?>_1">
                                                                                       <?= $arSpoilerText['ADDITIONAL_TITLE'][$i]; ?>
                                                                                 </span>
-                                                                                <span class="core__switch__btn__hidden core__switch__btn__hidden_<?= $spoiler_number++ ?>_1">
-                                                                                <?= $arSpoilerText['ADDITIONAL_TEXT'][$i]; ?>
-                                                                            </span>
+                                                                                <?if (!empty($arSpoilerText['ADDITIONAL_TEXT'][$i])):?>
+                                                                                    <span class="core__switch__btn__hidden core__switch__btn__hidden_<?= $spoiler_number++ ?>_1">
+                                                                                        <?= $arSpoilerText['ADDITIONAL_TEXT'][$i]; ?>
+                                                                                    </span>
+                                                                                <?else:?>
+                                                                                    <?$spoiler_number++;?>
+                                                                                <?endif;?>
                                                                             </p>
                                                                         <? endif; ?>
                                                                         <? if ($arSpoilerText['TEXT_AFTER'][$i]): ?>
