@@ -27,17 +27,25 @@ CJSCore::init(array('fx'));
     $assets->addCss("/assets/css/fonts.css");
     $assets->addCss("/assets/css/style.css");
     $assets->addCss("/assets/css/custom.css");
-    $assets->addCss("/assets/libs/fancybox/fancybox.css");
+    $assets->addCss("/assets/libs/fancybox/fancybox.css");    
+    $assets->addCss("/assets/css/font-awesome/font-awesome.min.css");
+    $assets->addCss("/assets/slick-1.8.0/slick/slick.css");
+    $assets->addCss("/assets/slick-1.8.0/slick/slick-theme.css");
+
+    $assets->addJs("//code.jquery.com/jquery-1.11.0.min.js");
+    $assets->addJs("//code.jquery.com/jquery-migrate-1.2.1.min.js");
     $assets->addJs("/assets/libs/jquery/jquery.min.js");
     $assets->addJs("/assets/libs/jquery/jquery-ui.min.js");
-    $assets->addJs("/assets/libs/jquery/datepicker-ru.js");
+    $assets->addJs("/assets/libs/jquery/datepicker-ru.js");    
+    $assets->addJs("/assets/slick-1.8.0/slick/slick.min.js");
     $assets->addJs("/assets/libs/bootstrap/js/bootstrap.min.js");
     $assets->addJs("/assets/libs/SelectFx/classie.js");
     $assets->addJs("/assets/libs/SelectFx/selectFx.js");
     $assets->addJs("/assets/libs/jQRangeSlider/jQRangeSlider-min.js");
     $assets->addJs("/assets/libs/fancybox/fancybox.js");
     $assets->addJs("/assets/js/custom.js");
-
+    
+    
     $APPLICATION->ShowHead();
     ?>
     <!--[if lt IE 9]>

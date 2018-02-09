@@ -525,4 +525,41 @@ $(function() {
     $('.header-menu .dropdown').on('click',function(){
         location.href = $(this).children('a').attr('href');
     });
+    
+    $('.hotel__detail___top__slider').slick({
+        arrows: true,
+        speed: 500,
+        slidesToShow: 1,
+        fade:true,
+        focusOnSelect: true,
+        infinite: true,
+        asNavFor: '.hotel__detail___bottom__slider'
+    });
+    
+    $('.hotel__detail___bottom__slider').slick({ 
+        slidesToShow: 100,
+        focusOnSelect: true,
+        centerMode: true,
+        asNavFor: '.hotel__detail___top__slider'
+    });
+    $('.hotel_number__slider').slick({
+        arrows: true,
+        slidesToShow: 1,
+        focusOnSelect: true,
+        dots:true,
+        fade: true,
+        speed: 500,
+        infinite: true,
+        centerMode: true
+    });
+    $('.js-hotel__maps_open').off('click').on('click',function(e){
+        e.preventDefault();
+        $.fancybox.open($('#hotel_maps'));
+    });
+    
+    $('.js-hotel__number_info').off('click').on('click',function(e){
+        e.preventDefault();
+        $.fancybox.open($('#number_info'));
+    });
+        
 });
