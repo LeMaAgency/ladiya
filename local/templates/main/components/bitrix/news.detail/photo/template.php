@@ -29,7 +29,8 @@ Loc::loadMessages(__FILE__);
                 <a href="<?= $arImg; ?>" data-fancybox="photo" data-caption="<?=$arResult['PROPERTIES']['MORE_PHOTO']['DESCRIPTION'][$descriptionCode]?>" class="catalog__list__item">
                     <div class="catalog__list__item__img" style="background-image: url('<?=$arImg; ?>');">
                         <div class="catalog__list__item__img__title">
-                            <?=$arResult['PROPERTIES']['MORE_PHOTO']['DESCRIPTION'][$descriptionCode]?>
+                            test
+                            <?=htmlspecialchars_decode($arResult['PROPERTIES']['MORE_PHOTO']['DESCRIPTION'][$descriptionCode])?>
                         </div>
                         <div class="catalog__list__item__img__wrap">
                             <div class="catalog__list__item__img__wrap__table">
