@@ -192,8 +192,8 @@ $this->setFrameMode(true);
                                         <div class="tab-content inner">
                                                 <div role="tabpanel" class="tab-pane active" >
                                                    
-                                                    <? foreach ($arResult['PROGRAMMS'] as $id => $programm): ?>
-                                                    <??>
+                                                    <?$spoiler_number = 0 ; //Переменная для спойлеров
+                                                    foreach ($arResult['PROGRAMMS'] as $id => $programm):?>
                                                         <div class="text page__program__detail__list__item">
                                                             <div class="page__program__detail__list__item__title"><?= $programm['NAME']; ?></div>
                                                             <div class="page__program__detail__list__item__text">
@@ -214,10 +214,10 @@ $this->setFrameMode(true);
                                                                             <? endif; ?>
                                                                             <p class="core__switch__btn">
                                                                                 <span class="core__switch__btn__text"
-                                                                                      data-js-core-switch-element="core__switch__btn__hidden_<?= $i ?>_1">
+                                                                                      data-js-core-switch-element="core__switch__btn__hidden_<?= $spoiler_number ?>_1">
                                                                                       <?= $arSpoilerText['ADDITIONAL_TITLE'][$i]; ?>
                                                                                 </span>
-                                                                                <span class="core__switch__btn__hidden core__switch__btn__hidden_<?= $i ?>_1">
+                                                                                <span class="core__switch__btn__hidden core__switch__btn__hidden_<?= $spoiler_number++ ?>_1">
                                                                                 <?= $arSpoilerText['ADDITIONAL_TEXT'][$i]; ?>
                                                                             </span>
                                                                             </p>
