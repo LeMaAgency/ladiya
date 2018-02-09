@@ -89,10 +89,14 @@ $foundCnt = (int) $arResult['NAV_RESULT']->NavRecordCount;
                 <div class="hotel__list___item__img__title">
                     <?= $arItem['NAME']; ?>
                     <div class="hotel__list__stars">
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <?
+                            $star_count = (int)$arItem['PROPERTIES']['NUMBER_OF_STARS']['VALUE'] - 1;
+                            for($i=0; $i <= $star_count; $i++){
+                                echo "<i class=\"fa fa-star\" aria-hidden=\"true\"></i>";
+                            }
+                        ?>
+                        
+                        
                     </div>
                     <div class="hotel__list___item__link js-hotel__maps_open">
                     <span>
