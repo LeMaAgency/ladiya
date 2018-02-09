@@ -144,9 +144,9 @@ $foundCnt = (int) $arResult['NAV_RESULT']->NavRecordCount;
             <div class="catalog__list__item" id="<?=$this->GetEditAreaId($arItem['ID']);?>">
                 <div class="catalog__list__item__img" style="background-image: url(<?=$arItem['PREVIEW_PICTURE']['SRC']?>)">
                     <? if(Helper::propFilled('DISCOUNT', $arItem)) : ?>
-                        <div class="discount">-<?=Helper::escPropValue('DISCOUNT', $arItem);?>%</div>
+                        <div class="catalog__list__item__img__discount"><?=Helper::escPropValue('DISCOUNT', $arItem)?></div>
+                        <!--<div class="discount">-<?//=Helper::escPropValue('DISCOUNT', $arItem);?>%</div>-->
                     <? endif; ?>
-                    <div class="catalog__list__item__img__discount">20%</div>
                     <div class="catalog__list__item__img__title"><?=$arItem['NAME']?></div>
                 </div>
 
