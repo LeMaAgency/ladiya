@@ -1936,6 +1936,17 @@ font-size: 18px;
     transform: rotate(180deg);
     background: url("/assets/img/icons/arrow__down.svg");
 }
+
+.core__switch__btn__text-noarrow{
+   position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted #f15922;
+    font-weight: 600;
+}
+
+
+
+
 .core__switch__btn__hidden {
     display: none;
     overflow: hidden;
