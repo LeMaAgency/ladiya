@@ -11,93 +11,320 @@
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
+use Bitrix\Main\Localization\Loc;
+Loc::loadMessages(__FILE__);
 ?>
-<div class="news-detail">
-	<?if($arParams["DISPLAY_PICTURE"]!="N" && is_array($arResult["DETAIL_PICTURE"])):?>
-		<img
-			class="detail_picture"
-			border="0"
-			src="<?=$arResult["DETAIL_PICTURE"]["SRC"]?>"
-			width="<?=$arResult["DETAIL_PICTURE"]["WIDTH"]?>"
-			height="<?=$arResult["DETAIL_PICTURE"]["HEIGHT"]?>"
-			alt="<?=$arResult["DETAIL_PICTURE"]["ALT"]?>"
-			title="<?=$arResult["DETAIL_PICTURE"]["TITLE"]?>"
-			/>
-	<?endif?>
-	<?if($arParams["DISPLAY_DATE"]!="N" && $arResult["DISPLAY_ACTIVE_FROM"]):?>
-		<span class="news-date-time"><?=$arResult["DISPLAY_ACTIVE_FROM"]?></span>
-	<?endif;?>
-	<?if($arParams["DISPLAY_NAME"]!="N" && $arResult["NAME"]):?>
-		<h3><?=$arResult["NAME"]?></h3>
-	<?endif;?>
-	<?if($arParams["DISPLAY_PREVIEW_TEXT"]!="N" && $arResult["FIELDS"]["PREVIEW_TEXT"]):?>
-		<p><?=$arResult["FIELDS"]["PREVIEW_TEXT"];unset($arResult["FIELDS"]["PREVIEW_TEXT"]);?></p>
-	<?endif;?>
-	<?if($arResult["NAV_RESULT"]):?>
-		<?if($arParams["DISPLAY_TOP_PAGER"]):?><?=$arResult["NAV_STRING"]?><br /><?endif;?>
-		<?echo $arResult["NAV_TEXT"];?>
-		<?if($arParams["DISPLAY_BOTTOM_PAGER"]):?><br /><?=$arResult["NAV_STRING"]?><?endif;?>
-	<?elseif(strlen($arResult["DETAIL_TEXT"])>0):?>
-		<?echo $arResult["DETAIL_TEXT"];?>
-	<?else:?>
-		<?echo $arResult["PREVIEW_TEXT"];?>
-	<?endif?>
-	<div style="clear:both"></div>
-	<br />
-	<?foreach($arResult["FIELDS"] as $code=>$value):
-		if ('PREVIEW_PICTURE' == $code || 'DETAIL_PICTURE' == $code)
-		{
-			?><?=GetMessage("IBLOCK_FIELD_".$code)?>:&nbsp;<?
-			if (!empty($value) && is_array($value))
-			{
-				?><img border="0" src="<?=$value["SRC"]?>" width="<?=$value["WIDTH"]?>" height="<?=$value["HEIGHT"]?>"><?
-			}
-		}
-		else
-		{
-			?><?=GetMessage("IBLOCK_FIELD_".$code)?>:&nbsp;<?=$value;?><?
-		}
-		?><br />
-	<?endforeach;
-	foreach($arResult["DISPLAY_PROPERTIES"] as $pid=>$arProperty):?>
 
-		<?=$arProperty["NAME"]?>:&nbsp;
-		<?if(is_array($arProperty["DISPLAY_VALUE"])):?>
-			<?=implode("&nbsp;/&nbsp;", $arProperty["DISPLAY_VALUE"]);?>
-		<?else:?>
-			<?=$arProperty["DISPLAY_VALUE"];?>
-		<?endif?>
-		<br />
-	<?endforeach;
-	if(array_key_exists("USE_SHARE", $arParams) && $arParams["USE_SHARE"] == "Y")
-	{
-		?>
-		<div class="news-detail-share">
-			<noindex>
-			<?
-			$APPLICATION->IncludeComponent("bitrix:main.share", "", array(
-					"HANDLERS" => $arParams["SHARE_HANDLERS"],
-					"PAGE_URL" => $arResult["~DETAIL_PAGE_URL"],
-					"PAGE_TITLE" => $arResult["~NAME"],
-					"SHORTEN_URL_LOGIN" => $arParams["SHARE_SHORTEN_URL_LOGIN"],
-					"SHORTEN_URL_KEY" => $arParams["SHARE_SHORTEN_URL_KEY"],
-					"HIDE" => $arParams["SHARE_HIDE"],
-				),
-				$component,
-				array("HIDE_ICONS" => "Y")
-			);
-			?>
-			</noindex>
+<div class="hotel__detail___container">
+	<div class="hotel__detail___title">
+		<h1>Название гостиницы</h1>		
+	</div>
+	<div class="hotel__detail___address js-hotel__maps_open">			
+			<i class="fa fa-map-marker" aria-hidden="true"></i>
+				<span>
+					Пятигорск, ул. Строителей, д. 2
+				</span>
+				<?=Loc::getMessage('NEWS_DETAIL_SHOW_IN_MAP');?>
 		</div>
-		<?
-	}
-	?>
+	<div class="hotel__detail___slider">
+		<div class="hotel__detail___top__slider">
+			<img src="/assets/img/icons/calendar.svg" alt="">	
+			<img src="/assets/img/carousel/1.png" alt="">
+			<img src="/assets/img/carousel/2.png" alt="">
+			<img src="/assets/img/carousel/3.png" alt="">
+			<img src="/assets/img/carousel/4.png" alt="">
+			<img src="/assets/img/carousel/5.png" alt="">
+			<img src="/assets/img/icons/calendar.svg" alt="">	
+			<img src="/assets/img/carousel/1.png" alt="">
+			<img src="/assets/img/carousel/2.png" alt="">
+			<img src="/assets/img/carousel/3.png" alt="">
+			<img src="/assets/img/carousel/4.png" alt="">
+			<img src="/assets/img/carousel/5.png" alt="">
+			<img src="/assets/img/icons/calendar.svg" alt="">	
+			<img src="/assets/img/carousel/1.png" alt="">
+			<img src="/assets/img/carousel/2.png" alt="">
+			<img src="/assets/img/carousel/3.png" alt="">
+			<img src="/assets/img/carousel/4.png" alt="">
+			<img src="/assets/img/carousel/5.png" alt="">
+			<img src="/assets/img/icons/calendar.svg" alt="">	
+			<img src="/assets/img/carousel/1.png" alt="">
+			<img src="/assets/img/carousel/2.png" alt="">
+			<img src="/assets/img/carousel/3.png" alt="">
+			<img src="/assets/img/carousel/4.png" alt="">
+			<img src="/assets/img/carousel/5.png" alt="">
+			<img src="/assets/img/icons/calendar.svg" alt="">	
+			<img src="/assets/img/carousel/1.png" alt="">
+			<img src="/assets/img/carousel/2.png" alt="">
+			<img src="/assets/img/carousel/3.png" alt="">
+			<img src="/assets/img/carousel/4.png" alt="">
+			<img src="/assets/img/carousel/5.png" alt="">
+			<img src="/assets/img/icons/calendar.svg" alt="">	
+			<img src="/assets/img/carousel/1.png" alt="">
+			<img src="/assets/img/carousel/2.png" alt="">
+			<img src="/assets/img/carousel/3.png" alt="">
+			<img src="/assets/img/carousel/4.png" alt="">
+			<img src="/assets/img/carousel/5.png" alt="">
+		</div>
+		<div class="hotel__detail___bottom__slider">
+			<img src="/assets/img/icons/calendar.svg" alt="">	
+			<img src="/assets/img/carousel/1.png" alt="">
+			<img src="/assets/img/carousel/2.png" alt="">
+			<img src="/assets/img/carousel/3.png" alt="">
+			<img src="/assets/img/carousel/4.png" alt="">
+			<img src="/assets/img/carousel/5.png" alt="">
+			<img src="/assets/img/icons/calendar.svg" alt="">	
+			<img src="/assets/img/carousel/1.png" alt="">
+			<img src="/assets/img/carousel/2.png" alt="">
+			<img src="/assets/img/carousel/3.png" alt="">
+			<img src="/assets/img/carousel/4.png" alt="">
+			<img src="/assets/img/carousel/5.png" alt="">
+			<img src="/assets/img/icons/calendar.svg" alt="">	
+			<img src="/assets/img/carousel/1.png" alt="">
+			<img src="/assets/img/carousel/2.png" alt="">
+			<img src="/assets/img/carousel/3.png" alt="">
+			<img src="/assets/img/carousel/4.png" alt="">
+			<img src="/assets/img/carousel/5.png" alt="">
+			<img src="/assets/img/icons/calendar.svg" alt="">	
+			<img src="/assets/img/carousel/1.png" alt="">
+			<img src="/assets/img/carousel/2.png" alt="">
+			<img src="/assets/img/carousel/3.png" alt="">
+			<img src="/assets/img/carousel/4.png" alt="">
+			<img src="/assets/img/carousel/5.png" alt="">
+			<img src="/assets/img/icons/calendar.svg" alt="">	
+			<img src="/assets/img/carousel/1.png" alt="">
+			<img src="/assets/img/carousel/2.png" alt="">
+			<img src="/assets/img/carousel/3.png" alt="">
+			<img src="/assets/img/carousel/4.png" alt="">
+			<img src="/assets/img/carousel/5.png" alt="">
+			<img src="/assets/img/icons/calendar.svg" alt="">	
+			<img src="/assets/img/carousel/1.png" alt="">
+			<img src="/assets/img/carousel/2.png" alt="">
+			<img src="/assets/img/carousel/3.png" alt="">
+			<img src="/assets/img/carousel/4.png" alt="">
+			<img src="/assets/img/carousel/5.png" alt="">
+		</div>
+	</div>
+	<div class="hotel__detail___description">
+			Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания
+			Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания
+			Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания
+			Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания
+			Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания
+			Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания
+			Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания
+			Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания
+			Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания
+			Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания
+			Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания
+			Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания
+			Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания
+			Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания
+	</div>
+	<div class="hotel__detail___infrastruktura">
+		<div class="hotel__detail___title">
+			<?= Loc::getmessage('NEWS_DETAIL_INFRASTRUKTURA'); ?>
+		</div>
+		<ul>
+			<li>
+				<span>
+					<i class="fa fa-bath" aria-hidden="true"></i>
+					<span>Душевая комната</span>
+				</span>
+			</li>
+			<li>
+				<span>
+					<i class="fa fa-plus-square" aria-hidden="true"></i>
+					<span>Аптека</span>
+				</span>
+			</li>
+			<li>
+				<span>
+					<i class="fa fa-wifi" aria-hidden="true"></i>
+					<span>Бесплатный Wi-Fi</span>
+				</span>
+			</li>
+			<li>
+				<span>
+					<i class="fa fa-bath" aria-hidden="true"></i>
+					<span>Душевая комната</span>
+				</span>
+			</li>
+			<li>
+				<span>
+					<i class="fa fa-plus-square" aria-hidden="true"></i>
+					<span>Аптека</span>
+				</span>
+			</li>
+			<li>
+				<span>
+					<i class="fa fa-wifi" aria-hidden="true"></i>
+					<span>Бесплатный Wi-Fi</span>
+				</span>
+			</li><li>
+				<span>
+					<i class="fa fa-bath" aria-hidden="true"></i>
+					<span>Душевая комната</span>
+				</span>
+			</li>
+			<li>
+				<span>
+					<i class="fa fa-plus-square" aria-hidden="true"></i>
+					<span>Аптека</span>
+				</span>
+			</li>
+			<li>
+				<span>
+					<i class="fa fa-wifi" aria-hidden="true"></i>
+					<span>Бесплатный Wi-Fi</span>
+				</span>
+			</li><li>
+				<span>
+					<i class="fa fa-bath" aria-hidden="true"></i>
+					<span>Душевая комната</span>
+				</span>
+			</li>
+			<li>
+				<span>
+					<i class="fa fa-plus-square" aria-hidden="true"></i>
+					<span>Аптека</span>
+				</span>
+			</li>
+			<li>
+				<span>
+					<i class="fa fa-wifi" aria-hidden="true"></i>
+					<span>Бесплатный Wi-Fi</span>
+				</span>
+			</li><li>
+				<span>
+					<i class="fa fa-bath" aria-hidden="true"></i>
+					<span>Душевая комната</span>
+				</span>
+			</li>
+			<li>
+				<span>
+					<i class="fa fa-plus-square" aria-hidden="true"></i>
+					<span>Аптека</span>
+				</span>
+			</li>
+			<li>
+				<span>
+					<i class="fa fa-wifi" aria-hidden="true"></i>
+					<span>Бесплатный Wi-Fi</span>
+				</span>
+			</li><li>
+				<span>
+					<i class="fa fa-bath" aria-hidden="true"></i>
+					<span>Душевая комната</span>
+				</span>
+			</li>
+			<li>
+				<span>
+					<i class="fa fa-plus-square" aria-hidden="true"></i>
+					<span>Аптека</span>
+				</span>
+			</li>
+			<li>
+				<span>
+					<i class="fa fa-wifi" aria-hidden="true"></i>
+					<span>Бесплатный Wi-Fi</span>
+				</span>
+			</li><li>
+				<span>
+					<i class="fa fa-bath" aria-hidden="true"></i>
+					<span>Душевая комната</span>
+				</span>
+			</li>
+			<li>
+				<span>
+					<i class="fa fa-plus-square" aria-hidden="true"></i>
+					<span>Аптека</span>
+				</span>
+			</li>
+			<li>
+				<span>
+					<i class="fa fa-wifi" aria-hidden="true"></i>
+					<span>Бесплатный Wi-Fi</span>
+				</span>
+			</li>
+		</ul>
+	</div>
+	<div class="hotel__detail___rooms">
+		<div class="hotel__detail___title">
+			<?= Loc::getmessage('NEWS_DETAIL_ROOMS'); ?>
+		</div>		
+		<div class="hotel__detail___room">
+			<div class="hotel__detail___room__img ">
+				<img src="/assets/img/carousel/1.png" alt="">
+			</div>
+			<div class="hotel__detail___room__text">
+				<span>
+					De Luxe Suite 2 комнатный 2 местный
+				</span>
+			</div>
+			<div class="hotel__detail___room__info">
+				<a href="#" class="item-card__content__more js-hotel__number_info">подробнее</a>
+			</div>
+		</div>
+		<div class="hotel__detail___room">
+			<div class="hotel__detail___room__img">
+				<img src="/assets/img/carousel/2.png" alt="">
+			</div>
+			<div class="hotel__detail___room__text">
+				<span>
+					De Luxe Suite 2 комнатный 2 местный
+				</span>
+			</div>
+			<div class="hotel__detail___room__info">
+				<a href="#" class="item-card__content__more js-hotel__number_info">подробнее</a>
+			</div>
+		</div>
+		<div class="hotel__detail___room">
+			<div class="hotel__detail___room__img">
+				<img src="/assets/img/carousel/3.png" alt="">
+			</div>
+			<div class="hotel__detail___room__text">					
+				<span>
+					De Luxe Suite 2 комнатный 2 местный
+				</span>
+			</div>
+			<div class="hotel__detail___room__info">
+				<a href="#" class="item-card__content__more js-hotel__number_info">подробнее</a>
+			</div>
+		</div>
+		<div class="hotel__detail___room">
+			<div class="hotel__detail___room__img">
+				<img src="/assets/img/carousel/4.png" alt="">
+			</div>
+			<div class="hotel__detail___room__text">					
+				<span>
+					De Luxe Suite 2 комнатный 2 местный
+				</span>
+			</div>
+			<div class="hotel__detail___room__info">
+				<a href="#" class="item-card__content__more js-hotel__number_info">подробнее</a>
+			</div>
+		</div>
+		<div class="hotel__detail___room">
+			<div class="hotel__detail___room__img">
+				<img src="/assets/img/carousel/5.png" alt="">
+			</div>
+			<div class="hotel__detail___room__text">					
+				<span>
+					De Luxe Suite 2 комнатный 2 местный
+				</span>
+			</div>
+			<div class="hotel__detail___room__info">
+				<a href="#" class="item-card__content__more js-hotel__number_info">подробнее</a>
+			</div>
+		</div>
+	</div>
 </div>
 <!--	начало Google карта с меткой-->
+<!--
 	<div id="map" style="height:400px;width: 100%;"></div>
     <script>
       function initMap() {
-		var myLatlng = new google.maps.LatLng(<?=$arResult["PROPERTIES"]["GOOGLE_MAP"]["VALUE"]?>);
+		var myLatlng = new google.maps.LatLng(<?/*=$arResult["PROPERTIES"]["GOOGLE_MAP"]["VALUE"]*/?>);
         var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 15,
           center: myLatlng
@@ -109,8 +336,9 @@ $this->setFrameMode(true);
       }
     </script>
     <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=<?=$arResult["PROPERTIES"]["GOOGLE_MAP"]["USER_TYPE_SETTINGS"]["API_KEY"]?>&callback=initMap">
+    src="https://maps.googleapis.com/maps/api/js?key=<?/*=$arResult["PROPERTIES"]["GOOGLE_MAP"]["USER_TYPE_SETTINGS"]["API_KEY"]*/?>&callback=initMap">
     </script>
+-->
 <!--	конец Google карта с меткой-->
 
 

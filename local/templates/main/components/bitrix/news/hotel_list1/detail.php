@@ -12,6 +12,7 @@
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 ?>
+<div class="container">
 <?$ElementID = $APPLICATION->IncludeComponent(
 	"bitrix:news.detail",
 	"",
@@ -166,4 +167,6 @@ $this->setFrameMode(true);
 	),
 	$component
 );?>
+
 <?endif?>
+</div>
