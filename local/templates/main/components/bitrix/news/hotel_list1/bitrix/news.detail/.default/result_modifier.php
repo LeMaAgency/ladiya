@@ -38,3 +38,11 @@ if(CModule::IncludeModule("iblock"))
     }
     $arResult["ROOMS_COUNT"] = count($arResult["ROOMS"]); //Количество комнат у гостиницы
 }
+
+
+
+//Получаем пути картинок галереи по ID
+foreach ($arResult['PROPERTIES']['GALLERY']['VALUE'] as $picID)
+{
+    $arResult['PROPERTIES']['GALLERY']['PATH'][]= CFile::GetPath($picID);
+}

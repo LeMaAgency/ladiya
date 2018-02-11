@@ -20,105 +20,26 @@ Loc::loadMessages(__FILE__);
 		<h1>Название гостиницы</h1>		
 	</div>
 	<div class="hotel__detail___address js-hotel__maps_open">			
-			<i class="fa fa-map-marker" aria-hidden="true"></i>
-				<span>
-					Пятигорск, ул. Строителей, д. 2
-				</span>
-				<?=Loc::getMessage('NEWS_DETAIL_SHOW_IN_MAP');?>
-		</div>
+        <i class="fa fa-map-marker" aria-hidden="true"></i>
+            <span>
+                Пятигорск, ул. Строителей, д. 2
+            </span>
+            <?=Loc::getMessage('NEWS_DETAIL_SHOW_IN_MAP');?>
+    </div>
 	<div class="hotel__detail___slider">
 		<div class="hotel__detail___top__slider">
-			<img src="/assets/img/icons/calendar.svg" alt="">	
-			<img src="/assets/img/carousel/1.png" alt="">
-			<img src="/assets/img/carousel/2.png" alt="">
-			<img src="/assets/img/carousel/3.png" alt="">
-			<img src="/assets/img/carousel/4.png" alt="">
-			<img src="/assets/img/carousel/5.png" alt="">
-			<img src="/assets/img/icons/calendar.svg" alt="">	
-			<img src="/assets/img/carousel/1.png" alt="">
-			<img src="/assets/img/carousel/2.png" alt="">
-			<img src="/assets/img/carousel/3.png" alt="">
-			<img src="/assets/img/carousel/4.png" alt="">
-			<img src="/assets/img/carousel/5.png" alt="">
-			<img src="/assets/img/icons/calendar.svg" alt="">	
-			<img src="/assets/img/carousel/1.png" alt="">
-			<img src="/assets/img/carousel/2.png" alt="">
-			<img src="/assets/img/carousel/3.png" alt="">
-			<img src="/assets/img/carousel/4.png" alt="">
-			<img src="/assets/img/carousel/5.png" alt="">
-			<img src="/assets/img/icons/calendar.svg" alt="">	
-			<img src="/assets/img/carousel/1.png" alt="">
-			<img src="/assets/img/carousel/2.png" alt="">
-			<img src="/assets/img/carousel/3.png" alt="">
-			<img src="/assets/img/carousel/4.png" alt="">
-			<img src="/assets/img/carousel/5.png" alt="">
-			<img src="/assets/img/icons/calendar.svg" alt="">	
-			<img src="/assets/img/carousel/1.png" alt="">
-			<img src="/assets/img/carousel/2.png" alt="">
-			<img src="/assets/img/carousel/3.png" alt="">
-			<img src="/assets/img/carousel/4.png" alt="">
-			<img src="/assets/img/carousel/5.png" alt="">
-			<img src="/assets/img/icons/calendar.svg" alt="">	
-			<img src="/assets/img/carousel/1.png" alt="">
-			<img src="/assets/img/carousel/2.png" alt="">
-			<img src="/assets/img/carousel/3.png" alt="">
-			<img src="/assets/img/carousel/4.png" alt="">
-			<img src="/assets/img/carousel/5.png" alt="">
+            <?foreach ($arResult['PROPERTIES']['GALLERY']['PATH'] as $img):?>
+                <img src="<?=$img?>" alt="">
+            <?endforeach;?>
 		</div>
 		<div class="hotel__detail___bottom__slider">
-			<img src="/assets/img/icons/calendar.svg" alt="">	
-			<img src="/assets/img/carousel/1.png" alt="">
-			<img src="/assets/img/carousel/2.png" alt="">
-			<img src="/assets/img/carousel/3.png" alt="">
-			<img src="/assets/img/carousel/4.png" alt="">
-			<img src="/assets/img/carousel/5.png" alt="">
-			<img src="/assets/img/icons/calendar.svg" alt="">	
-			<img src="/assets/img/carousel/1.png" alt="">
-			<img src="/assets/img/carousel/2.png" alt="">
-			<img src="/assets/img/carousel/3.png" alt="">
-			<img src="/assets/img/carousel/4.png" alt="">
-			<img src="/assets/img/carousel/5.png" alt="">
-			<img src="/assets/img/icons/calendar.svg" alt="">	
-			<img src="/assets/img/carousel/1.png" alt="">
-			<img src="/assets/img/carousel/2.png" alt="">
-			<img src="/assets/img/carousel/3.png" alt="">
-			<img src="/assets/img/carousel/4.png" alt="">
-			<img src="/assets/img/carousel/5.png" alt="">
-			<img src="/assets/img/icons/calendar.svg" alt="">	
-			<img src="/assets/img/carousel/1.png" alt="">
-			<img src="/assets/img/carousel/2.png" alt="">
-			<img src="/assets/img/carousel/3.png" alt="">
-			<img src="/assets/img/carousel/4.png" alt="">
-			<img src="/assets/img/carousel/5.png" alt="">
-			<img src="/assets/img/icons/calendar.svg" alt="">	
-			<img src="/assets/img/carousel/1.png" alt="">
-			<img src="/assets/img/carousel/2.png" alt="">
-			<img src="/assets/img/carousel/3.png" alt="">
-			<img src="/assets/img/carousel/4.png" alt="">
-			<img src="/assets/img/carousel/5.png" alt="">
-			<img src="/assets/img/icons/calendar.svg" alt="">	
-			<img src="/assets/img/carousel/1.png" alt="">
-			<img src="/assets/img/carousel/2.png" alt="">
-			<img src="/assets/img/carousel/3.png" alt="">
-			<img src="/assets/img/carousel/4.png" alt="">
-			<img src="/assets/img/carousel/5.png" alt="">
+            <?foreach ($arResult['PROPERTIES']['GALLERY']['PATH'] as $img):?>
+                <img src="<?=$img?>" alt="">
+            <?endforeach;?>
 		</div>
 	</div>
 	<div class="hotel__detail___description">
-			Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания
-			Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания
-			Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания
-			Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания
-			Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания
-			Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания
-			Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания
-			Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания
-			Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания
-			Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания
-			Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания
-			Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания
-			Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания
-			Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания Текст описания
+			<?=$arResult['DETAIL_TEXT']?>
 	</div>
 	<div class="hotel__detail___infrastruktura">
 		<div class="hotel__detail___title">
