@@ -33,7 +33,7 @@ if(CModule::IncludeModule("iblock"))
     while($ob = $res->GetNextElement())
     {
         $arFields = $ob->GetFields();
-        $arResult["ROOMS"] = Array($arFields);
+        $arResult["ROOMS"][] = Array($arFields);
 
     }
     $arResult["ROOMS_COUNT"] = count($arResult["ROOMS"]); //Количество комнат у гостиницы
@@ -46,3 +46,4 @@ foreach ($arResult['PROPERTIES']['GALLERY']['VALUE'] as $picID)
 {
     $arResult['PROPERTIES']['GALLERY']['PATH'][]= CFile::GetPath($picID);
 }
+// var_dump( $arResult["ROOMS_COUNT"]);
