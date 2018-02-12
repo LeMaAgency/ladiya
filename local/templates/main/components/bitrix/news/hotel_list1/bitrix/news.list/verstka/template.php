@@ -116,9 +116,24 @@ $foundCnt = (int) $arResult['NAV_RESULT']->NavRecordCount;
                         <div class="hotel__list___item__inf__text">
                             <?= Loc::getmessage('CT_BNL_INFRASTRUKTURA'); ?>
                         </div>
-                        <span data-title="Душевая комната"><i class="fa fa-bath" aria-hidden="true"></i></span>
-                        <span data-title="Бесплатный Wi-Fi"><i class="fa fa-wifi" aria-hidden="true"></i></span>
-                        <span data-title="Аптека"><i class="fa fa-plus-square" aria-hidden="true"></i></span>
+                        <?
+                            foreach ($arItem["PROPERTIES"]['INFRASTRUCTURE']['VALUE'] as $infastructureID){
+                                switch ($infastructureID) {
+                                    case 256:
+                                        echo " <span data-title=\"Душевая комната\"><i class=\"fa fa-bath\" aria-hidden=\"true\"></i></span>";
+                                        break;
+                                    case 254:
+                                        echo "<span data-title=\"Аптека\"><i class=\"fa fa-plus-square\" aria-hidden=\"true\"></i></span>";
+                                        break;
+                                    case 249:
+                                        echo " <span data-title=\"Бесплатный Wi-Fi\"><i class=\"fa fa-wifi\" aria-hidden=\"true\"></i></span>";
+                                        break;
+                                }
+                            }
+                        ?>
+<!--                        <span data-title="Душевая комната"><i class="fa fa-bath" aria-hidden="true"></i></span>-->
+<!--                        <span data-title="Бесплатный Wi-Fi"><i class="fa fa-wifi" aria-hidden="true"></i></span>-->
+<!--                        <span data-title="Аптека"><i class="fa fa-plus-square" aria-hidden="true"></i></span>-->
                     </div>
                 </div>                
                 <div class="hotel__list___item__inf__footer">
@@ -137,12 +152,18 @@ $foundCnt = (int) $arResult['NAV_RESULT']->NavRecordCount;
                 </div>                
             </div>
         </div>
-    
-    
-    
+
+
+
     <? endforeach; ?>
+        <div id="hotel_maps" style="display: none;">
+
+        </div>
     </div>
     <?if($arParams["DISPLAY_BOTTOM_PAGER"]):?>
         <br /><?=$arResult["NAV_STRING"];?>
     <?endif;?>
+
+
+<!--  Отложенная функция для передачи ключ   -->
 </div>

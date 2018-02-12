@@ -189,22 +189,22 @@
             </div>
         </div>
     </div>
-    <div id="hotel_maps" style="display: none;">
+    <!--<div id="hotel_maps" style="display: none;">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1519.0047569252404!2d43.06414668593344!3d44.052399894760164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40579df5a04af559%3A0x14631d7a55dec247!2z0JHQuNC30L3QtdGBLdC-0YLQtdC70Ywg0JHQtdGI0YLQsNGD!5e0!3m2!1sru!2sru!4v1517810852536" width="1200" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
-    </div>
-    <div id="number_info" class="hotel_number" style="display: none;">
+    </div>-->
+<!--    <div id="number_info" class="hotel_number" style="display: none;">
         <div class="hotel_number__title">
             STUDIO PLUS Одноместный номер
         </div>
         <div class="hotel_number__slider">
-            <img src="/assets/img/icons/calendar.svg" alt="">	
+            <img src="/assets/img/icons/calendar.svg" alt="">
             <img src="/assets/img/carousel/1.png" alt="">
             <img src="/assets/img/carousel/2.png" alt="">
             <img src="/assets/img/carousel/3.png" alt="">
             <img src="/assets/img/carousel/4.png" alt="">
             <img src="/assets/img/carousel/5.png" alt="">
         </div>
-        <div class="hotel_number__price_list">            
+        <div class="hotel_number__price_list">
             <div class="hotel_number__price_title">Цена за номер в сутки:</div>
             <ul>
                 <li>
@@ -212,22 +212,22 @@
                         <span class="title">Основное место в номере</span>
                         <span class="price">3330р</span>
                     </div>
-                </li>  
+                </li>
                 <li>
                     <div class="span">
                         <span class="title">Выкуп номера</span>
                         <span class="price">6660р</span>
                     </div>
-                </li>  
+                </li>
                 <li>
                     <div class="span">
                         <span class="title">Дополнительное место в номере</span>
                         <span class="price">9990р</span>
                     </div>
-                </li>                
-            </ul>            
+                </li>
+            </ul>
         </div>
-        <div class="hotel_number__description">            
+        <div class="hotel_number__description">
             <div class="hotel_number__descriprion_title">Описание:</div>
             <span>
                 У санатория «Машук Аква-Терм» собственная территория более 12 га. На территории много различных клумб с цветами,
@@ -236,7 +236,7 @@
                 минеральной воды «Славяновская» и два бювета с минеральной водой есть в санатории «Машук Аква-Терм».
             </span>
         </div>
-        <div class="hotel_number__amenity">            
+        <div class="hotel_number__amenity">
             <div class="hotel_number__amenity_title">Удобства:</div>
             <ul>
                 <li>
@@ -279,10 +279,10 @@
                         <i class="fa fa-bath" aria-hidden="true"></i>
                         <span>Душевая комната</span>
                     </span>
-                </li>						
+                </li>
             </ul>
         </div>
-    </div>
+    </div>-->
 </footer>
 </body>
 </html>
