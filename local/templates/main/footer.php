@@ -189,10 +189,10 @@
             </div>
         </div>
     </div>
-    <!--<div id="hotel_maps" style="display: none;">
+    <div id="hotel_maps" style="display: none;">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1519.0047569252404!2d43.06414668593344!3d44.052399894760164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40579df5a04af559%3A0x14631d7a55dec247!2z0JHQuNC30L3QtdGBLdC-0YLQtdC70Ywg0JHQtdGI0YLQsNGD!5e0!3m2!1sru!2sru!4v1517810852536" width="1200" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
-    </div>-->
-<!--    <div id="number_info" class="hotel_number" style="display: none;">
+    </div>
+    <div id="number_info" class="hotel_number" style="display: none;">
         <div class="hotel_number__title">
             STUDIO PLUS Одноместный номер
         </div>
@@ -282,7 +282,7 @@
                 </li>
             </ul>
         </div>
-    </div>-->
+    </div>
 </footer>
 </body>
 </html>

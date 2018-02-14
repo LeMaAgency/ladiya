@@ -156,9 +156,6 @@ $foundCnt = (int) $arResult['NAV_RESULT']->NavRecordCount;
 
 
     <? endforeach; ?>
-        <div id="hotel_maps" style="display: none;">
-
-        </div>
     </div>
     <?if($arParams["DISPLAY_BOTTOM_PAGER"]):?>
         <br /><?=$arResult["NAV_STRING"];?>
