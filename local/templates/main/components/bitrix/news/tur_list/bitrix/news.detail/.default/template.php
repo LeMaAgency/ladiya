@@ -221,9 +221,9 @@ $this->setFrameMode(true);
                                                                                       <?= $arSpoilerText['ADDITIONAL_TITLE'][$i]; ?>
                                                                                 </span>
                                                                                 <?if (!empty($arSpoilerText['ADDITIONAL_TEXT'][$i])):?>
-                                                                                    <span class="core__switch__btn__hidden core__switch__btn__hidden_<?= $spoiler_number++ ?>_1">
+                                                                                    <div class="core__switch__btn__hidden core__switch__btn__hidden_<?= $spoiler_number++ ?>_1">
                                                                                         <?= $arSpoilerText['ADDITIONAL_TEXT'][$i]; ?>
-                                                                                    </span>
+                                                                                    </div>
                                                                                 <?else:?>
                                                                                     <?$spoiler_number++;?>
                                                                                 <?endif;?>
