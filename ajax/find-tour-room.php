@@ -9,9 +9,10 @@ isset($_POST['tour_id'], $_POST['hotel'], $_POST['room_type'], $_POST['price_fro
 
 \Bitrix\Main\Loader::includeModule('iblock');
 
-$res = \WM\IBlock\Element::getList(4, array('filter' => array('ID' => $_POST['tour_id']), 'select' => array('ID', 'PROPERTY_ROOMS'),));
-
-//\WM\Common\Dumper::dump($res);
+$res = \WM\IBlock\Element::getList(4, array(
+    'filter' => array('ID' => $_POST['tour_id']),
+    'select' => array('ID', 'PROPERTY_ROOMS'),
+));
 
 $roomsIds = array();
 $res = \CIBlockElement::GetProperty(4, (int) $_POST['tour_id'], array(), array('CODE' => 'ROOMS'));
@@ -33,7 +34,11 @@ while($row = $res->Fetch())
 }
 
 //no dates - no info
-empty($datePrices) && exit;
+if(empty($datePrices))
+{
+    echo 'Ничего не найдено';
+    exit;
+}
 
 $curDatePrices = array();
 //$curDatePrices = isset($datePrices[$_POST['DATE']]) ? $datePrices[$_POST['DATE']] : current($datePrices);
@@ -64,7 +69,13 @@ if(!empty($_POST['hotel']))
     $filter['IBLOCK_SECTION_ID'] = (int) $_POST['hotel'];
 }
 
-$rooms = \WM\IBlock\Element::getList(7, array('filter' => $filter, 'arSelect' => array('ID', 'NAME', 'PROPERTY_PRICE', 'PROPERTY_PRICE_ADDITIONAL', 'PROPERTY_PEOPLE_COUNT', 'PROPERTY_ROOM_TYPE', 'IBLOCK_SECTION_ID'),));
+$rooms = \WM\IBlock\Element::getList(7, array(
+    'filter' => $filter,
+    'arSelect' => array(
+        'ID', 'NAME', 'PROPERTY_PRICE', 'PROPERTY_PRICE_ADDITIONAL',
+        'PROPERTY_PEOPLE_COUNT', 'PROPERTY_ROOM_TYPE', 'IBLOCK_SECTION_ID'
+    ),
+));
 $sections = array();
 foreach($rooms as $roomId => $room)
 {
@@ -78,7 +89,10 @@ foreach($rooms as $roomId => $room)
     }
 }
 
-$sections = \WM\IBlock\Section::getList(7, array('filter' => array('ID' => array_keys($sections)), 'arSelect' => array('ID', 'NAME'),));
+$sections = \WM\IBlock\Section::getList(7, array(
+    'filter' => array('ID' => array_keys($sections)),
+    'arSelect' => array('ID', 'NAME'),
+));
 foreach($rooms as $roomId => $room)
 {
     if(!empty($sections[$room['IBLOCK_SECTION_ID']]['NAME']))
