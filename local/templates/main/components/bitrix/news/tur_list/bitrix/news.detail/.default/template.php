@@ -526,111 +526,7 @@ $this->setFrameMode(true);
                     </div>
                 </div>
             </div>
-            <!-- Новый шаблон -->
-            <!--<div class="catalog__list catalog__list_3">
-                <a href="" title="" class="catalog__list__item">
-                    <div class="catalog__list__item__img" style="background-image: url('/upload/iblock/a6e/a6e11bf9f8e30f3b27e9883f3405ca43.png');">
-                        <div class="catalog__list__item__img__title">Кавказская мозаика</div>
-                        <div class="catalog__list__item__img__wrap">
-                            <div class="catalog__list__item__img__wrap__table">
-                                <div class="catalog__list__item__img__wrap__table__cell">
-                                    <div class="catalog__list__item__img__wrap__title">
-                                        Кавказская мозаика
-                                    </div>
-                                    <span class="catalog__list__item__img__wrap__text">
-                                В стоимость тура входит: проживание, питание по программе (для организованных групп), и экскурсионное обслуживание, страховка, услуги гидов.
-                            </span>
-                                    <div class="catalog__list__item__img__wrap__btn">
-                                        Подробнее
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="catalog__list__item__inf">
-                        <div class="catalog__list__item__inf__text">
-                            Экскурсионный тур
-                        </div>
-                        <div class="catalog__list__item__inf__footer">
-                            <div class="catalog__list__item__inf__day">
-                                <span>5 дней</span>
-                                <span>4 ночи</span>
-                            </div>
-                            <div class="catalog__list__item__inf__price">
-                                от 30 000 руб
-                            </div>
-                        </div>
-                    </div>
-                </a>
-                <a href="" title="" class="catalog__list__item">
-                    <div class="catalog__list__item__img" style="background-image: url('/upload/iblock/a6e/a6e11bf9f8e30f3b27e9883f3405ca43.png');">
-                        <div class="catalog__list__item__img__title">Кавказская мозаика</div>
-                        <div class="catalog__list__item__img__wrap">
-                            <div class="catalog__list__item__img__wrap__table">
-                                <div class="catalog__list__item__img__wrap__table__cell">
-                                    <div class="catalog__list__item__img__wrap__title">
-                                        Кавказская мозаика
-                                    </div>
-                                    <span class="catalog__list__item__img__wrap__text">
-                                В стоимость тура входит: проживание, питание по программе (для организованных групп), и экскурсионное обслуживание, страховка, услуги гидов.
-                            </span>
-                                    <div class="catalog__list__item__img__wrap__btn">
-                                        Подробнее
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="catalog__list__item__inf">
-                        <div class="catalog__list__item__inf__text">
-                            Экскурсионный тур
-                        </div>
-                        <div class="catalog__list__item__inf__footer">
-                            <div class="catalog__list__item__inf__day">
-                                <span>5 дней</span>
-                                <span>4 ночи</span>
-                            </div>
-                            <div class="catalog__list__item__inf__price">
-                                от 30 000 руб
-                            </div>
-                        </div>
-                    </div>
-                </a>
-                <a href="" title="" class="catalog__list__item">
-                    <div class="catalog__list__item__img" style="background-image: url('/upload/iblock/a6e/a6e11bf9f8e30f3b27e9883f3405ca43.png');">
-                        <div class="catalog__list__item__img__title">Кавказская мозаика</div>
-                        <div class="catalog__list__item__img__wrap">
-                            <div class="catalog__list__item__img__wrap__table">
-                                <div class="catalog__list__item__img__wrap__table__cell">
-                                    <div class="catalog__list__item__img__wrap__title">
-                                        Кавказская мозаика
-                                    </div>
-                                    <span class="catalog__list__item__img__wrap__text">
-                                В стоимость тура входит: проживание, питание по программе (для организованных групп), и экскурсионное обслуживание, страховка, услуги гидов.
-                            </span>
-                                    <div class="catalog__list__item__img__wrap__btn">
-                                        Подробнее
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="catalog__list__item__inf">
-                        <div class="catalog__list__item__inf__text">
-                            Экскурсионный тур
-                        </div>
-                        <div class="catalog__list__item__inf__footer">
-                            <div class="catalog__list__item__inf__day">
-                                <span>5 дней</span>
-                                <span>4 ночи</span>
-                            </div>
-                            <div class="catalog__list__item__inf__price">
-                                от 30 000 руб
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>-->
+
             <div class="catalog__list catalog__list_3">
                 <? foreach ($arResult['SIMILAR_TOURS'] as $tour): ?>
                     <a href="<?= $tour['DETAIL_PAGE_URL']; ?>" class="catalog__list__item">
@@ -694,69 +590,6 @@ $this->setFrameMode(true);
                         </div>
                     </a>
                 <? endforeach; ?>
-                <!--<div class="col-xs-12 col-sm-6 col-md-4 item">
-                    <div class="img" style="background-image: url('<? /*=$tour['PICTURE_SRC'];*/ ?>')">
-                        <? /* if(!empty($tour['PROPERTY_DISCOUNT_VALUE'])): */ ?>
-                            <div class="discount">-<? /*=(int) $tour['PROPERTY_DISCOUNT_VALUE'];*/ ?>%</div>
-                        <? /* endif; */ ?>
-                        <h3><? /*=$tour['NAME'];*/ ?></h3>
-
-                        <div class="text">
-                            <div class="table">
-                                <div class="cell">
-                                    <p><? /*=$tour['PREVIEW_TEXT'];*/ ?></p>
-
-                                    <a href="<? /*=$tour['DETAIL_PAGE_URL'];*/ ?>"><? /*=Loc::getMessage('TOUR_MORE_BTN');*/ ?></a>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="info">
-                        <div class="text">
-
-                            <? /* if(!empty($tour['PROPERTY_HEADER_VALUE'])): */ ?>
-                                <h5><? /*=$tour['PROPERTY_HEADER_VALUE'];*/ ?></h5>
-                            <? /* endif; */ ?>
-                            <div class="data-type">
-                                <? /* if(!empty($tour['PROPERTY_DAY_VALUE'])): */ ?>
-                                    <span>
-                                        <? /*=Helper::pluralizeN($tour['PROPERTY_DAY_VALUE'], array(
-                                            Loc::getMessage('TOUR_DAY_ONE'),
-                                            Loc::getMessage('TOUR_DAY_TWO'),
-                                            Loc::getMessage('TOUR_DAY_MORE'),
-                                        ));*/ ?>
-                                    </span>
-                                <? /* endif; */ ?>
-                                <? /* if(!empty($tour['PROPERTY_NIGHT_VALUE'])): */ ?>
-                                    <span>
-                                            <? /*=Helper::pluralizeN($tour['PROPERTY_NIGHT_VALUE'], array(
-                                                Loc::getMessage('TOUR_NIGHT_ONE'),
-                                                Loc::getMessage('TOUR_NIGHT_TWO'),
-                                                Loc::getMessage('TOUR_NIGHT_MORE'),
-                                            ));*/ ?>
-                                        </span>
-                                <? /* endif; */ ?>
-                            </div>
-
-                        </div>
-
-                        <div class="price">
-                            <div>
-                                <? /* if(!empty($tour['PROPERTY_PRICE_VALUE'])): */ ?>
-                                    <span>
-                                            <bold>
-                                                <? /*=Loc::getMessage('TOUR_PRICE_FROM');*/ ?>
-                                                <? /*=number_format($tour['PROPERTY_PRICE_VALUE'], 0, '', ' ');*/ ?>
-                                                <? /*=Loc::getMessage('TOUR_PRICE_CURRENCY_1');*/ ?>
-                                            </bold>
-                                        </span>
-                                <? /* endif; */ ?>
-                            </div>
-                        </div>
-                    </div>
-                </div>-->
             </div>
         </section>
     <? endif; ?>
@@ -831,7 +664,7 @@ $this->setFrameMode(true);
                             <div class="core__input__log"></div>
                         </div><br>
 
-<!--                        Название тура (подгружается автоматом в зависимости от того тора, на котором бронируем)-->
+<!--                        Название тура (подгружается автоматом в зависимости от того тура, на котором бронируем)-->
 <!--                        дата начала тура (календарик)-->
 <!--                        Кол-во туристов (взр./дет) - текстовое поле-->
 <!--                        Категория гостиницы (подгружать заведенные к этому туру, выбрать можно только одну)-->
