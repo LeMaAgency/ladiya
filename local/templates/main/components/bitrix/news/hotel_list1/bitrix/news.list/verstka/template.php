@@ -138,11 +138,16 @@ $foundCnt = (int) $arResult['NAV_RESULT']->NavRecordCount;
                 </div>                
                 <div class="hotel__list___item__inf__footer">
                     <div class="hotel__list___item__inf__price">
-                        <? if(Helper::propFilled('PRICE', $arItem)) : ?>
+                        <? //if(Helper::propFilled('PRICE', $arItem)) : ?>
+                            <?//=Loc::getMessage('CT_BNL_FROM');?>
+                            <?//=Helper::escPropValue('PRICE', $arItem);?>
+                            <?//=Loc::getMessage('CT_BNL_RUB');?>
+                        <? //endif; ?>
+                        <?if(!empty($arItem['PROPERTIES']['MIN_PRICE'])):?>
                             <?=Loc::getMessage('CT_BNL_FROM');?>
-                            <?=Helper::escPropValue('PRICE', $arItem);?>
+                            <?=$arItem['PROPERTIES']['MIN_PRICE']?>
                             <?=Loc::getMessage('CT_BNL_RUB');?>
-                        <? endif; ?>
+                        <?endif;?>
                         <div class="price_description"><?=Loc::getMessage('CT_BNL_PRICE_DESCRIPTION');?></div>
                     </div>
                     
@@ -154,7 +159,7 @@ $foundCnt = (int) $arResult['NAV_RESULT']->NavRecordCount;
         </div>
 
 
-
+        <? var_dump($arItem['PROPERTIES']['MIN_PRICE'])?>
     <? endforeach; ?>
     </div>
     <?if($arParams["DISPLAY_BOTTOM_PAGER"]):?>
