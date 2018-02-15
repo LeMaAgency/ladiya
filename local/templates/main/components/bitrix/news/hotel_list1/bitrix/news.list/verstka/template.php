@@ -159,7 +159,6 @@ $foundCnt = (int) $arResult['NAV_RESULT']->NavRecordCount;
         </div>
 
 
-        <? var_dump($arItem['PROPERTIES']['MIN_PRICE'])?>
     <? endforeach; ?>
     </div>
     <?if($arParams["DISPLAY_BOTTOM_PAGER"]):?>
