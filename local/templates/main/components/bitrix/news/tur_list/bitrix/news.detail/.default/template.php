@@ -361,16 +361,18 @@ $this->setFrameMode(true);
                                     <button class="calculate" type="submit"><?= Loc::getMessage('TOUR_SEARCH_BTN_TITLE'); ?></button>
                                     <div class="disclaimer"><?= Loc::getMessage('TOUR_SEARCH_HINT_TITLE'); ?></div>
 
-                                    <div class="page__program__detail__list__item__text">
+                                    <div class="js-ajax-filter-search"></div>
+
+                                    <div class="page__program__detail__list__item__text" style="margin-top:20px">
                                         <? if (!empty($arResult['PROPERTIES']['IN_PRICE_CONTAINS']['VALUE']['TEXT'])): ?>
                                             <p class="core__switch__btn">
-                                            <span class="core__switch__btn__text active"
+                                            <div class="core__switch__btn__text active"
                                                   data-js-core-switch-element="core__switch__btn__hidden_price_1">
                                                 <?= Loc::getMessage('TOUR_IN_PRICE_CONTAINS_TITLE'); ?>
-                                            </span>
-                                                <span class="core__switch__btn__hidden active core__switch__btn__hidden_price_1">
+                                            </div>
+                                                <div class="core__switch__btn__hidden active core__switch__btn__hidden_price_1">
                                                 <?= htmlspecialcharsback($arResult['PROPERTIES']['IN_PRICE_CONTAINS']['VALUE']['TEXT']); ?>
-                                            </span>
+                                            </div>
                                             </p>
                                         <? endif; ?>
                                         <? if (!empty($arResult['PROPERTIES']['ALSO_PAYS']['VALUE']['TEXT'])): ?>
@@ -398,7 +400,6 @@ $this->setFrameMode(true);
                                     </div>
                                 </form>
 
-                                <div class="js-ajax-filter-search"></div>
 
                             </div>
                         <? endif; ?>
@@ -406,7 +407,7 @@ $this->setFrameMode(true);
                         <div role="tabpanel" class="tab-pane" id="jotting">
                             <div class="row">
                                 <div class="col-xs-12">
-                                    <p><?= htmlspecialcharsback($arResult['PROPERTIES']['TOUR_MEMO']['VALUE']['TEXT']); ?></p>
+                                    <?= htmlspecialcharsback($arResult['PROPERTIES']['TOUR_MEMO']['VALUE']['TEXT']); ?>
                                 </div>
                             </div>
                         </div>
@@ -621,7 +622,7 @@ $this->setFrameMode(true);
                     <div class="popup__bron__bottom__right">
                         <p class="js-field-block">
                             <input type="checkbox" name="privacy">
-                            <a href="/privacy.html" target="_blank">Я согласен на обработку персональных данных</a>
+                            <a href="/turistam/obrabotka-personalnykh-dannykh/" target="_blank">Я согласен на обработку персональных данных</a>
                             <span class="core__input__log"></span>
                         </p>
                     </div>
@@ -696,7 +697,7 @@ $this->setFrameMode(true);
                     <div class="popup__bron__bottom__right">
                         <p class="js-field-block">
                             <input type="checkbox" name="privacy">
-                            <a href="/privacy.html" target="_blank">Я согласен на обработку персональных данных</a>
+                            <a href="/turistam/obrabotka-personalnykh-dannykh/" target="_blank">Я согласен на обработку персональных данных</a>
                             <span class="core__input__log"></span>
                         </p>
                     </div>
