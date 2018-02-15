@@ -3545,3 +3545,11 @@ input.filter__button {padding-bottom: 15px !important;}
 .tour-detail_tabs__wrapper .bg .tab-content.main #price table th {
     text-transform: none;
 }
+
+#jotting {
+    text-align: justify;
+}
+
+.need-indent p {
+    text-indent:25px;
+}
