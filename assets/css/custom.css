@@ -3265,7 +3265,8 @@ input.filter__button {padding-bottom: 15px !important;}
    border: 1px solid #F15922;
 }
 .hotel__detail___room>div{
-   display: table-cell;
+   display: table-cell;   
+   vertical-align: middle;
 }
 .hotel__detail___room__img{
    width: 20%;
@@ -3288,6 +3289,25 @@ input.filter__button {padding-bottom: 15px !important;}
 }
 .hotel__detail___room a{   
    margin: 10px;
+}
+
+.hotel__detail___room .item-card__content__more:hover{
+   padding-top: 10px;
+}
+
+.hotel__detail___room .item-card__content__more{
+   padding-top: 10px;
+   height: 40px;
+}
+
+.hotel__detail___room__price{
+   margin: 10px 10px 0 10px;   
+   font-weight: bold;
+}
+
+.hotel__detail___room__price .price{
+   font-size: 1.2em;
+   color: #f15922;   
 }
 
 @media (max-width: 1220px) {
