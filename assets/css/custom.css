@@ -3513,6 +3513,11 @@ input.filter__button {padding-bottom: 15px !important;}
     height: 200px;
 }
 
-.popup__form__agenci {
-    background-image: ;
+#popup__form__agenci {
+    background-image: url("/assets/img/form_bg.jpg");
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+#popup__form__agenci .core__input__log {
+    background-color: transparent;
 }
