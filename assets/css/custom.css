@@ -3265,7 +3265,8 @@ input.filter__button {padding-bottom: 15px !important;}
    border: 1px solid #F15922;
 }
 .hotel__detail___room>div{
-   display: table-cell;
+   display: table-cell;   
+   vertical-align: middle;
 }
 .hotel__detail___room__img{
    width: 20%;
@@ -3288,6 +3289,25 @@ input.filter__button {padding-bottom: 15px !important;}
 }
 .hotel__detail___room a{   
    margin: 10px;
+}
+
+.hotel__detail___room .item-card__content__more:hover{
+   padding-top: 10px;
+}
+
+.hotel__detail___room .item-card__content__more{
+   padding-top: 10px;
+   height: 40px;
+}
+
+.hotel__detail___room__price{
+   margin: 10px 10px 0 10px;   
+   font-weight: bold;
+}
+
+.hotel__detail___room__price .price{
+   font-size: 1.2em;
+   color: #f15922;   
 }
 
 @media (max-width: 1220px) {
@@ -3513,6 +3533,23 @@ input.filter__button {padding-bottom: 15px !important;}
     height: 200px;
 }
 
-.popup__form__agenci {
-    background-image: ;
+#popup__form__agenci {
+    background-image: url("/assets/img/form_bg.jpg");
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+#popup__form__agenci .core__input__log {
+    background-color: transparent;
+}
+
+.tour-detail_tabs__wrapper .bg .tab-content.main #price table th {
+    text-transform: none;
+}
+
+#jotting {
+    text-align: justify;
+}
+
+.need-indent p {
+    text-indent:25px;
 }

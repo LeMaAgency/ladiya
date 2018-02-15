@@ -65,7 +65,7 @@ Loc::loadMessages(__FILE__);
 	<div class="hotel__detail___rooms">
 		<div class="hotel__detail___title">
 			<?= Loc::getmessage('NEWS_DETAIL_ROOMS'); ?>
-		</div>
+		</div>			
         <?foreach ($arResult["ROOMS"] as $room):?>
             <div class="hotel__detail___room">
                 <div class="hotel__detail___room__img ">
@@ -77,6 +77,14 @@ Loc::loadMessages(__FILE__);
 				</span>
                 </div>
                 <div class="hotel__detail___room__info">
+					<div class="hotel__detail___room__price">
+						<span>цена от
+							<span class="price">
+								2000
+							</span>
+							руб.
+						</span>
+					</div>
                     <a href="#" class="item-card__content__more js-hotel__number_info">подробнее</a>
                 </div>
             </div>

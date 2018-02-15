@@ -684,7 +684,7 @@ $this->setFrameMode(true);
                             <div class="core__input__log"></div>
                         </div><br>
                         <div class="core__input js-field-block">
-                            <input name="phone" class="core__input__control" placeholder="Категория гостиницы">
+                            <input name="phone" class="core__input__control" placeholder="Название гостиницы">
                             <div class="core__input__log"></div>
                         </div>
                         <div class="core__input js-field-block">
