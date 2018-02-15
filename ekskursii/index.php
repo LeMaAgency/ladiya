@@ -3,7 +3,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 
 ?>
 
-<div class="head-img head-img_transport" <?$APPLICATION->ShowViewContent('head_pic')?>>
+<div class="head-img head-img_transport_new" <?$APPLICATION->ShowViewContent('head_pic')?>>
     <div class="lad-slideshow__block-title">
         <h1 class="lad-slideshow__block-title__h1"><?=$APPLICATION->ShowTitle(false);?></h1>
     </div>

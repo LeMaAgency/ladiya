@@ -408,6 +408,14 @@ h3 {
     width: 33.333333333333%;
     height: 235px;
 }
+@media (max-width: 1200px) {
+    .grid-4 .item:nth-child(1),
+    .grid-4 .item:nth-child(2),
+    .grid-4 .item:nth-child(3),
+    .grid-4 .item:nth-child(4) {
+        width: 100%!important;
+    }
+}
 
 .grid-5 .item {
     position: relative;
@@ -1995,6 +2003,9 @@ PAGE TRANSFER
 
 .head-img_transport{
     background-image: url('../../local/templates/main/images/head-img/transport.png');
+}
+.head-img_transport_new{
+    background-image: url('../../local/templates/main/images/banner2.jpg');
 }
 .reverse{
     float: right;

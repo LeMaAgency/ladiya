@@ -63,10 +63,13 @@ $strDeleteLink = \CIBlock::GetArrayByID($arParams['IBLOCK_ID'], 'ELEMENT_DELETE'
 $confirmDelete = array('CONFIRM' => \GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM'));
 
 ?>
-
-<? if($arParams["DISPLAY_TOP_PAGER"]): ?>
-    <?=$arResult["NAV_STRING"]?><br/>
-<? endif; ?>
+<!--<div class="nav__temp">-->
+<!--    <div class="container">-->
+<!--        --><?// if($arParams["DISPLAY_TOP_PAGER"]): ?>
+<!--            --><?//=$arResult["NAV_STRING"]?><!--<br/>-->
+<!--        --><?// endif; ?>
+<!--    </div>-->
+<!--</div>-->
 
 <div class="comment__list">
     <div class="container">
@@ -96,6 +99,14 @@ $confirmDelete = array('CONFIRM' => \GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')
         </div>
     </div>
 </div>
-<? if($arParams["DISPLAY_BOTTOM_PAGER"]): ?>
-    <br/><?=$arResult["NAV_STRING"]?>
-<? endif; ?>
+<div class="container">
+    <ul class="pagination">
+        <li class="active"><a href="#">«</a></li>
+        <li><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li class="disabled"><a href="#">»</a></li>
+    </ul>
+</div>
