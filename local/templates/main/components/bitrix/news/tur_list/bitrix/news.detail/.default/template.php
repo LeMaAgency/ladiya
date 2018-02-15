@@ -622,7 +622,7 @@ $this->setFrameMode(true);
                     <div class="popup__bron__bottom__right">
                         <p class="js-field-block">
                             <input type="checkbox" name="privacy">
-                            <a href="/privacy.html" target="_blank">Я согласен на обработку персональных данных</a>
+                            <a href="/turistam/obrabotka-personalnykh-dannykh/" target="_blank">Я согласен на обработку персональных данных</a>
                             <span class="core__input__log"></span>
                         </p>
                     </div>
@@ -697,7 +697,7 @@ $this->setFrameMode(true);
                     <div class="popup__bron__bottom__right">
                         <p class="js-field-block">
                             <input type="checkbox" name="privacy">
-                            <a href="/privacy.html" target="_blank">Я согласен на обработку персональных данных</a>
+                            <a href="/turistam/obrabotka-personalnykh-dannykh/" target="_blank">Я согласен на обработку персональных данных</a>
                             <span class="core__input__log"></span>
                         </p>
                     </div>
