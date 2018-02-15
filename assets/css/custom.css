@@ -3506,6 +3506,13 @@ input.filter__button {padding-bottom: 15px !important;}
     background-color: #CCC;
 }
 
+.video .video__item {
+    padding: 10px;
+}
+.video .item-block {
+    height: 200px;
+}
+
 .popup__form__agenci {
     background-image: ;
 }
