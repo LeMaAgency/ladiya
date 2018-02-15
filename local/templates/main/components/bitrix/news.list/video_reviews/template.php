@@ -28,7 +28,7 @@ $confirmDelete = array('CONFIRM' => \GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')
                 <div class="wrapper">
                     <div class="videoreviews">
                         <h2><?= $arResult['NAME']; ?></h2>
-                        <ul class="grid-3 video">
+                        <ul class="video slider__tem__index">
                             <? foreach ($arResult['ITEMS'] as $arItem):
                                 $this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], $strEditLink);
                                 $this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], $strDeleteLink, $confirmDelete);
@@ -42,7 +42,7 @@ $confirmDelete = array('CONFIRM' => \GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')
                                     $iCodeYoutubeVideo = str_replace('=', '', stristr($arItem['PROPERTIES']['LINK']['VALUE'], '='));
                                 }
                                 ?>
-                                <a href="<?= $arItem['PROPERTIES']['LINK']['VALUE']; ?>" data-fancybox="video-review">
+                                <a href="<?= $arItem['PROPERTIES']['LINK']['VALUE']; ?>" class="video__item" data-fancybox="video-review">
                                     <li class="item">
                                         <div class="item-block">
                                             <? if ($iCodeYoutubeVideo !== '') {

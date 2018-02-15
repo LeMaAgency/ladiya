@@ -23,7 +23,7 @@ $strEditLink = \CIBlock::GetArrayByID($arParams['IBLOCK_ID'], 'ELEMENT_EDIT');
 $strDeleteLink = \CIBlock::GetArrayByID($arParams['IBLOCK_ID'], 'ELEMENT_DELETE');
 $confirmDelete = array('CONFIRM' => \GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM'));
 ?>
-<div class="catalog__list catalog__list_3">
+<div class="catalog__list catalog__list_3 slider__tem__index">
     <? foreach($arResult["ITEMS"] as $arItem):
         $this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], $strEditLink);
         $this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], $strDeleteLink, $confirmDelete);
