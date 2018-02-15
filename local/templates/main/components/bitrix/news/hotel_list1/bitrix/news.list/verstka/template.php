@@ -98,7 +98,7 @@ $foundCnt = (int) $arResult['NAV_RESULT']->NavRecordCount;
                         
                         
                     </div>
-                    <div class="hotel__list___item__link js-hotel__maps_open">
+                    <div class="hotel__list___item__link js-hotel__maps_open" data-mapMarker="<?=$arItem["PROPERTIES"]["GOOGLE_MAP"]["VALUE"]?>" >
                     <span>
                         <i class="fa fa-map-marker" aria-hidden="true"></i>
                         <?=$arItem['PROPERTIES']['CITY']['VALUE'];?>

@@ -597,3 +597,32 @@ $(function() {
     });
         
 });
+
+$(function(){
+  
+    //Функция вызова гугл карты.
+    function initMap(lat,lng) {
+         var myLatlng = new google.maps.LatLng(lat,lng);
+         var map = new google.maps.Map(document.getElementById('hotel_maps'), {
+           zoom: 15,
+           center: myLatlng
+         });
+         var marker = new google.maps.Marker({
+           position: myLatlng,
+           map: map
+         });
+     }
+    //конец функции
+    
+    var fullMapMarker;
+    var lat;
+    var lng;
+    $(".js-hotel__maps_open").click(function(){
+        fullMapMarker=$(this).data("mapmarker"); //Присвоение переменной значение data аттибута элемнета ифноблока
+        /*Так как значение из ифоблока приходит в виде строки "123,123", необходимо записать числа до и после запятой 
+        в разные переменные и сделать их тип "number", так-как функция initMap не принимает строковых аргументов*/
+        lat = +fullMapMarker.replace(/\,.*/, '');//Удаление всего,что находится после запятой
+        lng = +fullMapMarker.replace(/.*\,/, '');//Удаление всего,что находится до запятой
+        initMap(lat,lng);//вызов функции google карт
+    });
+});
