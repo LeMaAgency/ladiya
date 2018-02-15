@@ -115,7 +115,7 @@ if(empty($rooms))
         <th scope="col">Гостиница</th>
         <th scope="col">Номер</th>
         <th scope="col">Стоимость тура на одного человека</th>
-        <th scope="col">Стоимость одноместного размещения в двухместном номере</th>
+        <th scope="col">Доплата за одноместное размещение</th>
         <th scope="col">Доплата за сутки</th>
         <th scope="col"></th>
     </tr>
@@ -149,7 +149,7 @@ if(empty($rooms))
                 <td data-label="Стоимость тура на одного человека" class="js-tour-cost">
                     <?=$curDatePrices[$roomId];?>
                 </td>
-                <td data-label="Стоимость одноместного размещения" class="js-tour-cost"><?=$room['PROPERTY_PRICE_ONLY_ONE_VALUE'];?></td>
+                <td data-label="Доплата за одноместное размещение" class="js-tour-cost"><?=$room['PROPERTY_PRICE_ONLY_ONE_VALUE'];?></td>
                 <td data-label="Доплата за сутки" class="js-tour-room-type"><?=$room['PROPERTY_PRICE_ADDITIONAL_VALUE'];?></td>
                 <td data-label="Забронировать">
                     <a href="#popup__form" class="reservation_btn">
@@ -204,7 +204,7 @@ if(empty($rooms))
                     <td data-label="Стоимость тура на одного человека" class="js-tour-cost">
                         <?=$curDatePrices[$roomId];?>
                     </td>
-                    <td data-label="Стоимость одноместного размещения" class="js-tour-cost"><?=$room['PROPERTY_PRICE_ONLY_ONE_VALUE'];?></td>
+                    <td data-label="Доплата за одноместное размещение" class="js-tour-cost"><?=$room['PROPERTY_PRICE_ONLY_ONE_VALUE'];?></td>
                     <td data-label="Доплата за сутки" class="js-tour-room-type"><?=$room['PROPERTY_PRICE_ADDITIONAL_VALUE'];?></td>
                     <td data-label="Забронировать">
                         <a href="#popup__form" class="reservation_btn">

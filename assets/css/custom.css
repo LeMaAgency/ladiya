@@ -3541,3 +3541,7 @@ input.filter__button {padding-bottom: 15px !important;}
 #popup__form__agenci .core__input__log {
     background-color: transparent;
 }
+
+.tour-detail_tabs__wrapper .bg .tab-content.main #price table th {
+    text-transform: none;
+}
