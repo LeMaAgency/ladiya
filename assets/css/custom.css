@@ -3221,6 +3221,9 @@ input.filter__button {padding-bottom: 15px !important;}
    cursor: pointer !important;
    color:#003D5D;
 }
+.hotel__detail___address span{
+   font-size: 1.2em;
+}
 
 .hotel__detail___infrastruktura{
    background-color: #003D5D;
