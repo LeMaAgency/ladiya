@@ -19,7 +19,7 @@ Loc::loadMessages(__FILE__);
 	<div class="hotel__detail___title">
 		<h1>Название гостиницы</h1>		
 	</div>
-	<div class="hotel__detail___address js-hotel__maps_open">
+    <div class="hotel__detail___address js-hotel__maps_open" data-mapmarker="<?=$arResult["PROPERTIES"]["GOOGLE_MAP"]["VALUE"]?>">
             <span>
                 Пятигорск, ул. Строителей, д. 2
             </span>						
@@ -80,7 +80,7 @@ Loc::loadMessages(__FILE__);
 					<div class="hotel__detail___room__price">
 						<span>цена от
 							<span class="price">
-								2000
+                                                            <?=$room["PROPS"]["PRICE"]["VALUE"]?>
 							</span>
 							руб.
 						</span>
