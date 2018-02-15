@@ -73,7 +73,7 @@ $rooms = \WM\IBlock\Element::getList(7, array(
     'filter' => $filter,
     'arSelect' => array(
         'ID', 'NAME', 'PROPERTY_PRICE', 'PROPERTY_PRICE_ADDITIONAL',
-        'PROPERTY_PEOPLE_COUNT', 'PROPERTY_ROOM_TYPE', 'IBLOCK_SECTION_ID'
+        'PROPERTY_PEOPLE_COUNT', 'PROPERTY_ROOM_TYPE', 'IBLOCK_SECTION_ID',
     ),
 ));
 $sections = array();
@@ -113,21 +113,34 @@ if(empty($rooms))
     <tr>
         <th scope="col">Дата</th>
         <th scope="col">Гостиница</th>
-        <th scope="col">Тип номера</th>
+        <th scope="col">Номер</th>
         <th scope="col">Стоимость тура на одного человека</th>
+        <th scope="col">Доплата за сутки</th>
         <th scope="col"></th>
     </tr>
     </thead>
     <tbody>
     <? if(!empty($curDatePrices)): ?>
+        <?php
+        $lastHotelName = null;
+        ?>
         <? foreach($rooms as $roomId => $room): ?>
             <tr data-id="<?=$roomId;?>">
                 <td data-label="Дата" class="js-tour-date"><?=Helper::enc($_POST["DATE"]);?></td>
-                <td data-label="Гостиница" class="js-tour-hotel"><?=$room['HOTEL_NAME'];?></td>
-                <td data-label="Тип номера" class="js-tour-room-type"><?=$room['PROPERTY_ROOM_TYPE_VALUE'];?></td>
+                <td data-label="Гостиница" class="js-tour-hotel">
+                    <?
+                    if($lastHotelName != $room['HOTEL_NAME'])
+                    {
+                        $lastHotelName = $room['HOTEL_NAME'];
+                        echo $room['HOTEL_NAME'];
+                    }
+                    ?>
+                </td>
+                <td data-label="Номер" class="js-tour-room-type"><?=$room['NAME'];?></td>
                 <td data-label="Стоимость тура на одного человека" class="js-tour-cost">
                     <?=$curDatePrices[$roomId];?>
                 </td>
+                <td data-label="Доплата за сутки" class="js-tour-room-type"><?=$room['PROPERTY_PRICE_ADDITIONAL_VALUE'];?></td>
                 <td data-label="Забронировать">
                     <a href="#popup__form" class="reservation_btn">
                         Забронировать
@@ -160,11 +173,20 @@ if(empty($rooms))
             <? foreach($rooms as $roomId => $room): ?>
                 <tr data-id="<?=$roomId;?>">
                     <td data-label="Дата" class="js-tour-date"><?=Helper::enc($curDate);?></td>
-                    <td data-label="Гостиница" class="js-tour-hotel"><?=$room['HOTEL_NAME'];?></td>
-                    <td data-label="Тип номера" class="js-tour-room-type"><?=$room['PROPERTY_ROOM_TYPE_VALUE'];?></td>
+                    <td data-label="Гостиница" class="js-tour-hotel">
+                        <?
+                        if($lastHotelName != $room['HOTEL_NAME'])
+                        {
+                            $lastHotelName = $room['HOTEL_NAME'];
+                            echo $room['HOTEL_NAME'];
+                        }
+                        ?>
+                    </td>
+                    <td data-label="Номер" class="js-tour-room-type"><?=$room['NAME'];?></td>
                     <td data-label="Стоимость тура на одного человека" class="js-tour-cost">
                         <?=$curDatePrices[$roomId];?>
                     </td>
+                    <td data-label="Доплата за сутки" class="js-tour-room-type"><?=$room['PROPERTY_PRICE_ADDITIONAL_VALUE'];?></td>
                     <td data-label="Забронировать">
                         <a href="#popup__form" class="reservation_btn">
                             Забронировать

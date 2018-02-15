@@ -20,7 +20,7 @@ $APPLICATION->SetTitle("О Кавказе");
 		"START_FROM" => "0"
 	)
 );?>
-<div class="text__block__wrap">
+<div class="text__block__wrap need-indent">
 	 <?$APPLICATION->IncludeComponent(
 	"bitrix:catalog",
 	".default",

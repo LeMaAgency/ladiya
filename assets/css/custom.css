@@ -3465,3 +3465,11 @@ input.filter__button {padding-bottom: 15px !important;}
       line-height: 28px;
    }
 }
+
+#jotting {
+    text-align: justify;
+}
+
+.need-indent p {
+    text-indent:25px;
+}
