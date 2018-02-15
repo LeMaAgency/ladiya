@@ -19,11 +19,10 @@ Loc::loadMessages(__FILE__);
 	<div class="hotel__detail___title">
 		<h1>Название гостиницы</h1>		
 	</div>
-	<div class="hotel__detail___address js-hotel__maps_open">			
-        <i class="fa fa-map-marker" aria-hidden="true"></i>
+	<div class="hotel__detail___address js-hotel__maps_open">
             <span>
                 Пятигорск, ул. Строителей, д. 2
-            </span>
+            </span>						
             <?=Loc::getMessage('NEWS_DETAIL_SHOW_IN_MAP');?>
     </div>
 	<div class="hotel__detail___slider">

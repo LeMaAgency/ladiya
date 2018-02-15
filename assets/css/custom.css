@@ -3497,9 +3497,11 @@ input.filter__button {padding-bottom: 15px !important;}
     right: -50px;
 }
 
-.video .video__item {
-    padding: 10px;
+.need-indent p {
+    text-indent:25px;
 }
-.video .item-block {
-    height: 200px;
+
+.dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover {
+    color: #F15922;
+    background-color: #CCC;
 }

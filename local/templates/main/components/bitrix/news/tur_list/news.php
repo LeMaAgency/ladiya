@@ -39,7 +39,7 @@ $viewMode = $curView ? 'list' : '';
         <h1 class="lad-slideshow__block-title__h1"><?=$APPLICATION->ShowTitle(false);?></h1>
     </div>
 </div>
-<?$APPLICATION->IncludeComponent(
+<?/*$APPLICATION->IncludeComponent(
     "bitrix:photo.detail",
     "pages_head_picture",
     array(
@@ -80,7 +80,7 @@ $viewMode = $curView ? 'list' : '';
         "COMPONENT_TEMPLATE" => "pages_head_picture"
     ),
     false
-);?>
+);*/?>
 <?$APPLICATION->IncludeComponent(
     "bitrix:breadcrumb",
     ".default",
