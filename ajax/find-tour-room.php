@@ -72,7 +72,7 @@ if(!empty($_POST['hotel']))
 $rooms = \WM\IBlock\Element::getList(7, array(
     'filter' => $filter,
     'arSelect' => array(
-        'ID', 'NAME', 'PROPERTY_PRICE', 'PROPERTY_PRICE_ADDITIONAL',
+        'ID', 'NAME', 'PROPERTY_PRICE', 'PROPERTY_PRICE_ADDITIONAL', 'PROPERTY_PRICE_ONLY_ONE',
         'PROPERTY_PEOPLE_COUNT', 'PROPERTY_ROOM_TYPE', 'IBLOCK_SECTION_ID',
     ),
 ));
@@ -115,6 +115,7 @@ if(empty($rooms))
         <th scope="col">Гостиница</th>
         <th scope="col">Номер</th>
         <th scope="col">Стоимость тура на одного человека</th>
+        <th scope="col">Стоимость одноместного размещения в двухместном номере</th>
         <th scope="col">Доплата за сутки</th>
         <th scope="col"></th>
     </tr>
@@ -148,6 +149,7 @@ if(empty($rooms))
                 <td data-label="Стоимость тура на одного человека" class="js-tour-cost">
                     <?=$curDatePrices[$roomId];?>
                 </td>
+                <td data-label="Стоимость одноместного размещения" class="js-tour-cost"><?=$room['PROPERTY_PRICE_ONLY_ONE_VALUE'];?></td>
                 <td data-label="Доплата за сутки" class="js-tour-room-type"><?=$room['PROPERTY_PRICE_ADDITIONAL_VALUE'];?></td>
                 <td data-label="Забронировать">
                     <a href="#popup__form" class="reservation_btn">
@@ -202,6 +204,7 @@ if(empty($rooms))
                     <td data-label="Стоимость тура на одного человека" class="js-tour-cost">
                         <?=$curDatePrices[$roomId];?>
                     </td>
+                    <td data-label="Стоимость одноместного размещения" class="js-tour-cost"><?=$room['PROPERTY_PRICE_ONLY_ONE_VALUE'];?></td>
                     <td data-label="Доплата за сутки" class="js-tour-room-type"><?=$room['PROPERTY_PRICE_ADDITIONAL_VALUE'];?></td>
                     <td data-label="Забронировать">
                         <a href="#popup__form" class="reservation_btn">
