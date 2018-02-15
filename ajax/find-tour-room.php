@@ -122,11 +122,19 @@ if(empty($rooms))
     <tbody>
     <? if(!empty($curDatePrices)): ?>
         <?php
-        $lastHotelName = null;
+        $lastHotelName = $lastDate = null;
         ?>
         <? foreach($rooms as $roomId => $room): ?>
             <tr data-id="<?=$roomId;?>">
-                <td data-label="Дата" class="js-tour-date"><?=Helper::enc($_POST["DATE"]);?></td>
+                <td data-label="Дата" class="js-tour-date">
+                    <?
+                    if($lastDate != $_POST["DATE"])
+                    {
+                        $lastDate = $_POST["DATE"];
+                        echo Helper::enc($_POST["DATE"]);
+                    }
+                    ?>
+                </td>
                 <td data-label="Гостиница" class="js-tour-hotel">
                     <?
                     if($lastHotelName != $room['HOTEL_NAME'])
@@ -172,7 +180,15 @@ if(empty($rooms))
         foreach($tmpDates as $curDate => $curDatePrices): ?>
             <? foreach($rooms as $roomId => $room): ?>
                 <tr data-id="<?=$roomId;?>">
-                    <td data-label="Дата" class="js-tour-date"><?=Helper::enc($curDate);?></td>
+                    <td data-label="Дата" class="js-tour-date">
+                        <?
+                        if($lastDate != $curDate)
+                        {
+                            $lastDate = $curDate;
+                            echo Helper::enc($curDate);
+                        }
+                        ?>
+                    </td>
                     <td data-label="Гостиница" class="js-tour-hotel">
                         <?
                         if($lastHotelName != $room['HOTEL_NAME'])

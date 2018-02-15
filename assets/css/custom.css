@@ -3473,3 +3473,8 @@ input.filter__button {padding-bottom: 15px !important;}
 .need-indent p {
     text-indent:25px;
 }
+
+.dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover {
+    color: #F15922;
+    background-color: #CCC;
+}
