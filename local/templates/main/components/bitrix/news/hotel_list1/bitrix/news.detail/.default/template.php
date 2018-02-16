@@ -17,11 +17,12 @@ Loc::loadMessages(__FILE__);
 
 <div class="hotel__detail___container">
 	<div class="hotel__detail___title">
-		<h1>Название гостиницы</h1>		
+		<h1><?=$arResult["NAME"]?></h1>		
 	</div>
     <div class="hotel__detail___address js-hotel__maps_open" data-mapmarker="<?=$arResult["PROPERTIES"]["GOOGLE_MAP"]["VALUE"]?>">
             <span>
-                Пятигорск, ул. Строителей, д. 2
+                <?=$arResult["PROPERTIES"]["CITY"]["VALUE"]?>
+                <?=$arResult["PROPERTIES"]["ADDRESS"]["VALUE"]?>
             </span>						
             <?=Loc::getMessage('NEWS_DETAIL_SHOW_IN_MAP');?>
     </div>
@@ -46,48 +47,120 @@ Loc::loadMessages(__FILE__);
 		</div>
 		<ul>
             <?
-            foreach ($arResult["PROPERTIES"]['INFRASTRUCTURE']['VALUE'] as $infastructureID){
-                switch ($infastructureID) {
-                    case 256:
-                        echo " <li><span><i class=\"fa fa-bath\" aria-hidden=\"true\"></i><span>Душевая комната</span></span></li>";
-                        break;
-                    case 254:
-                        echo "<li><span><i class=\"fa fa-plus-square\" aria-hidden=\"true\"></i><span>Аптека</span></span></li>";
-                        break;
-                    case 249:
-                        echo " <li><span><i class=\"fa fa-wifi\" aria-hidden=\"true\"></i><span>Бесплатный Wi-Fi</span></span></li>";
-                        break;
+                if(!empty($arResult["PROPERTIES"]['INFRASTRUCTURE']['VALUE']))
+                {
+                    foreach ($arResult["PROPERTIES"]['INFRASTRUCTURE']['VALUE'] as $infastructureID){
+                        switch ($infastructureID) {
+                            case 256:
+                                echo " <li><span><i class=\"fa fa-bath\" aria-hidden=\"true\"></i><span>Душевая комната</span></span></li>";
+                                break;
+                            case 254:
+                                echo "<li><span><i class=\"fa fa-plus-square\" aria-hidden=\"true\"></i><span>Аптека</span></span></li>";
+                                break;
+                            case 438:
+                                echo " <li><span><i class=\"fa fa-wifi\" aria-hidden=\"true\"></i><span>Бесплатный Wi-Fi</span></span></li>";
+                                break;
+                        }
+                    }   
                 }
-            }
             ?>
 		</ul>
 	</div>
 	<div class="hotel__detail___rooms">
 		<div class="hotel__detail___title">
 			<?= Loc::getmessage('NEWS_DETAIL_ROOMS'); ?>
-		</div>			
-        <?foreach ($arResult["ROOMS"] as $room):?>
-            <div class="hotel__detail___room">
-                <div class="hotel__detail___room__img ">
-                    <img src="<?=CFile::GetPath($room["PREVIEW_PICTURE"])?>" alt="">
+		</div>
+        <? if(!empty($arResult["ROOMS"])):?>
+            <?foreach ($arResult["ROOMS"] as $room):?>
+                <div class="hotel__detail___room">
+                    <div class="hotel__detail___room__img ">
+                        <img src="<?=CFile::GetPath($room["PREVIEW_PICTURE"])?>" alt="">
+                    </div>
+                    <div class="hotel__detail___room__text">
+                                    <span>
+                                            <?=$room["NAME"]?>
+                                    </span>
+                    </div>
+                    <div class="hotel__detail___room__info">
+                        <div class="hotel__detail___room__price">
+                                <span>цена от
+                                        <span class="price">
+                                            <?=$room["PROPS"]["PRICE"]["VALUE"]?>
+                                        </span>
+                                        руб.
+                                </span>
+                        </div>
+                        <a href="#" class="item-card__content__more js-hotel__number_info" data-room_id="<?=$room["ID"]?>">подробнее</a>
+                    </div>
                 </div>
-                <div class="hotel__detail___room__text">
-				<span>
-					<?=$room["NAME"]?>
-				</span>
-                </div>
-                <div class="hotel__detail___room__info">
-					<div class="hotel__detail___room__price">
-						<span>цена от
-							<span class="price">
-                                                            <?=$room["PROPS"]["PRICE"]["VALUE"]?>
-							</span>
-							руб.
-						</span>
-					</div>
-                    <a href="#" class="item-card__content__more js-hotel__number_info">подробнее</a>
-                </div>
-            </div>
-        <?endforeach;?>
+            <?endforeach;?>
+        <? endif;?>
 	</div>
+        <? if(!empty($arResult["ROOMS"])):?>
+            <? foreach ($arResult["ROOMS"] as $room):?>
+                <div id="room<?=$room["ID"]?>" class="hotel_number" style="display: none;">
+                    <div class="hotel_number__title">
+                        <?=$room["NAME"]?>
+                    </div>
+                    <div class="hotel_number__slider">
+                        <? foreach ($room["PROPS"]["ROOM_PHOTOS"]["VALUE"] as $photo):?>
+                        <img src="<?=CFile::GetPath($photo)?>" alt="">
+                        <? endforeach;?>
+                    </div>
+                    <div class="hotel_number__price_list">
+                        <div class="hotel_number__price_title"><?= Loc::getmessage('NEWS_DETAIL_ROOMS_PRICE_TITLE'); ?></div>
+                        <ul>
+                            <li>
+                                <div class="span">
+                                    <span class="title"><?= Loc::getmessage('NEWS_DETAIL_ROOMS_MAIN_PLACE_PRICE'); ?></span>
+                                    <span class="price"><?=$room["PROPS"]["PRICE"]["VALUE"]?> <?= Loc::getmessage('NEWS_DETAIL_ROOMS_CURRENCY'); ?></span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="span">
+                                    <span class="title"><?= Loc::getmessage('NEWS_DETAIL_ROOMS_ALL_ROOM_PRICE'); ?></span>
+                                    <span class="price"><?=$room["PROPS"]["ALL_ROOM_PRICE"]["VALUE"]?> <?= Loc::getmessage('NEWS_DETAIL_ROOMS_CURRENCY'); ?></span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="span">
+                                    <span class="title"><?= Loc::getmessage('NEWS_DETAIL_ROOMS_EXTRA_PLACE_PRICE'); ?></span>
+                                    <span class="price"><?=$room["PROPS"]["PRICE_EXTRA_SPACE"]["VALUE"]?> <?= Loc::getmessage('NEWS_DETAIL_ROOMS_CURRENCY'); ?></span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="hotel_number__description">
+                        <div class="hotel_number__descriprion_title"><?= Loc::getmessage('NEWS_DETAIL_ROOMS_DESCRIPTION'); ?></div>
+                        <span>
+                            <?=$room["DETAIL_TEXT"]?>
+                        </span>
+                    </div>
+                    <div class="hotel_number__amenity">
+                        <div class="hotel_number__amenity_title"><?= Loc::getmessage('NEWS_DETAIL_ROOMS_COMFORT'); ?></div>
+                        <ul>  
+                            <?
+                                if(!empty($room["PROPS"]['INFRASTRUCTURE']['VALUE']))
+                                {
+                                    foreach ($room["PROPS"]['INFRASTRUCTURE']['VALUE'] as $infastructureID){
+                                    switch ($infastructureID) {
+                                        case 256:
+                                            echo " <li><span><i class=\"fa fa-bath\" aria-hidden=\"true\"></i><span>Душевая комната</span></span></li>";
+                                            break;
+                                        case 254:
+                                            echo "<li><span><i class=\"fa fa-plus-square\" aria-hidden=\"true\"></i><span>Аптека</span></span></li>";
+                                            break;
+                                        case 438:
+                                            echo " <li><span><i class=\"fa fa-wifi\" aria-hidden=\"true\"></i><span>Бесплатный Wi-Fi</span></span></li>";
+                                            break;
+                                    }
+                                }
+                                }
+
+                            ?>
+                        </ul>
+                    </div>
+                </div>
+            <? endforeach;?>
+        <? endif;?>
 </div>

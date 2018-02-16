@@ -591,16 +591,16 @@ $(function() {
         $.fancybox.open($('#hotel_maps'));
     });
     
-    $('.js-hotel__number_info').off('click').on('click',function(e){
+    /*$('.js-hotel__number_info').off('click').on('click',function(e){
         e.preventDefault();
         $.fancybox.open($('#number_info'));
-    });
+    });*/
         
 });
 
 $(function(){
   
-    //Функция вызова гугл карты.
+//Функция вызова гугл карты.
     function initMap(lat,lng) {
          var myLatlng = new google.maps.LatLng(lat,lng);
          var map = new google.maps.Map(document.getElementById('hotel_maps'), {
@@ -612,8 +612,7 @@ $(function(){
            map: map
          });
      }
-    //конец функции
-    
+//конец функции
     var fullMapMarker;
     var lat;
     var lng;
@@ -625,4 +624,12 @@ $(function(){
         lng = +fullMapMarker.replace(/.*\,/, '');//Удаление всего,что находится до запятой
         initMap(lat,lng);//вызов функции google карт
     });
+    
+    
+//Всплывающее окно номеров гостиниц
+   $(".js-hotel__number_info").click(function(){
+        var roomID = "#room" + $(this).data("room_id");
+        $.fancybox.open($(roomID));
+    })
+    
 });
