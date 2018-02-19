@@ -19,5 +19,5 @@ $(function() {
                 $.fancybox.open($('#popup__form'));
             });
         });
-    })
+    }).trigger('submit');
 });
