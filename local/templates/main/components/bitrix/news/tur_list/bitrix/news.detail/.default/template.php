@@ -48,9 +48,9 @@ $this->setFrameMode(true);
                     </div>
                 </div>
 
-                <? if (!empty($arResult['PROPERTIES']['GALLERY_PHOTO']['VALUE_SRC'])): ?>
+                <? if (!empty($arResult['PROPERTIES']['SLIDER_PHOTO']['VALUE_SRC'])): ?>
                     <div class="carousel-inner" role="listbox">
-                        <? foreach ($arResult['PROPERTIES']['GALLERY_PHOTO']['VALUE_SRC'] as $src): ?>
+                        <? foreach ($arResult['PROPERTIES']['SLIDER_PHOTO']['VALUE_SRC'] as $src): ?>
                             <div class="item">
                                 <div class="img" style="background-image: url('<?= $src; ?>');"></div>
                             </div>
