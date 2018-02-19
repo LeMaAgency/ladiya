@@ -38,9 +38,11 @@ Loc::loadMessages(__FILE__);
                 $arImg = !empty($iCodeYoutubeVideo) ? 'http://img.youtube.com/vi/'.$iCodeYoutubeVideo."/sddefault.jpg" : "/YouTube.jpg"; ?>
                 <a href="<?= $arLinkVideo; ?>" data-fancybox="video" data-caption="<?=$arResult['PROPERTIES']['LINK_TO_VIDEO']['DESCRIPTION'][$descriptionCode]?>" class="catalog__list__item">
                     <div class="catalog__list__item__img" style="background-image: url('<?=$arImg; ?>');">
-                        <div class="catalog__list__item__img__title">
-                            <?=$arResult['PROPERTIES']['LINK_TO_VIDEO']['DESCRIPTION'][$descriptionCode]?>
-                        </div>
+                        <? if(!empty($arResult['PROPERTIES']['LINK_TO_VIDEO']['DESCRIPTION'][$descriptionCode])):?>
+                            <div class="catalog__list__item__img__title">
+                                <?=$arResult['PROPERTIES']['LINK_TO_VIDEO']['DESCRIPTION'][$descriptionCode]?>
+                            </div>
+                        <? endif;?>
                         <div class="catalog__list__item__img__wrap">
                             <div class="catalog__list__item__img__wrap__table">
                                 <div class="catalog__list__item__img__wrap__table__cell">
