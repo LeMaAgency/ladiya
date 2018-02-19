@@ -28,9 +28,11 @@ Loc::loadMessages(__FILE__);
                 $arImg = \CFile::GetPath($arImg); ?>
                 <a href="<?= $arImg; ?>" data-fancybox="photo" data-caption="<?=$arResult['PROPERTIES']['MORE_PHOTO']['DESCRIPTION'][$descriptionCode]?>" class="catalog__list__item">
                     <div class="catalog__list__item__img" style="background-image: url('<?=$arImg; ?>');">
-                        <div class="catalog__list__item__img__title">
-                            <?=htmlspecialcharsBack($arResult['PROPERTIES']['MORE_PHOTO']['DESCRIPTION'][$descriptionCode])?>
-                        </div>
+                        <? if(!empty($arResult['PROPERTIES']['MORE_PHOTO']['DESCRIPTION'][$descriptionCode])):?>
+                            <div class="catalog__list__item__img__title">
+                                <?=htmlspecialcharsBack($arResult['PROPERTIES']['MORE_PHOTO']['DESCRIPTION'][$descriptionCode])?>
+                            </div>
+                        <? endif;?>
                         <div class="catalog__list__item__img__wrap">
                             <div class="catalog__list__item__img__wrap__table">
                                 <div class="catalog__list__item__img__wrap__table__cell">
