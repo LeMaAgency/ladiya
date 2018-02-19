@@ -222,7 +222,7 @@ $this->setFrameMode(true);
                                                                                 </span>
                                                                                 <?if (!empty($arSpoilerText['ADDITIONAL_TEXT'][$i])):?>
                                                                                     <div class="core__switch__btn__hidden core__switch__btn__hidden_<?= $spoiler_number++ ?>_1">
-                                                                                        <?= $arSpoilerText['ADDITIONAL_TEXT'][$i]; ?>
+                                                                                        <?=htmlspecialcharsBack($arSpoilerText['ADDITIONAL_TEXT'][$i]);?>
                                                                                     </div>
                                                                                 <?else:?>
                                                                                     <?$spoiler_number++;?>
