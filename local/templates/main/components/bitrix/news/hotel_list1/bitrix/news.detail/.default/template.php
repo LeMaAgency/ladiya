@@ -49,19 +49,10 @@ Loc::loadMessages(__FILE__);
             <?
                 if(!empty($arResult["PROPERTIES"]['INFRASTRUCTURE']['VALUE']))
                 {
-                    foreach ($arResult["PROPERTIES"]['INFRASTRUCTURE']['VALUE'] as $infastructureID){
-                        switch ($infastructureID) {
-                            case 256:
-                                echo " <li><span><i class=\"fa fa-bath\" aria-hidden=\"true\"></i><span>Душевая комната</span></span></li>";
-                                break;
-                            case 254:
-                                echo "<li><span><i class=\"fa fa-plus-square\" aria-hidden=\"true\"></i><span>Аптека</span></span></li>";
-                                break;
-                            case 438:
-                                echo " <li><span><i class=\"fa fa-wifi\" aria-hidden=\"true\"></i><span>Бесплатный Wi-Fi</span></span></li>";
-                                break;
-                        }
-                    }   
+                    foreach ($arResult["INFRASTRUCTURE_DETAIL"] as $infastructure)
+                    {
+                        echo "<li><span><i class=\"fa ".$infastructure["PROPS"]["ICON_CODE"]["VALUE"]."\"aria-hidden=\"true\"></i><span>".$infastructure["NAME"]."</span></span></li>";
+                    }
                 }
             ?>
 		</ul>
@@ -140,23 +131,13 @@ Loc::loadMessages(__FILE__);
                         <div class="hotel_number__amenity_title"><?= Loc::getmessage('NEWS_DETAIL_ROOMS_COMFORT'); ?></div>
                         <ul>  
                             <?
-                                if(!empty($room["PROPS"]['INFRASTRUCTURE']['VALUE']))
+                                if(!empty($room["PROPS"]['INFRASTRUCTURE_DETAIL']))
                                 {
-                                    foreach ($room["PROPS"]['INFRASTRUCTURE']['VALUE'] as $infastructureID){
-                                    switch ($infastructureID) {
-                                        case 256:
-                                            echo " <li><span><i class=\"fa fa-bath\" aria-hidden=\"true\"></i><span>Душевая комната</span></span></li>";
-                                            break;
-                                        case 254:
-                                            echo "<li><span><i class=\"fa fa-plus-square\" aria-hidden=\"true\"></i><span>Аптека</span></span></li>";
-                                            break;
-                                        case 438:
-                                            echo " <li><span><i class=\"fa fa-wifi\" aria-hidden=\"true\"></i><span>Бесплатный Wi-Fi</span></span></li>";
-                                            break;
+                                    foreach ($room["PROPS"]["INFRASTRUCTURE_DETAIL"] as $infastructure)
+                                    {
+                                        echo "<li><span><i class=\"fa ".$infastructure["PROPS"]["ICON_CODE"]["VALUE"]."\"aria-hidden=\"true\"></i><span>".$infastructure["NAME"]."</span></span></li>";
                                     }
                                 }
-                                }
-
                             ?>
                         </ul>
                     </div>

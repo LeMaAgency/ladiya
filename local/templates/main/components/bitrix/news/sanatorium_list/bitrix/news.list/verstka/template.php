@@ -123,6 +123,7 @@ $foundCnt = (int) $arResult['NAV_RESULT']->NavRecordCount;
                                     echo " <span data-title=\"".$infastructure["NAME"]."\"><i class=\"fa ".$infastructure["PROPS"]["ICON_CODE"]["VALUE"]." aria-hidden=\"true\"></i></span>";
                                 }
                             }
+
                         ?>
                     </div>
                 </div>                
@@ -149,7 +150,4 @@ $foundCnt = (int) $arResult['NAV_RESULT']->NavRecordCount;
     <?if($arParams["DISPLAY_BOTTOM_PAGER"]):?>
         <br /><?=$arResult["NAV_STRING"];?>
     <?endif;?>
-
-
-<!--  Отложенная функция для передачи ключ   -->
 </div>

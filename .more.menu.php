@@ -1,15 +1,15 @@
 <?
 $aMenuLinks = Array(
 	Array(
-		"Санатории", 
-		"", 
+		"Новый раздел тест", 
+		"/novyy-razdel-test/", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
-		"Новый раздел тест", 
-		"/novyy-razdel-test/", 
+		"Санатории", 
+		"/sanatorii/", 
 		Array(), 
 		Array(), 
 		"" 

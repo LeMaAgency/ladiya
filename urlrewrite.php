@@ -13,16 +13,16 @@ $arUrlRewrite = array(
 		"PATH" => "/o-kompanii/detail.php",
 	),
 	array(
-		"CONDITION" => "#^/transport/([^/]+)/?(?:\\?(.*))?\$#",
-		"RULE" => "CODE=\$1&\$2",
-		"ID" => "",
-		"PATH" => "/transport/detail.php",
-	),
-	array(
 		"CONDITION" => "#^/ekskursii/([^/]+)/?(?:\\?(.*))?\$#",
 		"RULE" => "CODE=\$1&\$2",
 		"ID" => "",
 		"PATH" => "/ekskursii/detail.php",
+	),
+	array(
+		"CONDITION" => "#^/transport/([^/]+)/?(?:\\?(.*))?\$#",
+		"RULE" => "CODE=\$1&\$2",
+		"ID" => "",
+		"PATH" => "/transport/detail.php",
 	),
 	array(
 		"CONDITION" => "#^/turistam/([^/]+)/?(?:\\?(.*))?\$#",
@@ -31,22 +31,28 @@ $arUrlRewrite = array(
 		"PATH" => "/turistam/detail.php",
 	),
 	array(
-		"CONDITION" => "#^/photo/([^/]+)/?(?:\\?(.*))?\$#",
-		"RULE" => "CODE=\$1&\$2",
-		"ID" => "",
-		"PATH" => "/photo/detail.php",
-	),
-	array(
 		"CONDITION" => "#^/video/([^/]+)/?(?:\\?(.*))?\$#",
 		"RULE" => "CODE=\$1&\$2",
 		"ID" => "",
 		"PATH" => "/video/detail.php",
 	),
 	array(
+		"CONDITION" => "#^/photo/([^/]+)/?(?:\\?(.*))?\$#",
+		"RULE" => "CODE=\$1&\$2",
+		"ID" => "",
+		"PATH" => "/photo/detail.php",
+	),
+	array(
 		"CONDITION" => "#^/o-kavkaze/#",
 		"RULE" => "",
 		"ID" => "bitrix:catalog",
 		"PATH" => "/o-kavkaze/index.php",
+	),
+	array(
+		"CONDITION" => "#^/sanatorii/#",
+		"RULE" => "",
+		"ID" => "bitrix:news",
+		"PATH" => "/sanatorii/index.php",
 	),
 	array(
 		"CONDITION" => "#^/hotel/#",

@@ -5,15 +5,15 @@ global $APPLICATION;
 
 if(CModule::IncludeModule("iblock")) {
 
-    $IBLOCK_ID = 30; //Инфоблок с номерами санаторие
+    $IBLOCK_ID = 32; //Инфоблок с номерами санаторие
 
     foreach ($arResult["ITEMS"] as $key => $arItem)
     {
-        //Получение раздела инфоблока "Номера санаториев", чье польовательское поле UF_HOTEL хранит ID текущего санатория.
-        $hotelID = $arItem["ID"]; // ID текущего санатория
+        //Получение раздела инфоблока "Номера санаториев", чье польовательское поле UF_SANATORIUM хранит ID текущего санатория.
+        $sanatoriumID = $arItem["ID"]; // ID текущего санатория
         $arOrder = Array();
-        $arSelect = Array("ID", "NAME", "IBLOCK_ID", "UF_HOTEL");
-        $arFilter = Array("IBLOCK_ID" => $IBLOCK_ID, "ACTIVE" => "Y", "UF_HOTEL" => $hotelID);// происходит фильтрация раздлов по полю UF_HOTEL
+        $arSelect = Array("ID", "NAME", "IBLOCK_ID", "UF_SANATORIUM");
+        $arFilter = Array("IBLOCK_ID" => $IBLOCK_ID, "ACTIVE" => "Y", "UF_SANATORIUM" => $sanatoriumID);// происходит фильтрация раздлов по полю UF_SANATORIUM
         $res = CIBlockSection::GetList($arOrder, $arFilter, false, $arSelect, false);
         while ($ob = $res->GetNextElement()) {
             $arFields = $ob->GetFields();
@@ -69,3 +69,4 @@ if(CModule::IncludeModule("iblock")) {
 
     }
 }
+

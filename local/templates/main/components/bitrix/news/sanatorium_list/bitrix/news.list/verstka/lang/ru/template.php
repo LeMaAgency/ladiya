@@ -12,3 +12,6 @@ $MESS['CT_HOTEL_MORE'] = 'гостиниц';
 $MESS['CT_HOTEL_SEARCH_FOUND_ONE_TITLE'] = 'Найдена';
 $MESS['CT_HOTEL_SEARCH_FOUND_TWO_TITLE'] = 'Найдены';
 $MESS['CT_HOTEL_SEARCH_FOUND_MORE_TITLE'] = 'Найдено';
+$MESS['CT_BNL_INFRASTRUKTURA'] = 'Инфраструктура';
+$MESS['CT_BNL_PRICE_DESCRIPTION'] = 'за одного человека';
+$MESS['CT_BNL_SHOW_IN_MAP'] = ' - показать на карте';

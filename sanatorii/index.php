@@ -1,9 +1,9 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
-$APPLICATION->SetTitle("Гостиницы"); ?>
+$APPLICATION->SetTitle("Санатории"); ?>
 <? $APPLICATION->IncludeComponent(
-	"bitrix:news.list",
-	"slider-hotels",
+	"bitrix:news.list", 
+	"slider-hotels", 
 	array(
 		"ACTIVE_DATE_FORMAT" => "d.m.Y",
 		"ADD_SECTIONS_CHAIN" => "N",
@@ -77,7 +77,7 @@ $APPLICATION->SetTitle("Гостиницы"); ?>
 ); ?>
 <?$APPLICATION->IncludeComponent(
 	"bitrix:news", 
-	"hotel_list1", 
+	"sanatorium_list", 
 	array(
 		"ADD_ELEMENT_CHAIN" => "Y",
 		"ADD_SECTIONS_CHAIN" => "N",
@@ -127,7 +127,7 @@ $APPLICATION->SetTitle("Гостиницы"); ?>
 		"DISPLAY_PREVIEW_TEXT" => "Y",
 		"DISPLAY_TOP_PAGER" => "N",
 		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
-		"IBLOCK_ID" => "6",
+		"IBLOCK_ID" => "31",
 		"IBLOCK_TYPE" => "content",
 		"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
 		"LIST_ACTIVE_DATE_FORMAT" => "d.m.Y",
@@ -178,7 +178,7 @@ $APPLICATION->SetTitle("Гостиницы"); ?>
 		"USE_RSS" => "N",
 		"USE_SEARCH" => "N",
 		"USE_SHARE" => "N",
-		"COMPONENT_TEMPLATE" => "hotel_list1",
+		"COMPONENT_TEMPLATE" => "sanatorium_list",
 		"FILTER_NAME" => "",
 		"FILTER_FIELD_CODE" => array(
 			0 => "",
@@ -191,7 +191,7 @@ $APPLICATION->SetTitle("Гостиницы"); ?>
 			3 => "PRICE",
 			4 => "",
 		),
-		"SEF_FOLDER" => "/hotel/",
+		"SEF_FOLDER" => "/sanatorii/",
 		"SEF_URL_TEMPLATES" => array(
 			"news" => "",
 			"section" => "",

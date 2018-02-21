@@ -34,15 +34,15 @@ $viewMode = $curView ? 'list' : '';
 );?>
 <br />
 <?endif*/ ?>
-<section id="tours" class="container-fluid">
+<section class="content-page" id="tours">
     <div class="container">
         <div class="row">
 
             <? if ($arParams["USE_FILTER"] == "Y"): ?>
-                <div class="col-xs-12 col-md-4 col-lg-4">
+                <div class="col-xs-12 col-md-4 col-lg-4 hotels-filter">
                     <? $APPLICATION->IncludeComponent(
-                        "bitrix:catalog.filter",
-                        "",
+                        "lema:catalog.filter",
+                        "hotels",
                         Array(
                             "IBLOCK_TYPE" => $arParams["IBLOCK_TYPE"],
                             "IBLOCK_ID" => $arParams["IBLOCK_ID"],
@@ -61,7 +61,7 @@ $viewMode = $curView ? 'list' : '';
             <? endif ?>
             <? $APPLICATION->IncludeComponent(
                 "bitrix:news.list",
-                $viewMode,
+                "verstka",//$viewMode,
                 Array(
                     "IBLOCK_TYPE" => $arParams["IBLOCK_TYPE"],
                     "IBLOCK_ID" => $arParams["IBLOCK_ID"],

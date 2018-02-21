@@ -7,13 +7,13 @@ global $APPLICATION;
 if(CModule::IncludeModule("iblock"))
 {
 
-    $IBLOCK_ID = 30; //Инфоблок с номерами гостиниц
+    $IBLOCK_ID = 32; //Инфоблок с номерами санаториев
 
-    //Получение раздела инфоблока, чье польовательское поле UF_HOTEL привязано к гостинице
-    $hotelID = $arResult["ID"];
+    //Получение раздела инфоблока, чье польовательское поле UF_SANATORIUM привязано к санаторию
+    $sanatoriumID = $arResult["ID"];
     $arOrder = Array();
-    $arSelect = Array("ID", "NAME", "IBLOCK_ID", "UF_HOTEL");
-    $arFilter = Array("IBLOCK_ID"=>$IBLOCK_ID, "ACTIVE"=>"Y","UF_HOTEL" =>$hotelID);
+    $arSelect = Array("ID", "NAME", "IBLOCK_ID", "UF_SANATORIUM");
+    $arFilter = Array("IBLOCK_ID"=>$IBLOCK_ID, "ACTIVE"=>"Y","UF_SANATORIUM" =>$sanatoriumID);
     $res = CIBlockSection::GetList($arOrder, $arFilter, false, $arSelect,false );
     while($ob = $res->GetNextElement())
     {
@@ -39,12 +39,12 @@ if(CModule::IncludeModule("iblock"))
             $arResult["ROOMS"][] = $arFields;
 
         }
-        $arResult["ROOMS_COUNT"] = count($arResult["ROOMS"]); //Количество комнат у гостниницы
+        $arResult["ROOMS_COUNT"] = count($arResult["ROOMS"]); //Количество комнат у санатория
     }
 
 
 
-    //Получение списка инфраструктур гостиницы
+    //Получение списка инфраструктур санатория
     if(!empty($arResult["PROPERTIES"]["INFRASTRUCTURE"]["VALUE"]))
     {
         $arOrder = Array();
@@ -61,7 +61,7 @@ if(CModule::IncludeModule("iblock"))
     }
 
 
-    //Получение списка инфраструктур каждого номера гостиницы
+    //Получение списка инфраструктур каждого номера санатория
     if(!empty($arResult["ROOMS"]))
     {
         foreach ($arResult["ROOMS"] as $key=>$room)
@@ -80,7 +80,7 @@ if(CModule::IncludeModule("iblock"))
         }
     }
 }
-//Получаем пути картинок галереи гостиницы по ID
+//Получаем пути картинок галереи санатория по ID
 if(!empty($arResult['PROPERTIES']['GALLERY']['VALUE']))
 {
     foreach ($arResult['PROPERTIES']['GALLERY']['VALUE'] as $picID)
