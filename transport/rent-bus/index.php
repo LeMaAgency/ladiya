@@ -107,121 +107,152 @@ CModule::IncludeModule('iblock');
                     <div class="row">
                         <div class="col-sm-12">
                             <div class="core__text">
-                                <h1>Трансфер</h1>
-                                <p><span style="font-weight: bold;">КАВКАЗСКИЕ МИНЕРАЛЬНЫЕ ВОДЫ<br><span><br>Условия встречи туристов</span> </span></p>
+                                <h1><? $APPLICATION->IncludeFile(
+                                        SITE_DIR."include/transport/rent-bus/inner_page/title.php"
+                                    ); ?>
+                                </h1>
+                                <p>
+                                    <span style="font-weight: bold;"><? $APPLICATION->IncludeFile(
+                                            SITE_DIR."include/transport/rent-bus/inner_page/region.php"
+                                        ); ?>
+                                    </span>
+                                </p>
+                                <?$APPLICATION->IncludeComponent(
+	"bitrix:news.list", 
+	"transport-pages_table", 
+	array(
+		"ACTIVE_DATE_FORMAT" => "d.m.Y",
+		"ADD_SECTIONS_CHAIN" => "N",
+		"AJAX_MODE" => "N",
+		"AJAX_OPTION_ADDITIONAL" => "",
+		"AJAX_OPTION_HISTORY" => "N",
+		"AJAX_OPTION_JUMP" => "N",
+		"AJAX_OPTION_STYLE" => "Y",
+		"CACHE_FILTER" => "N",
+		"CACHE_GROUPS" => "Y",
+		"CACHE_TIME" => "36000000",
+		"CACHE_TYPE" => "A",
+		"CHECK_DATES" => "Y",
+		"DETAIL_URL" => "",
+		"DISPLAY_BOTTOM_PAGER" => "N",
+		"DISPLAY_DATE" => "N",
+		"DISPLAY_NAME" => "N",
+		"DISPLAY_PICTURE" => "N",
+		"DISPLAY_PREVIEW_TEXT" => "N",
+		"DISPLAY_TOP_PAGER" => "N",
+		"FIELD_CODE" => array(
+			0 => "",
+			1 => "",
+		),
+		"FILTER_NAME" => "",
+		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
+		"IBLOCK_ID" => "34",
+		"IBLOCK_TYPE" => "content",
+		"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
+		"INCLUDE_SUBSECTIONS" => "N",
+		"MESSAGE_404" => "",
+		"NEWS_COUNT" => "20",
+		"PAGER_BASE_LINK_ENABLE" => "N",
+		"PAGER_DESC_NUMBERING" => "N",
+		"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
+		"PAGER_SHOW_ALL" => "N",
+		"PAGER_SHOW_ALWAYS" => "N",
+		"PAGER_TEMPLATE" => ".default",
+		"PAGER_TITLE" => "Новости",
+		"PARENT_SECTION" => "50",
+		"PARENT_SECTION_CODE" => "",
+		"PREVIEW_TRUNCATE_LEN" => "",
+		"PROPERTY_CODE" => array(
+			0 => "TABLE_FIELD_2",
+			1 => "IS_TABLE_TITLES",
+			2 => "TABLE_FIELD_1",
+			3 => "TABLE_FIELD_3",
+			4 => "",
+		),
+		"SET_BROWSER_TITLE" => "N",
+		"SET_LAST_MODIFIED" => "N",
+		"SET_META_DESCRIPTION" => "N",
+		"SET_META_KEYWORDS" => "N",
+		"SET_STATUS_404" => "N",
+		"SET_TITLE" => "N",
+		"SHOW_404" => "N",
+		"SORT_BY1" => "ACTIVE_FROM",
+		"SORT_BY2" => "SORT",
+		"SORT_ORDER1" => "ASC",
+		"SORT_ORDER2" => "ASC",
+		"STRICT_SECTION_CHECK" => "N",
+		"COMPONENT_TEMPLATE" => "transport-pages_table"
+	),
+	false
+);?>
 
-                                <table class="tbc" cellspacing="0" cellpadding="0" border="0" style="width: 100%">
-                                    <tbody>
-                                    <tr><th>
-                                            <p><span style="font-weight: bold;">Прибытие</span></p>
-                                        </th><th>
-                                            <p><span style="font-weight: bold;">Место встречи</span></p>
-                                        </th><th>
-                                            <p><span style="font-weight: bold;">Табличка</span></p>
-                                        </th></tr>
-                                    <tr>
-                                        <td>
-                                            <p>Аэропорт</p>
-                                        </td>
-                                        <td>
-                                            <p>В зале прилета аэропорта</p>
-                                        </td>
-                                        <td>
-                                            <p>ЛАДЬЯ</p>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <p>Ж/д вокзал</p>
-                                        </td>
-                                        <td>
-                                            <p>Около вагона</p>
-                                        </td>
-                                        <td>
-                                            <p>ЛАДЬЯ</p>
-                                        </td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-                                <p><b><br>Индивидуальный трансфер</b> </span></p>
-
-                                <table style="width: 100%">
-                                    <tbody>
-                                    <tr><th>
-                                            <p><span style="font-weight: bold;">Место встречи</span></p>
-                                        </th><th>
-                                            <p><span style="font-weight: bold;">Место назначения</span></p>
-                                        </th><th>
-                                            <p><span style="font-weight: bold;">стоимость за машину</span></p>
-                                        </th></tr>
-                                    <tr>
-                                        <td>
-                                            <p>От аэропорта Мин. Воды</p>
-                                        </td>
-                                        <td>
-                                            <p>Кисловодск</p>
-                                        </td>
-                                        <td>
-                                            <p>1200 руб.</p>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <p>От аэропорта Мин. Воды</p>
-                                        </td>
-                                        <td>
-                                            <p>Пятигорск</p>
-                                        </td>
-                                        <td>
-                                            <p>800 &nbsp;руб.</p>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <p>От аэропорта Мин. Воды</p>
-                                        </td>
-                                        <td>
-                                            <p>Железноводск</p>
-                                        </td>
-                                        <td>
-                                            <p>800 руб.</p>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <p>От аэропорта Мин. Воды</p>
-                                        </td>
-                                        <td>
-                                            <p>Ессентуки</p>
-                                        </td>
-                                        <td>
-                                            <p>950&nbsp;руб.</p>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <p>От ж/д вокзала г. Пятигорск</p>
-                                        </td>
-                                        <td>
-                                            <p>до санатория</p>
-                                        </td>
-                                        <td>
-                                            <p>200&nbsp;руб.</p>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <p>От ж/д вокзала г.Железноводск<br>(станция Бештау)</p>
-                                        </td>
-                                        <td>
-                                            <p>до санатория</p>
-                                        </td>
-                                        <td>
-                                            <p>350 руб.</p>
-                                        </td>
-                                    </tr>
-                                    </tbody>
-                                </table>
+                                <?$APPLICATION->IncludeComponent(
+	"bitrix:news.list", 
+	"transport-pages_table", 
+	array(
+		"ACTIVE_DATE_FORMAT" => "d.m.Y",
+		"ADD_SECTIONS_CHAIN" => "N",
+		"AJAX_MODE" => "N",
+		"AJAX_OPTION_ADDITIONAL" => "",
+		"AJAX_OPTION_HISTORY" => "N",
+		"AJAX_OPTION_JUMP" => "N",
+		"AJAX_OPTION_STYLE" => "Y",
+		"CACHE_FILTER" => "N",
+		"CACHE_GROUPS" => "Y",
+		"CACHE_TIME" => "36000000",
+		"CACHE_TYPE" => "A",
+		"CHECK_DATES" => "Y",
+		"DETAIL_URL" => "",
+		"DISPLAY_BOTTOM_PAGER" => "N",
+		"DISPLAY_DATE" => "N",
+		"DISPLAY_NAME" => "N",
+		"DISPLAY_PICTURE" => "N",
+		"DISPLAY_PREVIEW_TEXT" => "N",
+		"DISPLAY_TOP_PAGER" => "N",
+		"FIELD_CODE" => array(
+			0 => "",
+			1 => "",
+		),
+		"FILTER_NAME" => "",
+		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
+		"IBLOCK_ID" => "34",
+		"IBLOCK_TYPE" => "content",
+		"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
+		"INCLUDE_SUBSECTIONS" => "Y",
+		"MESSAGE_404" => "",
+		"NEWS_COUNT" => "20",
+		"PAGER_BASE_LINK_ENABLE" => "N",
+		"PAGER_DESC_NUMBERING" => "N",
+		"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
+		"PAGER_SHOW_ALL" => "N",
+		"PAGER_SHOW_ALWAYS" => "N",
+		"PAGER_TEMPLATE" => ".default",
+		"PAGER_TITLE" => "Новости",
+		"PARENT_SECTION" => "51",
+		"PARENT_SECTION_CODE" => "",
+		"PREVIEW_TRUNCATE_LEN" => "",
+		"PROPERTY_CODE" => array(
+			0 => "TABLE_FIELD_2",
+			1 => "TABLE_FIELD_1",
+			2 => "TABLE_FIELD_3",
+			3 => "",
+		),
+		"SET_BROWSER_TITLE" => "N",
+		"SET_LAST_MODIFIED" => "N",
+		"SET_META_DESCRIPTION" => "N",
+		"SET_META_KEYWORDS" => "N",
+		"SET_STATUS_404" => "N",
+		"SET_TITLE" => "N",
+		"SHOW_404" => "N",
+		"SORT_BY1" => "ACTIVE_FROM",
+		"SORT_BY2" => "",
+		"SORT_ORDER1" => "DESC",
+		"SORT_ORDER2" => "ASC",
+		"STRICT_SECTION_CHECK" => "N",
+		"COMPONENT_TEMPLATE" => "transport-pages_table"
+	),
+	false
+);?>
                             </div>
                         </div>
                     </div>
