@@ -25,11 +25,6 @@
          foreach ($arResult['PROPERTIES']['LINK_TO_VIDEO']["PREVIEW_PICTURE"] as $key=>$prevPic)
             {
                 $pic_status = get_headers($prevPic);
-                
-                 echo '<pre>';
-                print_r($pic_status);
-                echo '</pre>';
-                
                 if(strpos($pic_status[0],'200' )) 
                 {
                     echo 'tets';
