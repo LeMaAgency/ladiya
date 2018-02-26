@@ -35,7 +35,9 @@ Loc::loadMessages(__FILE__);
                 }      
                 $descriptionCode = $key;
                 //$arImg = \CFile::GetPath($arImg);
-                $arImg = !empty($iCodeYoutubeVideo) ? 'http://img.youtube.com/vi/'.$iCodeYoutubeVideo."/sddefault.jpg" : "/YouTube.jpg"; ?>
+                $arImg = !empty($iCodeYoutubeVideo) ? 
+                        'http://img.youtube.com/vi/'.$iCodeYoutubeVideo."/sddefault.jpg" : 
+                        'http://img.youtube.com/vi/'.$iCodeYoutubeVideo."/0.jpg"; ?>
                 <a href="<?= $arLinkVideo; ?>" data-fancybox="video" data-caption="<?=$arResult['PROPERTIES']['LINK_TO_VIDEO']['DESCRIPTION'][$descriptionCode]?>" class="catalog__list__item">
                     <div class="catalog__list__item__img" style="background-image: url('<?=$arImg; ?>');">
                         <? if(!empty($arResult['PROPERTIES']['LINK_TO_VIDEO']['DESCRIPTION'][$descriptionCode])):?>
