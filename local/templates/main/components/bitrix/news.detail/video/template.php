@@ -26,37 +26,25 @@ Loc::loadMessages(__FILE__);
                 <?endif;?>
                 
                 <? foreach ($arResult['PROPERTIES']['LINK_TO_VIDEO']['VALUE'] as $key=>$arLinkVideo): ?>
-                <?$iCodeYoutubeVideo='';?>
-                <?if(stristr($arLinkVideo,'youtu.be')){
-                    $iCodeYoutubeVideo = str_replace('/','',strrchr($arLinkVideo,'/'));
-                    }
-                if(stristr($arLinkVideo,'youtube.com')){
-                    $iCodeYoutubeVideo = str_replace('=','',stristr($arLinkVideo,'='));
-                }      
-                $descriptionCode = $key;
-                //$arImg = \CFile::GetPath($arImg);
-                $arImg = !empty($iCodeYoutubeVideo) ? 
-                        'http://img.youtube.com/vi/'.$iCodeYoutubeVideo."/sddefault.jpg" : 
-                        'http://img.youtube.com/vi/'.$iCodeYoutubeVideo."/0.jpg"; ?>
-                <a href="<?= $arLinkVideo; ?>" data-fancybox="video" data-caption="<?=$arResult['PROPERTIES']['LINK_TO_VIDEO']['DESCRIPTION'][$descriptionCode]?>" class="catalog__list__item">
-                    <div class="catalog__list__item__img" style="background-image: url('<?=$arImg; ?>');">
-                        <? if(!empty($arResult['PROPERTIES']['LINK_TO_VIDEO']['DESCRIPTION'][$descriptionCode])):?>
-                            <div class="catalog__list__item__img__title">
-                                <?=$arResult['PROPERTIES']['LINK_TO_VIDEO']['DESCRIPTION'][$descriptionCode]?>
-                            </div>
-                        <? endif;?>
-                        <div class="catalog__list__item__img__wrap">
-                            <div class="catalog__list__item__img__wrap__table">
-                                <div class="catalog__list__item__img__wrap__table__cell">
-                                    <div class="catalog__list__item__img__wrap__title">
-                                        ПОСМОТРЕТЬ
+                    <a href="<?= $arLinkVideo; ?>" data-fancybox="video" data-caption="<?=$arResult['PROPERTIES']['LINK_TO_VIDEO']['DESCRIPTION'][$descriptionCode]?>" class="catalog__list__item">
+                        <div class="catalog__list__item__img" style="background-image: url('<?=$arResult['PROPERTIES']['LINK_TO_VIDEO']["PREVIEW_PICTURE"][$key]; ?>');">
+                            <? if(!empty($arResult['PROPERTIES']['LINK_TO_VIDEO']['DESCRIPTION'][$descriptionCode])):?>
+                                <div class="catalog__list__item__img__title">
+                                    <?=$arResult['PROPERTIES']['LINK_TO_VIDEO']['DESCRIPTION'][$descriptionCode]?>
+                                </div>
+                            <? endif;?>
+                            <div class="catalog__list__item__img__wrap">
+                                <div class="catalog__list__item__img__wrap__table">
+                                    <div class="catalog__list__item__img__wrap__table__cell">
+                                        <div class="catalog__list__item__img__wrap__title">
+                                            ПОСМОТРЕТЬ
+                                        </div>
+                                        <span class="catalog__list__item__img__wrap__text"></span>
                                     </div>
-                                    <span class="catalog__list__item__img__wrap__text"></span>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </a>
+                    </a>
                 <?endforeach;?>
             </div>
         </div>
