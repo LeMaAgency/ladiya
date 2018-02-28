@@ -55,12 +55,6 @@ $arUrlRewrite = array(
 		"PATH" => "/sanatorii/index.php",
 	),
 	array(
-		"CONDITION" => "#^/hotel/#",
-		"RULE" => "",
-		"ID" => "bitrix:news",
-		"PATH" => "/hotel/index.php",
-	),
-	array(
 		"CONDITION" => "#^/o-kmv/#",
 		"RULE" => "",
 		"ID" => "bitrix:catalog",
@@ -71,6 +65,12 @@ $arUrlRewrite = array(
 		"RULE" => "",
 		"ID" => "bitrix:news",
 		"PATH" => "/tours/index.php",
+	),
+	array(
+		"CONDITION" => "#^/hotel/#",
+		"RULE" => "",
+		"ID" => "bitrix:news",
+		"PATH" => "/hotel/index.php",
 	),
 	array(
 		"CONDITION" => "#^/news/#",
