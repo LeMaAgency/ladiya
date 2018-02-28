@@ -38,7 +38,8 @@ Loc::loadMessages(__FILE__);
                                 <div class="catalog__list__item__img__wrap__table__cell">
                                     <div class="catalog__list__item__img__wrap__title">
 <!--                                            --><?//=$arResult['PROPERTIES']['MORE_PHOTO']['DESCRIPTION'][$descriptionCode]?>
-                                       <?=Loc::getMessage('DETAIL_PHOTO_ZOOM');?>
+                                       <?//=Loc::getMessage('DETAIL_PHOTO_ZOOM');?>
+                                        <i class="fas fa-search-plus"></i>
                                     </div>
                                     <span class="catalog__list__item__img__wrap__text"></span>
                                 </div>

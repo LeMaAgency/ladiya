@@ -29,6 +29,14 @@ $this->setFrameMode(true);
         <? $count++;?>
     <?endforeach;?>
 </ul>
+<?if($count>1):?>
+    <a class="slider-control left" href="#slideshow" data-slide="prev">
+        <span class="fa fa-angle-left"></span>
+    </a>
+    <a class="slider-control right" href="#slideshow" data-slide="next">
+        <span class="fa fa-angle-right"></span>
+    </a>
+<?endif;?>
 <ul class="carousel-indicators">
     <?
     $first = true;

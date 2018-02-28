@@ -25,3 +25,4 @@ Thumbs.db
 .vscode-upload.json
 *.komodo*
 *.project*
+.user.ini

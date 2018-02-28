@@ -415,6 +415,9 @@ h3 {
     .grid-4 .item:nth-child(4) {
         width: 100%!important;
     }
+    .grid-4 .item:nth-child(1) {
+        height: 235px;
+    }
 }
 
 .grid-5 .item {
@@ -1069,8 +1072,7 @@ a:after {
 }
 
 .line .item {
-    width: 20%;
-    float: left;
+    width: 100%;
     color: #FFFFFF;
 }
 
@@ -1148,24 +1150,24 @@ a:after {
     position: relative;
 }
 
-.lad-why:after {
+.lad-why:before {
     content: '';
     position: absolute;
     left: 0;
     right: 0;
     display: block;
     border-top: 1px solid #FFFFFF;
-    z-index: 1;
+    z-index: auto;
 }
 
 @media (max-width: 1200px) {
-    .lad-why:after {
+    .lad-why:before {
         top: 265px;
     }
 }
 
 @media (min-width: 1200px) {
-    .lad-why:after {
+    .lad-why:before {
         top: 250px;
     }
 }
@@ -1273,24 +1275,28 @@ a:after {
     background: #F15922;
 }
 
-.reviews .slider-control {
+.reviews .slider-control,
+.slideshow .slider-control {
     position: absolute;
     top: 50%;
     font-size: 70px;
     padding: 20px;
-    color: #FFFFFF;
+    color: #f7b283;
 }
 
-.reviews .slider-control:hover {
+.reviews .slider-control:hover,
+.slideshow .slider-control:hover {
     color: #F15922;
 }
 
-.reviews .slider-control.left {
+.reviews .slider-control.left,
+.slideshow .slider-control.left {
     left: -50px;
     transform: translateX(50%) translateY(-25%);
 }
 
-.reviews .slider-control.right {
+.reviews .slider-control.right,
+.slideshow .slider-control.right {
     right: -50px;
     transform: translateX(-50%) translateY(-25%);
 }
@@ -1441,12 +1447,20 @@ a:after {
         min-height: auto;
     }
 
-    .lad-why:after {
+    .lad-why:before {
         content: none;
     }
 
     .grid-3 .item {
         margin-bottom: 20px;
+    }
+    .banner h2 {
+        font-size: 24px;
+    }
+    .banner .button {
+        margin: 25px 0 40px;
+        padding: 12px 50px;
+        font-size: 14px;
     }
 
     .more {
@@ -1480,6 +1494,10 @@ a:after {
 
     .slideshow .carousel-indicators {
         top: 45vh;
+    }
+
+    .slideshow .slider-control {
+        top: 15%;
     }
 
     .offer {
@@ -1600,13 +1618,13 @@ PAGE hotel
     position: absolute;
     top: 35%;
     right: 0;
-    width: 50%;
+    width: 25%;
     background-color: #0c384d;
     opacity: 0.77;
     z-index: 1;
 }
 .lad-slideshow__block-title__h1{
-    width: 570px;
+    width: 100%;
     padding: 0 20px;
     max-width: 100%;
     margin-top: 30px;
@@ -1614,7 +1632,7 @@ PAGE hotel
     font-size: 38px;
     font-weight: 400;
     text-transform: uppercase;
-    text-align: right;
+    text-align: left;
     margin-bottom: 15px;
 }
 .image-hotel-1{
@@ -2065,7 +2083,7 @@ PAGE TRANSFER
 }
 @media only screen and (max-width: 1200px) {
     .lad-slideshow__block-title {
-        width: 80%;
+        width: 50%;
     }
     .head-img {
         height: 330px;
