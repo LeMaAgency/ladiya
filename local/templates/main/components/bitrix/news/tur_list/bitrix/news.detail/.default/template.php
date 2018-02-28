@@ -254,115 +254,77 @@ $this->setFrameMode(true);
 
                         <? if ($arResult['SHOW_PRICE_TAB']): ?>
                             <div role="tabpanel" class="tab-pane" id="price">
-
                                 <form action="/ajax/find-tour-room.php" class="filter js-ajax-filter" method="post">
-                                    <input type="hidden" name="tour_id" value="<?= $arResult['ID']; ?>">
-                                    <div class="row">
+                                    <? if($arResult["PROPERTIES"]["TYPE"]["VALUE"] != "школьный"):?>
+                                        <input type="hidden" name="tour_id" value="<?= $arResult['ID']; ?>">
+                                        <div class="row">
 
-                                        <div class="col-xs-12 col-sm-4">
-                                            <div class="input">
-                                                <label for="room_type">Дата</label><br>
-                                                <input
-                                                      <?if(!empty($arResult['MIN_DATE'])){?>data-min-date="<?=$arResult['MIN_DATE'];?>"<?}?>
-                                                      <?if(!empty($arResult['MAX_DATE'])){?>data-max-date="<?=$arResult['MAX_DATE'];?>"<?}?>
-                                                      <?if(!empty($arResult['DATES'])){?>data-dates='<?=$arResult['DATES'];?>'<?}?>
-                                                      class="input" name="DATE" placeholder="Дата начала тура"/>
+                                            <div class="col-xs-12 col-sm-4">
+                                                <div class="input">
+                                                    <label for="room_type">Дата</label><br>
+                                                    <input
+                                                          <?if(!empty($arResult['MIN_DATE'])){?>data-min-date="<?=$arResult['MIN_DATE'];?>"<?}?>
+                                                          <?if(!empty($arResult['MAX_DATE'])){?>data-max-date="<?=$arResult['MAX_DATE'];?>"<?}?>
+                                                          <?if(!empty($arResult['DATES'])){?>data-dates='<?=$arResult['DATES'];?>'<?}?>
+                                                          class="input" name="DATE" placeholder="Дата начала тура"/>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="col-xs-12 col-sm-4">
-                                            <div class="input">
-                                                <? if (!empty($arResult['HOTELS'])): ?>
-                                                    <label for="hotel"><?= Loc::getMessage('TOUR_HOTEL_TITLE'); ?></label>
-                                                    <select name="hotel" id="hotel">
-                                                        <option value=""
-                                                                selected="selected"><?= Loc::getMessage('TOUR_SELECT_EMPTY_VALUE'); ?></option>
-                                                        <? foreach ($arResult['HOTELS'] as $id => $hotel): ?>
-                                                            <option value="<?= $id; ?>"><?= $hotel['NAME']; ?></option>
-                                                        <? endforeach; ?>
-                                                    </select>
-                                                <? endif; ?>
+                                            <div class="col-xs-12 col-sm-4">
+                                                <div class="input">
+                                                    <? if (!empty($arResult['HOTELS'])): ?>
+                                                        <label for="hotel"><?= Loc::getMessage('TOUR_HOTEL_TITLE'); ?></label>
+                                                        <select name="hotel" id="hotel">
+                                                            <option value=""
+                                                                    selected="selected"><?= Loc::getMessage('TOUR_SELECT_EMPTY_VALUE'); ?></option>
+                                                            <? foreach ($arResult['HOTELS'] as $id => $hotel): ?>
+                                                                <option value="<?= $id; ?>"><?= $hotel['NAME']; ?></option>
+                                                            <? endforeach; ?>
+                                                        </select>
+                                                    <? endif; ?>
+                                                </div>
                                             </div>
-                                        </div>
-
-                                        <div class="col-xs-12 col-sm-4">
-                                            <div class="input">
-                                                <? if (!empty($arResult['ROOM_TYPES'])): ?>
-                                                    <label for="room_type"><?= Loc::getMessage('TOUR_ROOM_TYPE_TITLE'); ?></label>
-                                                    <select name="room_type" id="room_type">
-                                                        <option value=""
-                                                                selected="selected"><?= Loc::getMessage('TOUR_SELECT_EMPTY_VALUE'); ?></option>
-                                                        <? foreach ($arResult['ROOM_TYPES'] as $id => $roomType): ?>
-                                                            <option value="<?= $id; ?>"><?= $roomType['VALUE']; ?></option>
-                                                        <? endforeach; ?>
-                                                    </select>
-                                                <? endif; ?>
+                                            <div class="col-xs-12 col-sm-4">
+                                                <div class="input">
+                                                    <? if (!empty($arResult['ROOM_TYPES'])): ?>
+                                                        <label for="room_type"><?= Loc::getMessage('TOUR_ROOM_TYPE_TITLE'); ?></label>
+                                                        <select name="room_type" id="room_type">
+                                                            <option value=""
+                                                                    selected="selected"><?= Loc::getMessage('TOUR_SELECT_EMPTY_VALUE'); ?></option>
+                                                            <? foreach ($arResult['ROOM_TYPES'] as $id => $roomType): ?>
+                                                                <option value="<?= $id; ?>"><?= $roomType['VALUE']; ?></option>
+                                                            <? endforeach; ?>
+                                                        </select>
+                                                    <? endif; ?>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="col-xs-12 col-sm-4">
-                                            <div class="core__price">
-                                                <div class="core__price__title"><?= Loc::getMessage('TOUR_SEARCH_PRICE_TITLE'); ?></div>
-                                                <div class="core__price__item">
-                                                    <div class="core__price__item_l">
-                                                        <span><?= Loc::getMessage('TOUR_PRICE_FROM'); ?></span>
-                                                        <input type="text" name="price_from" placeholder="0">
-                                                    </div>
-                                                    <div class="core__price__item_r">
-                                                        <span><?= Loc::getMessage('TOUR_PRICE_TO'); ?></span>
-                                                        <input type="text" name="price_to" placeholder="0">
+                                            <div class="col-xs-12 col-sm-4">
+                                                <div class="core__price">
+                                                    <div class="core__price__title"><?= Loc::getMessage('TOUR_SEARCH_PRICE_TITLE'); ?></div>
+                                                    <div class="core__price__item">
+                                                        <div class="core__price__item_l">
+                                                            <span><?= Loc::getMessage('TOUR_PRICE_FROM'); ?></span>
+                                                            <input type="text" name="price_from" placeholder="0">
+                                                        </div>
+                                                        <div class="core__price__item_r">
+                                                            <span><?= Loc::getMessage('TOUR_PRICE_TO'); ?></span>
+                                                            <input type="text" name="price_to" placeholder="0">
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <? /*
-                                    <div class="col-xs-12 col-sm-4">
-                                        <div class="input">
-                                            <select name="day_count">
-                                                <option disabled="disabled" selected="selected">Продолжительность тура</option>
-                                                <?for($i = 1; $i <= 10; ++$i):?>
-                                                    <option value="<?=$i;?>"><?=$i;?></option>
-                                                <?endfor;?>
-                                            </select>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-xs-12 col-sm-4">
-                                        <div class="input">
-                                            <?if(!empty($arResult['TRANSPORTS'])):?>
-                                                <select name="transport">
-                                                    <option value="" disabled="disabled" selected="selected">Транспорт</option>
-                                                    <?foreach($arResult['TRANSPORTS'] as $id => $transport):?>
-                                                        <option value="<?=$id;?>"><?=$transport['VALUE'];?></option>
-                                                    <?endforeach;?>
-                                                </select>
-                                            <?endif;?>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-xs-12 col-sm-4">
-                                        <div class="input">
-                                            <select name="people_count">
-                                                <option disabled="disabled" selected="selected">Кол-во людей</option>
-                                                <?for($i = 1; $i <= 10; ++$i):?>
-                                                    <option value="<?=$i;?>"><?=$i;?></option>
-                                                <?endfor;?>
-                                            </select>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-xs-12 col-sm-4">
-                                        <div class="input">
-                                            <input id="styled-checkbox" type="checkbox" value="value1">
-                                            <label for="styled-checkbox">Одноместное размещение</label>
-                                        </div>
-                                    </div>
-*/ ?>
-                                    </div>
-
-                                    <button class="calculate" type="submit"><?= Loc::getMessage('TOUR_SEARCH_BTN_TITLE'); ?></button>
-                                    <div class="disclaimer"><?= Loc::getMessage('TOUR_SEARCH_HINT_TITLE'); ?></div>
-
-                                    <div class="js-ajax-filter-search"></div>
-
+                                        <button class="calculate" type="submit"><?= Loc::getMessage('TOUR_SEARCH_BTN_TITLE'); ?></button>
+                                        <div class="disclaimer"><?= Loc::getMessage('TOUR_SEARCH_HINT_TITLE'); ?></div>
+                                        <div class="js-ajax-filter-search"></div>
+                                    <?else:?>
+                                        <? if(!empty($arResult["PROPERTIES"]["SCOOL_TOUR_TABLE"]["VALUE"])):?>
+                                            <div class="price_table">
+                                                <?=htmlspecialcharsback($arResult["PROPERTIES"]["SCOOL_TOUR_TABLE"]["VALUE"]["TEXT"])?>
+                                            </div>
+                                        <?else:?>
+                                            --Таблица с ценами не найдена--
+                                        <?endif;?>
+                                    <?endif;?>
                                     <div class="page__program__detail__list__item__text" style="margin-top:20px">
                                         <? if (!empty($arResult['PROPERTIES']['IN_PRICE_CONTAINS']['VALUE']['TEXT'])): ?>
                                             <p class="core__switch__btn">
