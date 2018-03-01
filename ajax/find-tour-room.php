@@ -108,7 +108,7 @@ if(empty($rooms))
     exit;
 }
 ?>
-<table>
+<table class="tour_price_table">
     <thead>
     <tr>
         <th scope="col">Дата</th>

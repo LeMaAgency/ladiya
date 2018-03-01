@@ -2145,3 +2145,13 @@ PAGE TRANSFER
     font-size: 16px;
     font-weight: bold;
 }
+
+.tour_price_table th {
+    background: rgb(0, 61, 93);
+    color: white;
+}
+.tour_price_table a{
+    padding: 5px;
+    background-color: #f58220;
+    border-radius: 5px;
+}

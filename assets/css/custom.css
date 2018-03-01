@@ -1140,7 +1140,7 @@ font-size: 18px;
 }
 
 .tour-detail_tabs__wrapper .bg .tab-content.main #price table tr {
-    border: 1px solid #ddd;
+    border: 1px solid #3e87ad;
     padding: .35em;
     background-color: white;
 }
@@ -1156,8 +1156,8 @@ font-size: 18px;
     text-align: center;
 }
 .tour-detail_tabs__wrapper .bg .tab-content.main #price table td .reservation_btn{
-    color:red;
-    text-decoration: underline;
+    color:white;
+    text-decoration: none;
 }
 .tour-detail_tabs__wrapper .booking, .tour-detail_tabs__wrapper .full_program {
     padding: 20px 0;
@@ -1567,7 +1567,7 @@ font-size: 18px;
     font-size: 14px;
     letter-spacing: .1em;
     text-transform: uppercase;
-    background: #f15922;
+    background: rgb(0, 61, 93);
     color: #fff;
 }
 
