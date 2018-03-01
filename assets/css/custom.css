@@ -2640,7 +2640,7 @@ input.filter__button {padding-bottom: 15px !important;}
 .gallery__photo__slider .slider__arrow_next {
     position: absolute;
     z-index: 100;
-    top: 55%;
+    top: 40%;
 }
 .gallery__photo__slider .slider__arrow_prev:hover,
 .gallery__photo__slider .slider__arrow_next:hover{
