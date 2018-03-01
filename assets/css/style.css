@@ -2135,3 +2135,7 @@ PAGE TRANSFER
 .search-page a{
     color: #337ab7;
 }
+
+.price_table table {
+    width: 100%;
+}
