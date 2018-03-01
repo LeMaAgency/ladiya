@@ -13,6 +13,9 @@
 $this->setFrameMode(true);
 ?>
 <form name="<? echo $arResult["FILTER_NAME"] . "_form" ?>" action="<? echo $arResult["FORM_ACTION"] ?>" method="get">
+    <div class="hotel_filter_title">
+        <?\WM\Components\IncludeArea::inc('', array('PATH' => SITE_DIR . 'include/hotel_filter/filter_name.php'));?>
+    </div>
     <? foreach ($arResult["ITEMS"] as $arItem):
         if (array_key_exists("HIDDEN", $arItem)):
             echo $arItem["INPUT"];
@@ -35,7 +38,7 @@ $this->setFrameMode(true);
     <div class="fields">
     <div class="filter__info">
         <p class="filter__info__text">
-            <?\WM\Components\IncludeArea::inc('', array('PATH' => SITE_DIR . 'include/filter-hotel-description.php'));?>
+            <?\WM\Components\IncludeArea::inc('', array('PATH' => SITE_DIR . 'include/hotel_filter/filter-hotel-description.php'));?>
         </p>
     </div>
     </div>

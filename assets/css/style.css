@@ -2139,3 +2139,9 @@ PAGE TRANSFER
 .price_table table {
     width: 100%;
 }
+
+.hotel_filter_title{
+
+    font-size: 16px;
+    font-weight: bold;
+}
