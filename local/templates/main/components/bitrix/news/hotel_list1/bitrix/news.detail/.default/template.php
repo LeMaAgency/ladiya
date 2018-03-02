@@ -144,7 +144,7 @@ Loc::loadMessages(__FILE__);
             <? endforeach;?>
         <? endif;?>
         <?if (!empty($arResult["PROPERTIES"]["TABLE"]["VALUE"])):?>
-            <div class="price_table">
+            <div class="custom_table">
                 <div class="hotel__detail___title">
                     <?= Loc::getmessage('NEWS_DETAIL_TABLE_TITLE'); ?>
                 </div>

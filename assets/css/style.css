@@ -2136,9 +2136,6 @@ PAGE TRANSFER
     color: #337ab7;
 }
 
-.price_table table {
-    width: 100%;
-}
 
 .hotel_filter_title{
 
@@ -2154,3 +2151,25 @@ PAGE TRANSFER
     padding: 5px;
     background-color: #f58220;
 }
+
+/*Стили таблиц, которые будут добавлены менеджарами через визуальный редактор*/
+.custom_table table{
+    width: 100%;
+}
+.custom_table table tr:first-child{
+    background: rgb(0, 61, 93) !important;
+    color: white;
+    border-color: rgb(0, 61, 93) !important;
+}
+.custom_table table tr:first-child p{
+    margin: 0px;
+    padding: 10px 0px;
+}
+.custom_table table tr p{
+    margin: 0px;
+    padding: 6px 0;
+}
+.custom_table table tr{
+    border: 1px solid #3e87ad;
+}
+/*----------------------*/

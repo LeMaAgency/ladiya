@@ -318,7 +318,7 @@ $this->setFrameMode(true);
                                         <div class="js-ajax-filter-search"></div>
                                     <?else:?>
                                         <? if(!empty($arResult["PROPERTIES"]["SCOOL_TOUR_TABLE"]["VALUE"])):?>
-                                            <div class="price_table">
+                                            <div class="custom_table">
                                                 <?=htmlspecialcharsback($arResult["PROPERTIES"]["SCOOL_TOUR_TABLE"]["VALUE"]["TEXT"])?>
                                             </div>
                                         <?else:?>
@@ -431,7 +431,9 @@ $this->setFrameMode(true);
                         </div>
                         <? if ($arResult['SHOW_GROUP_TAB']): ?>
                             <div role="tabpanel" class="tab-pane" id="group">
-                                <?= $arResult['PROPERTIES']['GROUP_TEXT']['TEXT']['VALUE']; ?>
+                                <div class="custom_table">
+                                    <?=htmlspecialcharsback($arResult['PROPERTIES']['GROUP_TEXT']['TEXT']['VALUE']);?>
+                                </div>
                             </div>
                         <? endif; ?>
                     </div>
