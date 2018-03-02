@@ -2161,6 +2161,9 @@ PAGE TRANSFER
     color: white;
     border-color: rgb(0, 61, 93) !important;
 }
+.custom_table table tr:first-child td{
+    border-color: rgb(0, 61, 93) !important;
+}
 .custom_table table tr:first-child p{
     margin: 0px;
     padding: 10px 0px;
@@ -2170,6 +2173,9 @@ PAGE TRANSFER
     padding: 6px 0;
 }
 .custom_table table tr{
+    border: 1px solid #3e87ad;
+}
+.custom_table table tr td{
     border: 1px solid #3e87ad;
 }
 /*----------------------*/
