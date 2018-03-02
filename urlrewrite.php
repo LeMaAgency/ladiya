@@ -43,16 +43,16 @@ $arUrlRewrite = array(
 		"PATH" => "/photo/detail.php",
 	),
 	array(
-		"CONDITION" => "#^/sanatorii/#",
-		"RULE" => "",
-		"ID" => "bitrix:news",
-		"PATH" => "/sanatorii/index.php",
-	),
-	array(
 		"CONDITION" => "#^/o-kavkaze/#",
 		"RULE" => "",
 		"ID" => "bitrix:catalog",
 		"PATH" => "/o-kavkaze/index.php",
+	),
+	array(
+		"CONDITION" => "#^/sanatorii/#",
+		"RULE" => "",
+		"ID" => "bitrix:news",
+		"PATH" => "/sanatorii/index.php",
 	),
 	array(
 		"CONDITION" => "#^/hotel/#",
@@ -61,16 +61,16 @@ $arUrlRewrite = array(
 		"PATH" => "/hotel/index.php",
 	),
 	array(
-		"CONDITION" => "#^/tours/#",
-		"RULE" => "",
-		"ID" => "bitrix:news",
-		"PATH" => "/tours/index.php",
-	),
-	array(
 		"CONDITION" => "#^/o-kmv/#",
 		"RULE" => "",
 		"ID" => "bitrix:catalog",
 		"PATH" => "/o-kmv/index.php",
+	),
+	array(
+		"CONDITION" => "#^/tours/#",
+		"RULE" => "",
+		"ID" => "bitrix:news",
+		"PATH" => "/tours/index.php",
 	),
 	array(
 		"CONDITION" => "#^/news/#",
