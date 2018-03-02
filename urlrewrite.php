@@ -43,16 +43,16 @@ $arUrlRewrite = array(
 		"PATH" => "/photo/detail.php",
 	),
 	array(
-		"CONDITION" => "#^/o-kavkaze/#",
-		"RULE" => "",
-		"ID" => "bitrix:catalog",
-		"PATH" => "/o-kavkaze/index.php",
-	),
-	array(
 		"CONDITION" => "#^/sanatorii/#",
 		"RULE" => "",
 		"ID" => "bitrix:news",
 		"PATH" => "/sanatorii/index.php",
+	),
+	array(
+		"CONDITION" => "#^/o-kavkaze/#",
+		"RULE" => "",
+		"ID" => "bitrix:catalog",
+		"PATH" => "/o-kavkaze/index.php",
 	),
 	array(
 		"CONDITION" => "#^/hotel/#",

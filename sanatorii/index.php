@@ -181,15 +181,14 @@ $APPLICATION->SetTitle("Санатории"); ?>
 		"COMPONENT_TEMPLATE" => "sanatorium_list",
 		"FILTER_NAME" => "",
 		"FILTER_FIELD_CODE" => array(
-			0 => "",
+			0 => "NAME",
 			1 => "",
 		),
 		"FILTER_PROPERTY_CODE" => array(
-			0 => "ADDRESS",
-			1 => "CITY",
-			2 => "ROOMS",
-			3 => "PRICE",
-			4 => "",
+			0 => "CITY",
+			1 => "ROOMS",
+			2 => "PRICE",
+			3 => "",
 		),
 		"SEF_FOLDER" => "/sanatorii/",
 		"SEF_URL_TEMPLATES" => array(

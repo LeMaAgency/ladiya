@@ -21,7 +21,6 @@ Loc::loadMessages(__FILE__);
 	</div>
     <div class="hotel__detail___address js-hotel__maps_open" data-mapmarker="<?=$arResult["PROPERTIES"]["GOOGLE_MAP"]["VALUE"]?>">
             <span>
-                <?=$arResult["PROPERTIES"]["CITY"]["VALUE"]?>
                 <?=$arResult["PROPERTIES"]["ADDRESS"]["VALUE"]?>
             </span>						
             <?=Loc::getMessage('NEWS_DETAIL_SHOW_IN_MAP');?>
