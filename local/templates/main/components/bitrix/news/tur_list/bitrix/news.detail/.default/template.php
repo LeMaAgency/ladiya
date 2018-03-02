@@ -432,7 +432,7 @@ $this->setFrameMode(true);
                         <? if ($arResult['SHOW_GROUP_TAB']): ?>
                             <div role="tabpanel" class="tab-pane" id="group">
                                 <div class="custom_table">
-                                    <?=htmlspecialcharsback($arResult['PROPERTIES']['GROUP_TEXT']['TEXT']['VALUE']);?>
+                                    <?=htmlspecialcharsback($arResult['PROPERTIES']['GROUP_TEXT']['VALUE']['TEXT']);?>
                                 </div>
                             </div>
                         <? endif; ?>
