@@ -1,3 +1,4 @@
+
 .search-button{
     float: right;
     padding: 18px;
@@ -3393,10 +3394,10 @@ input.filter__button {padding-bottom: 15px !important;}
    margin: 15px 25px;
 }
 
-.hotel_number__slider img{
+/*.hotel_number__slider img{
    height: -webkit-fill-available;
    max-height: 300px;
-}
+}*/
 .hotel_number__description{
    text-align: justify;
 }
@@ -3562,13 +3563,4 @@ input.filter__button {padding-bottom: 15px !important;}
 
 .need-indent p {
     text-indent:25px;
-}
-.hotel_number_slider{
-	margin-bottom: 50px;
-}
-.hotel_number_slider .slick-track{
-   width:unset;
-}
-.hotel_number_slider .slick-track img{
-   width:40vw;
 }
