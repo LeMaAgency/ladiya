@@ -3035,8 +3035,8 @@ input.filter__button {padding-bottom: 15px !important;}
     height: 100%;
     width: 30%;
     margin: 15px;   
-    min-height: 220px;
-    max-height: 240px;
+    min-height: 190px;
+    max-height: 210px;
     position: absolute;
     background-size: cover;
     background-position: center; 
