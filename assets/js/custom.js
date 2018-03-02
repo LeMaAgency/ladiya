@@ -663,7 +663,5 @@ $(function(){
         $.fancybox.open($(roomID));
 		$('.hotel_number__slider .slick-list .slick-track').css('width','unset');
 		$('.hotel_number__slider .slick-list .slick-track img:nth-child(1)').css('width','-webkit-fill-available');
-    })
-$('.')
-    
+    })    
 });
