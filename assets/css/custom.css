@@ -3563,3 +3563,12 @@ input.filter__button {padding-bottom: 15px !important;}
 .need-indent p {
     text-indent:25px;
 }
+.hotel_number_slider{
+	margin-bottom: 50px;
+}
+.hotel_number_slider .slick-track{
+   width:unset;
+}
+.hotel_number_slider .slick-track img{
+   width:40vw;
+}
