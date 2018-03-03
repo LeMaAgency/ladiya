@@ -522,7 +522,7 @@ font-size: 18px;
 .tour-detail_photos .carousel .container .title {
     position: absolute;
     top: 200px;
-    right: 0;
+    right: -250px;
     padding: 20px 36px;
     text-align: right;
     color: white;
@@ -544,18 +544,29 @@ font-size: 18px;
 .tour-detail_photos .carousel .container .title h3 {
     text-align: right;
     color: #fff;
-    font-size: 70px
+    font-size: 60px
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1600px) {
+    .tour-detail_photos .carousel .container .title {
+        right: -50px;
+    }
     .tour-detail_photos .carousel .container .title h3 {
         font-size: 50px;
+    }
+}
+@media (max-width: 1200px) {
+    .tour-detail_photos .carousel .container .title {
+        right: 0;
+    }
+    .tour-detail_photos .carousel .container .title h3 {
+        font-size: 45px;
     }
 }
 
 @media (max-width: 768px) {
     .tour-detail_photos .carousel .container .title h3 {
-        font-size: 20px;
+        font-size: 40px;
     }
 }
 
