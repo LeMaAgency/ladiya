@@ -505,6 +505,83 @@ $(function () {
         return false;
     })
 });
+
+//Форма бронирования на странице гостиницы
+$(function () {
+    $('#hotel_reservation').on('submit', function (e) {
+
+        e.preventDefault();
+
+        var curForm = $(this),
+            waitElement = curForm.find('input[type="submit"], button[type="submit"]').get(0);
+
+        BX.showWait(waitElement);
+
+        $.post($(this).attr('action'), $(this).serialize(), function (ans) {
+
+            BX.closeWait(waitElement);
+
+            curForm.find('input:not([type="submit"]):not([type="button"]), select , .cs-placeholder').css({'border': '1px solid green'});
+
+            if (ans && ans.errors)
+            {
+                curForm.find('.it-error').empty();
+                for(var inputName in ans.errors)
+                {
+                    curForm.find('[name="' + inputName + '"]').first().css({'border' : '1px solid red'})
+                        .closest('.it-block').find('.it-error').html(ans.errors[inputName]);
+                    curForm.find('[name="' + inputName + '"]').siblings('.cs-placeholder').css({'border' : '1px solid red'});
+                }
+            }
+            else
+            {
+                $.fancybox.open('Ваша заявка на бронирование номера отправлена! <br> В скором времени Вам ответят');
+                curForm.find('input.js-clearable:not([type="checkbox"]), textarea.js-clearable').val('');
+                curForm.find('.cs-placeholder').text('');
+            }
+        }, 'json');
+        return false;
+    })
+});
+
+//Форма бронирования на вспылвашках номеров
+$(function () {
+    $('.hotel_reservation_room').on('submit', function (e) {
+
+        e.preventDefault();
+
+        var curForm = $(this),
+            waitElement = curForm.find('input[type="submit"], button[type="submit"]').get(0);
+
+        BX.showWait(waitElement);
+
+        $.post($(this).attr('action'), $(this).serialize(), function (ans) {
+
+            BX.closeWait(waitElement);
+
+            curForm.find('input:not([type="submit"]):not([type="button"]), select , .cs-placeholder').css({'border': '1px solid green'});
+
+            if (ans && ans.errors)
+            {
+                curForm.find('.it-error').empty();
+                for(var inputName in ans.errors)
+                {
+                    curForm.find('[name="' + inputName + '"]').first().css({'border' : '1px solid red'})
+                        .closest('.it-block').find('.it-error').html(ans.errors[inputName]);
+                    curForm.find('[name="' + inputName + '"]').siblings('.cs-placeholder').css({'border' : '1px solid red'});
+                }
+            }
+            else
+            {
+                $.fancybox.open('Ваша заявка на бронирование номера отправлена! <br> В скором времени Вам ответят');
+                curForm.find('input.js-clearable:not([type="checkbox"]), textarea.js-clearable').val('');
+                curForm.find('.cs-placeholder').text('');
+            }
+        }, 'json');
+        return false;
+    })
+});
+
 /** Автоматическая прокрутка слайдера **/
 $(function() {
     window.sliderIntervalTime = 3000;
