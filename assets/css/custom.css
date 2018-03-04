@@ -3261,9 +3261,10 @@ input.filter__button {padding-bottom: 15px !important;}
 }
 
 .hotel__detail___infrastruktura li{
-   width: 20%;
+   width: 10%;
    float: left;    
    margin: 5px 0px;
+    text-align: center;
 }
 .hotel__detail___infrastruktura li i{
    font-size: 1.5em;
@@ -3277,9 +3278,6 @@ input.filter__button {padding-bottom: 15px !important;}
    line-height: 35px;
 }
 
-.hotel__detail___infrastruktura li span{
-   margin-left: 10px;
-}
 .hotel__detail___rooms{
    padding: 15px;
    overflow: auto;
