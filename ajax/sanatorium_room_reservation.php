@@ -36,7 +36,7 @@ if($form->validate())
         array(
             'NAME' => "Бронироване номера",
             'PROPERTY_VALUES' => array(
-                'HOTEL_NAME' => Helper::enc($form->getField('hotel_name')),
+                'SANATORIUM_NAME' => Helper::enc($form->getField('sanatorium_name')),
                 'NAME_OF_CUSTOMER' => Helper::enc($form->getField('name_of_customer')),
                 'PHONE' => Helper::enc($form->getField('phone')),
                 'DATE_ARRIVE' => Helper::enc($form->getField('date-arrive')),
@@ -47,10 +47,10 @@ if($form->validate())
             'ACTIVE' => 'N',
         ),
         //email event name
-        'NEW_HOTELROOM_RESERVATION',
+        'NEW_SANATORIUM_RESERVATION',
         //email send params
         array(
-            'HOTEL_NAME' => Helper::enc($form->getField('hotel_name')),
+            'SANATORIUM_NAME' => Helper::enc($form->getField('sanatorium_name')),
             'NAME_OF_CUSTOMER' => Helper::enc($form->getField('name_of_customer')),
             'PHONE' => Helper::enc($form->getField('phone')),
             'DATE_ARRIVE' => Helper::enc($form->getField('date-arrive')),

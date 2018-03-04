@@ -144,7 +144,7 @@ Loc::loadMessages(__FILE__);
                         <div class="form__filter__title">
                             <span>Оставить заявку</span>
                         </div>
-                        <input type="hidden" name="hotel_name" value="<?=$arResult["NAME"]?>">
+                        <input type="hidden" name="sanatorium_name" value="<?=$arResult["NAME"]?>">
                         <input type="hidden" name="select_room" value="<?=$room["NAME"]?>">
                         <div class="form__filter__item">
                             <div class="form__filter__item__name">
@@ -206,7 +206,7 @@ Loc::loadMessages(__FILE__);
             <div class="form__filter__title">
                 <span>Оставить заявку</span>
             </div>
-            <input type="hidden" name="hotel_name" value="<?=$arResult["NAME"]?>">
+            <input type="hidden" name="sanatorium_name" value="<?=$arResult["NAME"]?>">
             <div class="form__filter__item">
                 <div class="form__filter__item__name">
                     <span>Имя</span>
