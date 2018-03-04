@@ -1281,7 +1281,7 @@ a:after {
     top: 50%;
     font-size: 70px;
     padding: 20px;
-    color: #f7b283;
+    color: #003D5D;
 }
 
 .reviews .slider-control:hover,
@@ -1291,14 +1291,14 @@ a:after {
 
 .reviews .slider-control.left,
 .slideshow .slider-control.left {
-    left: -50px;
-    transform: translateX(50%) translateY(-25%);
+    left: -20px;
+    transform: translateX(50%) translateY(-50%);
 }
 
 .reviews .slider-control.right,
 .slideshow .slider-control.right {
-    right: -50px;
-    transform: translateX(-50%) translateY(-25%);
+    right: -20px;
+    transform: translateX(-50%) translateY(-50%);
 }
 
 .lad-footer {
