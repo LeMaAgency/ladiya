@@ -1929,6 +1929,14 @@ font-size: 18px;
     height: auto;
     line-height: 15px;
 }
+.page__program__detail__list__item__text  ul{
+    margin-left: 16px;
+}
+.page__program__detail__list__item__text li{
+    display: list-item;
+    list-style: disc;
+
+}
 .core__switch__btn {}
 .core__switch__btn__text {
     position: relative;

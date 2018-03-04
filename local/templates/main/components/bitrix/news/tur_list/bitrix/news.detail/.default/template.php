@@ -328,35 +328,35 @@ $this->setFrameMode(true);
                                     <div class="page__program__detail__list__item__text" style="margin-top:20px">
                                         <? if (!empty($arResult['PROPERTIES']['IN_PRICE_CONTAINS']['VALUE']['TEXT'])): ?>
                                             <p class="core__switch__btn">
-                                            <div class="core__switch__btn__text active"
-                                                  data-js-core-switch-element="core__switch__btn__hidden_price_1">
-                                                <?= Loc::getMessage('TOUR_IN_PRICE_CONTAINS_TITLE'); ?>
-                                            </div>
+                                                <div class="core__switch__btn__text active"
+                                                      data-js-core-switch-element="core__switch__btn__hidden_price_1">
+                                                    <?= Loc::getMessage('TOUR_IN_PRICE_CONTAINS_TITLE'); ?>
+                                                </div>
                                                 <div class="core__switch__btn__hidden active core__switch__btn__hidden_price_1">
-                                                <?= htmlspecialcharsback($arResult['PROPERTIES']['IN_PRICE_CONTAINS']['VALUE']['TEXT']); ?>
-                                            </div>
+                                                    <?= htmlspecialcharsback($arResult['PROPERTIES']['IN_PRICE_CONTAINS']['VALUE']['TEXT']); ?>
+                                                </div>
                                             </p>
                                         <? endif; ?>
                                         <? if (!empty($arResult['PROPERTIES']['ALSO_PAYS']['VALUE']['TEXT'])): ?>
                                             <p class="core__switch__btn">
-                                            <span class="core__switch__btn__text active"
-                                                  data-js-core-switch-element="core__switch__btn__hidden_price_2">
-                                                <?= Loc::getMessage('TOUR_ALSO_PAYS_TITLE'); ?>
-                                            </span>
-                                                <span class="core__switch__btn__hidden active core__switch__btn__hidden_price_2">
-                                            <?= htmlspecialcharsback($arResult['PROPERTIES']['ALSO_PAYS']['VALUE']['TEXT']); ?>
-                                        </span>
+                                                <div class="core__switch__btn__text active"
+                                                      data-js-core-switch-element="core__switch__btn__hidden_price_2">
+                                                    <?= Loc::getMessage('TOUR_ALSO_PAYS_TITLE'); ?>
+                                                </div>
+                                                <div class="core__switch__btn__hidden active core__switch__btn__hidden_price_2">
+                                                    <?= htmlspecialcharsback($arResult['PROPERTIES']['ALSO_PAYS']['VALUE']['TEXT']); ?>
+                                                </div>
                                             </p>
                                         <? endif; ?>
                                         <? if (!empty($arResult['PROPERTIES']['ADDITIONAL_INFO']['VALUE']['TEXT'])): ?>
                                             <p class="core__switch__btn">
-                                            <span class="core__switch__btn__text active"
-                                                  data-js-core-switch-element="core__switch__btn__hidden_price_3">
-                                                <?= Loc::getMessage('TOUR_ADDITIONAL_INFO_TITLE'); ?>
-                                            </span>
-                                                <span class="core__switch__btn__hidden active core__switch__btn__hidden_price_3">
-                                            <?= htmlspecialcharsback($arResult['PROPERTIES']['ADDITIONAL_INFO']['VALUE']['TEXT']); ?>
-                                        </span>
+                                                <div class="core__switch__btn__text active"
+                                                      data-js-core-switch-element="core__switch__btn__hidden_price_3">
+                                                    <?= Loc::getMessage('TOUR_ADDITIONAL_INFO_TITLE'); ?>
+                                                </div>
+                                                <div class="core__switch__btn__hidden active core__switch__btn__hidden_price_3">
+                                                    <?= htmlspecialcharsback($arResult['PROPERTIES']['ADDITIONAL_INFO']['VALUE']['TEXT']); ?>
+                                                </div>
                                             </p>
                                         <? endif; ?>
                                     </div>
