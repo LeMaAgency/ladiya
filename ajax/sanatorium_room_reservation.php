@@ -8,7 +8,7 @@ empty($_POST) && exit;
 
 //set rules & fields for form
 $form = new \WM\Forms\AjaxForm(array(
-    array('hotel_name', 'required',array('message' => 'Ошибка. ID гостиницы отсутвует')),
+    array('sanatorium_name', 'required',array('message' => 'Ошибка. ID гостиницы отсутвует')),
     //array('hotel_name', 'regex', array('pattern' => '~[0-9]~', 'message' => 'Вводите только цифры')),
     array('name_of_customer', 'length', array('min' => 2, 'max' => 50, 'message' => 'Имя должно быть больше {min} и меньше {max} символов')),
     array('name_of_customer', 'regex', array('pattern' => '~^[А-я Ё]+$~iu', 'message' => 'Недопустимые значения')),
