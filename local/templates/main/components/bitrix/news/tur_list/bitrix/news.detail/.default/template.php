@@ -195,7 +195,10 @@ $this->setFrameMode(true);
                                                     <?$spoiler_number = 0 ; //Переменная для спойлеров
                                                     foreach ($arResult['PROGRAMMS'] as $id => $programm):?>
                                                         <div class="text page__program__detail__list__item">
-                                                            <div class="page__program__detail__list__item__title"><?= $programm['NAME']; ?></div>
+                                                            <div class="page__program__detail__list__item__title">
+                                                                <?= $programm['NAME']; ?>
+                                                                <div class="page__program__detail__list__item__title_underline"></div>
+                                                            </div>
                                                             <div class="page__program__detail__list__item__text">
                                                                 <?= $programm['PREVIEW_TEXT']; ?>
     
