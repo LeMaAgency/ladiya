@@ -31,7 +31,7 @@ if($form->validate())
 {
     $status = $form->formActionFull(
     //iblock id
-        36,
+        37,
         //iblock add params
         array(
             'NAME' => "Бронироване номера",
