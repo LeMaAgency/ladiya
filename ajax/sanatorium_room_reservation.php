@@ -8,8 +8,11 @@ empty($_POST) && exit;
 
 //set rules & fields for form
 $form = new \WM\Forms\AjaxForm(array(
-    array('sanatorium_name', 'required',array('message' => 'Ошибка. ID гостиницы отсутвует')),
-    //array('hotel_name', 'regex', array('pattern' => '~[0-9]~', 'message' => 'Вводите только цифры')),
+    array('sanatorium_name', 'required',array('message' => 'Ошибка. ID санатория отсутвует')),
+    array('sanatorium_name', 'regex', array('pattern' => '~[0-9]~', 'message' => 'Неправильный формат ID санатория')),
+    array('select_room', 'regex', array('pattern' => '~[0-9]~', 'message' => 'Неправильный формат ID номера')),
+    array('select_room', 'required',array('message' => 'Выберите номер')),
+
     array('name_of_customer', 'length', array('min' => 2, 'max' => 50, 'message' => 'Имя должно быть больше {min} и меньше {max} символов')),
     array('name_of_customer', 'regex', array('pattern' => '~^[А-я Ё]+$~iu', 'message' => 'Недопустимые значения')),
     array('phone', 'phone', array('message' => 'Телефон должен быть в формате +7 (999) 666-33-11')),
@@ -29,6 +32,24 @@ $form = new \WM\Forms\AjaxForm(array(
 //check form fields
 if($form->validate())
 {
+    $hotel_name = null;
+    $room_name = null;
+    if(CModule::IncludeModule("iblock"))
+    {
+        //Нахождение имени отеля, по пришедшему ID
+        $sanatorium  = CIBlockElement::GetByID((int)$_POST["sanatorium_name"]);
+        if($ar_res = $sanatorium->GetNext())
+        {
+            $sanatorium_name = $ar_res["NAME"];
+        }
+
+        //Нахождение имени номера отеля, по пришедшему ID
+        $room  = CIBlockElement::GetByID((int)$_POST["select_room"]);
+        if($ar_res = $room->GetNext())
+        {
+            $room_name = $ar_res["NAME"];
+        }
+    }
     $status = $form->formActionFull(
     //iblock id
         37,
@@ -36,12 +57,12 @@ if($form->validate())
         array(
             'NAME' => "Бронироване номера",
             'PROPERTY_VALUES' => array(
-                'SANATORIUM_NAME' => Helper::enc($form->getField('sanatorium_name')),
+                'SANATORIUM_NAME' => Helper::enc($sanatorium_name),
                 'NAME_OF_CUSTOMER' => Helper::enc($form->getField('name_of_customer')),
                 'PHONE' => Helper::enc($form->getField('phone')),
                 'DATE_ARRIVE' => Helper::enc($form->getField('date-arrive')),
                 'DATE_DEPARTURE' => Helper::enc($form->getField('date-departure')),
-                'ROOM_NAME' => Helper::enc($form->getField('select_room')),
+                'ROOM_NAME' => Helper::enc($room_name),
                 'NUMBER_OF_GUESTS' => Helper::enc($form->getField('number_of_guests')),
             ),
             'ACTIVE' => 'N',
@@ -50,12 +71,12 @@ if($form->validate())
         'NEW_SANATORIUM_RESERVATION',
         //email send params
         array(
-            'SANATORIUM_NAME' => Helper::enc($form->getField('sanatorium_name')),
+            'SANATORIUM_NAME' => Helper::enc($sanatorium_name),
             'NAME_OF_CUSTOMER' => Helper::enc($form->getField('name_of_customer')),
             'PHONE' => Helper::enc($form->getField('phone')),
             'DATE_ARRIVE' => Helper::enc($form->getField('date-arrive')),
             'DATE_DEPARTURE' => Helper::enc($form->getField('date-departure')),
-            'ROOM_NAME' => Helper::enc($form->getField('select_room')),
+            'ROOM_NAME' => Helper::enc($room_name),
             'NUMBER_OF_GUESTS' => Helper::enc($form->getField('number_of_guests')),
         )
     );
