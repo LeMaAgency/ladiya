@@ -1908,7 +1908,6 @@ font-size: 18px;
 /* Детальная страница */
 .page__program__detail__list__item {
     text-align: left;
-    padding: 15px 0;
     color: #2c2b2b;
     font-weight: 300;
 }
@@ -1916,7 +1915,6 @@ font-size: 18px;
     text-transform: uppercase;
     margin-top: 20px;
     margin-bottom: 20px;
-    border: 2px solid #f15922;
     display: block;
     padding: 5px 7px;
     max-width: 17%;
