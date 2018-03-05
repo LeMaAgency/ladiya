@@ -146,8 +146,8 @@ Loc::loadMessages(__FILE__);
                         <div class="form__filter__title">
                             <span>Оставить заявку</span>
                         </div>
-                        <input type="hidden" name="hotel_name" value="<?=$arResult["NAME"]?>">
-                        <input type="hidden" name="select_room" value="<?=$room["NAME"]?>">
+                        <input type="hidden" name="hotel_name" value="<?=$arResult["ID"]?>">
+                        <input type="hidden" name="select_room" value="<?=$room["ID"]?>">
                         <div class="form__filter__item">
                             <div class="form__filter__item__name">
                                 <span>Имя</span>
@@ -216,7 +216,7 @@ Loc::loadMessages(__FILE__);
             <div class="form__filter__title">
                 <span>Оставить заявку</span>
             </div>
-            <input type="hidden" name="hotel_name" value="<?=$arResult["NAME"]?>">
+            <input type="hidden" name="hotel_name" value="<?=$arResult["ID"]?>">
             <div class="form__filter__item">
                 <div class="form__filter__item__name">
                     <span>Имя</span>
@@ -254,7 +254,7 @@ Loc::loadMessages(__FILE__);
                         <?
                         foreach ($arResult["ROOMS"] as $room)
                         {
-                            echo "<option value=\"".$room["NAME"]."\">".$room["NAME"]."</option>";
+                            echo "<option value=\"".$room["ID"]."\">".$room["NAME"]."</option>";
                         }
                         ?>
                     </select>
