@@ -78,6 +78,12 @@ $arUrlRewrite = array(
 		"ID" => "bitrix:news",
 		"PATH" => "/news/index.php",
 	),
+    array(
+        "CONDITION" => "#^/uslugi/([^/]+)/?(?:\\?(.*))?\$#",
+        "RULE" => "CODE=\$1&\$2",
+        "ID" => "",
+        "PATH" => "/uslugi/detail.php",
+    ),
 );
 
 ?>
