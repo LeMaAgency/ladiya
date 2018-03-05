@@ -23,7 +23,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 		"CACHE_TYPE" => "A",
 		"DETAIL_URL" => "",
 		"ELEMENT_CODE" => "",
-		"ELEMENT_ID" => "",
+		"ELEMENT_ID" => "571",
 		"ELEMENT_SORT_FIELD" => "sort",
 		"ELEMENT_SORT_ORDER" => "asc",
 		"FIELD_CODE" => array(
