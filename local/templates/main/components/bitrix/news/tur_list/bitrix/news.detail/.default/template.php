@@ -300,21 +300,6 @@ $this->setFrameMode(true);
                                                     <? endif; ?>
                                                 </div>
                                             </div>
-                                            <div class="col-xs-12 col-sm-4">
-                                                <div class="core__price">
-                                                    <div class="core__price__title"><?= Loc::getMessage('TOUR_SEARCH_PRICE_TITLE'); ?></div>
-                                                    <div class="core__price__item">
-                                                        <div class="core__price__item_l">
-                                                            <span><?= Loc::getMessage('TOUR_PRICE_FROM'); ?></span>
-                                                            <input type="text" name="price_from" placeholder="0">
-                                                        </div>
-                                                        <div class="core__price__item_r">
-                                                            <span><?= Loc::getMessage('TOUR_PRICE_TO'); ?></span>
-                                                            <input type="text" name="price_to" placeholder="0">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
                                         </div>
                                         <button class="calculate" type="submit"><?= Loc::getMessage('TOUR_SEARCH_BTN_TITLE'); ?></button>
                                         <div class="disclaimer"><?= Loc::getMessage('TOUR_SEARCH_HINT_TITLE'); ?></div>

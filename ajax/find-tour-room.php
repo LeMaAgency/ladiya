@@ -5,7 +5,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/bitrix/modules/main/include/prolog_be
 use \WM\Common\Helper;
 
 //Is POST data sent ?
-isset($_POST['tour_id'], $_POST['hotel'], $_POST['room_type'], $_POST['price_from'], $_POST['price_to'], $_POST['DATE']) || exit;
+isset($_POST['tour_id'], $_POST['hotel'], $_POST['room_type'], /*$_POST['price_from'], $_POST['price_to'],*/ $_POST['DATE']) || exit;
 
 \Bitrix\Main\Loader::includeModule('iblock');
 
@@ -55,14 +55,14 @@ if(!empty($_POST['room_type']))
     $filter['PROPERTY_ROOM_TYPE'] = (int) $_POST['room_type'];
 }
 //filter by property PRICE
-if(!empty($_POST['price_from']))
+/*if(!empty($_POST['price_from']))
 {
     $filter['>=PROPERTY_PRICE'] = $_POST['price_from'];
 }
 if(!empty($_POST['price_to']))
 {
     $filter['<=PROPERTY_PRICE'] = $_POST['price_to'];
-}
+}*/
 //filter by section
 if(!empty($_POST['hotel']))
 {
