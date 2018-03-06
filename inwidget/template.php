@@ -37,8 +37,11 @@ if(!$inWidget instanceof \inWidget\Core) {
 		?>
 		<li class="item">
 			<div class="item-block">
-				<div class="image"
-					 style="background-image: url('<?= $thumbnail ?>');"></div>
+                <a href="<?=$item->link?>" target="_blank">
+                    <div class="image"
+                         style="background-image: url('<?= $thumbnail ?>');">
+                    </div>
+                </a>
 			</div>
 		</li>
 		<?  $i++;
