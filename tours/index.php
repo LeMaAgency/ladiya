@@ -11,11 +11,7 @@ $APPLICATION->SetTitle("Туры по Кавказу");
     '/assets/js/scripts.js',
 ));
 ?>
-	<div class="head-img head-img_transport" <?$APPLICATION->ShowViewContent('head_pic')?>>
-		<div class="lad-slideshow__block-title">
-			<h1 class="lad-slideshow__block-title__h1"><?=$APPLICATION->ShowTitle(false);?></h1>
-		</div>
-	</div>
+
 <?$APPLICATION->IncludeComponent(
 	"bitrix:news", 
 	"tur_list", 
