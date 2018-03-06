@@ -1,6 +1,6 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
-$APPLICATION->SetTitle("Туры");
+$APPLICATION->SetTitle("Туры по Кавказу");
 
 //add js
 \WM\Common\AssetManager::get()->addJsArray(array(
@@ -11,7 +11,11 @@ $APPLICATION->SetTitle("Туры");
     '/assets/js/scripts.js',
 ));
 ?>
-
+	<div class="head-img head-img_transport" <?$APPLICATION->ShowViewContent('head_pic')?>>
+		<div class="lad-slideshow__block-title">
+			<h1 class="lad-slideshow__block-title__h1"><?=$APPLICATION->ShowTitle(false);?></h1>
+		</div>
+	</div>
 <?$APPLICATION->IncludeComponent(
 	"bitrix:news", 
 	"tur_list", 
@@ -40,20 +44,21 @@ $APPLICATION->SetTitle("Туры");
 		"DETAIL_PAGER_TEMPLATE" => "",
 		"DETAIL_PAGER_TITLE" => "Страница",
 		"DETAIL_PROPERTY_CODE" => array(
-            0 => "TYPE",
-            1 => "VIEW",
-            2 => "DATE",
-            3 => "COUNT",
-            4 => "DAY",
-            5 => "CITY",
-            6 => "HEADER",
-            7 => "NIGHT",
-            8 => "DISCOUNT",
-            9 => "COUNTRY",
-            10 => "PRICE",
-            11 => "PROGRAMMS",
-            12 => "SLIDER_PHOTO",
-            13 => "GALLERY_PHOTO",
+			0 => "TYPE",
+			1 => "VIEW",
+			2 => "COUNT",
+			3 => "CITY",
+			4 => "DATE",
+			5 => "HEADER",
+			6 => "DAY",
+			7 => "NIGHT",
+			8 => "PROGRAMMS",
+			9 => "DISCOUNT",
+			10 => "PRICE",
+			11 => "COUNTRY",
+			12 => "SLIDER_PHOTO",
+			13 => "GALLERY_PHOTO",
+			14 => "",
 		),
 		"DETAIL_SET_CANONICAL_URL" => "N",
 		"DISPLAY_BOTTOM_PAGER" => "Y",
@@ -74,15 +79,15 @@ $APPLICATION->SetTitle("Туры");
 		"LIST_PROPERTY_CODE" => array(
 			0 => "TYPE",
 			1 => "VIEW",
-			2 => "DATE",
-			3 => "COUNT",
-			4 => "DAYS_COUNT",
-			5 => "CITY",
+			2 => "COUNT",
+			3 => "DAYS_COUNT",
+			4 => "CITY",
+			5 => "DATE",
 			6 => "HEADER",
 			7 => "NIGHT",
 			8 => "DISCOUNT",
-			9 => "COUNTRY",
-			10 => "PRICE",
+			9 => "PRICE",
+			10 => "COUNTRY",
 			11 => "",
 		),
 		"MESSAGE_404" => "",
@@ -100,7 +105,7 @@ $APPLICATION->SetTitle("Туры");
 		"SEF_MODE" => "Y",
 		"SET_LAST_MODIFIED" => "N",
 		"SET_STATUS_404" => "N",
-		"SET_TITLE" => "Y",
+		"SET_TITLE" => "N",
 		"SHOW_404" => "N",
 		"SORT_BY1" => "ACTIVE_FROM",
 		"SORT_BY2" => "SORT",
@@ -121,12 +126,13 @@ $APPLICATION->SetTitle("Туры");
 			1 => "",
 		),
 		"FILTER_PROPERTY_CODE" => array(
-			0 => "TYPE",
-			1 => "VIEW",
-			2 => "DATE",
+			0 => "",
+			1 => "TYPE",
+			2 => "VIEW",
+			3 => "DATE",
 			4 => "DAYS_COUNT",
 			5 => "CITY",
-			11 => "",
+			6 => "",
 		),
 		"SEF_FOLDER" => "/tours/",
 		"SEF_URL_TEMPLATES" => array(

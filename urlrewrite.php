@@ -31,6 +31,12 @@ $arUrlRewrite = array(
 		"PATH" => "/turistam/detail.php",
 	),
 	array(
+		"CONDITION" => "#^/uslugi/([^/]+)/?(?:\\?(.*))?\$#",
+		"RULE" => "CODE=\$1&\$2",
+		"ID" => "",
+		"PATH" => "/uslugi/detail.php",
+	),
+	array(
 		"CONDITION" => "#^/video/([^/]+)/?(?:\\?(.*))?\$#",
 		"RULE" => "CODE=\$1&\$2",
 		"ID" => "",
@@ -55,6 +61,12 @@ $arUrlRewrite = array(
 		"PATH" => "/o-kavkaze/index.php",
 	),
 	array(
+		"CONDITION" => "#^/tours/#",
+		"RULE" => "",
+		"ID" => "bitrix:news",
+		"PATH" => "/tours/index.php",
+	),
+	array(
 		"CONDITION" => "#^/hotel/#",
 		"RULE" => "",
 		"ID" => "bitrix:news",
@@ -67,23 +79,11 @@ $arUrlRewrite = array(
 		"PATH" => "/o-kmv/index.php",
 	),
 	array(
-		"CONDITION" => "#^/tours/#",
-		"RULE" => "",
-		"ID" => "bitrix:news",
-		"PATH" => "/tours/index.php",
-	),
-	array(
 		"CONDITION" => "#^/news/#",
 		"RULE" => "",
 		"ID" => "bitrix:news",
 		"PATH" => "/news/index.php",
 	),
-    array(
-        "CONDITION" => "#^/uslugi/([^/]+)/?(?:\\?(.*))?\$#",
-        "RULE" => "CODE=\$1&\$2",
-        "ID" => "",
-        "PATH" => "/uslugi/detail.php",
-    ),
 );
 
 ?>
