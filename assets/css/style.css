@@ -2178,4 +2178,12 @@ PAGE TRANSFER
 .custom_table table tr td{
     border: 1px solid #3e87ad;
 }
+.tab-pane ol li{
+    list-style: decimal;
+    display: list-item !important;
+}
+.tab-pane ul li{
+    list-style: disc;
+    display: list-item !important;
+}
 /*----------------------*/
