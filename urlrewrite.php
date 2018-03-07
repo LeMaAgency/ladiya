@@ -61,12 +61,6 @@ $arUrlRewrite = array(
 		"PATH" => "/o-kavkaze/index.php",
 	),
 	array(
-		"CONDITION" => "#^/tours/#",
-		"RULE" => "",
-		"ID" => "bitrix:news",
-		"PATH" => "/tours/index.php",
-	),
-	array(
 		"CONDITION" => "#^/hotel/#",
 		"RULE" => "",
 		"ID" => "bitrix:news",
@@ -77,6 +71,12 @@ $arUrlRewrite = array(
 		"RULE" => "",
 		"ID" => "bitrix:catalog",
 		"PATH" => "/o-kmv/index.php",
+	),
+	array(
+		"CONDITION" => "#^/tours/#",
+		"RULE" => "",
+		"ID" => "bitrix:news",
+		"PATH" => "/tours/index.php",
 	),
 	array(
 		"CONDITION" => "#^/news/#",
