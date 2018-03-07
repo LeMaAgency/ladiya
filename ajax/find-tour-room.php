@@ -212,8 +212,15 @@ if(empty($rooms))
                         if($lastHotelName != $room['HOTEL_NAME'])
                         {
                             $lastHotelName = $room['HOTEL_NAME'];
-                            echo "<a href=\"/hotel/".$room["HOTEL_PAGE_URL"]."\">".$room['HOTEL_NAME']."</a>";
-                           // echo $room['HOTEL_NAME'];
+                            if(!empty($room["HOTEL_PAGE_URL"]))
+                            {
+                                echo "<a href=\"/hotel/".$room["HOTEL_PAGE_URL"]."\">".$room['HOTEL_NAME']."</a>";
+                            }
+                            else
+                            {
+                                echo $room['HOTEL_NAME'];
+                            }
+
                         }
                         ?>
                     </td>
