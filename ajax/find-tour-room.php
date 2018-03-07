@@ -90,15 +90,20 @@ foreach($rooms as $roomId => $room)
 }
 
 $sections = \WM\IBlock\Section::getList(7, array(
-    'filter' => array('ID' => array_keys($sections)),
-    'arSelect' => array('ID', 'NAME'),
+    'filter' => array('ID' => array_keys($sections),'IBLOCK_ID'=>7),
+    'arSelect' => array('ID', 'NAME','UF_HOTEL'),
 ));
-foreach($rooms as $roomId => $room)
+
+
+foreach ($sections as $key=>$section)
 {
-    if(!empty($sections[$room['IBLOCK_SECTION_ID']]['NAME']))
-    {
-        $rooms[$roomId]['HOTEL_NAME'] = $sections[$room['IBLOCK_SECTION_ID']]['NAME'];
-    }
+    $hotelInfo = \WM\IBlock\Element::getList(6, array(
+        'filter' => array('ID'=>$section['UF_HOTEL']),
+        'arSelect' => array(
+            'ID', 'NAME','CODE',
+        ),
+    ));
+    $sections[$key]['HOTEL_PAGE_URL'] = $hotelInfo[$section['UF_HOTEL']]['CODE'];
 }
 
 
@@ -107,6 +112,17 @@ if(empty($rooms))
     echo 'Ничего не найдено';
     exit;
 }
+?>
+<?
+    foreach($rooms as $roomId => $room)
+    {
+        if(!empty($sections[$room['IBLOCK_SECTION_ID']]['NAME']))
+        {
+            $rooms[$roomId]['HOTEL_NAME'] = $sections[$room['IBLOCK_SECTION_ID']]['NAME'];
+            $rooms[$roomId]['HOTEL_PAGE_URL'] = $sections[$room['IBLOCK_SECTION_ID']]['HOTEL_PAGE_URL'];
+            //var_dump($rooms[$roomId]['HOTEL_PAGE_URL']);
+        }
+    }
 ?>
 <table class="tour_price_table">
     <thead>
@@ -196,7 +212,8 @@ if(empty($rooms))
                         if($lastHotelName != $room['HOTEL_NAME'])
                         {
                             $lastHotelName = $room['HOTEL_NAME'];
-                            echo $room['HOTEL_NAME'];
+                            echo "<a href=\"/hotel/".$room["HOTEL_PAGE_URL"]."\">".$room['HOTEL_NAME']."</a>";
+                           // echo $room['HOTEL_NAME'];
                         }
                         ?>
                     </td>

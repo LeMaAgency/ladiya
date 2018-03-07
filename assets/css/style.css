@@ -2148,6 +2148,10 @@ PAGE TRANSFER
     color: white;
 }
 .tour_price_table a{
+    color:rgb(42, 42, 42);
+    text-decoration: underline;
+}
+.tour_price_table .reservation_btn{
     padding: 5px;
     background-color: #f58220;
 }
