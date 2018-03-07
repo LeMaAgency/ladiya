@@ -21,13 +21,15 @@ $strDeleteLink = \CIBlock::GetArrayByID($arParams['IBLOCK_ID'], 'ELEMENT_DELETE'
         $this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], $strDeleteLink, $confirmDelete);
         ?>
         <li id="<?=$this->GetEditAreaId($arItem['ID']);?>">
-            <div class="row">
-                <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
-                    <img src="<?=$arItem["PREVIEW_PICTURE"]['SRC']?>">
+            <a href="<?=$arItem['DETAIL_PAGE_URL']?>">
+                <div class="row">
+                    <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
+                        <img src="<?=$arItem["PREVIEW_PICTURE"]['SRC']?>">
+                    </div>
+                    <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7">
+                        <p><?=mb_strimwidth($arItem['PREVIEW_TEXT'], 0, 80, "...");?></p>
+                    </div>
                 </div>
-                <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7">
-                    <p><?=mb_strimwidth($arItem['PREVIEW_TEXT'], 0, 80, "...");?></p>
-                </div>
-            </div>
+            </a>
         </li>
     <? endforeach; ?>
