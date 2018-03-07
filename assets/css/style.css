@@ -278,7 +278,10 @@ h3 {
     margin-top: 14px;
     line-height: 72px;
 }
-
+.footer-news a{
+    margin: 0 !important;
+    padding: 0 !important;
+}
 .more {
     display: inline-block;
     border: 1px solid #CDCDCD;
@@ -924,12 +927,20 @@ a:after {
         padding-left: 8px;
         padding-right: 8px;
     }
+    .footer-news a{
+        margin: 0 !important;
+        padding: 0 !important;
+    }
 }
 
 @media (min-width: 1200px) {
     .nav > li > a {
         padding-left: 12px;
         padding-right: 12px;
+    }
+    .footer-news a{
+        margin: 0 !important;
+        padding: 0 !important;
     }
 }
 
