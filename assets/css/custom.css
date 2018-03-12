@@ -2834,10 +2834,14 @@ input.filter__button {padding-bottom: 15px !important;}
     color: #9e9e9e;
 }
 .news__detail__text {
+    text-align: left;
     overflow: hidden;
     /*max-height: 80px;*/
     width: 100%;
     margin-bottom: 20px;
+}
+.news__detail__text img{
+    margin: 10px;
 }
 .news__detail__btn {}
 .news__detail__btn__control {
