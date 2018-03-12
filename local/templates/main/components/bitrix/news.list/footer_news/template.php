@@ -27,7 +27,7 @@ $strDeleteLink = \CIBlock::GetArrayByID($arParams['IBLOCK_ID'], 'ELEMENT_DELETE'
                         <img src="<?=$arItem["PREVIEW_PICTURE"]['SRC']?>">
                     </div>
                     <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7">
-                        <p><?=mb_strimwidth($arItem['PREVIEW_TEXT'], 0, 80, "...");?></p>
+                        <p><?=mb_strimwidth($arItem['NAME'], 0, 80, "...");?></p>
                     </div>
                 </div>
             </a>
