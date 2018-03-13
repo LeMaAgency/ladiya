@@ -2178,6 +2178,7 @@ PAGE TRANSFER
 }
 .custom_table table tr:first-child td{
     border-color: rgb(0, 61, 93) !important;
+    padding:11px 10px;
 }
 .custom_table table tr:first-child p{
     margin: 0px;

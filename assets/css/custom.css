@@ -1159,6 +1159,7 @@ font-size: 18px;
 
 .tour-detail_tabs__wrapper .bg .tab-content.main #price table th, .tour-detail_tabs__wrapper .bg .tab-content.main #price table td {
     padding: .625em;
+    border:1px solid rgb(0, 61, 93);
 }
 
 .tour-detail_tabs__wrapper .bg .tab-content.main #price table th {
@@ -1558,9 +1559,16 @@ font-size: 18px;
 .core__text table td,
 .text__block table td,
 .page__hotel__detail__table table tr {
-    border: 1px solid #f15922;
+    border: 1px solid #003D5D;
     padding: .35em;
     background-color: white;
+}
+.core__text table tr:first-child td,
+.text__block table tr:first-child td,
+.page__hotel__detail__table table tr:first-child td{
+    background: rgb(0, 61, 93) !important;
+    color: white;
+    border-color: rgb(0, 61, 93) !important;
 }
 
 .core__text table th,
