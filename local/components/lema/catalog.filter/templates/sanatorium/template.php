@@ -31,7 +31,7 @@ $this->setFrameMode(true);
             <? endif ?>
         <? endforeach; ?>
         <div class="submit">
-            <input type="submit" name="set_filter" value="Поиск гостиниц"><input type="hidden" name="set_filter"
+            <input type="submit" name="set_filter" value="Поиск санатория"><input type="hidden" name="set_filter"
                                                                                 value="Y">
         </div>
     </div>
