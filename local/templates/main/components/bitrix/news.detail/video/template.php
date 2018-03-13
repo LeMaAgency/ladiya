@@ -24,28 +24,29 @@ Loc::loadMessages(__FILE__);
                         <?=CFile::GetPath($arResult['PROPERTIES']['ELEM_HEAD_PICTURE']['VALUE']);?>
                     <? $this->EndViewTarget();?>
                 <?endif;?>
-                
-                <? foreach ($arResult['PROPERTIES']['LINK_TO_VIDEO']['VALUE'] as $key=>$arLinkVideo): ?>
-                    <a href="<?= $arLinkVideo; ?>" data-fancybox="video" data-caption="<?=$arResult['PROPERTIES']['LINK_TO_VIDEO']['DESCRIPTION'][$descriptionCode]?>" class="catalog__list__item">
-                        <div class="catalog__list__item__img" style="background-image: url('<?=$arResult['PROPERTIES']['LINK_TO_VIDEO']["PREVIEW_PICTURE"][$key]; ?>');">
-                            <? if(!empty($arResult['PROPERTIES']['LINK_TO_VIDEO']['DESCRIPTION'][$descriptionCode])):?>
-                                <div class="catalog__list__item__img__title">
-                                    <?=$arResult['PROPERTIES']['LINK_TO_VIDEO']['DESCRIPTION'][$descriptionCode]?>
-                                </div>
-                            <? endif;?>
-                            <div class="catalog__list__item__img__wrap">
-                                <div class="catalog__list__item__img__wrap__table">
-                                    <div class="catalog__list__item__img__wrap__table__cell">
-                                        <div class="catalog__list__item__img__wrap__title">
-                                            ПОСМОТРЕТЬ
+                <div class="video_list">
+                    <? foreach ($arResult['PROPERTIES']['LINK_TO_VIDEO']['VALUE'] as $key=>$arLinkVideo): ?>
+                        <a href="<?= $arLinkVideo; ?>" data-fancybox="video" data-caption="<?=$arResult['PROPERTIES']['LINK_TO_VIDEO']['DESCRIPTION'][$descriptionCode]?>" class="catalog__list__item">
+                            <div class="catalog__list__item__img" style="background-image: url('<?=$arResult['PROPERTIES']['LINK_TO_VIDEO']["PREVIEW_PICTURE"][$key]; ?>');">
+                                <? if(!empty($arResult['PROPERTIES']['LINK_TO_VIDEO']['DESCRIPTION'][$descriptionCode])):?>
+                                    <div class="catalog__list__item__img__title">
+                                        <?=$arResult['PROPERTIES']['LINK_TO_VIDEO']['DESCRIPTION'][$descriptionCode]?>
+                                    </div>
+                                <? endif;?>
+                                <div class="catalog__list__item__img__wrap">
+                                    <div class="catalog__list__item__img__wrap__table">
+                                        <div class="catalog__list__item__img__wrap__table__cell">
+                                            <div class="catalog__list__item__img__wrap__title">
+
+                                            </div>
+                                            <span class="catalog__list__item__img__wrap__text"></span>
                                         </div>
-                                        <span class="catalog__list__item__img__wrap__text"></span>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </a>
-                <?endforeach;?>
+                        </a>
+                    <?endforeach;?>
+                </div>
             </div>
         </div>
     </div>

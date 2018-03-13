@@ -2,7 +2,7 @@
 $aMenuLinks = Array(
 	Array(
 		"Туры по Кавказу", 
-		"/tours/", 
+		"/tours/?VIEW=1",
 		Array(), 
 		Array(), 
 		"" 
