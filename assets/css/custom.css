@@ -3312,6 +3312,7 @@ input.filter__button {padding-bottom: 15px !important;}
     float: left;
     padding: 20px 20px 32px 20px;
     height: 368px;
+    position: relative;
 }
 .hotel__detail___room:hover {
    border: 1px solid #F15922;
@@ -3339,7 +3340,10 @@ input.filter__button {padding-bottom: 15px !important;}
    width: 100%;
 }
 .hotel__detail___room__info{
-
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 .hotel__detail___room a{   
    margin: 10px;
