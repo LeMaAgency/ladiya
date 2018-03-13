@@ -59,34 +59,38 @@ Loc::loadMessages(__FILE__);
 		</ul>
 	</div>
 	<div class="hotel__detail___rooms">
-		<div class="hotel__detail___title">
-			<?= Loc::getmessage('NEWS_DETAIL_ROOMS'); ?>
-		</div>
-        <? if(!empty($arResult["ROOMS"])):?>
-            <?foreach ($arResult["ROOMS"] as $room):?>
-                <div class="hotel__detail___room">
-                    <div class="hotel__detail___room__img ">
-                        <img src="<?=CFile::GetPath($room["PREVIEW_PICTURE"])?>" alt="">
-                    </div>
-                    <div class="hotel__detail___room__text">
-                                    <span>
-                                            <?=$room["NAME"]?>
-                                    </span>
-                    </div>
-                    <div class="hotel__detail___room__info">
-                        <div class="hotel__detail___room__price">
-                                <span>цена от
-                                        <span class="price">
-                                            <?=$room["PROPS"]["PRICE"]["VALUE"]?>
+        <div class="hotel__detail___title">
+            <?= Loc::getmessage('NEWS_DETAIL_ROOMS'); ?>
+        </div>
+        <div class="hotel__detail___rooms_wrapper">
+            <? if(!empty($arResult["ROOMS"])):?>
+                <?foreach ($arResult["ROOMS"] as $room):?>
+                    <div class="hotel__detail___room_wrapper">
+                        <div class="hotel__detail___room">
+                            <div class="hotel__detail___room__img ">
+                                <img src="<?=CFile::GetPath($room["PREVIEW_PICTURE"])?>" alt="">
+                            </div>
+                            <div class="hotel__detail___room__text">
+                                            <span>
+                                                    <?=$room["NAME"]?>
+                                            </span>
+                            </div>
+                            <div class="hotel__detail___room__info">
+                                <div class="hotel__detail___room__price">
+                                        <span>цена от
+                                                <span class="price">
+                                                    <?=$room["PROPS"]["PRICE"]["VALUE"]?>
+                                                </span>
+                                                руб.
                                         </span>
-                                        руб.
-                                </span>
+                                </div>
+                                <a href="#" class="item-card__content__more js-hotel__number_info" data-room_id="<?=$room["ID"]?>">подробнее</a>
+                            </div>
                         </div>
-                        <a href="#" class="item-card__content__more js-hotel__number_info" data-room_id="<?=$room["ID"]?>">подробнее</a>
                     </div>
-                </div>
-            <?endforeach;?>
-        <? endif;?>
+                <?endforeach;?>
+            <? endif;?>
+        </div>
 	</div>
         <? if(!empty($arResult["ROOMS"])):?>
             <? foreach ($arResult["ROOMS"] as $room):?>
