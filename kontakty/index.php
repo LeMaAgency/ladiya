@@ -79,9 +79,9 @@ $APPLICATION->SetTitle("Контакты");
                             <b><? \WM\Components\IncludeArea::inc('', array('PATH' => SITE_DIR . 'include/contacts/email_title.php')); ?></b><br>
                             <? \WM\Components\IncludeArea::inc('', array('PATH' => SITE_DIR . 'include/contacts/email_description.php')); ?>
                             <br>
-                            <b><? \WM\Components\IncludeArea::inc('', array('PATH' => SITE_DIR . 'include/contacts/icq_title.php')); ?></b><br>
+                            <b><? \WM\Components\IncludeArea::inc('', array('PATH' => SITE_DIR . 'include/contacts/icq_title.php')); ?></b>
                             <? \WM\Components\IncludeArea::inc('', array('PATH' => SITE_DIR . 'include/contacts/icq_description.php')); ?>
-                            <br>
+
                             <b><? \WM\Components\IncludeArea::inc('', array('PATH' => SITE_DIR . 'include/contacts/schedule_title.php')); ?></b><br>
                             <? \WM\Components\IncludeArea::inc('', array('PATH' => SITE_DIR . 'include/contacts/schedule_description.php')); ?>
                             <br>
