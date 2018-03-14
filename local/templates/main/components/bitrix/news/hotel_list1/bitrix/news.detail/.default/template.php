@@ -155,7 +155,7 @@ Loc::loadMessages(__FILE__);
                             <input type="hidden" name="select_room" value="<?=$room["ID"]?>">
                             <div class="form__filter__item room_reservation_form_date_arrive">
                                 <div class="form__filter__item__name">
-                                    <span>Дата заезда</span>
+                                    <span>Заезд</span>
                                 </div>
                                 <div class="form__filter__input  it-block">
                                     <input type="text" class="form__filter__input__control filter__item__date__inp js-clearable"
@@ -166,7 +166,7 @@ Loc::loadMessages(__FILE__);
                             </div>
                             <div class="form__filter__item room_reservation_form_date_departure">
                                 <div class="form__filter__item__name">
-                                    <span>Дата выезда</span>
+                                    <span>Выезд</span>
                                 </div>
                                 <div class="form__filter__input  it-block">
                                     <input type="text" class="form__filter__input__control filter__item__date__inp js-clearable"
@@ -232,7 +232,7 @@ Loc::loadMessages(__FILE__);
                 <input type="hidden" name="hotel_name" value="<?=$arResult["ID"]?>">
                 <div class="form__filter__item room_reservation_form_date_arrive">
                     <div class="form__filter__item__name">
-                        <span>Дата заезда</span>
+                        <span>Заезд</span>
                     </div>
                     <div class="form__filter__input  it-block">
                         <input type="text" class="form__filter__input__control filter__item__date__inp js-clearable" id="date-arrive"
@@ -243,7 +243,7 @@ Loc::loadMessages(__FILE__);
                 </div>
                 <div class="form__filter__item room_reservation_form_date_departure">
                     <div class="form__filter__item__name">
-                        <span>Дата выезда</span>
+                        <span>Выезд</span>
                     </div>
                     <div class="form__filter__input  it-block">
                         <input type="text" class="form__filter__input__control filter__item__date__inp js-clearable" id="date-departure"
