@@ -10,8 +10,8 @@ empty($_POST) && exit;
 $form = new \WM\Forms\AjaxForm(array(
     array('hotel_name', 'required',array('message' => 'Ошибка. ID гостиницы отсутвует')),
     array('hotel_name', 'regex', array('pattern' => '~[0-9]~', 'message' => 'Неправильный формат ID гостиницы')),
-    array('select_room', 'regex', array('pattern' => '~[0-9]~', 'message' => 'Неправильный формат ID номера')),
     array('select_room', 'required',array('message' => 'Выберите номер')),
+    array('select_room', 'regex', array('pattern' => '~[0-9]~', 'message' => 'Неправильный указан ID номера')),
     //array('hotel_name', 'regex', array('pattern' => '~[0-9]~', 'message' => 'Вводите только цифры')),
     array('name_of_customer', 'length', array('min' => 2, 'max' => 50, 'message' => 'Имя должно быть больше {min} и меньше {max} символов')),
     array('name_of_customer', 'regex', array('pattern' => '~^[А-я Ё]+$~iu', 'message' => 'Недопустимые значения')),

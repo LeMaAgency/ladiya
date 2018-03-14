@@ -146,65 +146,73 @@ Loc::loadMessages(__FILE__);
                             ?>
                         </ul>
                     </div>
-                    <form  class="form__filter hotel_reservation_room" action="<?=SITE_DIR?>ajax/hotel_room_reservation.php">
+                    <div class="room_reservation_form room_fancybox">
                         <div class="form__filter__title">
-                            <span>Оставить заявку</span>
+                            <span>Забронировать номер</span>
                         </div>
-                        <input type="hidden" name="hotel_name" value="<?=$arResult["ID"]?>">
-                        <input type="hidden" name="select_room" value="<?=$room["ID"]?>">
-                        <div class="form__filter__item">
-                            <div class="form__filter__item__name">
-                                <span>Имя</span>
+                        <form  class="form__filter hotel_reservation_room" action="<?=SITE_DIR?>ajax/hotel_room_reservation.php">
+                            <input type="hidden" name="hotel_name" value="<?=$arResult["ID"]?>">
+                            <input type="hidden" name="select_room" value="<?=$room["ID"]?>">
+                            <div class="form__filter__item room_reservation_form_date_arrive">
+                                <div class="form__filter__item__name">
+                                    <span>Дата заезда</span>
+                                </div>
+                                <div class="form__filter__input  it-block">
+                                    <input type="text" class="form__filter__input__control filter__item__date__inp js-clearable"
+                                           name="date-arrive" placeholder="Выбрать дату">
+                                    <i class="fa fa-calendar-o bg_icon" aria-hidden="true"></i>
+                                    <div class="form__filter__input__log it-error"></div>
+                                </div>
                             </div>
-                            <div class="form__filter__input  it-block">
-                                <input name="name_of_customer" class="form__filter__input__control js-clearable" type="text">
-                                <div class="form__filter__input__log it-error"></div>
+                            <div class="form__filter__item room_reservation_form_date_departure">
+                                <div class="form__filter__item__name">
+                                    <span>Дата выезда</span>
+                                </div>
+                                <div class="form__filter__input  it-block">
+                                    <input type="text" class="form__filter__input__control filter__item__date__inp js-clearable"
+                                           name="date-departure" placeholder="Выбрать дату">
+                                    <i class="fa fa-calendar-o bg_icon" aria-hidden="true"></i>
+                                    <div class="form__filter__input__log it-error"></div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="form__filter__item">
-                            <div class="form__filter__item__name">
-                                <span>Телефон</span>
+                            <div class="form__filter__item room_reservation_form_number_of_guests">
+                                <div class="form__filter__item__name">
+                                    <span>Количество человек</span>
+                                </div>
+                                <div class="form__filter__input  it-block">
+                                    <select name="number_of_guests" class="form__filter__select__control cs-select cs-skin-border" id="">
+                                        <?for ($i = 1; $i< 6;$i++):?>
+                                            <option value="<?=$i;?>" selected="selected"><?=$i;?></option>
+                                        <?endfor;?>
+                                    </select>
+                                    <div class="form__filter__input__log it-error"></div>
+                                </div>
                             </div>
-                            <div class="form__filter__input it-block">
-                                <input name="phone" class="form__filter__input__control js-clearable" type="text">
-                                <div class="form__filter__input__log it-error"></div>
+                            <div class="form__filter__item room_reservation_form_name">
+                                <div class="form__filter__item__name">
+                                    <span>Имя</span>
+                                </div>
+                                <div class="form__filter__input  it-block">
+                                    <input name="name_of_customer" class="form__filter__input__control js-clearable" type="text">
+                                    <div class="form__filter__input__log it-error"></div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="form__filter__item">
-                            <div class="form__filter__item__name">
-                                <span>Количество человек</span>
+                            <div class="form__filter__item room_reservation_form_phone">
+                                <div class="form__filter__item__name">
+                                    <span>Телефон</span>
+                                </div>
+                                <div class="form__filter__input it-block">
+                                    <input name="phone" class="form__filter__input__control js-clearable" type="text">
+                                    <div class="form__filter__input__log it-error"></div>
+                                </div>
                             </div>
-                            <div class="form__filter__input  it-block">
-                                <input name="number_of_guests" class="form__filter__input__control js-clearable" type="text">
-                                <div class="form__filter__input__log it-error"></div>
+                            <div class="room_reservation_form_button">
+                                <div class="form__filter__btn">
+                                    <input type="submit" class="form__filter__btn__control "></input>
+                                </div>
                             </div>
-                        </div>
-                        <div class="form__filter__item">
-                            <div class="form__filter__item__name">
-                                <span>Дата заезда</span>
-                            </div>
-                            <div class="form__filter__input  it-block">
-                                <input type="text" class="form__filter__input__control filter__item__date__inp js-clearable"
-                                       name="date-arrive" placeholder="Выбрать дату">
-                                <div class="form__filter__input__log it-error"></div>
-                            </div>
-                        </div>
-                        <div class="form__filter__item">
-                            <div class="form__filter__item__name">
-                                <span>Дата выезда</span>
-                            </div>
-                            <div class="form__filter__input  it-block">
-                                <input type="text" class="form__filter__input__control filter__item__date__inp js-clearable"
-                                       name="date-departure" placeholder="Выбрать дату">
-                                <div class="form__filter__input__log it-error"></div>
-                            </div>
-                        </div>
-                        <div class="form__filter__item">
-                            <div class="form__filter__btn">
-                                <input type="submit" class="form__filter__btn__control "></input>
-                            </div>
-                        </div>
-                    </form>
+                        </form>
+                    </div>
                 </div>
             <? endforeach;?>
         <? endif;?>
@@ -216,79 +224,88 @@ Loc::loadMessages(__FILE__);
                 <?=htmlspecialcharsback($arResult["PROPERTIES"]["TABLE"]["VALUE"]["TEXT"]);?>
             </div>
         <?endif;?>
-        <form  class="form__filter" action="<?=SITE_DIR?>ajax/hotel_room_reservation.php" id="hotel_reservation">
+        <div class="room_reservation_form">
             <div class="form__filter__title">
-                <span>Оставить заявку</span>
+                <span>Забронировать номер</span>
             </div>
-            <input type="hidden" name="hotel_name" value="<?=$arResult["ID"]?>">
-            <div class="form__filter__item">
-                <div class="form__filter__item__name">
-                    <span>Имя</span>
+            <form  class="form__filter" action="<?=SITE_DIR?>ajax/hotel_room_reservation.php" id="hotel_reservation">
+                <input type="hidden" name="hotel_name" value="<?=$arResult["ID"]?>">
+                <div class="form__filter__item room_reservation_form_date_arrive">
+                    <div class="form__filter__item__name">
+                        <span>Дата заезда</span>
+                    </div>
+                    <div class="form__filter__input  it-block">
+                        <input type="text" class="form__filter__input__control filter__item__date__inp js-clearable" id="date-arrive"
+                               name="date-arrive" placeholder="Выбрать дату">
+                        <i class="fa fa-calendar-o bg_icon" aria-hidden="true"></i>
+                        <div class="form__filter__input__log it-error"></div>
+                    </div>
                 </div>
-                <div class="form__filter__input  it-block">
-                    <input name="name_of_customer" class="form__filter__input__control js-clearable" type="text">
-                    <div class="form__filter__input__log it-error"></div>
+                <div class="form__filter__item room_reservation_form_date_departure">
+                    <div class="form__filter__item__name">
+                        <span>Дата выезда</span>
+                    </div>
+                    <div class="form__filter__input  it-block">
+                        <input type="text" class="form__filter__input__control filter__item__date__inp js-clearable" id="date-departure"
+                               name="date-departure" placeholder="Выбрать дату">
+                        <i class="fa fa-calendar-o bg_icon" aria-hidden="true"></i>
+                        <div class="form__filter__input__log it-error"></div>
+                    </div>
                 </div>
-            </div>
-            <div class="form__filter__item">
-                <div class="form__filter__item__name">
-                    <span>Телефон</span>
+                <div class="form__filter__item room_reservation_form_hotel_room">
+                    <div class="form__filter__item__name">
+                        <span>Номер</span>
+                    </div>
+                    <div class="form__filter__input  it-block">
+                        <select name="select_room" class="form__filter__select__control cs-select cs-skin-border">
+                            <option value="" selected="selected"></option>
+                            <?
+                            foreach ($arResult["ROOMS"] as $room)
+                            {
+                                echo "<option value=\"".$room["ID"]."\">".$room["NAME"]."</option>";
+                            }
+                            ?>
+                        </select>
+                        <div class="form__filter__input__log it-error"></div>
+                    </div>
                 </div>
-                <div class="form__filter__input it-block">
-                    <input name="phone" class="form__filter__input__control js-clearable" type="text">
-                    <div class="form__filter__input__log it-error"></div>
+                <div class="form__filter__item room_reservation_form_number_of_guests">
+                    <div class="form__filter__item__name">
+                        <span>Количество человек</span>
+                    </div>
+                    <div class="form__filter__input  it-block">
+                        <select name="number_of_guests" class="form__filter__select__control cs-select cs-skin-border" id="">
+                            <?for ($i = 1; $i< 6;$i++):?>
+                                <option value="<?=$i;?>" selected="selected"><?=$i;?></option>
+                            <?endfor;?>
+                        </select>
+                        <div class="form__filter__input__log it-error"></div>
+                    </div>
                 </div>
-            </div>
-            <div class="form__filter__item">
-                <div class="form__filter__item__name">
-                    <span>Количество человек</span>
+                <div class="form__filter__item room_reservation_form_name">
+                    <div class="form__filter__item__name">
+                        <span>Имя</span>
+                    </div>
+                    <div class="form__filter__input  it-block">
+                        <input name="name_of_customer" class="form__filter__input__control js-clearable" type="text">
+                        <div class="form__filter__input__log it-error"></div>
+                    </div>
                 </div>
-                <div class="form__filter__input  it-block">
-                    <input name="number_of_guests" class="form__filter__input__control js-clearable" type="text">
-                    <div class="form__filter__input__log it-error"></div>
+                <div class="form__filter__item room_reservation_form_phone">
+                    <div class="form__filter__item__name">
+                        <span>Телефон</span>
+                    </div>
+                    <div class="form__filter__input it-block">
+                        <input name="phone" class="form__filter__input__control js-clearable" type="text">
+                        <div class="form__filter__input__log it-error"></div>
+                    </div>
                 </div>
-            </div>
-            <div class="form__filter__item">
-                <div class="form__filter__item__name">
-                    <span>Номер</span>
+
+                <div class="room_reservation_form_button">
+                    <div class="form__filter__btn">
+                        <input type="submit" class="form__filter__btn__control "></input>
+                    </div>
                 </div>
-                <div class="form__filter__input  it-block">
-                    <select name="select_room" class="form__filter__select__control cs-select cs-skin-border">
-                        <option value="" selected="selected"></option>
-                        <?
-                        foreach ($arResult["ROOMS"] as $room)
-                        {
-                            echo "<option value=\"".$room["ID"]."\">".$room["NAME"]."</option>";
-                        }
-                        ?>
-                    </select>
-                    <div class="form__filter__input__log it-error"></div>
-                </div>
-            </div>
-            <div class="form__filter__item">
-                <div class="form__filter__item__name">
-                    <span>Дата заезда</span>
-                </div>
-                <div class="form__filter__input  it-block">
-                    <input type="text" class="form__filter__input__control filter__item__date__inp js-clearable" id="date-arrive"
-                           name="date-arrive" placeholder="Выбрать дату">
-                    <div class="form__filter__input__log it-error"></div>
-                </div>
-            </div>
-            <div class="form__filter__item">
-                <div class="form__filter__item__name">
-                    <span>Дата выезда</span>
-                </div>
-                <div class="form__filter__input  it-block">
-                    <input type="text" class="form__filter__input__control filter__item__date__inp js-clearable" id="date-departure"
-                           name="date-departure" placeholder="Выбрать дату">
-                    <div class="form__filter__input__log it-error"></div>
-                </div>
-            </div>
-            <div class="form__filter__item">
-                <div class="form__filter__btn">
-                    <input type="submit" class="form__filter__btn__control "></input>
-                </div>
-            </div>
-        </form>
+            </form>
+        </div>
 </div>
