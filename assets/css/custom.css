@@ -2576,14 +2576,6 @@ input.filter__button {padding-bottom: 15px !important;}
     .catalog__list__item__inf__btn {
         text-align: center;
     }
-    .room_reservation_form .room_reservation_form_hotel_room,
-    .room_reservation_form .room_reservation_form_number_of_guests,
-    .room_reservation_form .room_reservation_form_date_arrive,
-    .room_reservation_form .room_reservation_form_date_departure,
-    .room_reservation_form .room_reservation_form_name,
-    .room_reservation_form .room_reservation_form_phone{
-        width: 80%;
-    }
 }
 
 
@@ -3079,6 +3071,14 @@ input.filter__button {padding-bottom: 15px !important;}
     .header-menu .navbar-nav > li > .dropdown-menu {
         margin: 0;
     }
+    .room_reservation_form .room_reservation_form_hotel_room,
+    .room_reservation_form .room_reservation_form_number_of_guests,
+    .room_reservation_form .room_reservation_form_date_arrive,
+    .room_reservation_form .room_reservation_form_date_departure,
+    .room_reservation_form .room_reservation_form_name,
+    .room_reservation_form .room_reservation_form_phone{
+        width: 80%;
+    }
 }
 
 /* hotel__list */
@@ -3496,7 +3496,7 @@ input.filter__button {padding-bottom: 15px !important;}
       display: table-row;
    }
    .hotel__detail___room .item-card__content__more{
-      width: 80%;
+      width: 100%;
    }
    .hotel__detail___room span{
       padding: 0 5px;

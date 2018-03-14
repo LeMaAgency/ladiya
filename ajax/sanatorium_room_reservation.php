@@ -10,9 +10,8 @@ empty($_POST) && exit;
 $form = new \WM\Forms\AjaxForm(array(
     array('sanatorium_name', 'required',array('message' => 'Ошибка. ID санатория отсутвует')),
     array('sanatorium_name', 'regex', array('pattern' => '~[0-9]~', 'message' => 'Неправильный формат ID санатория')),
-    array('select_room', 'regex', array('pattern' => '~[0-9]~', 'message' => 'Неправильный формат ID номера')),
     array('select_room', 'required',array('message' => 'Выберите номер')),
-
+    array('select_room', 'regex', array('pattern' => '~[0-9]~', 'message' => 'Неправильный формат ID номера')),
     array('name_of_customer', 'length', array('min' => 2, 'max' => 50, 'message' => 'Имя должно быть больше {min} и меньше {max} символов')),
     array('name_of_customer', 'regex', array('pattern' => '~^[А-я Ё]+$~iu', 'message' => 'Недопустимые значения')),
     array('phone', 'phone', array('message' => 'Телефон должен быть в формате +7 (999) 666-33-11')),
