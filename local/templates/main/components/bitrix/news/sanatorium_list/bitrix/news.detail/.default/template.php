@@ -88,7 +88,7 @@ Loc::loadMessages(__FILE__);
 	</div>
         <? if(!empty($arResult["ROOMS"])):?>
             <? foreach ($arResult["ROOMS"] as $room):?>
-                <div id="room<?=$room["ID"]?>" class="hotel_number" style="display: none;">
+                <div id="room<?=$room["ID"]?>" class="hotel_number" style="display: none;" data-options='{"touch": false}'>
                     <div class="hotel_number__title">
                         <?=$room["NAME"]?>
                     </div>
