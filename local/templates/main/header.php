@@ -44,6 +44,7 @@ CJSCore::init(array('fx'));
     $assets->addJs("/assets/libs/jQRangeSlider/jQRangeSlider-min.js");
     $assets->addJs("/assets/libs/fancybox/fancybox.js");
     $assets->addJs("/assets/js/custom.js");
+    $assets->addJs("/assets/js/jquery.maskedinput.min.js");
     
     
     $APPLICATION->ShowHead();
