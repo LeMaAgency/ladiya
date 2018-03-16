@@ -53,7 +53,7 @@ $CONFIG = array(
 	// Path to skin directory
 	'skinPath' => 'skins/',
 		
-	// Default language [ ru / en ] or something else from lang directory.
+	// Default language [ ru / en / ua ] or something else from lang directory.
 	'langDefault' => 'ru',
 		
 	// Full path to langs directory
