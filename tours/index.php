@@ -16,7 +16,7 @@ $APPLICATION->SetTitle("Туры по Кавказу");
 	"bitrix:news", 
 	"tur_list", 
 	array(
-		"ADD_ELEMENT_CHAIN" => "N",
+		"ADD_ELEMENT_CHAIN" => "Y",
 		"ADD_SECTIONS_CHAIN" => "Y",
 		"AJAX_MODE" => "N",
 		"AJAX_OPTION_ADDITIONAL" => "",

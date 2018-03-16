@@ -109,10 +109,13 @@ if(!empty($arResult['PROPERTIES']['DATE']['VALUE']) && !empty($arResult['PROPERT
 {
     $modify = '+' . ($arResult['PROPERTIES']['DAYS_COUNT']['VALUE'] - 1) . ' day';
     $obj = $dates = array();
+    $toDay = strtotime('now');
+
     foreach($arResult['PROPERTIES']['DATE']['VALUE'] as $date)
     {
-        if(!($tmp = DateTime::createFromFormat('d.m.Y', $date)))
+        if(!($tmp = DateTime::createFromFormat('d.m.Y', $date)) || $tmp->getTimestamp() < $toDay)
             continue;
+
         $tmp = $tmp->modify($modify)->format('d.m.Y');
         $dates[] = $date;
         $dates[] = $tmp;
