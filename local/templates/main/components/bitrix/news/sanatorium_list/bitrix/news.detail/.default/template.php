@@ -119,6 +119,9 @@ Loc::loadMessages(__FILE__);
                                 </div>
                             </li>
                         </ul>
+                        <div class="hotel_number__price_list_notify">
+                            <?= Loc::getmessage('NEWS_DETAIL_ROOMS_NOTIFY'); ?>
+                        </div>
                     </div>
                     <div class="hotel_number__description">
                         <div class="hotel_number__descriprion_title"><?= Loc::getmessage('NEWS_DETAIL_ROOMS_DESCRIPTION'); ?></div>

@@ -3575,7 +3575,11 @@ input.filter__button {padding-bottom: 15px !important;}
    padding-left: 5px;
    font-weight: 600;
 }
-
+.hotel_number__price_list .hotel_number__price_list_notify{
+    font-size: 12px;
+    color: gray;
+    margin-top: 12px;
+}
 
 .hotel_number__amenity{
    padding-top: 15px;
