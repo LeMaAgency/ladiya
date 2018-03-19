@@ -2278,7 +2278,8 @@ input.filter__button {padding-bottom: 15px !important;}
 .room_fancybox .room_reservation_form_date_departure,
 .room_fancybox .room_reservation_form_name,
 .room_fancybox .room_reservation_form_phone{
-    width: 80%;
+    width: 45%;
+    display: inline-block;
 }
 .cs-skin-border.cs-active > span ,
 .cs-skin-border .cs-options {
@@ -2781,7 +2782,7 @@ input.filter__button {padding-bottom: 15px !important;}
     border-top: 0;
 }
 .nav .dropdown-menu a {
-    padding: 10px 20px;
+    padding: 5px 20px;
 }
 
 .header-menu .dropdown.open .dropdown-toggle{
