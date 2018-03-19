@@ -912,7 +912,10 @@ font-size: 18px;
     margin: 0 auto 20px;
     text-align: left;
 }
-
+.tour-detail_tabs__wrapper .bg .tab-content.main #description iframe{
+    width: 100%;
+    border: none;
+}
 @media (min-width: 320px) {
     .tour-detail_tabs__wrapper .bg .tab-content.main #price .filter .input {
         width: 98%;
