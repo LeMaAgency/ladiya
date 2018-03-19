@@ -9,4 +9,4 @@ $MESS['NEWS_DETAIL_ROOMS_EXTRA_PLACE_PRICE'] = 'Дополнительное м�
 $MESS['NEWS_DETAIL_ROOMS_DESCRIPTION'] = 'Описание';
 $MESS['NEWS_DETAIL_ROOMS_COMFORT'] = 'Удобства';
 $MESS['NEWS_DETAIL_ROOMS_CURRENCY'] = 'р' ;
-$MESS['NEWS_DETAIL_TABLE_TITLE'] = 'Прайс' ;
+$MESS['NEWS_DETAIL_TABLE_TITLE'] = 'Стоимость проживания' ;
