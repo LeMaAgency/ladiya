@@ -193,7 +193,8 @@ if(empty($rooms))
             $i = 0;
 
         //get slice dates
-        $tmpDates = array_slice($datePrices, $i, 5);
+        //$tmpDates = array_slice($datePrices, $i, 5);
+        $tmpDates = array_slice($datePrices, $i, 1);
 
         foreach($tmpDates as $curDate => $curDatePrices): ?>
             <? foreach($rooms as $roomId => $room): ?>
