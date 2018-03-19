@@ -67,5 +67,20 @@ if(CModule::IncludeModule("iblock")) {
             }
         }
 
+        //Получение названия города по его ID
+
+        if(!empty($arItem["PROPERTIES"]["CITY"]["VALUE"]))
+        {
+            $arOrder = Array();
+            $arSelect = Array("ID", "NAME", "IBLOCK_ID");
+            $arFilter = Array("IBLOCK_ID" => 35, "ACTIVE" => "Y", "ID" => $arItem["PROPERTIES"]["CITY"]["VALUE"]);
+            $res = CIBlockElement::GetList($arOrder, $arFilter, false, false, $arSelect);
+
+            while ($ob = $res->GetNextElement()) {
+                $arFields = $ob->GetFields();
+                $arResult["ITEMS"][$key]["PROPERTIES"]["CITY"]["INFO"] = $arFields; //Запись своиств инфраструктур
+
+            }
+        }
     }
 }
