@@ -742,5 +742,5 @@ $(function(){
 		$('.hotel_number__slider .slick-list .slick-track img:nth-child(1)').css('width','-webkit-fill-available');
     })
 
-    $(".room_reservation_form_phone").find("input").mask("+7 (999) 999-99-99");
+    //$(".room_reservation_form_phone").find("input").mask("+7 (999) 999-99-99");
 });
