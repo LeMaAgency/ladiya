@@ -430,7 +430,7 @@ $this->setFrameMode(true);
 
                 <div class="row addtional-buttons">
                     <div class="col-xs-12 col-sm-6">
-                        <a href="#price" id="bron__btn" class="booking"><?= Loc::getMessage('TOUR_ORDER_BTN_TITLE'); ?></a>
+                        <a href="#popup__form" data-fancybox id="bron__btn" class="booking"><?= Loc::getMessage('TOUR_ORDER_BTN_TITLE'); ?></a>
                     </div>
                     <div class="col-xs-12 col-sm-6">
                         <a href="#popup__form__agenci" data-fancybox class="full_program">Бронирование для агентств</a>
@@ -559,7 +559,11 @@ $this->setFrameMode(true);
                 Мы с Вами свяжемся в ближайшее время
             </div>
             <div class="popup__bron__bottom">
-                <form class="form__go js-tour-request" action="/ajax/tour-order.php" method="post">
+                <? if($arResult["PROPERTIES"]["TYPE"]["VALUE"] == "школьный"):?>
+                <form class="form__go js-tour-request" action="/ajax/school_tour-order.php" method="post">
+                <?else:?>
+                    <form class="form__go js-tour-request" action="/ajax/tour-order.php" method="post">
+                <?endif;?>
                     <input type="hidden" id="tour_order_id" value="">
                     <div class="popup__bron__bottom__left">
                         <div class="core__input js-field-block">
