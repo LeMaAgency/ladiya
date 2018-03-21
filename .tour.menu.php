@@ -13,27 +13,6 @@ $aMenuLinks = Array(
 		Array(), 
 		Array(), 
 		"" 
-	),
-	Array(
-		"Активные", 
-		"#", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
-		"Туры выходного дня", 
-		"#", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
-		"Фототуры", 
-		"", 
-		Array(), 
-		Array(), 
-		"" 
 	)
 );
 ?>

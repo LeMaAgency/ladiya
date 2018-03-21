@@ -15,14 +15,7 @@ $aMenuLinks = Array(
 		"" 
 	),
 	Array(
-		"График экскурсий", 
-		"/ekskursii/grafik-i-stoimost-ekskursiy/", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
-		"Прайс и доплаты", 
+		"Прайс и график экскурсий", 
 		"/ekskursii/grafik-i-stoimost-ekskursiy/", 
 		Array(), 
 		Array(), 
