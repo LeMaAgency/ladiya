@@ -1958,6 +1958,7 @@ font-size: 18px;
     min-width: unset;
     text-align: center;
     color: white;
+    max-width: unset;
 }
 .page__program__detail__list_plate_style .page__program__detail__list__item__title_underline{
     display: none;
