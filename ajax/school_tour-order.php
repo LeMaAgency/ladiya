@@ -39,11 +39,11 @@ if($form->validate())
             'ACTIVE' => 'N',
         ),
         //email event name
-        '',
+        'SCHOOL_TOUR_ORDER_REQUEST',
         //email send params
         array(
-//            'NAME' => Helper::enc($form->getField('name')),
-//            'PHONE' => $form->getField('phone'),
+            'NAME' => Helper::enc($form->getField('name')),
+            'PHONE' => $form->getField('phone'),
         )
     );
 
