@@ -190,67 +190,68 @@ $this->setFrameMode(true);
 
                                         <!-- TAB CONTENT -->
                                         <div class="tab-content inner">
-                                                <div role="tabpanel" class="tab-pane active" >
-                                                   
-                                                    <?$spoiler_number = 0 ; //Переменная для спойлеров
-                                                    foreach ($arResult['PROGRAMMS'] as $id => $programm):?>
-                                                        <div class="text page__program__detail__list__item">
-                                                            <div class="page__program__detail__list__item__title">
-                                                                <?= $programm['NAME']; ?>
-                                                                <div class="page__program__detail__list__item__title_underline"></div>
-                                                            </div>
-                                                            <div class="page__program__detail__list__item__text">
-                                                                <?= $programm['PREVIEW_TEXT']; ?>
-    
-                                                                <? $arSpoilerText = $arResult['SPOILER_TEXT'][$id];
-                                                                if ($arSpoilerText): ?>
-                                                                    <? $iCount = count($arSpoilerText['ADDITIONAL_TITLE']);
-                                                                    for ($i = 0; $i <= $iCount; $i++):?>
-                                                                        <? if (
-                                                                            !empty($arSpoilerText['ADDITIONAL_TITLE'][$i])
-                                                                        ): ?>
-                                                                            <? if ($arSpoilerText['TEXT_BEFORE'][$i]): ?>
-                                                                                <p>
-                                                                                    <?= $arSpoilerText['TEXT_BEFORE'][$i]; ?>
-                                                                                </p>
-                                                                            <? endif; ?>
-                                                                            <p class="core__switch__btn">
-                                                                                <?if (!empty($arSpoilerText['ADDITIONAL_TEXT'][$i])):?>
+                                            <div role="tabpanel" class="tab-pane active" >
+                                                <div class="page__program__detail__list_plate_style">
+                                                    <?
+                                                        $spoiler_number = 0 ; //Переменная для спойлеров
+                                                        $dualProgram = array_chunk($arResult['PROGRAMMS'],2);//Разбитие массива по 2 элемента
+                                                    foreach ($dualProgram as $key => $dualProgramItem):?>
+                                                        <div class="page__program__detail__list_plate_style_row clearfix">
+                                                            <?foreach ($dualProgramItem as $id=>$programm):?>
+                                                                <div class="text page__program__detail__list__item">
+                                                                    <div class="page__program__detail__list__item__title">
+                                                                        <?= $programm['NAME']; ?>
+                                                                        <div class="page__program__detail__list__item__title_underline"></div>
+                                                                    </div>
+                                                                    <div class="page__program__detail__list__item_arrow"></div>
+                                                                    <div class="page__program__detail__list__item__text">
+                                                                        <?= $programm['PREVIEW_TEXT']; ?>
+                                                                        <? $arSpoilerText = $arResult['SPOILER_TEXT'][$programm["ID"]];
+                                                                        if ($arSpoilerText): ?>
+                                                                            <? $iCount = count($arSpoilerText['ADDITIONAL_TITLE']);
+                                                                            for ($i = 0; $i <= $iCount; $i++):?>
+                                                                                <? if (
+                                                                                !empty($arSpoilerText['ADDITIONAL_TITLE'][$i])
+                                                                                ): ?>
+                                                                                    <? if ($arSpoilerText['TEXT_BEFORE'][$i]): ?>
+                                                                                        <p>
+                                                                                            <?= $arSpoilerText['TEXT_BEFORE'][$i]; ?>
+                                                                                        </p>
+                                                                                    <? endif; ?>
+                                                                                    <p class="core__switch__btn">
+                                                                                    <?if (!empty($arSpoilerText['ADDITIONAL_TEXT'][$i])):?>
                                                                                     <span class="core__switch__btn__text"
                                                                                 <?else:?>
                                                                                     <span class="core__switch__btn__text-noarrow"
                                                                                 <?endif;?>
-                                                                                      data-js-core-switch-element="core__switch__btn__hidden_<?= $spoiler_number ?>_1">
-                                                                                      <?= $arSpoilerText['ADDITIONAL_TITLE'][$i]; ?>
-                                                                                </span>
-                                                                                <?if (!empty($arSpoilerText['ADDITIONAL_TEXT'][$i])):?>
-                                                                                    <div class="core__switch__btn__hidden core__switch__btn__hidden_<?= $spoiler_number++ ?>_1">
-                                                                                        <?=htmlspecialcharsBack($arSpoilerText['ADDITIONAL_TEXT'][$i]);?>
-                                                                                    </div>
-                                                                                <?else:?>
-                                                                                    <?$spoiler_number++;?>
-                                                                                <?endif;?>
-                                                                            </p>
+                                                                                          data-js-core-switch-element="core__switch__btn__hidden_<?= $spoiler_number ?>_1">
+                                                                                    <?= $arSpoilerText['ADDITIONAL_TITLE'][$i]; ?>
+                                                                                    </span>
+                                                                                    <?if (!empty($arSpoilerText['ADDITIONAL_TEXT'][$i])):?>
+                                                                                        <div class="core__switch__btn__hidden core__switch__btn__hidden_<?= $spoiler_number++ ?>_1">
+                                                                                            <?=htmlspecialcharsBack($arSpoilerText['ADDITIONAL_TEXT'][$i]);?>
+                                                                                        </div>
+                                                                                    <?else:?>
+                                                                                        <?$spoiler_number++;?>
+                                                                                    <?endif;?>
+                                                                                    </p>
+                                                                                <? endif; ?>
+                                                                                <? if ($arSpoilerText['TEXT_AFTER'][$i]): ?>
+                                                                                    <p>
+                                                                                        <?= $arSpoilerText['TEXT_AFTER'][$i]; ?>
+                                                                                    </p>
+                                                                                <? endif; ?>
+                                                                            <? endfor; ?>
                                                                         <? endif; ?>
-                                                                        <? if ($arSpoilerText['TEXT_AFTER'][$i]): ?>
-                                                                            <p>
-                                                                                <?= $arSpoilerText['TEXT_AFTER'][$i]; ?>
-                                                                            </p>
-                                                                        <? endif; ?>
-                                                                    <? endfor; ?>
-                                                                <? endif; ?>
-    
-                                                            </div>
+                                                                    </div>
+                                                                </div>
+                                                            <?endforeach;?>
                                                         </div>
-                                                        
-                                                        <? endforeach;?>
+                                                    <? endforeach;?>
                                                 </div>
-                                                
-                                            
+                                            </div>
                                         </div>
-
                                     <? endif; ?>
-
                                 </div>
                             </div>
                         </div>
