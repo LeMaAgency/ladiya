@@ -430,7 +430,12 @@ $this->setFrameMode(true);
 
                 <div class="row addtional-buttons">
                     <div class="col-xs-12 col-sm-6">
-                        <a href="#popup__form" data-fancybox id="bron__btn" class="booking"><?= Loc::getMessage('TOUR_ORDER_BTN_TITLE'); ?></a>
+                        <? if($arResult["PROPERTIES"]["TYPE"]["VALUE"] == "школьный"):?>
+                            <a href="#popup__form" data-fancybox id="bron__btn" class="booking"><?= Loc::getMessage('TOUR_ORDER_BTN_TITLE'); ?></a>
+                        <?else:?>
+                            <a href="#price"  id="bron__btn" class="booking"><?= Loc::getMessage('TOUR_ORDER_BTN_TITLE'); ?></a>
+                        <?endif;?>
+
                     </div>
                     <div class="col-xs-12 col-sm-6">
                         <a href="#popup__form__agenci" data-fancybox class="full_program">Бронирование для агентств</a>
