@@ -49,10 +49,12 @@ $foundCnt = (int) $arResult['NAV_RESULT']->NavRecordCount;
                 </div>
 
                 <div class="buttons hidden-xs">
-                    <button class="list">
-                        <span></span>
-                        <span></span>
-                    </button>
+                    <a href="<?=$APPLICATION->GetCurPageParam('VIEW=0', array('VIEW'));?>">
+                        <button class="list">
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </a>
                     <a href="<?=$APPLICATION->GetCurPageParam('VIEW=1', array('VIEW'));?>">
                         <button class="grid">
                             <span></span>
@@ -68,84 +70,89 @@ $foundCnt = (int) $arResult['NAV_RESULT']->NavRecordCount;
     </div>
 
     <div class="catalog__list hotel__list__one">
+        <?if ($_GET['VIEW'] == '0'):?>
+            <div class="hotel__list-list_style">
+        <?endif;?>
+            <? foreach($arResult["ITEMS"] as $arItem): ?>
+                <?
+                $this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], $strEditLink);
+                $this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], $strDeleteLink, $confirmDelete);
+                ?>
 
-    <? foreach($arResult["ITEMS"] as $arItem): ?>
-        <?
-        $this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], $strEditLink);
-        $this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], $strDeleteLink, $confirmDelete);
-        ?>
-        
-        
-        
-        <div class="hotel__list___item" id="<?= $this->GetEditAreaId($arItem['ID']); ?>">
-            <div class="hotel__list___item__img" style="background-image: url(<?=$arItem['PREVIEW_PICTURE']['SRC'];?>)">
-            
-                <!-- <? /* if ($arItem['PROPERTIES']['DISCOUNT']['VALUE']) : */ ?>
-                                <div class="discount">-<? /*= $arItem['PROPERTIES']['DISCOUNT']['VALUE'] */ ?>%</div>
-                            --><? /* endif; */ ?>
-                
-            </div>
-            <div class="hotel__list___item__inf">
-                <div class="hotel__list___item__img__title">
-                    <?= $arItem['NAME']; ?>
-                    <div class="hotel__list__stars">
-                        <?
-                            $star_count = (int)$arItem['PROPERTIES']['NUMBER_OF_STARS']['VALUE'] - 1;
-                            for($i=0; $i <= $star_count; $i++){
-                                echo "<i class=\"fa fa-star\" aria-hidden=\"true\"></i>";
-                            }
-                        ?>
-                        
-                        
+
+
+                <div class="hotel__list___item" id="<?= $this->GetEditAreaId($arItem['ID']); ?>">
+                    <div class="hotel__list___item__img" style="background-image: url(<?=$arItem['PREVIEW_PICTURE']['SRC'];?>)">
+
+                        <!-- <? /* if ($arItem['PROPERTIES']['DISCOUNT']['VALUE']) : */ ?>
+                                        <div class="discount">-<? /*= $arItem['PROPERTIES']['DISCOUNT']['VALUE'] */ ?>%</div>
+                                    --><? /* endif; */ ?>
+
                     </div>
-                    <div class="hotel__list___item__link js-hotel__maps_open" data-mapMarker="<?=$arItem["PROPERTIES"]["GOOGLE_MAP"]["VALUE"]?>" >
-                    <span>
-                        <? if(!empty($arItem["PROPERTIES"]["CITY"]["INFO"]["NAME"]))
-                                echo $arItem["PROPERTIES"]["CITY"]["INFO"]["NAME"];?>
-                        <i class="fa fa-map-marker" aria-hidden="true"></i>
-                        <?=Loc::getMessage('CT_BNL_SHOW_IN_MAP');?>
-                    </span>
+                    <div class="hotel__list___item__inf">
+                        <div class="hotel__list___item__img__title">
+                            <?= $arItem['NAME']; ?>
+                            <div class="hotel__list__stars">
+                                <?
+                                    $star_count = (int)$arItem['PROPERTIES']['NUMBER_OF_STARS']['VALUE'] - 1;
+                                    for($i=0; $i <= $star_count; $i++){
+                                        echo "<i class=\"fa fa-star\" aria-hidden=\"true\"></i>";
+                                    }
+                                ?>
+
+
+                            </div>
+                            <div class="hotel__list___item__link js-hotel__maps_open" data-mapMarker="<?=$arItem["PROPERTIES"]["GOOGLE_MAP"]["VALUE"]?>" >
+                            <span>
+                                <? if(!empty($arItem["PROPERTIES"]["CITY"]["INFO"]["NAME"]))
+                                        echo $arItem["PROPERTIES"]["CITY"]["INFO"]["NAME"];?>
+                                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                <?=Loc::getMessage('CT_BNL_SHOW_IN_MAP');?>
+                            </span>
+                            </div>
+                        </div>
+                        <div>
+                            <? if ($arItem['PREVIEW_TEXT']) : ?>
+                                <p class="hotel__list___item__inf__descriptions">
+                                    <?= $arItem['PREVIEW_TEXT']; ?>
+                                </p>
+                            <? endif; ?>
+                            <div class="hotel__list__infrastruktura">
+                                <div class="hotel__list___item__inf__text">
+                                    <?= Loc::getmessage('CT_BNL_INFRASTRUKTURA'); ?>
+                                </div>
+                                <?
+                                    if(!empty($arItem["PROPERTIES"]["INFRASTRUCTURE_DETAIL"]))
+                                    {
+                                        foreach ($arItem["PROPERTIES"]["INFRASTRUCTURE_DETAIL"] as $infastructure){
+                                            echo " <span data-title=\"".$infastructure["NAME"]."\"><i class=\"fa ".$infastructure["PROPS"]["ICON_CODE"]["VALUE"]." aria-hidden=\"true\"></i></span>";
+                                        }
+                                    }
+                                ?>
+                            </div>
+                        </div>
+                        <div class="hotel__list___item__inf__footer">
+                            <div class="hotel__list___item__inf__price">
+                                <?if(!empty($arItem['PROPERTIES']['MIN_PRICE'])):?>
+                                    <?=Loc::getMessage('CT_BNL_FROM');?>
+                                    <?=$arItem['PROPERTIES']['MIN_PRICE']?>
+                                    <?=Loc::getMessage('CT_BNL_RUB');?>
+                                <?endif;?>
+                                <div class="price_description"><?=Loc::getMessage('CT_BNL_PRICE_DESCRIPTION');?></div>
+                            </div>
+
+                            <div class="hotel__list___item__inf__btn">
+                                <a href="<?=$arItem['DETAIL_PAGE_URL'];?>" class="button"><?=Loc::getMessage('CT_BNL_MORE_INFO');?></a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div>
-                    <? if ($arItem['PREVIEW_TEXT']) : ?>
-                        <p class="hotel__list___item__inf__descriptions">
-                            <?= $arItem['PREVIEW_TEXT']; ?>
-                        </p>
-                    <? endif; ?>
-                    <div class="hotel__list__infrastruktura">
-                        <div class="hotel__list___item__inf__text">
-                            <?= Loc::getmessage('CT_BNL_INFRASTRUKTURA'); ?>
-                        </div>
-                        <?
-                            if(!empty($arItem["PROPERTIES"]["INFRASTRUCTURE_DETAIL"]))
-                            {
-                                foreach ($arItem["PROPERTIES"]["INFRASTRUCTURE_DETAIL"] as $infastructure){
-                                    echo " <span data-title=\"".$infastructure["NAME"]."\"><i class=\"fa ".$infastructure["PROPS"]["ICON_CODE"]["VALUE"]." aria-hidden=\"true\"></i></span>";
-                                }
-                            }
-                        ?>
-                    </div>
-                </div>                
-                <div class="hotel__list___item__inf__footer">
-                    <div class="hotel__list___item__inf__price">
-                        <?if(!empty($arItem['PROPERTIES']['MIN_PRICE'])):?>
-                            <?=Loc::getMessage('CT_BNL_FROM');?>
-                            <?=$arItem['PROPERTIES']['MIN_PRICE']?>
-                            <?=Loc::getMessage('CT_BNL_RUB');?>
-                        <?endif;?>
-                        <div class="price_description"><?=Loc::getMessage('CT_BNL_PRICE_DESCRIPTION');?></div>
-                    </div>
-                    
-                    <div class="hotel__list___item__inf__btn">
-                        <a href="<?=$arItem['DETAIL_PAGE_URL'];?>" class="button"><?=Loc::getMessage('CT_BNL_MORE_INFO');?></a>
-                    </div>
-                </div>                
-            </div>
-        </div>
 
 
-    <? endforeach; ?>
+            <? endforeach; ?>
+             <?if ($_GET['VIEW'] == '0'):?>
+                </div>
+            <?endif;?>
     </div>
     <?if($arParams["DISPLAY_BOTTOM_PAGER"]):?>
         <br /><?=$arResult["NAV_STRING"];?>
