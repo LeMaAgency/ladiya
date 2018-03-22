@@ -9,8 +9,8 @@ global $APPLICATION;
 $IBLOCK_ID = 16;
 
 $arOrder = Array();
-$arSelect = Array("ID", "NAME", "IBLOCK_ID", "DETAIL_PAGE_URL");
-$arFilter = Array("IBLOCK_ID"=>$IBLOCK_ID, "ACTIVE"=>"Y","SECTION_ID"=>12);
+$arSelect = Array("ID", "NAME", "IBLOCK_ID", "DETAIL_PAGE_URL","PROPERTY_ADD_IN_SUBMENU_VALUE");
+$arFilter = Array("IBLOCK_ID"=>$IBLOCK_ID, "ACTIVE"=>"Y","SECTION_ID"=>12,"!PROPERTY_ADD_IN_SUBMENU_VALUE"=>false);
 $res = CIBlockElement::GetList($arOrder, $arFilter, false, false ,$arSelect);
 
     while($ob = $res->GetNextElement())
