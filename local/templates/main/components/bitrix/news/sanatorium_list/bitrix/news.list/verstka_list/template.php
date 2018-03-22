@@ -49,11 +49,13 @@ $foundCnt = (int) $arResult['NAV_RESULT']->NavRecordCount;
                 </div>
 
                 <div class="buttons hidden-xs">
-                    <button class="list">
-                        <span></span>
-                        <span></span>
-                    </button>
                     <a href="<?=$APPLICATION->GetCurPageParam('VIEW=1', array('VIEW'));?>">
+                        <button class="list">
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </a>
+                    <a href="<?=$APPLICATION->GetCurPageParam('VIEW=0', array('VIEW'));?>">
                         <button class="grid">
                             <span></span>
                             <span></span>
@@ -68,7 +70,7 @@ $foundCnt = (int) $arResult['NAV_RESULT']->NavRecordCount;
     </div>
 
     <div class="catalog__list hotel__list__one">
-
+        <div class="hotel__list-list_style">
     <? foreach($arResult["ITEMS"] as $arItem): ?>
         <?
         $this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], $strEditLink);
@@ -147,6 +149,7 @@ $foundCnt = (int) $arResult['NAV_RESULT']->NavRecordCount;
 
 
     <? endforeach; ?>
+        </div>
     </div>
     <?if($arParams["DISPLAY_BOTTOM_PAGER"]):?>
         <br /><?=$arResult["NAV_STRING"];?>
