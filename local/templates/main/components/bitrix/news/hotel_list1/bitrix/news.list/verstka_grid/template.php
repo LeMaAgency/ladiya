@@ -49,13 +49,13 @@ $foundCnt = (int) $arResult['NAV_RESULT']->NavRecordCount;
                 </div>
 
                 <div class="buttons hidden-xs">
-                    <a href="<?=$APPLICATION->GetCurPageParam('VIEW=0', array('VIEW'));?>">
+                    <a href="<?=$APPLICATION->GetCurPageParam('VIEW=1', array('VIEW'));?>">
                         <button class="list">
                             <span></span>
                             <span></span>
                         </button>
                     </a>
-                    <a href="<?=$APPLICATION->GetCurPageParam('VIEW=1', array('VIEW'));?>">
+                    <a href="<?=$APPLICATION->GetCurPageParam('VIEW=0', array('VIEW'));?>">
                         <button class="grid">
                             <span></span>
                             <span></span>

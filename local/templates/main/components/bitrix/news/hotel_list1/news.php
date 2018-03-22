@@ -12,7 +12,7 @@
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 $curView = $_GET['VIEW'];
-$viewMode = $curView ? 'verstka_grid' : 'verstka_list';
+$viewMode = $curView ? 'verstka_list' : 'verstka_grid';
 ?>
 
 <? /*if($arParams["USE_RSS"]=="Y"):?>
