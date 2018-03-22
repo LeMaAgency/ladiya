@@ -12,7 +12,7 @@
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 $curView = $_GET['VIEW'];
-$viewMode = $curView ? 'list' : '';
+$viewMode = $curView ? 'verstka_grid' : 'verstka_list';
 ?>
 
 <? /*if($arParams["USE_RSS"]=="Y"):?>
@@ -61,7 +61,7 @@ $viewMode = $curView ? 'list' : '';
             <? endif ?>
             <? $APPLICATION->IncludeComponent(
                 "bitrix:news.list",
-                "verstka",//$viewMode,
+                $viewMode,
                 Array(
                     "IBLOCK_TYPE" => $arParams["IBLOCK_TYPE"],
                     "IBLOCK_ID" => $arParams["IBLOCK_ID"],

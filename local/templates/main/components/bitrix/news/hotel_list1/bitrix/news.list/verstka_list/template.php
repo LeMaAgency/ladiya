@@ -70,9 +70,7 @@ $foundCnt = (int) $arResult['NAV_RESULT']->NavRecordCount;
     </div>
 
     <div class="catalog__list hotel__list__one">
-        <?if ($_GET['VIEW'] == '0'):?>
             <div class="hotel__list-list_style">
-        <?endif;?>
             <? foreach($arResult["ITEMS"] as $arItem): ?>
                 <?
                 $this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], $strEditLink);
@@ -147,12 +145,8 @@ $foundCnt = (int) $arResult['NAV_RESULT']->NavRecordCount;
                         </div>
                     </div>
                 </div>
-
-
             <? endforeach; ?>
-             <?if ($_GET['VIEW'] == '0'):?>
-                </div>
-            <?endif;?>
+            </div>
     </div>
     <?if($arParams["DISPLAY_BOTTOM_PAGER"]):?>
         <br /><?=$arResult["NAV_STRING"];?>
