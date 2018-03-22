@@ -19,7 +19,7 @@ $this->setFrameMode(true);
 <?endif;?>
 <div class="text__block__wrap">
     <div class="container">
-        <div class="text__block">
+        <div class="text__block clearfix">
             <? if ($arResult["DETAIL_TEXT"]): ?>
                 <? echo $arResult["DETAIL_TEXT"]; ?>
             <? endif ?>
