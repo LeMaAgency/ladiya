@@ -2449,7 +2449,6 @@ input.filter__button {padding-bottom: 15px !important;}
     margin-top: 5px;
     float: right;
     width: auto;
-
 }
 .catalog__list_one .catalog__list__item__inf__day,
 .catalog__list_one .catalog__list__item__inf__price {
@@ -3155,8 +3154,6 @@ input.filter__button {padding-bottom: 15px !important;}
     width: 48%; /*100*/
     background: #ffffff;
     padding: 0!important;
-    min-height: 484px;
-    overflow: hidden;
 }
 .hotel__list__one .hotel__list___item:hover .hotel__list___item__img__wrap{
     display: none;
@@ -3168,9 +3165,6 @@ input.filter__button {padding-bottom: 15px !important;}
     margin-top: 5px;
     float: right;
     width: auto;
-    position: absolute;
-    right: 10px;
-    bottom: 20px;
 }
 .hotel__list__one .hotel__list___item__inf__day,
 .hotel__list__one .hotel__list___item__inf__price {
@@ -3190,6 +3184,7 @@ input.filter__button {padding-bottom: 15px !important;}
     padding-right: 5px;
     margin: 0px 0px 25px 0px;
     margin: 1%;
+    min-height: 484px;
 }
 .hotel__list___item:nth-child(2n) {
     padding-right: 0;
@@ -3237,7 +3232,7 @@ input.filter__button {padding-bottom: 15px !important;}
     min-height: 70px;
     display: block;/*table-cell*/
     position: relative;
-    height: 285px;
+    min-height: 285px;
 }
 .hotel__list___item__inf__text {
     font-size: 12px;
@@ -3253,7 +3248,10 @@ input.filter__button {padding-bottom: 15px !important;}
 
 .hotel__list___item__inf__footer {
     width: 100%;
-    margin-top: 5px; 
+    margin-top: 5px;
+    position: absolute;
+    right: 20px;
+    bottom: 10px;
 }
 
 .hotel__list___item__inf__price {
@@ -3308,22 +3306,15 @@ input.filter__button {padding-bottom: 15px !important;}
     .hotel__list___item__inf {
         width: 100%;
         display: block;
-        height: auto;
     }
     .hotel__list___item__inf__btn {
         text-align: center;
     }
     .hotel__list__one .hotel__list___item__inf__footer{
-        position: relative;
-        right:0;
-        bottom: 0;
+         position: relative;
     }
     .hotel__list-list_style .hotel__list___item {
         display: block!important;
-        height: auto !important;
-    }
-    .hotel__list__one .hotel__list___item{
-        min-height: unset;
     }
     .hotel__list-list_style .hotel__list___item__img {
         display: block!important;
@@ -3796,6 +3787,7 @@ input.filter__button {padding-bottom: 15px !important;}
 .hotel__list-list_style .hotel__list___item {
     display: table;
     width: 100%;
+    min-height: unset;
 
 }
 .hotel__list-list_style .hotel__list___item__img {
@@ -3806,4 +3798,9 @@ input.filter__button {padding-bottom: 15px !important;}
 .hotel__list-list_style .hotel__list___item__inf {
     width: 66%;
     display: table-cell;
+}
+.hotel__list-list_style .hotel__list___item__inf__footer{
+    position: relative;
+    right: 0;
+    bottom: 0;
 }
