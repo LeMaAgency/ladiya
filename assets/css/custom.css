@@ -1965,7 +1965,6 @@ font-size: 18px;
 }
 .page__program__detail__list_plate_style .core__switch__btn__text{
     color: #2d4754;
-    text-decoration: underline;
     border-bottom:none;
 }
 @media (max-width: 776px){
