@@ -2449,6 +2449,7 @@ input.filter__button {padding-bottom: 15px !important;}
     margin-top: 5px;
     float: right;
     width: auto;
+
 }
 .catalog__list_one .catalog__list__item__inf__day,
 .catalog__list_one .catalog__list__item__inf__price {
@@ -3154,6 +3155,8 @@ input.filter__button {padding-bottom: 15px !important;}
     width: 48%; /*100*/
     background: #ffffff;
     padding: 0!important;
+    min-height: 484px;
+    overflow: hidden;
 }
 .hotel__list__one .hotel__list___item:hover .hotel__list___item__img__wrap{
     display: none;
@@ -3165,6 +3168,9 @@ input.filter__button {padding-bottom: 15px !important;}
     margin-top: 5px;
     float: right;
     width: auto;
+    position: absolute;
+    right: 10px;
+    bottom: 20px;
 }
 .hotel__list__one .hotel__list___item__inf__day,
 .hotel__list__one .hotel__list___item__inf__price {
@@ -3231,6 +3237,7 @@ input.filter__button {padding-bottom: 15px !important;}
     min-height: 70px;
     display: block;/*table-cell*/
     position: relative;
+    height: 285px;
 }
 .hotel__list___item__inf__text {
     font-size: 12px;
@@ -3301,15 +3308,22 @@ input.filter__button {padding-bottom: 15px !important;}
     .hotel__list___item__inf {
         width: 100%;
         display: block;
+        height: auto;
     }
     .hotel__list___item__inf__btn {
         text-align: center;
     }
     .hotel__list__one .hotel__list___item__inf__footer{
-         position: relative;
+        position: relative;
+        right:0;
+        bottom: 0;
     }
     .hotel__list-list_style .hotel__list___item {
         display: block!important;
+        height: auto !important;
+    }
+    .hotel__list__one .hotel__list___item{
+        min-height: unset;
     }
     .hotel__list-list_style .hotel__list___item__img {
         display: block!important;
