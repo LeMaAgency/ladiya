@@ -97,7 +97,7 @@ $APPLICATION->SetTitle("Туры и экскурсии на Кавказских
                                             <? includeArea('phone_4'); ?>
 									    </span>
                                         <span class="social"><? includeArea('social'); ?></span>
-                                        <a class="button outline" href="#"><? includeArea('all_contact'); ?></a>
+                                        <a class="button outline" href="<?=SITE_DIR.'kontakty/'?>"><? includeArea('all_contact'); ?></a>
                                     </div>
                                 </div>
                             </div>
