@@ -60,7 +60,7 @@ $confirmDelete = array('CONFIRM' => \GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')
                                 </a>
                             <? endforeach; ?>
                         </ul>
-                        <a class="reload" href="#"><?= Loc::getMessage('VIDEO_REVIEWS_ALL'); ?></a>
+                        <a class="reload" href="/video/otzyvy-nashikh-turistov/"><?= Loc::getMessage('VIDEO_REVIEWS_ALL'); ?></a>
                     </div>
                 </div>
             </div>
