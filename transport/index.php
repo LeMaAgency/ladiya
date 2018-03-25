@@ -25,7 +25,7 @@ $APPLICATION->SetTitle("Наш транспорт");
 		"COMPONENT_TEMPLATE" => "pages_head_picture",
 		"DETAIL_URL" => "",
 		"ELEMENT_CODE" => "",
-		"ELEMENT_ID" => "110",
+		"ELEMENT_ID" => "653",
 		"ELEMENT_SORT_FIELD" => "sort",
 		"ELEMENT_SORT_ORDER" => "asc",
 		"FIELD_CODE" => array(
