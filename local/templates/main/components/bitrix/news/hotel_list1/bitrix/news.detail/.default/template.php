@@ -50,8 +50,8 @@ Loc::loadMessages(__FILE__);
                 {
                     foreach ($arResult["INFRASTRUCTURE_DETAIL"] as $infastructure)
                     {
-                        echo "<li><span><i class=\"fa ".$infastructure["PROPS"]["ICON_CODE"]["VALUE"].
-                            "\"aria-hidden=\"true\"></i><div class=\"hotel__detail___infrastruktura_name\">".$infastructure["NAME"].
+                        echo "<li><span><img class=\"inf_icon\" src=\"".CFile::GetPath($infastructure["PROPS"]["ICON_CODE"]["VALUE"]).
+                            "\"aria-hidden=\"true\"></img><div class=\"hotel__detail___infrastruktura_name\">".$infastructure["NAME"].
                             "</div></span></li>";
                     }
                 }

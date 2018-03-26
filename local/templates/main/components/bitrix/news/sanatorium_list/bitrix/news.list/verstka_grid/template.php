@@ -123,7 +123,8 @@ $foundCnt = (int) $arResult['NAV_RESULT']->NavRecordCount;
                             if(!empty($arItem["PROPERTIES"]["INFRASTRUCTURE_DETAIL"]))
                             {
                                 foreach ($arItem["PROPERTIES"]["INFRASTRUCTURE_DETAIL"] as $infastructure){
-                                    echo " <span data-title=\"".$infastructure["NAME"]."\"><i class=\"fa ".$infastructure["PROPS"]["ICON_CODE"]["VALUE"]." aria-hidden=\"true\"></i></span>";
+                                    echo " <span data-title=\"".$infastructure["NAME"]."\"><img class=\"inf_icon\" src=\"".CFile::GetPath($infastructure["PROPS"]["ICON_CODE"]["VALUE"]).
+                                        "\"aria-hidden=\"true\"></img></span>";
                                 }
                             }
 
