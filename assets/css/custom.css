@@ -3804,3 +3804,30 @@ input.filter__button {padding-bottom: 15px !important;}
     right: 0;
     bottom: 0;
 }
+.text__block .page_404{
+
+}
+.text__block .page_404 .img_404{
+    display: block;
+    margin: 50px auto !important;
+}
+.text__block .page_404 .text{
+    text-align: center;
+    margin: 50px 0;
+    text-transform: uppercase;
+}
+.text__block .page_404 .main_page_btn{
+    padding: 10px;
+    font-size: 20px;
+    background-color: #003D5D;
+    margin: 0 auto;
+    display: block;
+    max-width: 300px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: background-color 0.3s;
+}
+.text__block .page_404 .main_page_btn:hover{
+    background-color: #F15922;
+    transition: background-color 0.3s;
+}
