@@ -2214,3 +2214,71 @@ PAGE TRANSFER
 .fixed_header .lad-menu{
     background-color: white;
 }
+/*Меню "Еще" и его пункты*/
+.logo_other_menu{
+
+}
+.logo_other_menu_link{
+
+}
+.logo_other_menu_drop{
+    left: auto;
+    right: 0;
+    border-radius: 0;
+    position: absolute;
+    top: 100%;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 160px;
+    padding: 5px 0;
+    margin: 2px 0 0;
+    font-size: 14px;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: 4px;
+    -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    box-shadow: 0 6px 12px rgba(0,0,0,.175);
+}
+.navbar-nav>li>.logo_other_menu_drop{
+    margin-top: 0;
+    border-radius: 0;
+}
+.nav .logo_other_menu_drop{
+
+}
+.nav .logo_other_menu_drop a {
+    padding: 5px 20px;
+}
+.logo_other_menu_drop>li>a {
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: 400;
+    line-height: 1.42857143;
+    color: #333;
+    white-space: nowrap;
+}
+.logo_other_menu_drop>li>a:focus,
+.logo_other_menu_drop>li>a:hover{
+    color: #F15922;
+    background-color: #CCC;
+    text-decoration: none;
+}
+@media (max-width: 767px){
+    .navbar-nav .logo_other_menu_drop {
+        position: static;
+        float: none;
+        width: auto;
+        margin-top: 0;
+        background-color: transparent;
+        border: 0;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+}

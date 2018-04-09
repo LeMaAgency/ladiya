@@ -754,4 +754,14 @@ $(function(){
             $('.fixed_header').css('top','unset');
         }
     })
+
+//Меню "Еще" и его пункты
+    if($(window).width()>767){
+        $('.logo_other_menu').on('mouseover',function () {
+            $(this).find('.logo_other_menu_drop').css('display','block')
+        })
+        $('.logo_other_menu').on('mouseout',function () {
+            $(this).find('.logo_other_menu_drop').css('display','none')
+        })
+    }
 });
