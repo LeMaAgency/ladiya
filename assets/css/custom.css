@@ -3725,7 +3725,7 @@ input.filter__button {padding-bottom: 15px !important;}
 .line .slider__arrow_prev,
 .line .slider__arrow_next {
     position: absolute;
-    z-index: 9999;
+    z-index: 993;
     top: 38%;
 }
 .slider__tem__index .slider__arrow_prev:hover,

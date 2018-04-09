@@ -67,124 +67,128 @@ CJSCore::init(array('fx'));
  **/
 ?>
 <!-- Шапка -->
-<header class="lad-header">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-                <div class="wrapper">
-                    <div class="header icon-menu">
-                        <ul class="nav navbar-nav">
-                            <li><a href="/photo/" class="icon-point i-camera"><? includeArea("photo"); ?></a></li>
-                            <li><a href="/video/" class="icon-point i-play"><? includeArea("video"); ?></a></li>
-                        </ul>
+<header class="fixed_wrapper">
+    <div class="fixed_header">
+        <div class="lad-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                        <div class="wrapper">
+                            <div class="header icon-menu">
+                                <ul class="nav navbar-nav">
+                                    <li><a href="/photo/" class="icon-point i-camera"><? includeArea("photo"); ?></a></li>
+                                    <li><a href="/video/" class="icon-point i-play"><? includeArea("video"); ?></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
+                        <div class="wrapper">
+                            <!-- Навигация в адаптиве -->
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle collapsed invert" data-toggle="collapse"
+                                        data-target=".header-menu" aria-expanded="false">
+                                    <i class="fa fa-bars"></i>
+                                </button>
+                            </div>
+                            <div class="header-menu collapse navbar-collapse">
+                                <?$APPLICATION->IncludeComponent(
+                                    "bitrix:menu",
+                                    "top_multilevel",
+                                    array(
+                                        "ALLOW_MULTI_SELECT" => "N",
+                                        "CHILD_MENU_TYPE" => "podmenu",
+                                        "DELAY" => "N",
+                                        "MAX_LEVEL" => "3",
+                                        "MENU_CACHE_GET_VARS" => array(
+                                        ),
+                                        "MENU_CACHE_TIME" => "3600",
+                                        "MENU_CACHE_TYPE" => "A",
+                                        "MENU_CACHE_USE_GROUPS" => "N",
+                                        "ROOT_MENU_TYPE" => "top",
+                                        "USE_EXT" => "Y",
+                                        "COMPONENT_TEMPLATE" => "top_multilevel"
+                                    ),
+                                    false
+                                );?>
+
+
+                                <?$APPLICATION->IncludeComponent(
+                                    "bitrix:search.form",
+                                    "main_search_form",
+                                    Array(),
+                                    false
+                                );?>
+
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
-                <div class="wrapper">
-                    <!-- Навигация в адаптиве -->
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle collapsed invert" data-toggle="collapse"
-                                data-target=".header-menu" aria-expanded="false">
-                            <i class="fa fa-bars"></i>
-                        </button>
+        </div>
+        <div class="lad-menu">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                        <div class="wrapper">
+                            <div class="logo">
+                                <a href="<?=SITE_DIR?>"><img src="<?=SITE_TEMPLATE_PATH?>/images/logo.png" height="55px"></a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="header-menu collapse navbar-collapse">
-                        <?$APPLICATION->IncludeComponent(
-	"bitrix:menu", 
-	"top_multilevel", 
-	array(
-		"ALLOW_MULTI_SELECT" => "N",
-		"CHILD_MENU_TYPE" => "podmenu",
-		"DELAY" => "N",
-		"MAX_LEVEL" => "3",
-		"MENU_CACHE_GET_VARS" => array(
-		),
-		"MENU_CACHE_TIME" => "3600",
-		"MENU_CACHE_TYPE" => "A",
-		"MENU_CACHE_USE_GROUPS" => "N",
-		"ROOT_MENU_TYPE" => "top",
-		"USE_EXT" => "Y",
-		"COMPONENT_TEMPLATE" => "top_multilevel"
-	),
-	false
-);?>
-                        
-                        
-        <?$APPLICATION->IncludeComponent(
-            "bitrix:search.form",
-            "main_search_form",
-            Array(),
-            false
-        );?>
-                        
+                    <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
+                        <div class="wrapper">
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                                        data-target=".main-menu" aria-expanded="false">
+                                    <i class="fa fa-bars"></i>
+                                </button>
+                            </div>
+                            <div class="main-menu collapse navbar-collapse">
+                                <? $APPLICATION->IncludeComponent(
+                                    "bitrix:menu",
+                                    "logo_other_menu",
+                                    array(
+                                        "ALLOW_MULTI_SELECT" => "N",
+                                        "CHILD_MENU_TYPE" => "other",
+                                        "DELAY" => "N",
+                                        "MAX_LEVEL" => "2",
+                                        "MENU_CACHE_GET_VARS" => array(
+                                        ),
+                                        "MENU_CACHE_TIME" => "3600",
+                                        "MENU_CACHE_TYPE" => "A",
+                                        "MENU_CACHE_USE_GROUPS" => "N",
+                                        "ROOT_MENU_TYPE" => "more",
+                                        "USE_EXT" => "Y",
+                                        "COMPONENT_TEMPLATE" => "logo_other_menu"
+                                    ),
+                                    false
+                                ); ?>
+                                <? $APPLICATION->IncludeComponent(
+                                    "bitrix:menu",
+                                    "logo_menu",
+                                    array(
+                                        "ALLOW_MULTI_SELECT" => "N",
+                                        "CHILD_MENU_TYPE" => "other",
+                                        "DELAY" => "N",
+                                        "MAX_LEVEL" => "2",
+                                        "MENU_CACHE_GET_VARS" => array(
+                                        ),
+                                        "MENU_CACHE_TIME" => "3600",
+                                        "MENU_CACHE_TYPE" => "A",
+                                        "MENU_CACHE_USE_GROUPS" => "N",
+                                        "ROOT_MENU_TYPE" => "logo",
+                                        "USE_EXT" => "Y",
+                                        "COMPONENT_TEMPLATE" => "logo_menu"
+                                    ),
+                                    false
+                                ); ?>
+
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </header>
-<section class="lad-menu">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-                <div class="wrapper">
-                    <div class="logo">
-                        <a href="<?=SITE_DIR?>"><img src="<?=SITE_TEMPLATE_PATH?>/images/logo.png" height="55px"></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
-                <div class="wrapper">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                                data-target=".main-menu" aria-expanded="false">
-                            <i class="fa fa-bars"></i>
-                        </button>
-                    </div>
-                    <div class="main-menu collapse navbar-collapse">
-                        <? $APPLICATION->IncludeComponent(
-	"bitrix:menu", 
-	"logo_other_menu", 
-	array(
-		"ALLOW_MULTI_SELECT" => "N",
-		"CHILD_MENU_TYPE" => "other",
-		"DELAY" => "N",
-		"MAX_LEVEL" => "2",
-		"MENU_CACHE_GET_VARS" => array(
-		),
-		"MENU_CACHE_TIME" => "3600",
-		"MENU_CACHE_TYPE" => "A",
-		"MENU_CACHE_USE_GROUPS" => "N",
-		"ROOT_MENU_TYPE" => "more",
-		"USE_EXT" => "Y",
-		"COMPONENT_TEMPLATE" => "logo_other_menu"
-	),
-	false
-); ?>
-                        <? $APPLICATION->IncludeComponent(
-                            "bitrix:menu", 
-                            "logo_menu", 
-                            array(
-                                "ALLOW_MULTI_SELECT" => "N",
-                                "CHILD_MENU_TYPE" => "other",
-                                "DELAY" => "N",
-                                "MAX_LEVEL" => "2",
-                                "MENU_CACHE_GET_VARS" => array(
-                                ),
-                                "MENU_CACHE_TIME" => "3600",
-                                "MENU_CACHE_TYPE" => "A",
-                                "MENU_CACHE_USE_GROUPS" => "N",
-                                "ROOT_MENU_TYPE" => "logo",
-                                "USE_EXT" => "Y",
-                                "COMPONENT_TEMPLATE" => "logo_menu"
-                            ),
-                            false
-                        ); ?>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>

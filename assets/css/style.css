@@ -2202,3 +2202,15 @@ PAGE TRANSFER
     display: list-item !important;
 }
 /*----------------------*/
+.fixed_wrapper{
+    min-height: 143px;
+}
+.fixed_header{
+    position: fixed;
+    width: 100%;
+    z-index: 994;
+
+}
+.fixed_header .lad-menu{
+    background-color: white;
+}

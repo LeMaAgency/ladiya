@@ -743,4 +743,15 @@ $(function(){
     })
 
     //$(".room_reservation_form_phone").find("input").mask("+7 (999) 999-99-99");
+
+//изменение позиции шапки сайта при скролле
+    $(document).scroll(function () {
+        var rangeFromTop = $(this).scrollTop();
+        if(rangeFromTop > 10){
+            $('.fixed_header').css('top','0');
+        }
+        else{
+            $('.fixed_header').css('top','unset');
+        }
+    })
 });
